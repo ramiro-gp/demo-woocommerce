@@ -1,0 +1,26 @@
+# Private runtime configuration, passwords, dumps, uploads and reports.
+.local/
+.env
+.env.*
+!.env.example
+backups/
+secrets/
+work/
+wp-config.php
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+*.sql
+*.sql.gz
+*.tar.gz
+*.log
+node_modules/
+.DS_Store
+Thumbs.db
