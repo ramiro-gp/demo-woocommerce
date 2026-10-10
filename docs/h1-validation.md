@@ -60,4 +60,14 @@ No se instaló WooCommerce, Mercado Pago, SEOPress, FluentSMTP ni LiteSpeed Cach
 
 El aviso conocido del cliente MariaDB durante algunas operaciones WP-CLI está explicado en [Operación local](operations.md#verificación-de-h1). Las operaciones de respaldo, restauración y reset terminaron correctamente.
 
-H1 se completó sin un dominio HTTPS público. La matriz real de WooCommerce/HPOS/Blocks/Mercado Pago y Checkout Pro corresponde a H2. Los cambios permanecen locales, sin commit ni push.
+H1 se completó sin un dominio HTTPS público. La matriz real de WooCommerce/HPOS/Blocks/Mercado Pago y Checkout Pro corresponde a H2.
+
+## Reconciliación en la ruta canónica — 10/10/2026
+
+La carpeta `C:\Codigo\demo-woocommerce` estaba vacía, sin `.git`. El remoto solicitado, `https://github.com/ramiro-gp/demo-woocommerce.git`, ya contenía H1 completo en `main`, commit `1174a8da7d8ed612fafb727dc7c1ca0fa97d8bba`. Se clonó directamente ese remoto en la carpeta canónica. La comparación con los archivos fuente anteriores no requirió recuperar código adicional. No se copió otro `.git` ni runtime, bases, backups, logs o secretos.
+
+Los contenedores existentes todavía apuntaban a la carpeta anterior. Se conservaron los tres volúmenes `demo-woocommerce-local_*`, se generaron credenciales locales nuevas en la carpeta canónica y se renovaron las contraseñas de los mismos usuarios locales. Se recrearon únicamente los tres contenedores de este proyecto desde el Compose canónico. La carpeta anterior queda como referencia histórica; no debe utilizarse para operar el proyecto y sus credenciales anteriores ya no son válidas.
+
+Se verificaron `doctor`, WordPress 7.1.3, PHP 8.4.26, MariaDB 10.11.19, acceso HTTP al sitio, inicio de sesión real en wp-admin, Mailpit, captura de `wp_mail`, exclusión Git de `.env` y secretos, y persistencia de un marcador en la base después de `stop`/`start`. El fixture `fresh` validó idioma, preferencias y contraseña del administrador, sin plugins funcionales activos. Se creó el respaldo privado `.local/local/backups/h1-canonical-before-h2/` desde la ruta correcta. No se repitieron resets destructivos sobre la instancia principal.
+
+H1 queda consolidado antes de introducir H2. La referencia histórica de pruebas aisladas anterior conserva su alcance original; esta sección registra las comprobaciones adicionales realizadas desde la ruta canónica.
