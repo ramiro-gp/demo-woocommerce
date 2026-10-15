@@ -6,6 +6,17 @@ require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/checkout-labels.php';
 require_once __DIR__ . '/inc/discovery.php';
 
+// With plain permalinks and an Apache front controller, core has no rewrite
+// rules to distinguish an unknown path from the root. Preserve native query
+// URLs and API handlers, but let WordPress render its real 404 for other paths.
+add_action('parse_request', static function ($wp) {
+    if (is_admin() || get_option('permalink_structure') !== '' || !empty($wp->matched_rule) || isset($wp->query_vars['rest_route']) || isset($wp->query_vars['wc-api'])) { return; }
+    $path = wp_parse_url(wp_unslash($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
+    $root = trailingslashit(wp_parse_url(home_url('/'), PHP_URL_PATH) ?: '/');
+    if (!is_string($path) || $path === $root || $path === $root . 'index.php') { return; }
+    $wp->query_vars['error'] = '404';
+}, 20);
+
 add_action('after_setup_theme', static function () {
     add_theme_support('woocommerce');
     add_theme_support('custom-logo', ['height' => 80, 'width' => 280, 'flex-width' => true, 'flex-height' => true]);

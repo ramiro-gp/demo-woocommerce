@@ -334,7 +334,7 @@ $urls = ['home' => home_url('/')];
 foreach ($pages as $key => $page) { if ('home' !== $key) { $urls[$key] = $page['url']; } }
 $urls['shop'] = wc_get_page_permalink('shop');
 $urls['search'] = add_query_arg(['s' => 'h2', 'post_type' => 'product'], home_url('/'));
-$urls['notFound'] = add_query_arg('p', 2147483647, home_url('/'));
+$urls['notFound'] = home_url('/pagina-inexistente/');
 $pending = [];
 foreach ($definitions as $key => $definition) {
     $post = $found[$key] ? get_post($found[$key]) : null;

@@ -34,13 +34,15 @@ function commerce_base_category_links($attributes = []) {
 
 function commerce_base_search_tools($attributes = []) {
     $shop = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/');
+    $form = function_exists('get_product_search_form') ? get_product_search_form(false) : get_search_form(false);
     ob_start(); ?>
     <div class="cb-search-tools">
-        <?php if (function_exists('get_product_search_form')) { echo get_product_search_form(false); } else { get_search_form(); } ?>
+        <?php if (empty($attributes['recovery'])) { echo $form; } ?>
         <div class="cb-recovery-links">
             <?php if (!empty($attributes['recovery'])) : ?><a class="cb-button" href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Volver al inicio', 'commerce-base'); ?></a><?php endif; ?>
             <a class="<?php echo !empty($attributes['recovery']) ? 'cb-button is-secondary' : 'cb-link'; ?>" href="<?php echo esc_url($shop); ?>"><?php esc_html_e('Ver catálogo', 'commerce-base'); ?> <span aria-hidden="true">↗</span></a>
         </div>
+        <?php if (!empty($attributes['recovery'])) { echo $form; } ?>
     </div>
     <?php return ob_get_clean();
 }

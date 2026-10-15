@@ -16,7 +16,7 @@ URLs leídas del reporte privado `.local/local/h4/content.json` después de semb
 | Preguntas frecuentes | 40 | <http://localhost:8080/?page_id=40> |
 | Tienda | 7 | <http://localhost:8080/?page_id=7> |
 | Búsqueda de productos | — | <http://localhost:8080/?s=h2&post_type=product> |
-| Ruta inexistente de QA | — | <http://localhost:8080/?p=2147483647> |
+| Ruta inexistente de QA | — | <http://localhost:8080/pagina-inexistente/> |
 
 Los slugs editoriales son `inicio`, `conocenos`, `contacto` y `preguntas-frecuentes`. Se preservó la estructura de enlaces permanentes existente: los links se obtienen mediante `get_permalink()`, `wc_get_page_permalink()` y `get_term_link()`. Los IDs anteriores son evidencia local, no constantes del theme. No se cambiaron las URLs de carrito, checkout, cuenta ni productos.
 
@@ -136,3 +136,11 @@ Problemas detectados y resueltos:
 Las imágenes y textos institucionales, botones y links se editan en Páginas; el nombre/descripción en ajustes de WP; categorías/nombres/thumbnails en Productos → Categorías; selección/cantidad mediante atributos del bloque; navegación mediante la ubicación primary. No se agregaron formularios, CRM, plugins ni un catálogo paralelo. Fuentes técnicas de búsqueda: [theming de Woo blocks](https://developer.woocommerce.com/docs/theming/block-theme-development/theming-woo-blocks) y [Product Search Results](https://woocommerce.com/document/woocommerce-store-editing/templates/customizing-product-search-results/), contrastadas con el código instalado WooCommerce 11.2.1.
 
 Capturas y reportes de QA deben permanecer bajo `.local/local/h4/`, excluidos de Git. No se certifica exhaustivamente WCAG 2.2 AA ni se afirma preparación para producción. H4 no incorpora Commerce Core, legales definitivos, integraciones logísticas, medios de pago nuevos, SEO final ni deploy. La validación comercial y los límites de H2 continúan en su [informe de cierre](h2-validation.md).
+
+## Corrección de rutas 404 tras revisión del usuario
+
+La comprobación inicial de 404 usaba `?p=2147483647`. Esa consulta sí devolvía la pantalla correcta, pero una ruta como `/no-existe` mostraba Home con HTTP 200. Con enlaces permanentes simples y el front controller de Apache, WordPress no tiene reglas de rewrite para distinguir ese path de la raíz. Se corrigió mediante el hook público [parse_request](https://developer.wordpress.org/reference/classes/wp/parse_request/): únicamente en modo de permalinks simples, los paths desconocidos activan el error 404 nativo. Se conservan raíz/index.php, reglas reconocidas y handlers API. No se cambiaron permalinks ni datos comerciales.
+
+La pantalla mantiene el diseño H4 y muestra **Volver al inicio** antes del buscador, junto a Ver catálogo. Para revisarla: <http://localhost:8080/404> o cualquier ruta inexistente. No se crea una página CMS con HTTP 200 ni un redirect automático.
+
+`tests/verify-h4-404.cjs`: **23 comprobaciones aprobadas**, cinco rutas 404 sin redirect, doce rutas nativas/API con HTTP 200, seis combinaciones mobile/desktop claro/oscuro con botón de Home probado mediante navegación real. Capturas finales inspeccionadas; evidencia privada `404-routing.json` y `404-path-*.png`.
