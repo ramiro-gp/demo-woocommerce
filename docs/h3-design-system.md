@@ -97,13 +97,15 @@ Prompt final: “Editorial photo specimen for a refined urban apparel visual-sys
 ## Operación y revisión
 
 ```powershell
-.\scripts\h3.ps1 sync -Instance h2-public
-.\scripts\h3.ps1 verify -Instance h2-public
-powershell -NoProfile -File .\tests\verify-h3-local.ps1 -Instance h2-public
+.\scripts\h3.ps1 sync -Instance local
+.\scripts\h3.ps1 verify -Instance local
+powershell -NoProfile -File .\tests\verify-h3-local.ps1 -Instance local
 ```
 
 `sync` empaqueta exclusivamente `commerce-base`, valida rutas y copia al volumen actual. No borra datos, themes ajenos ni archivos obsoletos; avisa si existen estos últimos. No se agregó un bind mount que interfiera con restore de H1. La copia del volumen es runtime; la fuente canónica sigue siendo este repositorio. Los comandos `start`/`stop` conservan el theme sincronizado. Un cambio de fuente requiere `sync`.
 
-Abrir [showcase local](http://localhost:18081/?commerce-base-showcase=1). Accesible en entorno WordPress `local`, o para un administrador autenticado; en otro entorno el visitante recibe 404. Envía `noindex, nofollow, noarchive` y cabeceras sin caché. No crea una página en la base, sitemap ni contenido indexable. Las capturas y reportes privados viven en `.local/h2-public/h3/`.
+Abrir [showcase local](http://localhost:8080/?commerce-base-showcase=1). Accesible en entorno WordPress `local`, o para un administrador autenticado; en otro entorno el visitante recibe 404. Envía `noindex, nofollow, noarchive` y cabeceras sin caché. No crea una página en la base, sitemap ni contenido indexable. Las capturas y reportes privados viven en `.local/local/h3/`.
+
+Commerce Base 1.0.1 añade correcciones de links/footer, opciones de variación y controles de checkout: tokens `--cb-radius-sm: 3px`, `--cb-control-selected` y `--cb-control-mark`. Ver [correcciones, APIs e instancias](h3-corrections.md). El cierre original en 18081 se conserva como evidencia histórica.
 
 Ver [validación y límites de H3](h3-validation.md). H4 requiere revisión visual del usuario.

@@ -11,6 +11,7 @@ function commerce_base_icon($name) {
         'plus' => '<path d="M12 5v14M5 12h14"/>',
         'minus' => '<path d="M5 12h14"/>',
         'check' => '<path d="m5 12 4 4L19 6"/>',
+        'heart' => '<path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/>',
     ];
     return '<svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">' . ($paths[$name] ?? $paths['arrow']) . '</svg>';
 }
@@ -75,8 +76,34 @@ function commerce_base_header($attributes = []) {
 }
 
 function commerce_base_footer($attributes = []) {
+    $shop_links = [];
+    $help_links = [];
+    if (function_exists('wc_get_page_permalink')) {
+        foreach (['shop' => __('Tienda', 'commerce-base'), 'cart' => __('Carrito', 'commerce-base')] as $page => $label) {
+            if ('publish' === get_post_status(wc_get_page_id($page))) { $shop_links[] = ['url' => wc_get_page_permalink($page), 'label' => $label]; }
+        }
+        if ('publish' === get_post_status(wc_get_page_id('myaccount'))) { $help_links[] = ['url' => wc_get_page_permalink('myaccount'), 'label' => __('Mi cuenta y pedidos', 'commerce-base')]; }
+    }
+    // Publish links only when the merchant has created and published the pages.
+    foreach (['contacto' => 'Contacto', 'preguntas-frecuentes' => 'Preguntas frecuentes', 'envios' => 'Envíos', 'cambios-y-devoluciones' => 'Cambios y devoluciones', 'terminos' => 'Términos', 'boton-de-arrepentimiento' => 'Botón de Arrepentimiento'] as $slug => $label) {
+        $page = get_page_by_path($slug);
+        if ($page && 'publish' === $page->post_status) { $help_links[] = ['url' => get_permalink($page), 'label' => $label]; }
+    }
+    if (get_privacy_policy_url()) { $help_links[] = ['url' => get_privacy_policy_url(), 'label' => __('Privacidad', 'commerce-base')]; }
     ob_start(); ?>
-    <footer class="cb-footer"><div class="cb-footer-inner cb-container"><a class="cb-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a><p><?php echo esc_html(get_bloginfo('description')); ?></p><a class="cb-link" href="#main-content" data-cb-anchor><?php esc_html_e('Volver arriba', 'commerce-base'); ?> <span aria-hidden="true">↑</span></a></div></footer>
+    <footer class="cb-footer"><div class="cb-container">
+        <div class="cb-footer-inner">
+            <div class="cb-footer-brand"><a class="cb-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a><p><?php echo esc_html(get_bloginfo('description')); ?></p></div>
+            <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Tienda', 'commerce-base'); ?>"><h2><?php esc_html_e('Tienda', 'commerce-base'); ?></h2><?php foreach ($shop_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
+            <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Ayuda e información', 'commerce-base'); ?>"><h2><?php esc_html_e('Ayuda e información', 'commerce-base'); ?></h2><?php foreach ($help_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
+            <?php if (has_nav_menu('footer-social')) : ?><nav class="cb-footer-column" aria-label="<?php esc_attr_e('Redes sociales', 'commerce-base'); ?>"><h2><?php esc_html_e('Encontranos', 'commerce-base'); ?></h2><?php wp_nav_menu(['theme_location' => 'footer-social', 'container' => false, 'depth' => 1, 'fallback_cb' => false]); ?></nav><?php endif; ?>
+        </div>
+        <div class="cb-footer-bottom">
+            <?php if (function_exists('get_woocommerce_currency') && 'ARS' === get_woocommerce_currency()) : ?><p><?php esc_html_e('Precios expresados en pesos argentinos (ARS).', 'commerce-base'); ?></p><?php endif; ?>
+            <p class="cb-footer-credit">Hecho con <span class="cb-credit-heart" role="img" aria-label="amor"><?php echo commerce_base_icon('heart'); ?></span> por <a class="cb-link" href="https://ramita.dev" target="_blank" rel="noopener noreferrer">Ramiro Garcia<span class="screen-reader-text"> (abre en una nueva pestaña)</span></a></p>
+            <a class="cb-link cb-back-top" href="#cb-page-top" data-cb-anchor><?php esc_html_e('Volver arriba', 'commerce-base'); ?> <span aria-hidden="true">↑</span></a>
+        </div>
+    </div></footer>
     <?php return ob_get_clean();
 }
 

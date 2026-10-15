@@ -2,7 +2,7 @@
 param(
   [Parameter(Position = 0, Mandatory = $true)]
   [ValidateSet('sync', 'activate', 'snapshot', 'verify')][string]$Action,
-  [ValidatePattern('^[a-z][a-z0-9-]{0,29}$')][string]$Instance = 'h2-public'
+  [ValidatePattern('^[a-z][a-z0-9-]{0,29}$')][string]$Instance = 'local'
 )
 
 $ErrorActionPreference = 'Stop'

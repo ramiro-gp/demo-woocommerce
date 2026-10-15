@@ -7,9 +7,11 @@ const assert = require('node:assert/strict');
 process.env.PLAYWRIGHT_BROWSERS_PATH ||= 'C:\\Users\\ramiro\\AppData\\Local\\ms-playwright';
 const { chromium } = require('playwright');
 
-const base = new URL(process.env.H3_BASE_URL || 'http://localhost:18081');
+const base = new URL(process.env.H3_BASE_URL || 'http://localhost:8080');
 const showcase = new URL('/?commerce-base-showcase=1', base).href;
-const output = path.resolve(__dirname, '../.local/h2-public/h3');
+const instance = process.env.H3_INSTANCE || 'local';
+assert.match(instance, /^[a-z][a-z0-9-]{0,29}$/);
+const output = path.resolve(__dirname, `../.local/${instance}/h3`);
 fs.mkdirSync(output, { recursive: true });
 const report = { startedAt: new Date().toISOString(), baseUrl: base.href, browser: 'Chromium', checks: [], screenshots: [], pageErrors: [], assetErrors: [], reflowTechnique: '1280px desktop at 200%/400% approximated by 640px/320px CSS viewports, with deviceScaleFactor 2/4. This checks reflow; it does not exercise browser chrome zoom.' };
 
@@ -239,7 +241,9 @@ async function closed(page, selector) { await page.waitForFunction(selector => !
 			assert.deepEqual(busy, { disabled: true, busy: 'true' }); await page.waitForFunction(() => !document.querySelector('[data-cb-loading-demo]').disabled);
 		});
 		await check('Nonhero page has solid header and unobscured title', async () => {
-			await page.goto(new URL('/?page_id=6', base).href, { waitUntil: 'networkidle' }); await ready(page); await scrollTo(page, 0);
+			const nonheroUrl = await page.locator('.cb-footer-column a').filter({ hasText: /^Carrito$/ }).getAttribute('href');
+			assert.ok(nonheroUrl, 'Native cart link missing');
+			await page.goto(nonheroUrl, { waitUntil: 'networkidle' }); await ready(page); await scrollTo(page, 0);
 			const result = await page.evaluate(() => { const heading = document.querySelector('main h1, .wp-block-post-title'); const main = document.querySelector('main'); return { hasHero: document.body.classList.contains('has-hero'), progress: Number(document.documentElement.style.getPropertyValue('--cb-header-progress')), headingTop: heading?.getBoundingClientRect().top, headerBottom: document.querySelector('[data-cb-header]').getBoundingClientRect().bottom, mainClass: main?.className, mainPadding: main ? getComputedStyle(main).paddingBlockStart : null }; });
 			assert.equal(result.hasHero, false); assert.equal(result.progress, 1); assert.ok(Number.isFinite(result.headingTop), 'Nonhero title missing'); assert.ok(result.headingTop >= result.headerBottom - 1, `Header overlap: ${JSON.stringify(result)}`);
 			return result;

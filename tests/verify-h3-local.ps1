@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-  [ValidatePattern('^[a-z][a-z0-9-]{0,29}$')][string]$Instance = 'h2-public',
+  [ValidatePattern('^[a-z][a-z0-9-]{0,29}$')][string]$Instance = 'local',
   [ValidatePattern('^/[^\r\n]*$')][string]$ShowcasePath = '/?commerce-base-showcase=1'
 )
 $ErrorActionPreference = 'Stop'

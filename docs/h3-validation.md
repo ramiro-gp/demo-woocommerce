@@ -1,5 +1,7 @@
 # H3 — Cierre técnico y revisión visual
 
+**Nota posterior:** este documento registra el cierre original en `h2-public`. Para las correcciones actuales, la demo principal es `http://localhost:8080`, Commerce Base 1.0.1. Ver [informe post-H3](h3-corrections.md) con separación de instancias, URLs y resultados actuales.
+
 Implementado y validado el 15/10/2026, hora de Argentina. Commerce Base está listo para la revisión visual del usuario. H4 no se inició.
 
 ## Punto de partida y preservación

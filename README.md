@@ -6,11 +6,14 @@ La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`com
 
 ## H3 — revisar Commerce Base
 
-La instancia conservada `h2-public` usa Commerce Base. Abrí el [showcase local del sistema visual](http://localhost:18081/?commerce-base-showcase=1) para revisar tipografía, paleta, Claro/Oscuro/Sistema, header, menú fullscreen, controles, producto y motion. Es una vista de desarrollo sin página publicada ni indexación. La home de H4 todavía no existe.
+La demo principal es la instancia **`local` en http://localhost:8080**, con Commerce Base 1.0.1. Abrí la [tienda](http://localhost:8080/?post_type=product) o el [showcase del sistema visual](http://localhost:8080/?commerce-base-showcase=1) para revisar las correcciones post-H3. El showcase es una vista de desarrollo sin página publicada ni indexación. La home de H4 todavía no existe; la raíz ya no muestra Hello world.
+
+**`localhost:18081` es `h2-public`**, instalación técnica aislada para pagos/pruebas H2. Conserva sus productos, pedidos, credenciales, contenido inicial y Commerce Base 1.0.0 usado en la revisión original de H3. No es la URL de las correcciones actuales. La demo 8080 conserva sus métodos de pago previos, actualmente sin gateway habilitado; no se trasladaron credenciales de H2. Ver [informe post-H3 e instancias](docs/h3-corrections.md).
 
 ```powershell
-.\scripts\h3.ps1 sync -Instance h2-public
-powershell -NoProfile -File .\tests\verify-h3-local.ps1 -Instance h2-public
+powershell -NoProfile -File .\scripts\dev.ps1 start -Instance local
+.\scripts\h3.ps1 sync -Instance local
+powershell -NoProfile -File .\tests\verify-h3-local.ps1 -Instance local
 ```
 
 `sync` copia únicamente el theme al volumen existente, sin mounts ni borrados. Fuente: `commerce-base/`. Ver [dirección y tokens](docs/h3-design-system.md) y [pruebas, capturas y límites](docs/h3-validation.md). H2 se conserva; no se repiten pagos ni se reconfigura el checkout.
