@@ -1,0 +1,204 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "68ch",
+      "wideSize": "110rem"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "customGradient": false,
+      "palette": [
+        { "slug": "background", "name": "Fondo", "color": "var(--cb-background)" },
+        { "slug": "surface", "name": "Superficie", "color": "var(--cb-surface)" },
+        { "slug": "surface-elevated", "name": "Superficie elevada", "color": "var(--cb-surface-elevated)" },
+        { "slug": "text", "name": "Texto", "color": "var(--cb-text)" },
+        { "slug": "text-muted", "name": "Texto secundario", "color": "var(--cb-text-muted)" },
+        { "slug": "border", "name": "Borde", "color": "var(--cb-border)" },
+        { "slug": "accent", "name": "Acento", "color": "var(--cb-accent)" },
+        { "slug": "accent-hover", "name": "Acento activo", "color": "var(--cb-accent-hover)" },
+        { "slug": "accent-contrast", "name": "Sobre acento", "color": "var(--cb-accent-contrast)" },
+        { "slug": "focus", "name": "Foco", "color": "var(--cb-focus)" },
+        { "slug": "success", "name": "Éxito", "color": "var(--cb-success)" },
+        { "slug": "warning", "name": "Advertencia", "color": "var(--cb-warning)" },
+        { "slug": "danger", "name": "Error", "color": "var(--cb-danger)" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "%", "vw", "vh"],
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        { "slug": "10", "name": "1 · 4", "size": "var(--cb-space-1)" },
+        { "slug": "20", "name": "2 · 8", "size": "var(--cb-space-2)" },
+        { "slug": "30", "name": "3 · 12", "size": "var(--cb-space-3)" },
+        { "slug": "40", "name": "4 · 16", "size": "var(--cb-space-4)" },
+        { "slug": "50", "name": "5 · 24", "size": "var(--cb-space-5)" },
+        { "slug": "60", "name": "6 · 32", "size": "var(--cb-space-6)" },
+        { "slug": "70", "name": "7 · 48", "size": "var(--cb-space-7)" },
+        { "slug": "80", "name": "8 · 64", "size": "var(--cb-space-8)" },
+        { "slug": "section", "name": "Sección", "size": "var(--cb-section-space)" }
+      ]
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "interface",
+          "name": "Manrope · interfaz",
+          "fontFamily": "Manrope, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Manrope",
+              "fontStyle": "normal",
+              "fontWeight": "400 700",
+              "fontDisplay": "swap",
+              "src": ["file:./assets/fonts/manrope-latin.woff2"]
+            }
+          ]
+        },
+        {
+          "slug": "editorial",
+          "name": "Newsreader · editorial",
+          "fontFamily": "Newsreader, Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "Newsreader",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": ["file:./assets/fonts/newsreader-latin.woff2"]
+            },
+            {
+              "fontFamily": "Newsreader",
+              "fontStyle": "italic",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": ["file:./assets/fonts/newsreader-italic-latin.woff2"]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Secundario", "size": "0.875rem", "fluid": false },
+        { "slug": "body", "name": "Lectura", "size": "clamp(1rem, 0.95rem + 0.25vw, 1.125rem)", "fluid": false },
+        { "slug": "lead", "name": "Introducción", "size": "clamp(1.125rem, 1rem + 0.5vw, 1.5rem)", "fluid": false },
+        { "slug": "heading", "name": "Título", "size": "clamp(2.5rem, 1.75rem + 3vw, 5rem)", "fluid": false },
+        { "slug": "display", "name": "Editorial", "size": "clamp(3.5rem, 1.5rem + 5.5vw, 8rem)", "fluid": false }
+      ]
+    },
+    "shadow": {
+      "defaultPresets": false
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|background",
+      "text": "var:preset|color|text"
+    },
+    "spacing": {
+      "blockGap": "var:preset|spacing|50",
+      "padding": {
+        "top": "0",
+        "bottom": "0",
+        "left": "var(--cb-gutter)",
+        "right": "var(--cb-gutter)"
+      }
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|interface",
+      "fontSize": "var:preset|font-size|body",
+      "fontWeight": "400",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|editorial",
+          "fontWeight": "400",
+          "lineHeight": "1.05",
+          "letterSpacing": "-0.035em"
+        },
+        "spacing": {
+          "margin": { "top": "0", "bottom": "var:preset|spacing|50" }
+        }
+      },
+      "h1": { "typography": { "fontSize": "var:preset|font-size|display" } },
+      "h2": { "typography": { "fontSize": "var:preset|font-size|heading" } },
+      "h3": { "typography": { "fontSize": "clamp(1.75rem, 1.4rem + 1.3vw, 2.5rem)" } },
+      "h4": { "typography": { "fontSize": "1.5rem" } },
+      "h5": { "typography": { "fontSize": "1.25rem" } },
+      "h6": { "typography": { "fontSize": "1.125rem" } },
+      "link": {
+        "color": { "text": "var:preset|color|text" },
+        "typography": { "textDecoration": "underline" },
+        ":hover": { "color": { "text": "var:preset|color|accent" } }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|accent",
+          "text": "var:preset|color|accent-contrast"
+        },
+        "border": { "radius": "0", "width": "1px", "style": "solid", "color": "var:preset|color|accent" },
+        "spacing": {
+          "padding": {
+            "top": "var:preset|spacing|30",
+            "bottom": "var:preset|spacing|30",
+            "left": "var:preset|spacing|50",
+            "right": "var:preset|spacing|50"
+          }
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|interface",
+          "fontSize": "1rem",
+          "fontWeight": "600",
+          "lineHeight": "1.5",
+          "textDecoration": "none"
+        },
+        ":hover": {
+          "color": { "background": "var:preset|color|accent-hover", "text": "var:preset|color|accent-contrast" },
+          "border": { "color": "var:preset|color|accent-hover" }
+        }
+      },
+      "caption": {
+        "color": { "text": "var:preset|color|text-muted" },
+        "typography": { "fontFamily": "var:preset|font-family|interface", "fontSize": "0.875rem", "lineHeight": "1.5" }
+      }
+    },
+    "blocks": {
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|interface",
+          "fontWeight": "700",
+          "letterSpacing": "-0.06em"
+        }
+      },
+      "core/navigation": {
+        "typography": { "fontFamily": "var:preset|font-family|interface", "fontSize": "1rem" }
+      },
+      "core/separator": {
+        "color": { "text": "var:preset|color|border" },
+        "border": { "width": "0 0 1px", "style": "solid" }
+      },
+      "core/quote": {
+        "border": { "color": "var:preset|color|accent", "width": "0 0 0 2px", "style": "solid" },
+        "spacing": { "padding": { "left": "var:preset|spacing|60" } },
+        "typography": { "fontFamily": "var:preset|font-family|editorial", "fontSize": "var:preset|font-size|lead" }
+      },
+      "core/image": {
+        "border": { "radius": "0" }
+      },
+      "core/post-title": {
+        "typography": { "fontFamily": "var:preset|font-family|editorial" }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Cabecera", "area": "header" },
+    { "name": "footer", "title": "Pie", "area": "footer" }
+  ]
+}

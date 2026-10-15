@@ -1,8 +1,19 @@
 # demo-woocommerce
 
-Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **H1 está consolidado y H2 está cerrado funcionalmente:** se verificaron HPOS, Blocks, inventario, checkout invitado, pagos y devoluciones con el plugin oficial de Mercado Pago. Las pruebas usaron cuentas y saldo ficticios en HTTPS temporal; el túnel está apagado. La repetición exacta de una notificación quedó sin reproducir y se documenta como límite del caso condicional. No se inició H3.
+Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **H1 está consolidado, H2 está cerrado funcionalmente y H3 está implementado y validado para revisión visual.** H2 verificó HPOS, Blocks, inventario, checkout invitado, pagos y devoluciones con el plugin oficial de Mercado Pago. Las pruebas usaron cuentas y saldo ficticios en HTTPS temporal; el túnel está apagado. La repetición exacta de una notificación quedó sin reproducir y se documenta como límite del caso condicional. H3 agrega Commerce Base y su sistema visual. No se inició H4.
 
-La identidad ficticia aprobada es **TRAMA**. El futuro theme se llamará **Commerce Base** (`commerce-base`) y el futuro plugin, cuando corresponda, **Commerce Core** (`commerce-core`). H1 todavía no los crea.
+La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
+
+## H3 — revisar Commerce Base
+
+La instancia conservada `h2-public` usa Commerce Base. Abrí el [showcase local del sistema visual](http://localhost:18081/?commerce-base-showcase=1) para revisar tipografía, paleta, Claro/Oscuro/Sistema, header, menú fullscreen, controles, producto y motion. Es una vista de desarrollo sin página publicada ni indexación. La home de H4 todavía no existe.
+
+```powershell
+.\scripts\h3.ps1 sync -Instance h2-public
+powershell -NoProfile -File .\tests\verify-h3-local.ps1 -Instance h2-public
+```
+
+`sync` copia únicamente el theme al volumen existente, sin mounts ni borrados. Fuente: `commerce-base/`. Ver [dirección y tokens](docs/h3-design-system.md) y [pruebas, capturas y límites](docs/h3-validation.md). H2 se conserva; no se repiten pagos ni se reconfigura el checkout.
 
 ## Antes de empezar
 
