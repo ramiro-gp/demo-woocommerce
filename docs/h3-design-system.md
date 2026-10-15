@@ -70,7 +70,7 @@ La preferencia `light`/`dark`/`system` vive en `localStorage`, clave `commerce-b
 
 La cabecera es fija, sin saltos de layout. En presencia del hero parte transparente y el fondo/borde progresa con `scrollY / 140`, actualizado en un único frame mediante listener pasivo. Las demás páginas parten sólidas. `ResizeObserver` mantiene la altura usada por los anchors. El buscador abre el menú con foco en búsqueda; en mobile se mantiene dentro del menú.
 
-El menú es un `dialog` nativo fullscreen. Entra desde arriba con `transform`, y vuelve por el mismo camino al cerrar. Permanece modal durante el cierre; se desmonta al finalizar la transición, con fallback acotado. Tiene foco inicial, Tab/Shift+Tab, Escape, cierre accesible, bloqueo y restauración de scroll/foco. Sin JS queda una navegación alternativa visible. El drawer de filtros entra desde la derecha y comparte el controlador accesible, con estados independientes.
+El menú es un `dialog` nativo fullscreen. La franja superior permanece fija y opaca; el panel inferior entra desde arriba con `transform` y vuelve por el mismo camino al cerrar. Al terminar, la cabecera recupera gradualmente su transparencia según el scroll. Permanece modal durante el cierre; se desmonta al finalizar la transición del panel, con fallback acotado. Tiene foco inicial, Tab/Shift+Tab, Escape, cierre accesible, bloqueo y restauración de scroll/foco. Sin JS queda una navegación alternativa visible. El drawer de filtros entra desde la derecha y comparte el controlador accesible, con estados independientes.
 
 ## Movimiento y controles
 
@@ -106,6 +106,6 @@ powershell -NoProfile -File .\tests\verify-h3-local.ps1 -Instance local
 
 Abrir [showcase local](http://localhost:8080/?commerce-base-showcase=1). Accesible en entorno WordPress `local`, o para un administrador autenticado; en otro entorno el visitante recibe 404. Envía `noindex, nofollow, noarchive` y cabeceras sin caché. No crea una página en la base, sitemap ni contenido indexable. Las capturas y reportes privados viven en `.local/local/h3/`.
 
-Commerce Base 1.0.1 añade correcciones de links/footer, opciones de variación y controles de checkout: tokens `--cb-radius-sm: 3px`, `--cb-control-selected` y `--cb-control-mark`. Ver [correcciones, APIs e instancias](h3-corrections.md). El cierre original en 18081 se conserva como evidencia histórica.
+Commerce Base 1.0.2 añade correcciones de links/footer, opciones de variación y controles de checkout: tokens `--cb-radius-sm: 3px`, `--cb-control-selected` y `--cb-control-mark`. Ver [correcciones, APIs e instancias](h3-corrections.md). El cierre original en 18081 se conserva como evidencia histórica.
 
 Ver [validación y límites de H3](h3-validation.md). H4 requiere revisión visual del usuario.

@@ -107,6 +107,8 @@ async function settle(page) { await page.waitForTimeout(400); }
                 return next.top - country.bottom;
             });
             assert.ok(spacing >= 15, `country/address gap ${spacing}`);
+            const stateOffset = await page.locator('#shipping-state').evaluate(node => node.getBoundingClientRect().top - node.closest('.wc-block-components-state-input').getBoundingClientRect().top);
+            assert.ok(Math.abs(stateOffset) < 1, `Province has an internal top offset of ${stateOffset}px`);
             const checkbox = page.getByLabel('Crear una cuenta con TRAMA', { exact: true });
             for (const mode of ['light', 'dark']) {
                 await page.locator('[data-cb-theme-select]').selectOption(mode);

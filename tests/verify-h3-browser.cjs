@@ -154,7 +154,7 @@ async function closed(page, selector) { await page.waitForFunction(selector => !
 				await scrollTo(page, 350);
 				const opener = page.locator('[data-cb-menu-open]:not([data-cb-menu-search-open])').first();
 				await opener.click(); await dialogState(page, '[data-cb-menu]', 'open');
-				await page.waitForFunction(() => Math.abs(new DOMMatrix(getComputedStyle(document.querySelector('[data-cb-menu]')).transform).m42) < 1);
+				await page.waitForFunction(() => Math.abs(new DOMMatrix(getComputedStyle(document.querySelector('[data-cb-menu-panel]')).transform).m42) < 1);
 				assert.equal(await page.locator('[data-cb-menu-close]').evaluate(node => node === document.activeElement), true);
 				await screenshot(page, `menu-${width}.png`);
 				await page.evaluate(() => {
@@ -180,6 +180,30 @@ async function closed(page, selector) { await page.waitForFunction(selector => !
 				return { inverse, focusReturned: true, scrollRestored: true, nativeTabTrap: true, escape: true };
 			});
 		}
+		await check('Mobile menu keeps an opaque stationary masthead through opening and closing', async () => {
+			await page.setViewportSize({ width: 390, height: 844 });
+			for (const mode of ['light', 'dark']) {
+				await page.locator('[data-cb-theme-select]').first().selectOption(mode);
+				await scrollTo(page, 0);
+				await page.locator('.cb-menu-trigger').click();
+				await dialogState(page, '[data-cb-menu]', 'open');
+				await page.waitForFunction(() => Math.abs(new DOMMatrix(getComputedStyle(document.querySelector('[data-cb-menu-panel]')).transform).m42) < 1);
+				const samples = await page.evaluate(async () => {
+					document.querySelector('[data-cb-menu-close]').click();
+					const values = [];
+					while (document.querySelector('[data-cb-menu]').open) {
+						const masthead = document.querySelector('.cb-menu-masthead');
+						values.push({ top: masthead.getBoundingClientRect().top, height: masthead.getBoundingClientRect().height, background: getComputedStyle(masthead).backgroundColor, opacity: Number(getComputedStyle(document.querySelector('[data-cb-header]'), '::before').opacity), y: new DOMMatrix(getComputedStyle(document.querySelector('[data-cb-menu-panel]')).transform).m42 });
+						await new Promise(requestAnimationFrame);
+					}
+					return values;
+				});
+				assert.ok(samples.length > 2 && samples.some(sample => sample.y < -1));
+				assert.ok(samples.every(sample => sample.top === 0 && sample.height >= 80 && sample.opacity === 1 && sample.background !== 'rgba(0, 0, 0, 0)'), JSON.stringify(samples));
+				await page.waitForTimeout(280);
+				assert.equal(await page.locator('[data-cb-header]').evaluate(node => Number(getComputedStyle(node, '::before').opacity)), 0);
+			}
+		});
 		await check('Reopen during closing and search focus', async () => {
 			await page.setViewportSize({ width: 1440, height: 1000 });
 			await page.locator('[data-cb-menu-search-open]').click(); await dialogState(page, '[data-cb-menu]', 'open');

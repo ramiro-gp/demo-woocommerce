@@ -73,6 +73,8 @@
 			var savedStyles = null;
 			var fallbackInert = [];
 			var nativeDialog = typeof menu.showModal === 'function';
+			var motionPanel = menu.querySelector('[data-cb-menu-panel]') || menu;
+			var isNavigation = menu.hasAttribute('data-cb-menu');
 
 			function setExpanded(expanded) {
 				openers.forEach(function (button) { button.setAttribute('aria-expanded', String(expanded)); });
@@ -116,6 +118,7 @@
 				fallbackInert.forEach(function (item) { item.node.inert = item.value; });
 				fallbackInert = [];
 				unlockScroll();
+				if (isNavigation) root.classList.remove('cb-menu-active');
 				setExpanded(false);
 				if (opener && opener.isConnected) opener.focus({ preventScroll: true });
 				if (resolveClosing) resolveClosing(true);
@@ -130,6 +133,7 @@
 				resolveClosing = null;
 				if (state === 'closed') {
 					opener = button || document.activeElement;
+					if (isNavigation) root.classList.add('cb-menu-active');
 					lockScroll();
 					menu.dataset.state = 'opening';
 					if (nativeDialog) menu.showModal();
@@ -168,7 +172,7 @@
 			menu.addEventListener('cancel', function (event) { event.preventDefault(); closeDialog(); });
 			menu.addEventListener('close', function () { if (state !== 'closed') finishClose(); });
 			menu.addEventListener('transitionend', function (event) {
-				if (event.target === menu && event.propertyName === 'transform' && state === 'closing') finishClose();
+				if (event.target === motionPanel && event.propertyName === 'transform' && state === 'closing') finishClose();
 			});
 			menu.addEventListener('keydown', function (event) {
 				if (event.key === 'Escape') { event.preventDefault(); closeDialog(); return; }

@@ -6,7 +6,7 @@ Corrección de revisión manual sobre `a962061d7c8918c5c0cca2071288e4853eff3b02`
 
 | Instancia | Servicio/puerto | Propósito | Theme |
 | --- | --- | --- | --- |
-| `local` | `demo-woocommerce-local-wordpress-1`, `127.0.0.1:8080 → 80` | Instalación original y demo principal para revisar correcciones H3 | Commerce Base **1.0.1**, activado en esta corrección |
+| `local` | `demo-woocommerce-local-wordpress-1`, `127.0.0.1:8080 → 80` | Instalación original y demo principal para revisar correcciones H3 | Commerce Base **1.0.2**, activado en esta corrección |
 | `h2-public` | `demo-woocommerce-h2-public-wordpress-1`, `127.0.0.1:18081 → 80` | Instalación aislada de H2, pruebas de pagos y sus pedidos/evidencia | Commerce Base **1.0.0**, activado durante H3 original, conservado |
 
 La instancia `local` estaba detenida y tenía Twenty Twenty-Five activo. `h2-public` estaba ejecutándose y mostraba Hello world porque tenía la portada configurada para entradas y el contenido de instalación intacto. Commerce Base ya estaba activo allí: no era un fallo de activación. H3 se había revisado previamente en ese entorno técnico.
@@ -73,7 +73,7 @@ Respaldo completo previo de `local`: `.local/local/backups/h3-before-corrections
 ## Validación y límites
 
 - 22 comprobaciones específicas: header/footer, variaciones reales, carrito, labels de envío y facturación, checkbox, radius, spacing, reduced motion, no-JS y limpieza. Matriz de producto/checkout/footer a 320, 390, 768, 1024, 1366, 1920, 2560 y 3840px, claro/oscuro.
-- Regresión H3 original: 42 comprobaciones, incluyendo otros anchos, header progresivo, menú fullscreen, trap/retorno de foco, panel, anchors, storage y reflow equivalente 200%/400%. No se afirma probar el zoom de la UI del navegador.
+- Regresión H3 ampliada: 43 comprobaciones, incluyendo otros anchos, header progresivo, menú fullscreen, trap/retorno de foco, panel, anchors, storage y reflow equivalente 200%/400%. No se afirma probar el zoom de la UI del navegador.
 - Smoke Store API: simple y S al carrito, sesión invitada aislada, M agotado/exceso rechazados, tarifas/retiro nativos, preview repetido de pedido sin crearlo, HPOS y stock final sin cambios. Browser: selección nativa real, SKU S-NEGRO, máximo 3 unidades, reset y add-to-cart, carrito y Checkout Block hidratados. Los fixtures tienen el mismo precio y no tienen fotos por variación: no se afirma haber verificado cambios de foto/precio inexistentes; esos renderizadores siguen siendo los nativos.
 - Sin nuevos pageerror JS; sintaxis PHP/JS válida; sin warnings PHP nuevos ni críticos WooCommerce. El log de `local` conserva una advertencia de conexión del 11/10, anterior a la tarea del 15/10; no se eliminó evidencia histórica.
 - Hashes finales de ambas instancias conservan plugins/versiones, HPOS, gateways/credenciales, envíos, productos/stock, pedidos/refunds/reservas y páginas comerciales. No se enviaron pagos/refunds ni se repitió la matriz de Mercado Pago. No se creó un pedido cobrado; el smoke de pedido fue el preview oficial sin creación. Los carritos de QA se vaciaron.
@@ -95,5 +95,7 @@ node tests/verify-h3-browser.cjs
 **H6/H7 pagos:** revisar la experiencia final de Checkout Pro, que ofrece tarjetas y otros medios dentro de Mercado Pago; evaluar posteriormente transferencia bancaria directa u otro gateway independiente sólo si el comercio lo necesita. Sin instalar/configurar pasarelas, duplicar Checkout Pro ni trasladar credenciales ahora.
 
 ## Revisión manual del cierre
+
+Segunda revisión, Commerce Base 1.0.2: se eliminó el `margin-top: 12px` nativo del contenedor interno del select Provincia dentro de formularios de dirección WooCommerce. En desktop Ciudad y Provincia vuelven a compartir borde superior y altura de 50px; también se comprobó en mobile y ambos modos. La cabecera del diálogo de menú quedó separada del panel animado: la franja superior permanece fija/opaca y el contenido se desliza por debajo. Al finalizar el cierre, el header normal recupera su transparencia en 240ms. Se mantienen modalidad, foco, Escape, reapertura, scroll y reduced motion. El controlador escucha el `transitionend` del panel que efectivamente se mueve. QA final: 43/43 comprobaciones generales (incluye muestras de cada frame del cierre móvil en claro/oscuro) y 22/22 específicas; sin errores JS/PHP nuevos y baseline comercial intacto.
 
 En 8080: alternar claro/oscuro; revisar hover/focus del catálogo; abrir/cerrar menú; recorrer footer y firma/nueva pestaña; volver arriba; probar S/Negro, M agotado, reset y teclado; mirar relacionados a distintos anchos; agregar al carrito y revisar tilde, labels, separación y radius de checkout. La raíz no sustituye el showcase y todavía no tiene home de H4. La disponibilidad de medios de pago en la demo queda expresamente fuera de este cierre visual.

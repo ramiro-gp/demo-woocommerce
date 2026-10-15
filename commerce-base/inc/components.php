@@ -61,15 +61,15 @@ function commerce_base_header($attributes = []) {
         </div>
     </header>
     <dialog class="cb-menu" id="cb-menu" data-cb-menu aria-label="<?php esc_attr_e('Navegación principal', 'commerce-base'); ?>">
-        <div class="cb-menu-inner cb-container">
-            <div class="cb-menu-top"><span class="cb-brand"><?php echo esc_html(get_bloginfo('name')); ?></span><span class="cb-eyebrow"><?php esc_html_e('Explorar', 'commerce-base'); ?></span><button class="cb-icon-button" type="button" data-cb-menu-close aria-label="<?php esc_attr_e('Cerrar menú', 'commerce-base'); ?>"><?php echo commerce_base_icon('close'); ?></button></div>
+        <div class="cb-menu-masthead"><div class="cb-menu-top cb-container"><span class="cb-brand"><?php echo esc_html(get_bloginfo('name')); ?></span><span class="cb-eyebrow"><?php esc_html_e('Explorar', 'commerce-base'); ?></span><button class="cb-icon-button" type="button" data-cb-menu-close aria-label="<?php esc_attr_e('Cerrar menú', 'commerce-base'); ?>"><?php echo commerce_base_icon('close'); ?></button></div></div>
+        <div class="cb-menu-panel" data-cb-menu-panel><div class="cb-menu-inner cb-container">
             <nav class="cb-menu-nav" aria-label="<?php esc_attr_e('Principal', 'commerce-base'); ?>">
                 <?php foreach (commerce_base_navigation() as $index => $link) : ?>
                 <a class="cb-menu-link" href="<?php echo esc_url($link['url']); ?>"<?php echo !empty($link['target']) ? ' target="' . esc_attr($link['target']) . '" rel="noopener"' : ''; ?>><span class="cb-index"><?php echo esc_html(sprintf('%02d', $index + 1)); ?></span><span><?php echo esc_html($link['label']); ?></span><?php echo commerce_base_icon('arrow'); ?></a>
                 <?php endforeach; ?>
             </nav>
             <div class="cb-menu-bottom"><p><?php echo esc_html(get_bloginfo('description')); ?></p><form role="search" class="cb-menu-search" action="<?php echo esc_url(home_url('/')); ?>" method="get"><label class="screen-reader-text" for="cb-menu-search"><?php esc_html_e('Buscar productos', 'commerce-base'); ?></label><input class="cb-input" id="cb-menu-search" type="search" name="s" placeholder="<?php esc_attr_e('¿Qué estás buscando?', 'commerce-base'); ?>"><input type="hidden" name="post_type" value="product"><button class="cb-icon-button" aria-label="<?php esc_attr_e('Buscar', 'commerce-base'); ?>"><?php echo commerce_base_icon('search'); ?></button></form></div>
-        </div>
+        </div></div>
     </dialog>
     <noscript><nav class="cb-container cb-no-js-nav" aria-label="<?php esc_attr_e('Navegación sin JavaScript', 'commerce-base'); ?>"><?php foreach (commerce_base_navigation() as $link) { echo '<a href="' . esc_url($link['url']) . '">' . esc_html($link['label']) . '</a> '; } ?></nav></noscript>
     <?php return ob_get_clean();

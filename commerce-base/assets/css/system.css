@@ -428,8 +428,10 @@ body.admin-bar { --cb-admin-offset: 32px; }
   border-block-end: 1px solid var(--cb-border);
   background: var(--cb-background);
   opacity: 1;
+  transition: opacity var(--cb-duration-medium) var(--cb-ease);
 }
 .has-hero .cb-header::before { opacity: var(--cb-header-progress); }
+.cb-menu-active .cb-header::before { opacity: 1; transition: none; }
 .cb-header-inner {
   display: flex;
   min-block-size: var(--cb-header-size);
@@ -495,23 +497,32 @@ body.admin-bar { --cb-admin-offset: 32px; }
   padding: 0;
   border: 0;
   border-radius: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background: transparent;
+  color: var(--cb-text);
+}
+.cb-menu[open] { display: block; }
+.cb-menu::backdrop { background: transparent; }
+.cb-menu-masthead { position: relative; z-index: 1; background: var(--cb-background); padding-block-start: var(--cb-admin-offset); }
+.cb-menu-top { min-block-size: var(--cb-header-height); }
+.cb-menu-panel {
+  position: absolute;
+  inset: calc(var(--cb-header-height) + var(--cb-admin-offset)) 0 0;
   overflow-y: auto;
   overscroll-behavior: contain;
   background: var(--cb-background);
-  color: var(--cb-text);
   transform: translateY(-100%);
   transition: transform var(--cb-duration-menu) var(--cb-ease);
 }
-.cb-menu[open] { display: block; }
-.cb-menu[data-state="open"] { transform: translateY(0); }
-.cb-menu::backdrop { background: transparent; }
+.cb-menu[data-state="open"] .cb-menu-panel { transform: translateY(0); }
 .cb-menu-inner {
   display: flex;
   min-block-size: 100%;
   flex-direction: column;
-  padding-block: var(--cb-space-4) var(--cb-space-6);
+  padding-block: 0 var(--cb-space-6);
 }
-.cb-menu-top { display: flex; min-block-size: 48px; align-items: center; justify-content: space-between; gap: var(--cb-space-5); }
+.cb-menu-top { display: flex; align-items: center; justify-content: space-between; gap: var(--cb-space-5); }
 .cb-menu-top .cb-eyebrow { margin: 0; }
 .cb-menu-nav { padding-block: clamp(2.5rem, 7vh, 7rem); }
 .cb-menu-nav ul { list-style: none; padding: 0; margin: 0; }
@@ -777,6 +788,7 @@ body.admin-bar { --cb-admin-offset: 32px; }
 .wc-blocks-components-select .wc-blocks-components-select__label { color: var(--cb-text-muted); }
 .wc-blocks-components-select .wc-blocks-components-select__expand { fill: currentColor; }
 .wc-blocks-components-select option { background: var(--cb-background); color: var(--cb-text); }
+.wc-block-components-address-form :is(.wc-block-components-state-input, .wc-block-components-country-input) .wc-blocks-components-select { margin-block-start: 0; }
 .wc-block-components-address-form .wc-block-components-country-input { margin-block: 0; }
 .wp-block-woocommerce-checkout .wc-block-components-address-form { display: flex; flex-wrap: wrap; gap: var(--cb-space-4); }
 .wp-block-woocommerce-checkout .wc-block-components-address-form > * { flex: 0 0 100%; min-inline-size: 0; }
@@ -842,7 +854,6 @@ body.admin-bar { --cb-admin-offset: 32px; }
   .cb-hero-foot { margin-block-start: var(--cb-space-4); padding-block-start: var(--cb-space-3); }
   .cb-specimen-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--cb-space-8); }
   .cb-menu-nav { inline-size: 85%; }
-  .cb-menu-inner { padding-block-start: var(--cb-space-5); }
   .cb-showcase-intro { grid-template-columns: 1fr 2fr; align-items: baseline; gap: var(--cb-space-7); }
 }
 @media (min-width: 60rem) {
@@ -863,7 +874,11 @@ body.admin-bar { --cb-admin-offset: 32px; }
   .cb-hero-foot { padding-block-start: var(--cb-space-2); margin-block-start: var(--cb-space-3); }
 }
 @media (max-width: 48.875rem) { body.admin-bar { --cb-admin-offset: 46px; } }
-@media (max-width: 37.5rem) { body.admin-bar .cb-header { inset-block-start: 0; } }
+@media (max-width: 37.5rem) {
+  body.admin-bar .cb-header { inset-block-start: 0; }
+  body.admin-bar .cb-menu-masthead { padding-block-start: 0; }
+  body.admin-bar .cb-menu-panel { inset-block-start: var(--cb-header-height); }
+}
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; --cb-duration-short: 0.01ms; --cb-duration-medium: 0.01ms; --cb-duration-menu: 0.01ms; --cb-move: 0px; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
