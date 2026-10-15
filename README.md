@@ -6,7 +6,7 @@ La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`com
 
 ## H3 — revisar Commerce Base
 
-La demo principal es la instancia **`local` en http://localhost:8080**, con Commerce Base 1.0.2. Abrí la [tienda](http://localhost:8080/?post_type=product) o el [showcase del sistema visual](http://localhost:8080/?commerce-base-showcase=1) para revisar las correcciones post-H3. El showcase es una vista de desarrollo sin página publicada ni indexación. La home de H4 todavía no existe; la raíz ya no muestra Hello world.
+La demo principal es la instancia **`local` en http://localhost:8080**, con Commerce Base 1.0.3. Abrí la [tienda](http://localhost:8080/?post_type=product) o el [showcase del sistema visual](http://localhost:8080/?commerce-base-showcase=1) para revisar las correcciones post-H3. El showcase es una vista de desarrollo sin página publicada ni indexación. La home de H4 todavía no existe; la raíz ya no muestra Hello world.
 
 **`localhost:18081` es `h2-public`**, instalación técnica aislada para pagos/pruebas H2. Conserva sus productos, pedidos, credenciales, contenido inicial y Commerce Base 1.0.0 usado en la revisión original de H3. No es la URL de las correcciones actuales. La demo 8080 conserva sus métodos de pago previos, actualmente sin gateway habilitado; no se trasladaron credenciales de H2. Ver [informe post-H3 e instancias](docs/h3-corrections.md).
 

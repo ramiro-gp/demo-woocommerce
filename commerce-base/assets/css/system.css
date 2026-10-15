@@ -5,6 +5,7 @@
   --cb-surface: #e9e5db;
   --cb-surface-elevated: #e0dfd3;
   --cb-text: #202a24;
+  --cb-notice-text: #202a24;
   --cb-text-muted: #586157;
   --cb-border: #777e70;
   --cb-accent: #405b35;
@@ -820,6 +821,28 @@ body.admin-bar { --cb-admin-offset: 32px; }
 .woocommerce .woocommerce-error { border-color: var(--cb-danger); }
 .woocommerce .woocommerce-info { border-color: var(--cb-focus); }
 .woocommerce :where(.woocommerce-message, .woocommerce-info, .woocommerce-error)::before { position: static; margin-inline-end: var(--cb-space-3); }
+:root[data-theme="dark"] :is(
+  .wc-block-components-notice-banner,
+  .wc-block-components-notice-banner *,
+  .woocommerce .woocommerce-message,
+  .woocommerce .woocommerce-message *,
+  .woocommerce .woocommerce-info,
+  .woocommerce .woocommerce-info *,
+  .woocommerce .woocommerce-error,
+  .woocommerce .woocommerce-error *
+) { color: var(--cb-notice-text) !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) :is(
+    .wc-block-components-notice-banner,
+    .wc-block-components-notice-banner *,
+    .woocommerce .woocommerce-message,
+    .woocommerce .woocommerce-message *,
+    .woocommerce .woocommerce-info,
+    .woocommerce .woocommerce-info *,
+    .woocommerce .woocommerce-error,
+    .woocommerce .woocommerce-error *
+  ) { color: var(--cb-notice-text) !important; }
+}
 .woocommerce table.shop_table { border-color: var(--cb-border); border-radius: 0; }
 .woocommerce table.shop_table :where(th, td) { padding: var(--cb-space-4); border-color: var(--cb-border); }
 .woocommerce .quantity .qty { max-inline-size: 5rem; }
