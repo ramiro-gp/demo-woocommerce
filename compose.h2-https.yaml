@@ -1,0 +1,9 @@
+# Temporary HTTPS override for the isolated h2-public instance only.
+# The base stack remains bound to loopback; cloudflared publishes only WordPress.
+services:
+  wordpress:
+    environment:
+      LOCAL_SITE_URL: ${H2_PUBLIC_SITE_URL:?Use scripts/h2-https.ps1 start}
+  wpcli:
+    environment:
+      LOCAL_SITE_URL: ${H2_PUBLIC_SITE_URL:?Use scripts/h2-https.ps1 start}

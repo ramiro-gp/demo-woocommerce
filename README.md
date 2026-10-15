@@ -1,6 +1,6 @@
 # demo-woocommerce
 
-Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **Esta entrega corresponde únicamente a H1:** instala WordPress y prepara su entorno. El catálogo, el diseño propio, WooCommerce y Mercado Pago se incorporarán en hitos posteriores.
+Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **H1 está consolidado y H2 está cerrado funcionalmente:** se verificaron HPOS, Blocks, inventario, checkout invitado, pagos y devoluciones con el plugin oficial de Mercado Pago. Las pruebas usaron cuentas y saldo ficticios en HTTPS temporal; el túnel está apagado. La repetición exacta de una notificación quedó sin reproducir y se documenta como límite del caso condicional. No se inició H3.
 
 La identidad ficticia aprobada es **TRAMA**. El futuro theme se llamará **Commerce Base** (`commerce-base`) y el futuro plugin, cuando corresponda, **Commerce Core** (`commerce-core`). H1 todavía no los crea.
 
@@ -109,7 +109,7 @@ Las imágenes se fijan por versión y digest en `compose.yaml`. PHP y MariaDB so
 
 Si el WordPress conservado en el volumen no coincide con la versión fijada, `start` se detiene para exigir una migración deliberada; no lo sobrescribe silenciosamente.
 
-No se instalan SEOPress, FluentSMTP ni LiteSpeed Cache en H1. No hay theme comercial, plugin comercial, túnel, checkout, pagos ni deploy.
+H1 no instaló SEOPress, FluentSMTP ni LiteSpeed Cache, ni creó theme/plugin comercial, túnel, checkout, pagos o deploy. H2 agrega únicamente la matriz técnica descrita abajo.
 
 ## Documentación
 
@@ -118,4 +118,23 @@ No se instalan SEOPress, FluentSMTP ni LiteSpeed Cache en H1. No hay theme comer
 - [Comandos, instancias aisladas y recuperación](docs/operations.md).
 - [Cierre de H1 y pruebas ejecutadas](docs/h1-validation.md).
 
-H1 quedó verificado localmente el 10/10/2026: instalación nueva, persistencia, correo, respaldo/restauración y ambos resets en una instancia aislada. El registro enlazado detalla las comprobaciones y sus límites. H2 queda pendiente de una nueva indicación.
+H1 quedó verificado localmente el 10/10/2026: instalación nueva, persistencia, correo, respaldo/restauración y ambos resets en una instancia aislada. También quedó reconciliado en la ruta única `C:\Codigo\demo-woocommerce`, reutilizando volúmenes y generando credenciales locales nuevas, sin copiar runtime desde otra carpeta.
+
+## H2 — compatibilidad comprobada
+
+Desde esta misma carpeta, después de H1:
+
+```powershell
+.\scripts\h2.ps1 install
+.\scripts\h2.ps1 inspect
+.\scripts\h2.ps1 inventory
+powershell -NoProfile -File .\tests\verify-h2-local.ps1
+```
+
+Se fijaron WooCommerce 11.2.1 y Mercado Pago oficial 8.9.6. El setup crea únicamente productos técnicos, HPOS, Cart/Checkout Blocks y envíos nativos para Argentina. Las pruebas `inventory` usan pedidos aislados y APIs del core sin dinero ni pasarela; no acreditan pagos Mercado Pago. Los plugins viven en el volumen WordPress, no en Git.
+
+Ver [versiones, procedimiento, resultados y límites de H2](docs/h2-validation.md). No ejecutar el fixture sobre una tienda real: reaplica configuración técnica local. Los secretos y reportes permanecen en `.local/`, fuera de Git.
+
+La instancia aislada `h2-public` conserva tres pedidos de invitado: #16 aprobado y devuelto, #17 rechazado y cancelado, y #19 pendiente por Rapipago, aprobado después mediante cambio nativo a saldo ficticio y finalmente devuelto. El pendiente se actualizó aun habiendo cerrado Checkout Pro; la confirmación posterior al primer retorno descontó stock una sola vez. Ambas devoluciones se confirmaron en Mercado Pago, WooCommerce, stock y correo. Stock final: simple 5, variante S 3 y M 0; reservas 0. Cart/Checkout Blocks siguen activos.
+
+El entorno volvió a `http://localhost:18081`, con Mailpit privado en `http://localhost:18026`. Quick Tunnel cambia de hostname en cada sesión y requiere verificar los destinos del plugin antes de volver a pagar. Ver [operación y apagado de HTTPS temporal](docs/h2-temporary-https.md). La viabilidad local comprobada no reemplaza la validación del hosting y la configuración comercial previa a producción.
