@@ -197,6 +197,9 @@
       }
     }
   },
+  "customTemplates": [
+    { "name": "page-institutional", "title": "Página institucional", "postTypes": ["page"] }
+  ],
   "templateParts": [
     { "name": "header", "title": "Cabecera", "area": "header" },
     { "name": "footer", "title": "Pie", "area": "footer" }

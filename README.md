@@ -1,12 +1,25 @@
 # demo-woocommerce
 
-Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **H1 está consolidado, H2 está cerrado funcionalmente y H3 está implementado y validado para revisión visual.** H2 verificó HPOS, Blocks, inventario, checkout invitado, pagos y devoluciones con el plugin oficial de Mercado Pago. Las pruebas usaron cuentas y saldo ficticios en HTTPS temporal; el túnel está apagado. La repetición exacta de una notificación quedó sin reproducir y se documenta como límite del caso condicional. H3 agrega Commerce Base y su sistema visual. No se inició H4.
+Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **H1 está consolidado, H2 está cerrado funcionalmente y H3 y sus correcciones están aprobados. H4 está implementado y validado, listo para revisión visual.** H2 verificó HPOS, Blocks, inventario, checkout invitado, pagos y devoluciones con el plugin oficial de Mercado Pago. Las pruebas usaron cuentas y saldo ficticios en HTTPS temporal; el túnel está apagado. La repetición exacta de una notificación quedó sin reproducir y se documenta como límite del caso condicional. H3 agrega Commerce Base y su sistema visual; H4 construye la home y la estructura institucional. H5 no comenzó.
 
 La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
 
+## H4 — Home y estructura institucional para revisar
+
+La demo principal sigue en **[http://localhost:8080](http://localhost:8080/)**. H4 incorpora Inicio, [Conocenos](http://localhost:8080/?page_id=38), [Contacto](http://localhost:8080/?page_id=39), [Preguntas frecuentes](http://localhost:8080/?page_id=40), navegación real, búsqueda y 404. El contenido se guarda como bloques editables de WordPress; la home consulta productos reales de WooCommerce. Remeras, Buzos, Pantalones y Accesorios son categorías estructurales vacías, con el aviso “Colección en preparación”; el catálogo final corresponde a H5.
+
+Commerce Base **1.1.0** está disponible para revisión visual: hero **Vestir lo cotidiano.**, productos inmediatos, categorías, lookbook, marca y ayuda. Validación: 223 comprobaciones H4 y 64 adicionales del scope de búsqueda corregido, 22 de regresión H3, editor nativo y smoke WooCommerce/Mercado Pago. Ver [implementación, URLs, operación y evidencia](docs/h4-validation.md) y [assets/prompt](docs/h4-assets.md). Se conservan los enlaces permanentes existentes, checkout, configuración comercial y separación de `h2-public`. Contacto usa canales demo sin datos reales; envíos, pagos y cambios se describen de forma prudente. **H5 no comenzó.**
+
+```powershell
+.\scripts\h4.ps1 inspect
+.\scripts\h4.ps1 verify
+```
+
+`seed` es una herramienta de preparación local que exige backup y bloquea ediciones manuales; no hace falta ejecutarla para navegar la demo. El showcase H3 sigue disponible como referencia del sistema visual.
+
 ## H3 — revisar Commerce Base
 
-La demo principal es la instancia **`local` en http://localhost:8080**, con Commerce Base 1.0.3. Abrí la [tienda](http://localhost:8080/?post_type=product) o el [showcase del sistema visual](http://localhost:8080/?commerce-base-showcase=1) para revisar las correcciones post-H3. El showcase es una vista de desarrollo sin página publicada ni indexación. La home de H4 todavía no existe; la raíz ya no muestra Hello world.
+La demo principal es la instancia **`local` en http://localhost:8080**. Commerce Base 1.0.3 cerró las correcciones post-H3; H4 extiende esa base. Abrí la [tienda](http://localhost:8080/?post_type=product) o el [showcase del sistema visual](http://localhost:8080/?commerce-base-showcase=1) para revisar el sistema. El showcase es una vista de desarrollo sin página publicada ni indexación; la home real corresponde a H4.
 
 **`localhost:18081` es `h2-public`**, instalación técnica aislada para pagos/pruebas H2. Conserva sus productos, pedidos, credenciales, contenido inicial y Commerce Base 1.0.0 usado en la revisión original de H3. No es la URL de las correcciones actuales. La demo 8080 conserva sus métodos de pago previos, actualmente sin gateway habilitado; no se trasladaron credenciales de H2. Ver [informe post-H3 e instancias](docs/h3-corrections.md).
 
@@ -131,6 +144,7 @@ H1 no instaló SEOPress, FluentSMTP ni LiteSpeed Cache, ni creó theme/plugin co
 - [Arquitectura local y límites de esta entrega](docs/architecture.md).
 - [Comandos, instancias aisladas y recuperación](docs/operations.md).
 - [Cierre de H1 y pruebas ejecutadas](docs/h1-validation.md).
+- [H4: implementación institucional y validación pendiente](docs/h4-validation.md).
 
 H1 quedó verificado localmente el 10/10/2026: instalación nueva, persistencia, correo, respaldo/restauración y ambos resets en una instancia aislada. También quedó reconciliado en la ruta única `C:\Codigo\demo-woocommerce`, reutilizando volúmenes y generando credenciales locales nuevas, sin copiar runtime desde otra carpeta.
 

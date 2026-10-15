@@ -1,4 +1,12 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
-<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content"} -->
-<main class="wp-block-group cb-container cb-page-content" id="main-content"><!-- wp:heading {"level":1} --><h1 class="wp-block-heading">No encontramos esta página.</h1><!-- /wp:heading --><!-- wp:paragraph --><p>Podés buscar lo que necesitás desde aquí.</p><!-- /wp:paragraph --><!-- wp:search {"label":"Buscar","buttonText":"Buscar"} /--></main><!-- /wp:group -->
+<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content cb-not-found","layout":{"type":"default"}} -->
+<main class="wp-block-group cb-container cb-page-content cb-not-found" id="main-content">
+<!-- wp:paragraph {"className":"cb-error-number"} --><p class="cb-error-number">404</p><!-- /wp:paragraph -->
+<!-- wp:group {"className":"cb-not-found-copy","layout":{"type":"default"}} --><div class="wp-block-group cb-not-found-copy">
+<!-- wp:paragraph {"className":"cb-eyebrow"} --><p class="cb-eyebrow">Fuera de recorrido</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":1} --><h1 class="wp-block-heading">Esta página<br>no está acá.</h1><!-- /wp:heading -->
+<!-- wp:paragraph --><p>El enlace puede haber cambiado. Volvé al inicio o buscá lo que necesitás en el catálogo.</p><!-- /wp:paragraph -->
+<!-- wp:commerce-base/search-tools {"recovery":true} /-->
+</div><!-- /wp:group -->
+</main><!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

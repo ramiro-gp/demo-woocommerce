@@ -20,6 +20,30 @@ function commerce_base_theme_select($id = 'cb-color-mode') {
     return '<label class="screen-reader-text" for="' . esc_attr($id) . '">' . esc_html__('Apariencia', 'commerce-base') . '</label><select class="cb-theme-select" id="' . esc_attr($id) . '" data-cb-theme-select aria-label="' . esc_attr__('Apariencia', 'commerce-base') . '"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select>';
 }
 
+function commerce_base_external_link($url) {
+    $target = wp_parse_url($url);
+    $site = wp_parse_url(home_url('/'));
+    if (!$target || empty($target['host'])) { return false; }
+    $scheme = strtolower($target['scheme'] ?? $site['scheme']);
+    if (!in_array($scheme, ['http', 'https'], true)) { return false; }
+    return strtolower($target['host'] ?? '') !== strtolower($site['host'] ?? '') ||
+        ($target['port'] ?? ($scheme === 'https' ? 443 : 80)) !== ($site['port'] ?? ($site['scheme'] === 'https' ? 443 : 80));
+}
+
+function commerce_base_link_target($url) {
+    return commerce_base_external_link($url) ? ' target="_blank" rel="noopener noreferrer"' : '';
+}
+
+// Merchant-controlled social navigation only; payment/navigation redirects are untouched.
+add_filter('nav_menu_link_attributes', static function ($attributes, $item, $args) {
+    if (($args->theme_location ?? '') !== 'footer-social') { return $attributes; }
+    if (commerce_base_external_link($attributes['href'] ?? '')) {
+        $attributes['target'] = '_blank';
+        $attributes['rel'] = trim(($attributes['rel'] ?? '') . ' noopener noreferrer');
+    } else { unset($attributes['target']); }
+    return $attributes;
+}, 10, 3);
+
 function commerce_base_navigation() {
     $locations = get_nav_menu_locations();
     $items = !empty($locations['primary']) ? wp_get_nav_menu_items($locations['primary']) : [];
@@ -65,13 +89,13 @@ function commerce_base_header($attributes = []) {
         <div class="cb-menu-panel" data-cb-menu-panel><div class="cb-menu-inner cb-container">
             <nav class="cb-menu-nav" aria-label="<?php esc_attr_e('Principal', 'commerce-base'); ?>">
                 <?php foreach (commerce_base_navigation() as $index => $link) : ?>
-                <a class="cb-menu-link" href="<?php echo esc_url($link['url']); ?>"<?php echo !empty($link['target']) ? ' target="' . esc_attr($link['target']) . '" rel="noopener"' : ''; ?>><span class="cb-index"><?php echo esc_html(sprintf('%02d', $index + 1)); ?></span><span><?php echo esc_html($link['label']); ?></span><?php echo commerce_base_icon('arrow'); ?></a>
+                <a class="cb-menu-link" href="<?php echo esc_url($link['url']); ?>"<?php echo commerce_base_link_target($link['url']); ?>><span class="cb-index"><?php echo esc_html(sprintf('%02d', $index + 1)); ?></span><span><?php echo esc_html($link['label']); ?></span><?php echo commerce_base_icon('arrow'); ?></a>
                 <?php endforeach; ?>
             </nav>
             <div class="cb-menu-bottom"><p><?php echo esc_html(get_bloginfo('description')); ?></p><form role="search" class="cb-menu-search" action="<?php echo esc_url(home_url('/')); ?>" method="get"><label class="screen-reader-text" for="cb-menu-search"><?php esc_html_e('Buscar productos', 'commerce-base'); ?></label><input class="cb-input" id="cb-menu-search" type="search" name="s" placeholder="<?php esc_attr_e('¿Qué estás buscando?', 'commerce-base'); ?>"><input type="hidden" name="post_type" value="product"><button class="cb-icon-button" aria-label="<?php esc_attr_e('Buscar', 'commerce-base'); ?>"><?php echo commerce_base_icon('search'); ?></button></form></div>
         </div></div>
     </dialog>
-    <noscript><nav class="cb-container cb-no-js-nav" aria-label="<?php esc_attr_e('Navegación sin JavaScript', 'commerce-base'); ?>"><?php foreach (commerce_base_navigation() as $link) { echo '<a href="' . esc_url($link['url']) . '">' . esc_html($link['label']) . '</a> '; } ?></nav></noscript>
+    <noscript><nav class="cb-container cb-no-js-nav" aria-label="<?php esc_attr_e('Navegación sin JavaScript', 'commerce-base'); ?>"><?php foreach (commerce_base_navigation() as $link) { echo '<a href="' . esc_url($link['url']) . '"' . commerce_base_link_target($link['url']) . '>' . esc_html($link['label']) . '</a> '; } ?></nav></noscript>
     <?php return ob_get_clean();
 }
 
@@ -84,6 +108,8 @@ function commerce_base_footer($attributes = []) {
         }
         if ('publish' === get_post_status(wc_get_page_id('myaccount'))) { $help_links[] = ['url' => wc_get_page_permalink('myaccount'), 'label' => __('Mi cuenta y pedidos', 'commerce-base')]; }
     }
+    $about = get_page_by_path('conocenos');
+    if ($about && 'publish' === $about->post_status) { $shop_links[] = ['url' => get_permalink($about), 'label' => __('Conocenos', 'commerce-base')]; }
     // Publish links only when the merchant has created and published the pages.
     foreach (['contacto' => 'Contacto', 'preguntas-frecuentes' => 'Preguntas frecuentes', 'envios' => 'Envíos', 'cambios-y-devoluciones' => 'Cambios y devoluciones', 'terminos' => 'Términos', 'boton-de-arrepentimiento' => 'Botón de Arrepentimiento'] as $slug => $label) {
         $page = get_page_by_path($slug);
@@ -109,7 +135,9 @@ function commerce_base_footer($attributes = []) {
 
 function commerce_base_product_grid($attributes = []) {
     if (!function_exists('wc_get_products')) { return '<p>' . esc_html__('El catálogo estará disponible al activar WooCommerce.', 'commerce-base') . '</p>'; }
-    $products = wc_get_products(['status' => 'publish', 'limit' => min(24, max(1, absint($attributes['limit'] ?? 4))), 'orderby' => 'date', 'order' => 'DESC']);
+    $query = ['status' => 'publish', 'visibility' => 'catalog', 'limit' => min(24, max(1, absint($attributes['limit'] ?? 4))), 'orderby' => 'date', 'order' => 'DESC'];
+    if ('yes' === get_option('woocommerce_hide_out_of_stock_items')) { $query['stock_status'] = ['instock', 'onbackorder']; }
+    $products = wc_get_products($query);
     ob_start(); ?>
     <div class="cb-product-grid">
     <?php foreach ($products as $product) :

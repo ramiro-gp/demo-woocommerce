@@ -4,17 +4,22 @@ if (!defined('ABSPATH')) { exit; }
 
 require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/checkout-labels.php';
+require_once __DIR__ . '/inc/discovery.php';
 
 add_action('after_setup_theme', static function () {
     add_theme_support('woocommerce');
     add_theme_support('custom-logo', ['height' => 80, 'width' => 280, 'flex-width' => true, 'flex-height' => true]);
     add_theme_support('editor-styles');
     add_editor_style('assets/css/system.css');
+    add_editor_style('assets/css/pages.css');
     register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
 });
 
 add_filter('woocommerce_placeholder_img_src', static function ($source) {
-    return get_option('woocommerce_placeholder_image', 0) ? $source : get_theme_file_uri('assets/images/product-placeholder.svg');
+    $id = absint(get_option('woocommerce_placeholder_image', 0));
+    $file = $id ? basename((string) get_attached_file($id)) : '';
+    // Keep a merchant's custom image; replace only WooCommerce's built-in fallback.
+    return $id && !preg_match('/^woocommerce-placeholder\.(?:png|jpe?g|webp)$/i', $file) ? $source : get_theme_file_uri('assets/images/product-placeholder.svg');
 });
 
 // Give native WooCommerce block templates the same skip-link target and width
@@ -33,6 +38,7 @@ add_filter('render_block_core/group', static function ($html, $block) {
 add_action('wp_enqueue_scripts', static function () {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('commerce-base', get_theme_file_uri('assets/css/system.css'), [], $version);
+    wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
     if (function_exists('is_product') && is_product()) {
         $product = wc_get_product(get_queried_object_id());
@@ -51,13 +57,17 @@ add_action('wp_body_open', static function () { echo '<div id="cb-page-top" tabi
 
 add_action('init', static function () {
     register_block_pattern_category('commerce-base', ['label' => __('Commerce Base', 'commerce-base')]);
-    wp_register_script('commerce-base-editor', get_theme_file_uri('assets/js/editor.js'), ['wp-blocks', 'wp-element', 'wp-block-editor', 'wp-server-side-render'], wp_get_theme()->get('Version'), true);
-    foreach (['header', 'footer', 'product-grid'] as $component) {
+    wp_register_script('commerce-base-editor', get_theme_file_uri('assets/js/editor.js'), ['wp-blocks', 'wp-element', 'wp-block-editor', 'wp-components', 'wp-server-side-render'], wp_get_theme()->get('Version'), true);
+    foreach (['header', 'footer', 'product-grid', 'category-links', 'search-tools'] as $component) {
+        $attributes = [];
+        if ($component === 'product-grid') { $attributes = ['limit' => ['type' => 'number', 'default' => 4]]; }
+        if ($component === 'category-links') { $attributes = ['limit' => ['type' => 'number', 'default' => 4], 'termIds' => ['type' => 'array', 'default' => [], 'items' => ['type' => 'number']]]; }
+        if ($component === 'search-tools') { $attributes = ['recovery' => ['type' => 'boolean', 'default' => false]]; }
         register_block_type('commerce-base/' . $component, [
             'api_version' => 3,
             'editor_script' => 'commerce-base-editor',
-            'attributes' => $component === 'product-grid' ? ['limit' => ['type' => 'number', 'default' => 4]] : [],
-            'supports' => ['html' => false, 'inserter' => $component === 'product-grid'],
+            'attributes' => $attributes,
+            'supports' => ['html' => false, 'inserter' => !in_array($component, ['header', 'footer'], true)],
             'render_callback' => static function ($attributes) use ($component) {
                 return call_user_func('commerce_base_' . str_replace('-', '_', $component), $attributes);
             },
