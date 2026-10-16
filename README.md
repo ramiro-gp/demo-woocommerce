@@ -1,10 +1,21 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H5 están cerrados funcionalmente; H4 está consolidado en main. H5.1 incorpora Shoppable Lookbook y espera revisión visual antes de cualquier merge. H6 no comenzó.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H5.1 están aprobados y consolidados en main. H6.1 implementa carrito/checkout en `codex/h6-1-cart-checkout` y espera revisión manual antes del merge. H6.2 y H7 no comenzaron.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
 
 La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
 
-## H5.1 — Shoppable Lookbook para revisar
+## H6.1 — Carrito y checkout para revisar
+
+**[Carrito](http://localhost:8080/?page_id=8)** y **[checkout](http://localhost:8080/?page_id=9)** integrados con Commerce Base 1.4.0: controles nativos, resumen claro, cupón secundario, vacío diseñado y Cross-Sells reales en carrusel oficial con cards H5. Checkout conserva compra invitada, cuenta opcional, misma dirección nativa y enlace oficial para volver al carrito. Sin gateways ni logística nuevos.
+
+Ver [arquitectura, configuración protegida, QA, límites y URLs H6.1](docs/h6-1-cart-checkout.md). No ejecutar configuración para navegar; agregar un producto desde la tienda. `verify` revisa huellas sin importar datos.
+
+```powershell
+.\scripts\h6-1.ps1 inspect
+.\scripts\h6-1.ps1 verify
+```
+
+## H5.1 — Shoppable Lookbook aprobado
 
 La sección Lookbook de la **[Home](http://localhost:8080/)** ahora usa un bloque Gutenberg editable con dos productos reales: Remera Base y Pantalón Pausa. El plugin propio **Commerce Lookbook** conserva imagen, referencias y posiciones independientemente del theme; Commerce Base 1.3.0 aporta los tokens visuales. Sin plugins externos ni dependencias nuevas.
 
@@ -17,7 +28,7 @@ Hover/focus abre la píldora; click navega. En touch, primer tap abre y segundo 
 
 No ejecutar seeds para navegar. La migración local conserva el copy y la estructura H4; H6, pagos, logística, deploy y Commerce Core completo quedan fuera de este hito.
 
-## H5 — Catálogo y producto para revisar
+## H5 — Catálogo y producto aprobados
 
 **[Tienda TRAMA](http://localhost:8080/?post_type=product)**: 16 productos reales WooCommerce, 10 variables/6 simples, 72 variaciones, cuatro categorías pobladas, colección Ritmo diario, tres ofertas y cuatro destacados. Commerce Base 1.2.1 incorpora filtros oficiales con panel móvil, ordenamiento, cards compartidas, ficha, galería y guía de talles reemplazable. Home mantiene el diseño aprobado.
 

@@ -80,6 +80,7 @@ services:
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/zz-local.ini:ro
       - ./docker/tools:/opt/local-tools:ro
       - ./demo/catalog:/opt/demo-catalog:ro
+      - ./demo/cart-checkout:/opt/demo-cart-checkout:ro
       - ./.local/${LOCAL_INSTANCE}/backups:/backups
 
   mailpit:

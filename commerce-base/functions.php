@@ -28,6 +28,8 @@ add_action('after_setup_theme', static function () {
     add_editor_style('assets/css/pages.css');
     add_editor_style('assets/css/catalog.css');
     add_editor_style('assets/css/lookbook.css');
+    add_editor_style('assets/css/cart.css');
+    add_editor_style('assets/css/checkout.css');
     register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
 });
 
@@ -53,13 +55,25 @@ add_filter('render_block_core/group', static function ($html, $block) {
 
 add_action('wp_enqueue_scripts', static function () {
     $version = wp_get_theme()->get('Version');
+    $cart = function_exists('is_cart') && is_cart();
+    $checkout = function_exists('is_checkout') && is_checkout();
+    $account = function_exists('is_account_page') && is_account_page();
     wp_enqueue_style('commerce-base', get_theme_file_uri('assets/css/system.css'), [], $version);
-    wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
-    wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), ['commerce-base-pages'], $version);
-    wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version);
+    if (!$cart && !$checkout && !$account) {
+        wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
+    }
+    // Cart reuses H5's cards; account retains its approved H5 presentation.
+    if (!$checkout) {
+        wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), [$cart || $account ? 'commerce-base' : 'commerce-base-pages'], $version);
+    }
+    if (!$cart && !$checkout && !$account) { wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version); }
+    if ($cart) { wp_enqueue_style('commerce-base-cart', get_theme_file_uri('assets/css/cart.css'), ['commerce-base-catalog'], $version); }
+    if ($checkout) { wp_enqueue_style('commerce-base-checkout', get_theme_file_uri('assets/css/checkout.css'), ['commerce-base'], $version); }
+    // Mini-Cart can open throughout the storefront and uses the same native controls.
+    if (!$cart) { wp_enqueue_style('commerce-base-mini-cart', get_theme_file_uri('assets/css/mini-cart.css'), ['commerce-base'], $version); }
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
     if (function_exists('WC')) {
-        wp_enqueue_script('commerce-base-cart-presentation', get_theme_file_uri('assets/js/cart-presentation.js'), ['wp-element', 'wp-data', 'wc-blocks-data-store'], $version, true);
+        wp_enqueue_script('commerce-base-cart-presentation', get_theme_file_uri('assets/js/cart-presentation.js'), ['wp-element', 'wp-data', 'wp-i18n', 'wc-blocks-data-store'], $version, true);
     }
     if (function_exists('is_woocommerce') && (is_woocommerce() || is_search())) {
         wp_enqueue_script('commerce-base-catalog', get_theme_file_uri('assets/js/catalog.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
@@ -70,6 +84,13 @@ add_action('wp_enqueue_scripts', static function () {
             wp_enqueue_script('commerce-base-variations', get_theme_file_uri('assets/js/variations.js'), ['jquery', 'wc-add-to-cart-variation'], $version, true);
         }
     }
+});
+
+// Public Woo extension: allow a Product Collection after the two native cart
+// columns, preserving document/keyboard order and the editable filled state.
+add_action('enqueue_block_editor_assets', static function () {
+    if (!class_exists('WooCommerce')) { return; }
+    wp_enqueue_script('commerce-base-cart-editor', get_theme_file_uri('assets/js/cart-editor.js'), ['wc-blocks-checkout'], wp_get_theme()->get('Version'), true);
 });
 
 // Before styles: resolve the visitor's preference without a network request.

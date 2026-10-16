@@ -1,7 +1,11 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 <!-- wp:woocommerce/page-content-wrapper {"page":"checkout"} -->
-<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content","layout":{"type":"default"}} -->
-<main class="wp-block-group cb-container cb-page-content" id="main-content"><!-- wp:woocommerce/store-notices /--><!-- wp:post-content {"layout":{"type":"default"}} /--></main>
+<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content cb-checkout","layout":{"type":"default"}} -->
+<main class="wp-block-group cb-container cb-page-content cb-checkout" id="main-content">
+<!-- wp:group {"tagName":"header","className":"cb-checkout-intro","layout":{"type":"default"}} -->
+<header class="wp-block-group cb-checkout-intro"><!-- wp:post-title {"level":1} /--><!-- wp:paragraph --><p>Completá tus datos y revisá el pedido antes de continuar.</p><!-- /wp:paragraph --></header>
+<!-- /wp:group -->
+<!-- wp:woocommerce/store-notices /--><!-- wp:post-content {"layout":{"type":"default"}} /--></main>
 <!-- /wp:group -->
 <!-- /wp:woocommerce/page-content-wrapper -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

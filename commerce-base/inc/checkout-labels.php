@@ -42,3 +42,12 @@ add_filter('load_script_translations', static function ($translations, $file, $h
     }
     return wp_json_encode($catalog);
 }, 10, 4);
+
+// The native Mini-Cart empty pattern uses this PHP msgid, missing from the
+// installed es_AR pack. A future official translation takes precedence.
+add_filter('gettext_woocommerce', static function ($translation, $message) {
+    if ($message === 'Your shopping cart is empty' && $translation === $message && determine_locale() === 'es_AR') {
+        return __('Tu carrito está vacío', 'commerce-base');
+    }
+    return $translation;
+}, 10, 2);

@@ -14,6 +14,19 @@
     }
     createRoot(root).render(h(CartCount));
   }
+  const feedback = document.querySelector('[data-cb-cart-feedback-root]');
+  if (feedback) {
+    function CartFeedback() {
+      const pending = useSelect(get => {
+        const cart = get(cartStore);
+        return cart.getItemsPendingQuantityUpdate().length > 0 || cart.getItemsPendingDelete().length > 0;
+      }, []);
+      return h('span', { role: 'status', 'aria-live': 'polite', 'aria-atomic': true },
+        pending ? window.wp.i18n.__('Actualizando tu carrito…', 'commerce-base') : ''
+      );
+    }
+    createRoot(feedback).render(h(CartFeedback));
+  }
   function reflectPending() {
     const cart = select(cartStore);
     document.querySelectorAll('.cb-card-purchase button[data-product_id]').forEach(button => {
