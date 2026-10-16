@@ -31,6 +31,7 @@ add_action('after_setup_theme', static function () {
     add_editor_style('assets/css/lookbook.css');
     add_editor_style('assets/css/cart.css');
     add_editor_style('assets/css/checkout.css');
+    add_editor_style('assets/css/shipping.css');
     register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
 });
 
@@ -70,6 +71,9 @@ add_action('wp_enqueue_scripts', static function () {
     if (!$cart && !$checkout && !$account) { wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version); }
     if ($cart) { wp_enqueue_style('commerce-base-cart', get_theme_file_uri('assets/css/cart.css'), ['commerce-base-catalog'], $version); }
     if ($checkout) { wp_enqueue_style('commerce-base-checkout', get_theme_file_uri('assets/css/checkout.css'), ['commerce-base'], $version); }
+    if ($cart || $checkout) {
+        wp_enqueue_style('commerce-base-shipping', get_theme_file_uri('assets/css/shipping.css'), [$cart ? 'commerce-base-cart' : 'commerce-base-checkout'], $version);
+    }
     // Mini-Cart can open throughout the storefront and uses the same native controls.
     if (!$cart) { wp_enqueue_style('commerce-base-mini-cart', get_theme_file_uri('assets/css/mini-cart.css'), ['commerce-base'], $version); }
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);

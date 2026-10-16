@@ -1,6 +1,6 @@
 # H6.1 — Carrito y checkout TRAMA
 
-Entrega en `codex/h6-1-cart-checkout`, pendiente de revisión manual. H6.2 y H7 no comenzaron. Ruta única: `C:\Codigo\demo-woocommerce`. Commerce Base 1.4.0 sobre WooCommerce 11.2.1 y WordPress 7.1.3 existentes.
+H6.1 y sus correcciones posteriores fueron aprobados y consolidados en `main` mediante `0db3289c3a8705140a755becc02672eda16a8f8b` al iniciar [H6.2](h6-2-shipping-logistics.md). Este informe conserva el alcance y la evidencia de la entrega original en `codex/h6-1-cart-checkout`. H7 no comenzó. Ruta única: `C:\Codigo\demo-woocommerce`. Commerce Base 1.4.0 al inicio de H6.1 sobre WooCommerce 11.2.1 y WordPress 7.1.3 existentes.
 
 ## Consolidación aprobada
 
@@ -190,7 +190,7 @@ Revalidación dirigida: **36 comprobaciones** en Chromium, Firefox y WebKit; 390
 
 ## Pendientes fuera del alcance
 
-- **H6.2:** decisión comercial de zonas/métodos/costos, cobertura, preparación logística, pesos/dimensiones y evaluación/integración de transportistas cuando corresponda. Permanecen únicamente los métodos técnicos preexistentes H2; no se configuraron tarifas definitivas.
+- **H6.2:** la preparación demo de zonas/métodos/costos, pesos/dimensiones y evaluación de transportistas se documenta ahora en [H6.2](h6-2-shipping-logistics.md). Las tarifas definitivas y la integración de un carrier pertenecen a cada cliente.
 - **H7:** decisión y convivencia de Mercado Pago/BACS u otros métodos autorizados, estados de pago, comunicaciones, SMTP y emails finales. Mercado Pago H2 preservado; local8080 sigue sin gateway habilitado. No se invocaron pagos.
 - **H8 / Commerce Core:** diseño de copia/sincronización persistente de direcciones de Mi Cuenta si se confirma esa necesidad.
 - Sin deploy, legales, ARCA, Botón de Arrepentimiento ni Commerce Core nuevo.

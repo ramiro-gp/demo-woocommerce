@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "notice": "Configuración DEMO — reemplazar al adaptar la tienda a un comercio real.",
+  "currency": "ARS",
+  "weight_unit": "kg",
+  "dimension_unit": "cm",
+  "zone": { "name": "Argentina — DEMO", "country": "AR" },
+  "flat_rate": { "title": "Envío estándar", "cost": "4500", "tax_status": "none" },
+  "free_shipping": { "title": "Envío gratis", "requires": "min_amount", "min_amount": "100000", "ignore_discounts": "no" },
+  "hide_paid_when_free": "yes",
+  "shipping_countries": "all",
+  "pickup_settings": { "enabled": "yes", "title": "Retiro", "cost": "0", "tax_status": "none" },
+  "pickup_locations": [
+    {
+      "name": "TRAMA — punto DEMO",
+      "address": { "address_1": "Dirección DEMO — reemplazar", "city": "Ciudad DEMO", "state": "C", "postcode": "0000", "country": "AR" },
+      "details": "Punto ficticio para probar el retiro. Reemplazar al configurar la tienda.",
+      "enabled": true
+    }
+  ],
+  "checkout_shipping_method": { "shippingText": "Enviar a domicilio", "localPickupText": "Retiro", "showIcon": true, "showPrice": true },
+  "products": {
+    "TRM-REM-001": { "weight": "0.30", "length": "30", "width": "24", "height": "4" },
+    "TRM-REM-002": { "weight": "0.25", "length": "28", "width": "23", "height": "3" },
+    "TRM-REM-003": { "weight": "0.20", "length": "28", "width": "22", "height": "3" },
+    "TRM-REM-004": { "weight": "0.35", "length": "32", "width": "25", "height": "4" },
+    "TRM-BUZ-001": { "weight": "0.70", "length": "35", "width": "28", "height": "9" },
+    "TRM-BUZ-002": { "weight": "0.90", "length": "38", "width": "30", "height": "12" },
+    "TRM-BUZ-003": { "weight": "0.75", "length": "36", "width": "28", "height": "10" },
+    "TRM-PAN-001": { "weight": "0.65", "length": "36", "width": "28", "height": "6" },
+    "TRM-PAN-002": { "weight": "0.70", "length": "38", "width": "28", "height": "7" },
+    "TRM-PAN-003": { "weight": "0.60", "length": "34", "width": "27", "height": "7" },
+    "TRM-ACC-001": { "weight": "0.28", "length": "30", "width": "25", "height": "3" },
+    "TRM-ACC-002": { "weight": "0.18", "length": "25", "width": "22", "height": "14" },
+    "TRM-ACC-003": { "weight": "0.12", "length": "22", "width": "18", "height": "4" },
+    "TRM-ACC-004": { "weight": "0.08", "length": "20", "width": "12", "height": "3" },
+    "TRM-ACC-005": { "weight": "0.06", "length": "20", "width": "16", "height": "2" },
+    "TRM-ACC-006": { "weight": "0.35", "length": "26", "width": "20", "height": "9" }
+  }
+}

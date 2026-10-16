@@ -1,10 +1,21 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H5.1 están aprobados y consolidados en main. H6.1 implementa carrito/checkout en `codex/h6-1-cart-checkout` y espera revisión manual antes del merge. H6.2 y H7 no comenzaron.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H6.1 y sus correcciones están aprobados y consolidados en main (`0db3289`). H6.2 se desarrolla en `codex/h6-2-shipping-logistics` para revisión manual, sin merge a main. H7 no comenzó.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
 
 La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
 
-## H6.1 — Carrito y checkout para revisar
+## H6.2 — Envíos y preparación logística
+
+WooCommerce Core resuelve la zona Argentina, **Envío estándar $4.500**, **Envío gratis desde $100.000 después de descuentos** y **Retiro gratuito** mediante Local Pickup de Checkout Blocks. Commerce Base 1.5.0 integra su presentación. **Configuración DEMO — reemplazar al adaptar la tienda a un comercio real.** Los 16 productos tienen peso y dimensiones; las 72 variaciones heredan del padre. Ningún transportista instalado.
+
+Ver [configuración, reproducción, QA y URLs H6.2](docs/h6-2-shipping-logistics.md) e [investigación comparativa de Correo Argentino, Andreani y OCA](docs/h6-shipping-carriers.md). Para navegar, agregá un producto desde la [tienda](http://localhost:8080/?post_type=product) y abrí [carrito](http://localhost:8080/?page_id=8) o [checkout](http://localhost:8080/?page_id=9). No ejecutar seeds para navegar.
+
+```powershell
+.\scripts\h6-2.ps1 inspect
+.\scripts\h6-2.ps1 verify
+```
+
+## H6.1 — Carrito y checkout aprobados
 
 **[Carrito](http://localhost:8080/?page_id=8)** y **[checkout](http://localhost:8080/?page_id=9)** integrados con Commerce Base 1.4.0: controles nativos, resumen claro, cupón secundario, vacío diseñado y Cross-Sells reales en carrusel oficial con cards H5. Checkout conserva compra invitada, cuenta opcional, misma dirección nativa y enlace oficial para volver al carrito. Sin gateways ni logística nuevos.
 

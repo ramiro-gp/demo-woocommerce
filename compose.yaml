@@ -81,6 +81,7 @@ services:
       - ./docker/tools:/opt/local-tools:ro
       - ./demo/catalog:/opt/demo-catalog:ro
       - ./demo/cart-checkout:/opt/demo-cart-checkout:ro
+      - ./demo/shipping:/opt/demo-shipping:ro
       - ./.local/${LOCAL_INSTANCE}/backups:/backups
 
   mailpit:
