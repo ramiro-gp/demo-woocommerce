@@ -78,7 +78,11 @@ function commerce_base_header($attributes = []) {
                 <?php echo commerce_base_theme_select(); ?>
                 <button class="cb-icon-button cb-header-search" type="button" data-cb-menu-open data-cb-menu-search-open aria-controls="cb-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Buscar productos', 'commerce-base'); ?>"><?php echo commerce_base_icon('search'); ?></button>
                 <?php if (function_exists('wc_get_cart_url')) : ?>
-                <a class="cb-icon-button" href="<?php echo esc_url(wc_get_cart_url()); ?>" aria-label="<?php esc_attr_e('Abrir carrito', 'commerce-base'); ?>"><?php echo commerce_base_icon('bag'); ?></a>
+                <?php if (is_cart() || is_checkout()) : // Mini-Cart deliberately hides itself on these native pages. ?>
+                <a class="cb-icon-button cb-header-cart cb-cart-page-link" href="<?php echo esc_url(wc_get_cart_url()); ?>"><?php echo commerce_base_icon('bag'); ?><span class="screen-reader-text"><?php esc_html_e('Carrito', 'commerce-base'); ?></span><span data-cb-cart-count-root data-cb-count-label="<?php esc_attr_e('%d artículos', 'commerce-base'); ?>"><?php $count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0; if ($count > 0) { echo '<span class="wc-block-mini-cart__badge">' . esc_html($count) . '</span>'; } ?></span></a>
+                <?php else : ?>
+                <?php echo do_blocks('<!-- wp:woocommerce/mini-cart {"miniCartIcon":"bag","hasHiddenPrice":true,"productCountVisibility":"greater_than_zero","addToCartBehaviour":"none","className":"cb-header-cart"} /-->'); ?>
+                <?php endif; ?>
                 <?php endif; ?>
                 <button class="cb-icon-button cb-menu-trigger" type="button" data-cb-menu-open aria-controls="cb-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Abrir menú', 'commerce-base'); ?>"><?php echo commerce_base_icon('menu'); ?></button>
             </div>
@@ -135,13 +139,8 @@ function commerce_base_footer($attributes = []) {
 
 function commerce_base_product_grid($attributes = []) {
     if (!function_exists('wc_get_products')) { return '<p>' . esc_html__('El catálogo estará disponible al activar WooCommerce.', 'commerce-base') . '</p>'; }
-    $query = ['status' => 'publish', 'visibility' => 'catalog', 'limit' => min(24, max(1, absint($attributes['limit'] ?? 4))), 'orderby' => 'date', 'order' => 'DESC'];
-    if ('yes' === get_option('woocommerce_hide_out_of_stock_items')) { $query['stock_status'] = ['instock', 'onbackorder']; }
-    $products = wc_get_products($query);
-    ob_start(); ?>
-    <div class="cb-product-grid">
-    <?php foreach ($products as $product) { echo commerce_base_product_card($product, 3); } ?>
-    </div>
-    <?php if (!$products) { echo '<p>' . esc_html__('Todavía no hay productos publicados.', 'commerce-base') . '</p>'; }
-    return ob_get_clean();
+    // Keep the existing editable Home block/layout. Native Product Collection
+    // supplies product context, cart feedback and its accessible notices region.
+    $settings = ['queryId' => 91, 'query' => ['woocommerceAttributes' => [], 'woocommerceStockStatus' => ['instock', 'outofstock', 'onbackorder'], 'taxQuery' => (object) [], 'isProductCollectionBlock' => true, 'perPage' => min(24, max(1, absint($attributes['limit'] ?? 4))), 'pages' => 1, 'offset' => 0, 'postType' => 'product', 'order' => 'desc', 'orderBy' => 'date', 'author' => '', 'search' => '', 'exclude' => [], 'sticky' => '', 'inherit' => false], 'displayLayout' => ['type' => 'flex', 'columns' => 4, 'shrinkColumns' => true], 'className' => 'cb-home-collection'];
+    return do_blocks('<!-- wp:woocommerce/product-collection ' . wp_json_encode($settings) . ' --><div class="wp-block-woocommerce-product-collection cb-home-collection"><!-- wp:woocommerce/product-template {"className":"cb-product-grid"} --><!-- wp:commerce-base/product-card /--><!-- /wp:woocommerce/product-template --><!-- wp:woocommerce/product-collection-no-results --><!-- wp:paragraph --><p>Todavía no hay productos publicados.</p><!-- /wp:paragraph --><!-- /wp:woocommerce/product-collection-no-results --></div><!-- /wp:woocommerce/product-collection -->');
 }

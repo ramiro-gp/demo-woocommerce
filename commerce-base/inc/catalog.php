@@ -2,6 +2,45 @@
 /** Commerce presentation. Product values and operations belong to WooCommerce. */
 if (!defined('ABSPATH')) { exit; }
 
+/** Only colors represented by a visible, purchasable, in-stock variation. */
+function commerce_base_available_colors($product) {
+    if (!$product->is_type('variable')) { return []; }
+    $attribute = $product->get_attributes()['pa_color'] ?? null;
+    if (!$attribute || !$attribute->is_taxonomy() || !$attribute->get_variation()) { return []; }
+    $slugs = [];
+    foreach ($product->get_available_variations('objects') as $variation) {
+        if (!$variation->is_purchasable() || !$variation->is_in_stock()) { continue; }
+        $slug = $variation->get_variation_attributes()['attribute_pa_color'] ?? '';
+        // An empty variation attribute means any of the parent's real options.
+        foreach ($slug !== '' ? [$slug] : $product->get_variation_attributes()['pa_color'] as $available) { $slugs[$available] = true; }
+    }
+    $colors = [];
+    foreach (array_keys($slugs) as $slug) {
+        $term = get_term_by('slug', $slug, 'pa_color');
+        if ($term && !is_wp_error($term)) { $colors[$slug] = $term->name; }
+    }
+    return $colors;
+}
+
+function commerce_base_card_colors($product) {
+    $colors = commerce_base_available_colors($product);
+    if (count($colors) < 2) { return ''; }
+    $palette = apply_filters('commerce_base_color_swatches', ['natural' => '#ded5c2', 'crudo' => '#f2ead8', 'negro' => '#242625', 'gris' => '#8a8c88', 'verde' => '#626d4b', 'bordo' => '#713e48']);
+    $html = '<ul class="cb-card-colors"><li class="screen-reader-text">' . esc_html(sprintf(__('Disponible en %s', 'commerce-base'), implode(', ', array_values($colors)))) . '</li>';
+    foreach ($colors as $slug => $name) {
+        $html .= '<li class="cb-color-swatch" title="' . esc_attr($name) . '" aria-hidden="true" style="--cb-swatch:' . esc_attr($palette[$slug] ?? 'var(--cb-text-muted)') . '"></li>';
+    }
+    return $html . '</ul>';
+}
+
+/** Render the official block with its real product context, also on Home. */
+function commerce_base_card_button($product) {
+    if (!$product->is_in_stock() || !$product->is_purchasable()) {
+        return '<span class="cb-card-unavailable">' . esc_html__('No disponible', 'commerce-base') . '</span>';
+    }
+    return (new WP_Block(['blockName' => 'woocommerce/product-button', 'attrs' => ['className' => 'cb-card-purchase'], 'innerBlocks' => [], 'innerHTML' => '', 'innerContent' => []], ['postId' => $product->get_id()]))->render();
+}
+
 function commerce_base_product_card($product, $level = 2) {
     if (!$product) { return ''; }
     $level = in_array($level, [2, 3], true) ? $level : 2;
@@ -13,6 +52,8 @@ function commerce_base_product_card($product, $level = 2) {
         </figure>
         <div class="cb-card-caption"><h<?php echo $level; ?> class="cb-product-title"><a href="<?php echo esc_url($product->get_permalink()); ?>"><?php echo esc_html($product->get_name()); ?></a></h<?php echo $level; ?>><span class="cb-card-arrow" aria-hidden="true">↗</span></div>
         <div class="cb-product-price"><?php echo wp_kses_post($product->get_price_html()); ?></div>
+        <?php echo commerce_base_card_colors($product); ?>
+        <?php echo commerce_base_card_button($product); ?>
     </article>
     <?php return ob_get_clean();
 }
@@ -53,7 +94,7 @@ function commerce_base_product_information($product, $only_guide = false) {
     ob_start(); ?>
     <div class="cb-product-information">
     <?php if ($guide && $only_guide) : ?>
-        <details class="cb-size-guide" id="cb-size-guide"><summary><?php esc_html_e('Guía de talles', 'commerce-base'); ?> <span aria-hidden="true">↗</span></summary><div class="cb-size-guide-content"><h2><?php echo esc_html($guide['title']); ?></h2><p><?php echo esc_html($config['notice'] ?? ''); ?></p><div class="cb-table-scroll" role="region" aria-label="<?php esc_attr_e('Medidas por talle', 'commerce-base'); ?>" tabindex="0"><table><caption class="screen-reader-text"><?php echo esc_html($guide['title']); ?></caption><thead><tr><?php foreach ($guide['columns'] as $column) { echo '<th scope="col">' . esc_html($column) . '</th>'; } ?></tr></thead><tbody><?php foreach ($guide['rows'] as $row) { echo '<tr>'; foreach ($row as $i => $value) { echo $i === 0 ? '<th scope="row">' . esc_html($value) . '</th>' : '<td>' . esc_html($value) . '</td>'; } echo '</tr>'; } ?></tbody></table></div></div></details>
+        <details class="cb-size-guide" id="cb-size-guide"><summary><?php esc_html_e('Guía de talles', 'commerce-base'); ?></summary><div class="cb-size-guide-content"><h2><?php echo esc_html($guide['title']); ?></h2><p><?php echo esc_html($config['notice'] ?? ''); ?></p><div class="cb-table-scroll" role="region" aria-label="<?php esc_attr_e('Medidas por talle', 'commerce-base'); ?>" tabindex="0"><table><caption class="screen-reader-text"><?php echo esc_html($guide['title']); ?></caption><thead><tr><?php foreach ($guide['columns'] as $column) { echo '<th scope="col">' . esc_html($column) . '</th>'; } ?></tr></thead><tbody><?php foreach ($guide['rows'] as $row) { echo '<tr>'; foreach ($row as $i => $value) { echo $i === 0 ? '<th scope="row">' . esc_html($value) . '</th>' : '<td>' . esc_html($value) . '</td>'; } echo '</tr>'; } ?></tbody></table></div></div></details>
     <?php endif; ?>
     <?php if (!$only_guide) : ?>
     <p class="cb-product-reference"><?php esc_html_e('Referencia', 'commerce-base'); ?> <span><?php echo esc_html($product->get_sku()); ?></span></p>
@@ -74,7 +115,7 @@ add_action('init', static function () {
     foreach (['product-card', 'product-information'] as $name) {
         register_block_type('commerce-base/' . $name, ['api_version' => 3, 'uses_context' => ['postId'], 'supports' => ['html' => false, 'interactivity' => ['clientNavigation' => true]], 'editor_script' => 'commerce-base-editor', 'render_callback' => static function ($attrs, $content, $block) use ($name) {
             $product = wc_get_product($block->context['postId'] ?? get_the_ID());
-            return $name === 'product-card' ? commerce_base_product_card($product) : commerce_base_product_information($product);
+            return $name === 'product-card' ? commerce_base_product_card($product, is_front_page() ? 3 : 2) : commerce_base_product_information($product);
         }]);
     }
 }, 20);

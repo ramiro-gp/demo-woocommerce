@@ -49,7 +49,7 @@ function watch(page) {
             await page.setViewportSize({ width, height: width >= 1920 ? 1080 : 900 });
             for (const [name, url] of routes) {
                 await check(`${theme}/${width}/${name}`, async () => {
-                    const response = await page.goto(url); assert.equal(response.status(), 200);
+                    const response = await page.goto(url, { waitUntil: 'domcontentloaded' }); assert.equal(response.status(), 200);
                     await settle(page);
                     const metrics = await page.evaluate(() => {
                         const root = document.documentElement;
@@ -66,7 +66,7 @@ function watch(page) {
                     });
                     assert.ok(metrics.scroll <= metrics.viewport + 1, 'Horizontal overflow ' + JSON.stringify(metrics));
                     assert.equal(metrics.theme, theme); assert.equal(metrics.h1, 1); assert.ok(metrics.galleryFirst); assert.ok(metrics.imageFilters);
-                    if (name === 'shop') { assert.equal(metrics.cards, 16); if (width >= 1024) assert.ok(metrics.cardWidth >= 180 && metrics.cardWidth <= 460, 'Card width'); }
+                    if (name === 'shop') { assert.equal(metrics.cards, 15); if (width >= 1024) assert.ok(metrics.cardWidth >= 180 && metrics.cardWidth <= 460, 'Card width'); }
                     return metrics;
                 });
             }
@@ -89,7 +89,7 @@ function watch(page) {
         await page.getByRole('checkbox', { name: 'Negro', exact: true }).check();
         await page.waitForURL(/filter_color=negro/);
         await page.getByRole('button', { name: 'Limpiar filtros', exact: true }).click();
-        await page.waitForFunction(() => document.querySelectorAll('.cb-catalog-collection .cb-product-card').length === 16);
+        await page.waitForFunction(() => document.querySelectorAll('.cb-catalog-collection .cb-product-card').length === 15);
         assert.ok(!new URL(page.url()).searchParams.has('filter_color'));
         return { combined: true, cleared: true };
     });
@@ -99,11 +99,19 @@ function watch(page) {
         await page.waitForURL(/max_price=35000/); await page.waitForFunction(() => document.querySelectorAll('.cb-catalog-collection .cb-product-card').length === 8);
         return { maximum: 35000, results: 8 };
     });
-    await check('Native stock filter', async () => {
-        await page.goto(seed.shop); await page.getByRole('checkbox', { name: 'Agotado', exact: true }).check();
-        await page.waitForFunction(() => document.querySelectorAll('.cb-catalog-collection .cb-product-card').length === 1);
-        assert.equal(await page.locator('.cb-catalog-collection .cb-product-title').innerText(), 'Pantalón Línea');
-        return { url: page.url(), results: 1 };
+    await check('Native hide-out-of-stock default and real availability filter', async () => {
+        await page.goto(seed.shop);
+        assert.equal(await page.locator('.cb-catalog-collection .cb-product-card').count(), 15);
+        assert.equal(await page.getByRole('checkbox', { name: 'Agotado', exact: true }).count(), 0);
+        assert.ok(!(await page.getByRole('checkbox', { name: 'Hay stock', exact: true }).isChecked()));
+        await page.getByRole('checkbox', { name: 'Hay stock', exact: true }).check();
+        await page.waitForURL(/filter_stock_status=instock/);
+        await page.getByRole('checkbox', { name: 'Hay stock', exact: true }).uncheck();
+        await page.waitForURL(u => !u.searchParams.has('filter_stock_status'));
+        assert.equal(await page.locator('.cb-catalog-collection .cb-product-card').count(), 15);
+        await page.goto(product('pantalon-linea').url);
+        assert.match(await page.locator('main').innerText(), /Agotado/);
+        return { catalogAvailable: 15, directSoldOutAccessible: true, noFakeSelection: true };
     });
     for (const order of ['price', 'price-desc', 'date', 'menu_order']) await check('Native sorting ' + order, async () => {
         await page.goto(seed.shop); await page.locator('select.orderby').selectOption(order);
@@ -120,7 +128,7 @@ function watch(page) {
         assert.match(await page.locator('.cb-empty-results').innerText(), /No hay prendas/);
         await capture(page, 'empty-filters');
         await page.locator('.wc-link-clear-any-filters').click();
-        await page.waitForFunction(() => document.querySelectorAll('.cb-catalog-collection .cb-product-card').length === 16);
+        await page.waitForFunction(() => document.querySelectorAll('.cb-catalog-collection .cb-product-card').length === 15);
     });
     for (const theme of ['light', 'dark']) await check('Mobile native filters + keyboard ' + theme, async () => {
         await page.emulateMedia({ colorScheme: theme }); await page.setViewportSize({ width: 390, height: 844 }); await page.goto(seed.shop);
@@ -144,11 +152,12 @@ function watch(page) {
     await check('Official variations, stock, images, size guide and keyboard', async () => {
         await page.setViewportSize({ width: 1440, height: 1000 }); await page.emulateMedia({ colorScheme: 'light' }); await page.goto(product('remera-base').url);
         await page.locator('.cb-variation-options').first().waitFor();
-        unavailableId = await page.locator('form.variations_form').evaluate(n => JSON.parse(n.dataset.product_variations).find(v => !v.is_in_stock).variation_id);
+        // Native hide-out-of-stock also removes these variations from form JSON.
+        unavailableId = seed.exhausted_variation_id; assert.ok(unavailableId > 0);
         const sizes = page.locator('select[name="attribute_pa_talle"] + .cb-variation-options');
         assert.deepEqual(await sizes.locator('button > span').allTextContents(), ['S', 'M', 'L', 'XL']);
         await page.getByRole('radio', { name: 'Natural', exact: true }).click();
-        assert.ok(await sizes.getByRole('radio', { name: 'XL Agotado', exact: true }).isDisabled());
+        assert.ok(await sizes.getByRole('radio', { name: /XL (Agotado|No disponible)/ }).isDisabled());
         await sizes.getByRole('radio', { name: 'S', exact: true }).click();
         await page.waitForFunction(() => Number(document.querySelector('input.variation_id').value) > 0);
         await page.getByRole('radio', { name: 'Negro', exact: true }).click();

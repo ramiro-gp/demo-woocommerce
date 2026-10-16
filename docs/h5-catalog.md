@@ -1,6 +1,6 @@
 # H5 — Catálogo y producto TRAMA
 
-Estado: **implementado y validado; pendiente de revisión visual del usuario**. H6 no comenzó. Ruta única: `C:\Codigo\demo-woocommerce`. Rama: `codex/h5-catalog-product`.
+Estado: **aprobación visual general recibida; correcciones post-H5 pendientes de nueva revisión antes del merge**. Ver [causas, cambios, QA y pendientes futuros](h5-corrections.md). H6 no comenzó. Ruta única: `C:\Codigo\demo-woocommerce`. Rama: `codex/h5-catalog-product`.
 
 ## Consolidación H4
 
@@ -41,7 +41,7 @@ SKU: `TRM-{REM|BUZ|PAN|ACC}-{001…}`. Variaciones: `TRM-REM-001-NAT-S`; colores
 
 WooCommerce es la única fuente de datos en ejecución. Los JSON bajo `demo/catalog/` se usan exclusivamente por WP-CLI para preparar la demo; el theme no los lee. Las cards obtienen nombres, fotografías, precios, ofertas, enlaces y disponibilidad de objetos WC_Product.
 
-Commerce Base 1.2.0 conserva el sistema editorial H3/H4, Manrope/Newsreader, paleta, modos y tokens de motion. `inc/catalog.php` añade presentación; `catalog.css` y `catalog.js` completan layout, foco y feedback. La card única se reutiliza en Home, Product Collection, categorías, búsqueda y relacionados: foto 4:5, nombre, precio y badge cuando corresponde; sin cajas ni sombras.
+Commerce Base 1.2.1 conserva el sistema editorial H3/H4, Manrope/Newsreader, paleta, modos y tokens de motion. `inc/catalog.php` añade presentación; `catalog.css` y `catalog.js` completan layout, foco y feedback. La card única se reutiliza en Home, Product Collection, categorías, búsqueda y relacionados: foto 4:5, nombre, precio, badge, colores disponibles y Product Button nativo; sin cajas ni sombras.
 
 El catálogo no tiene hero. Cabecera corta, breadcrumb secundario, conteo y select nativo; filtros de 180–200 px a la izquierda desde 783 px. La grilla usa espacio disponible: una columna a 320, dos desde 360, y auto-fill con tamaños mínimos en desktop. En pantallas amplias puede llegar a seis columnas con fotos de tamaño legible. El catálogo admite hasta 140rem; la ficha y Home mantienen el ancho aprobado de H4.
 

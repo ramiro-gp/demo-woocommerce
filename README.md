@@ -1,14 +1,14 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H4 están aprobados; H4 está consolidado en main. H5 está implementado y validado, pendiente de revisión visual. H6 no comenzó.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y agrega el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H4 están aprobados; H4 está consolidado en main. H5 recibió aprobación general y sus correcciones post-H5 esperan nueva revisión visual antes del merge. H6 no comenzó.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y agrega el catálogo real de H5.
 
 La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
 
 ## H5 — Catálogo y producto para revisar
 
-**[Tienda TRAMA](http://localhost:8080/?post_type=product)**: 16 productos reales WooCommerce, 10 variables/6 simples, 72 variaciones, cuatro categorías pobladas, colección Ritmo diario, tres ofertas y cuatro destacados. Commerce Base 1.2.0 incorpora filtros oficiales con panel móvil, ordenamiento, cards compartidas, ficha, galería y guía de talles reemplazable. Home mantiene el diseño aprobado.
+**[Tienda TRAMA](http://localhost:8080/?post_type=product)**: 16 productos reales WooCommerce, 10 variables/6 simples, 72 variaciones, cuatro categorías pobladas, colección Ritmo diario, tres ofertas y cuatro destacados. Commerce Base 1.2.1 incorpora filtros oficiales con panel móvil, ordenamiento, cards compartidas, ficha, galería y guía de talles reemplazable. Home mantiene el diseño aprobado.
 
-Ver [informe, catálogo, fixtures, pruebas y URLs](docs/h5-catalog.md) y [procedencia de las 32 fotografías](docs/h5-assets.md). Los fixtures son idempotentes por SKU y bloquean ediciones manuales. Los productos técnicos H2 se conservan fuera del catálogo visible. La demo 8080 conserva su configuración comercial; Mercado Pago sigue disponible en la instancia H2 separada de 18081.
+Ver [informe, catálogo, fixtures, pruebas y URLs](docs/h5-catalog.md), [correcciones post-H5 y pendientes H6/H8](docs/h5-corrections.md) y [procedencia de las 32 fotografías](docs/h5-assets.md). Los fixtures son idempotentes por SKU y bloquean ediciones manuales. El ajuste nativo de inventario oculta agotados: 15 productos visibles, 16 conservados. Las cards incorporan colores reales y Product Button; el header usa Mini-Cart/store oficial. Mercado Pago sigue disponible en la instancia H2 separada de 18081.
 
 ```powershell
 .\scripts\h5.ps1 inspect

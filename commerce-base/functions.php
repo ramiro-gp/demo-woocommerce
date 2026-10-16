@@ -56,6 +56,9 @@ add_action('wp_enqueue_scripts', static function () {
     wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
     wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), ['commerce-base-pages'], $version);
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
+    if (function_exists('WC')) {
+        wp_enqueue_script('commerce-base-cart-presentation', get_theme_file_uri('assets/js/cart-presentation.js'), ['wp-element', 'wp-data', 'wc-blocks-data-store'], $version, true);
+    }
     if (function_exists('is_woocommerce') && (is_woocommerce() || is_search())) {
         wp_enqueue_script('commerce-base-catalog', get_theme_file_uri('assets/js/catalog.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
     }

@@ -1,5 +1,8 @@
 /* Commerce Base: shared tokens, editorial primitives and commerce surfaces. */
 :root {
+  --cb-layer-header: 40;
+  --cb-layer-overlay: 100;
+  --cb-layer-skip-link: 200;
   color-scheme: light;
   --cb-background: #f3f0e8;
   --cb-surface: #e9e5db;
@@ -155,7 +158,7 @@ hr, .cb-rule { border: 0; border-block-start: 1px solid var(--cb-border); margin
 }
 .cb-skip-link {
   position: fixed;
-  z-index: 200;
+  z-index: var(--cb-layer-skip-link);
   inset-block-start: var(--cb-space-4);
   inset-inline-start: var(--cb-gutter);
   padding: var(--cb-space-3) var(--cb-space-5);
@@ -322,7 +325,7 @@ hr, .cb-rule { border: 0; border-block-start: 1px solid var(--cb-border); margin
 .cb-field { display: grid; align-content: start; gap: var(--cb-space-2); min-inline-size: 0; }
 .cb-field > label, .cb-field > legend { font-size: 0.9375rem; font-weight: 600; }
 .cb-input, .cb-select, .cb-field textarea,
-:where(.woocommerce, .wc-block-components-form) :where(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="hidden"]), select, textarea) {
+:where(.woocommerce, .wc-block-components-form) :where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]):not([type="hidden"]), select, textarea) {
   inline-size: 100%;
   min-inline-size: 0;
   min-block-size: 48px;
@@ -415,7 +418,7 @@ fieldset.cb-field legend { margin-block-end: var(--cb-space-3); }
 body.admin-bar { --cb-admin-offset: 32px; }
 .cb-header {
   position: fixed;
-  z-index: 40;
+  z-index: var(--cb-layer-header);
   inset-block-start: var(--cb-admin-offset);
   inset-inline: 0;
   isolation: isolate;
@@ -488,7 +491,7 @@ body.admin-bar { --cb-admin-offset: 32px; }
 /* Native dialog provides modality; the panel returns along its opening path. */
 .cb-menu {
   position: fixed;
-  z-index: 100;
+  z-index: var(--cb-layer-overlay);
   inset: 0;
   inline-size: 100%;
   max-inline-size: none;

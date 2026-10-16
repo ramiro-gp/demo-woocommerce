@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
   [Parameter(Position = 0, Mandatory = $true)]
-  [ValidateSet('inspect', 'sync', 'backup', 'seed', 'verify')][string]$Action,
+  [ValidateSet('inspect', 'sync', 'backup', 'seed', 'verify', 'configure')][string]$Action,
   [ValidatePattern('^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$')][string]$BackupId = 'h5-before-catalog'
 )
 $ErrorActionPreference = 'Stop'
@@ -16,7 +16,7 @@ switch ($Action) {
     & "$PSScriptRoot/dev.ps1" wp -Instance local -WpArgs @('eval', 'wp_clean_themes_cache(true);', '--quiet')
   }
   default {
-    if ($Action -eq 'seed') {
+    if ($Action -in @('seed', 'configure')) {
       $manifestPath = Join-Path $repoRoot ".local/local/backups/$BackupId/manifest.json"
       if (-not (Test-Path -LiteralPath $manifestPath)) { throw 'Create a preventive backup before importing H5.' }
       $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
@@ -27,11 +27,16 @@ switch ($Action) {
         if ($entry.Count -ne 1 -or (Get-FileHash -LiteralPath $filePath -Algorithm SHA256).Hash.ToLowerInvariant() -cne $entry[0].sha256) { throw 'Backup integrity failed.' }
       }
     }
-    $wpArgs = @('eval-file', '/opt/local-tools/h5-catalog.php', $Action, $BackupId, '--quiet')
+    $catalogAction = if ($Action -eq 'configure') { 'verify' } else { $Action }
+    $wpArgs = @('eval-file', '/opt/local-tools/h5-catalog.php', $catalogAction, $BackupId, '--quiet')
     $raw = @(& "$PSScriptRoot/dev.ps1" wp -Instance local -WpArgs $wpArgs) -join "`n"
     $report = $raw | ConvertFrom-Json
     [IO.File]::WriteAllText((Join-Path $privateRoot "$Action.json"), $raw + "`n", (New-Object Text.UTF8Encoding($false)))
     if ($report.result -notin @('ready', 'passed')) { throw ('H5 preserved conflicting content: ' + ($report.conflicts -join ' ')) }
+    if ($Action -eq 'configure') {
+      & "$PSScriptRoot/dev.ps1" wp -Instance local -WpArgs @('option', 'update', 'woocommerce_hide_out_of_stock_items', 'yes', '--quiet')
+      & "$PSScriptRoot/dev.ps1" wp -Instance local -WpArgs @('eval-file', '/opt/local-tools/h5-corrections-verify.php', '--quiet')
+    }
     $raw
   }
 }
