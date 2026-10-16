@@ -1,6 +1,6 @@
 # H4 — Home y estructura institucional
 
-**Estado: implementado y validado; listo para revisión visual del usuario.** Trabajo del 15/10/2026, hora de Argentina, exclusivamente en `C:\Codigo\demo-woocommerce`, rama `codex/h4-institutional-home`. H0–H3 y las correcciones post-H3 son la base aprobada. Se confirmó remoto `https://github.com/ramiro-gp/demo-woocommerce.git`, árbol limpio y cierre H3 en `a212c310e67e6cef91e8044f8b501f59aa8d42c0`, también presente en GitHub, antes de editar. H5 no comenzó.
+**Estado: aprobado visualmente por el usuario y consolidado en main.** Trabajo del 15/10/2026, hora de Argentina, exclusivamente en `C:\Codigo\demo-woocommerce`, rama `codex/h4-institutional-home`. H0–H3 y las correcciones post-H3 son la base aprobada. Se confirmó remoto `https://github.com/ramiro-gp/demo-woocommerce.git`, árbol limpio y cierre H3 en `a212c310e67e6cef91e8044f8b501f59aa8d42c0`, también presente en GitHub, antes de editar H4. El estado actual de H5 se documenta en [su informe](h5-catalog.md).
 
 ## Instancia y accesos
 

@@ -1,0 +1,7 @@
+{
+  "notice": "Medidas orientativas de la demo, en centímetros. Compará con una prenda tuya extendida, sin estirar. El comercio debe reemplazarlas por las medidas de cada modelo.",
+  "guides": {
+    "tops": {"title": "Remeras y buzos", "columns": ["Talle", "Ancho de pecho", "Largo"], "rows": [["S", "52", "66"], ["M", "55", "69"], ["L", "58", "72"], ["XL", "61", "75"]]},
+    "bottoms": {"title": "Pantalones", "columns": ["Talle", "Contorno de cintura", "Largo"], "rows": [["S", "72–78", "100"], ["M", "79–85", "102"], ["L", "86–92", "104"], ["XL", "93–99", "106"]]}
+  }
+}

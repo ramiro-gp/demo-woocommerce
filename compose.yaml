@@ -79,6 +79,7 @@ services:
       - ./docker/local-mail.php:/var/www/html/wp-content/mu-plugins/000-local-mail.php:ro
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/zz-local.ini:ro
       - ./docker/tools:/opt/local-tools:ro
+      - ./demo/catalog:/opt/demo-catalog:ro
       - ./.local/${LOCAL_INSTANCE}/backups:/backups
 
   mailpit:

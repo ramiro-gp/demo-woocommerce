@@ -1,14 +1,27 @@
 # demo-woocommerce
 
-Base local reproducible para una futura demo comercial de WordPress y WooCommerce. **H1 está consolidado, H2 está cerrado funcionalmente y H3 y sus correcciones están aprobados. H4 está implementado y validado, listo para revisión visual.** H2 verificó HPOS, Blocks, inventario, checkout invitado, pagos y devoluciones con el plugin oficial de Mercado Pago. Las pruebas usaron cuentas y saldo ficticios en HTTPS temporal; el túnel está apagado. La repetición exacta de una notificación quedó sin reproducir y se documenta como límite del caso condicional. H3 agrega Commerce Base y su sistema visual; H4 construye la home y la estructura institucional. H5 no comenzó.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H4 están aprobados; H4 está consolidado en main. H5 está implementado y validado, pendiente de revisión visual. H6 no comenzó.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y agrega el catálogo real de H5.
 
 La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
 
-## H4 — Home y estructura institucional para revisar
+## H5 — Catálogo y producto para revisar
 
-La demo principal sigue en **[http://localhost:8080](http://localhost:8080/)**. H4 incorpora Inicio, [Conocenos](http://localhost:8080/?page_id=38), [Contacto](http://localhost:8080/?page_id=39), [Preguntas frecuentes](http://localhost:8080/?page_id=40), navegación real, búsqueda y 404. El contenido se guarda como bloques editables de WordPress; la home consulta productos reales de WooCommerce. Remeras, Buzos, Pantalones y Accesorios son categorías estructurales vacías, con el aviso “Colección en preparación”; el catálogo final corresponde a H5.
+**[Tienda TRAMA](http://localhost:8080/?post_type=product)**: 16 productos reales WooCommerce, 10 variables/6 simples, 72 variaciones, cuatro categorías pobladas, colección Ritmo diario, tres ofertas y cuatro destacados. Commerce Base 1.2.0 incorpora filtros oficiales con panel móvil, ordenamiento, cards compartidas, ficha, galería y guía de talles reemplazable. Home mantiene el diseño aprobado.
 
-Commerce Base **1.1.0** está disponible para revisión visual: hero **Vestir lo cotidiano.**, productos inmediatos, categorías, lookbook, marca y ayuda. Validación: 223 comprobaciones H4 y 64 adicionales del scope de búsqueda corregido, 22 de regresión H3, editor nativo y smoke WooCommerce/Mercado Pago. Ver [implementación, URLs, operación y evidencia](docs/h4-validation.md) y [assets/prompt](docs/h4-assets.md). Se conservan los enlaces permanentes existentes, checkout, configuración comercial y separación de `h2-public`. Contacto usa canales demo sin datos reales; envíos, pagos y cambios se describen de forma prudente. **H5 no comenzó.**
+Ver [informe, catálogo, fixtures, pruebas y URLs](docs/h5-catalog.md) y [procedencia de las 32 fotografías](docs/h5-assets.md). Los fixtures son idempotentes por SKU y bloquean ediciones manuales. Los productos técnicos H2 se conservan fuera del catálogo visible. La demo 8080 conserva su configuración comercial; Mercado Pago sigue disponible en la instancia H2 separada de 18081.
+
+```powershell
+.\scripts\h5.ps1 inspect
+.\scripts\h5.ps1 verify
+```
+
+La documentación incluye el procedimiento de backup/importación. No ejecutar seeds para simplemente navegar ni para sobrescribir cambios del comercio.
+
+## H4 — Home y estructura institucional aprobadas
+
+La demo principal sigue en **[http://localhost:8080](http://localhost:8080/)**. H4 incorporó Inicio, [Conocenos](http://localhost:8080/?page_id=38), [Contacto](http://localhost:8080/?page_id=39), [Preguntas frecuentes](http://localhost:8080/?page_id=40), navegación real, búsqueda y 404. El contenido se guarda como bloques editables de WordPress; la home consulta productos reales de WooCommerce. Las cuatro categorías estructurales de H4 ahora contienen el catálogo H5.
+
+H4 (Commerce Base **1.1.0**) fue aprobado visualmente: hero **Vestir lo cotidiano.**, productos inmediatos, categorías, lookbook, marca y ayuda. Su validación comprende 223 comprobaciones H4 y 64 adicionales de búsqueda, 22 de regresión H3, editor nativo y smoke WooCommerce/Mercado Pago. Ver [implementación y evidencia](docs/h4-validation.md) y [assets/prompt](docs/h4-assets.md). Se conservan permalinks, checkout y separación de `h2-public`; H5 documenta la preparación del índice nativo de atributos local.
 
 ```powershell
 .\scripts\h4.ps1 inspect

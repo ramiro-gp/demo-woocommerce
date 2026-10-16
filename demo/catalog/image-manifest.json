@@ -1,0 +1,290 @@
+[
+  {
+    "file": "remera-base-nat.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 119656,
+    "sha256": "48723274e61df4da922a561c850b3ab531ca472845d6d91c85ae2dcbe2a5fee6",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-101f1f43-15f5-4cb8-9a1b-d775c28551b2.png"
+  },
+  {
+    "file": "remera-base-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 135344,
+    "sha256": "45996caf10f4fc93e46ac3a1beeb4db5c77409baaea199ea73a01954cb4a9595",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-ce5024d4-934f-4332-959a-f2a09e189922.png"
+  },
+  {
+    "file": "remera-trazo-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 105408,
+    "sha256": "b0f6673e4944b0ff81fa69cbf0ff332d9e8a3807956f5c4d3ae6f056a29244ad",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-73d7bcb7-eaa1-478b-abe0-42f28e5f5a63.png"
+  },
+  {
+    "file": "remera-trazo-gri.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 187718,
+    "sha256": "150c6556f0a3bc488b83bf4e35239a22c18dd96311768d65a0adb2a7ab2372d0",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-166d282d-debf-4fb3-bd65-0a64a5a07fab.png"
+  },
+  {
+    "file": "remera-aire-ver.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 139150,
+    "sha256": "5751cd24fa71ad93998326545296bd8eead7219cd9abec862208f9feb944808f",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-aaefd90f-4019-481f-805c-fbecfc0b7945.png"
+  },
+  {
+    "file": "remera-aire-nat.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 88266,
+    "sha256": "757eb1549d539d8de7cf8bc1ab0cfd1fc3a57d1a14e92e06bda9c2278e324adb",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-2710805e-c154-4ec7-b112-a15027a6bbac.png"
+  },
+  {
+    "file": "remera-horizonte-gri.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 184142,
+    "sha256": "a8423415d76764a6fad337e9c8fcc4bad3b0cf6d657c0f2e03b4c6908f1ee793",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-0f0c19df-686e-4c15-80a9-479d7196693c.png"
+  },
+  {
+    "file": "remera-horizonte-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 89702,
+    "sha256": "28d17d906731487fc36594fd4c237b6115582bbeb75d783680ea3d4e99f3a7f9",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-384c8631-f649-43b7-8deb-75fcae9282d5.png"
+  },
+  {
+    "file": "buzo-pulso-gri.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 219140,
+    "sha256": "fbea4af22f05eaf2b6d585c1d8347fb64789f7c284624fa5238c876b3a8e585b",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-02909b62-733f-4891-9af1-4980e9c00d42.png"
+  },
+  {
+    "file": "buzo-pulso-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 105980,
+    "sha256": "b5e202be5e779e75a364e087edba60ba1aa907ddbd04319cfcaf4383441b0c07",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-19220fa6-b5f8-4dcd-80d8-2d124108603d.png"
+  },
+  {
+    "file": "buzo-refugio-ver.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 152512,
+    "sha256": "f99c5471389b0c7c1d74f86dad2f603d0df355b510b3b1a159f6f6bd56ff069a",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-9871d7aa-0a5c-4af6-a3d1-0cc28009299a.png"
+  },
+  {
+    "file": "buzo-refugio-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 103822,
+    "sha256": "c286026e5b6d878cf2130fd8119a8b10fd005af84cba37972e36a9622ae26bd7",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-4df24abc-33cf-48e6-873e-0907c14ec7da.png"
+  },
+  {
+    "file": "buzo-textura-bor.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 181574,
+    "sha256": "4aca9c5f78ad7f0d34c317a208ace58763b29a46cf29bb51063ed115f5d2a1b6",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-029480d1-8c42-4e35-bdc4-50072e660c3a.png"
+  },
+  {
+    "file": "buzo-textura-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 191336,
+    "sha256": "6ff2099d6b5c0622649dc5a1d3b918ea975136b34cc3ef062bdc0b50a2a0bd2c",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-055652cc-a1d5-44a7-aadf-615948c51b2d.png"
+  },
+  {
+    "file": "pantalon-cauce-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 111598,
+    "sha256": "8ee938f96ea8a8b8c1a94381e7cd3e1c83a8f2c19de961f9ed627423f1bdb1f9",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-75a91d6e-1ebd-4b9d-9495-c77fbaa27d83.png"
+  },
+  {
+    "file": "pantalon-cauce-ver.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 102162,
+    "sha256": "b91c36825bd536008262ec2c52e2346addf44a65c7dc30a8e8ecf1204feed4b3",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-71bc0dbb-47dc-4e42-8fd3-d0fe3858ac21.png"
+  },
+  {
+    "file": "pantalon-linea-nat.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 93040,
+    "sha256": "6400182dc55408abecbd324049fe6e2f64cb202572a2a2694b3682142e5c53ff",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-15cc6c89-1aaf-44dd-932d-fe2b63b51ec7.png"
+  },
+  {
+    "file": "pantalon-linea-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 198444,
+    "sha256": "46c825e2ae88c4fdd7772e66096537730d8da228ed4b556559cead86cebe4496",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-60be7be5-f020-4d48-ad17-d6eb5bcaa941.png"
+  },
+  {
+    "file": "pantalon-pausa-gri.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 172584,
+    "sha256": "2898aa753331dc38dfb21a54d1c627ec7a6ae2c6094f60dccf43d33701c18ef8",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-cc037c88-00e8-48ac-b3fc-650df32a11c0.png"
+  },
+  {
+    "file": "pantalon-pausa-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 121480,
+    "sha256": "8b687a6678b9e675db448ad8d258695bbe00f334b4bb07a8c853617228e36be6",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-7f298f02-78f1-44c7-ac75-f7e24fbd0e33.png"
+  },
+  {
+    "file": "bolsa-diario-nat.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 183756,
+    "sha256": "5a56afc5449ee0d25432a8fccd06f4fc0be446b43e7c29d7285940b81a99e9e0",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-46269cc9-0d8a-4120-bba0-6b8fc4ba8e80.png"
+  },
+  {
+    "file": "bolsa-diario-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 276256,
+    "sha256": "390cd02998a3887abf47485758eb343f5b435ab83ed87b14b191945568673b01",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-81e28a21-30d1-474f-96b4-502dae19ccff.png"
+  },
+  {
+    "file": "gorra-sombra-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 169490,
+    "sha256": "9da09a656bd54987fc8a92baf0cdab3fc0fcc80ebe164238b3084b3a48bbf5d5",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-556887f1-1a71-41b8-b440-99b0f299a5b6.png"
+  },
+  {
+    "file": "gorra-sombra-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 123804,
+    "sha256": "eef8b1f619385297a7e80f7d92a37f8b0426ea7e74178f6e0a85d85e45834ba1",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-165bc277-90d6-48eb-9632-e36bc8968782.png"
+  },
+  {
+    "file": "gorro-punto-ver.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 260064,
+    "sha256": "ae8462baeae5d5db90cf4bfe5bb6392e186eedc3b0e14c7c9d28a9e6a6d68410",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-3df8f5b3-40d8-48df-85e8-d1f0903235a7.png"
+  },
+  {
+    "file": "gorro-punto-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 196180,
+    "sha256": "e792bbe46de4356115022d5e62f4073446f0b7e5eaff8135dc9e507a647961b9",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-4ff9dd81-8bcd-4566-91a7-72a725d0eb23.png"
+  },
+  {
+    "file": "medias-canal-cru.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 230726,
+    "sha256": "af05538570a0f77663a8976718e52adcdaf39c12be315594154abeb6992528a3",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-659a9a3f-0211-447e-b1bd-a5abcdb29d63.png"
+  },
+  {
+    "file": "medias-canal-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 229778,
+    "sha256": "9107916919666b645e9f02f7f025b65dbd5d238eb230f502516e3c00c22223dc",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-c5deb172-bb1b-4152-995b-19c491aa9b3b.png"
+  },
+  {
+    "file": "panuelo-pliegue-bor.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 178328,
+    "sha256": "331fbcfba9ec26391ba545bc9fd690bffb7a88baec5b53ea4b144ec7f02312a0",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-191c59e9-ce47-417d-9e8e-c3aa8ca31da8.png"
+  },
+  {
+    "file": "panuelo-pliegue-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 148912,
+    "sha256": "90e143879252ab303faccbbd0d3f0ec0bd9cde20bfca1b579bd8819a896aa15d",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-d135ebed-63ea-42d3-b1c5-d5c0f2bf4634.png"
+  },
+  {
+    "file": "bolso-transito-neg.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 248056,
+    "sha256": "be1873815bb3a0a717de453199bdfbddc8749b08ad57736de3bb56e55b5717c4",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-f611a149-2f70-4891-aade-0b5c08678a16.png"
+  },
+  {
+    "file": "bolso-transito-detalle.webp",
+    "width": 1000,
+    "height": 1250,
+    "bytes": 167618,
+    "sha256": "606b746712348a9f73256aaa2f51eb58cafafd23fbc4d3837bc40bc76382f734",
+    "generator": "Built-in image_gen",
+    "source_png": "exec-fcf3701c-2f0c-4e16-95c9-27a0327930c6.png"
+  }
+]

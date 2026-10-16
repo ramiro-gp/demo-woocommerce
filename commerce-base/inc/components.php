@@ -140,16 +140,7 @@ function commerce_base_product_grid($attributes = []) {
     $products = wc_get_products($query);
     ob_start(); ?>
     <div class="cb-product-grid">
-    <?php foreach ($products as $product) :
-        $category_names = wc_get_product_terms($product->get_id(), 'product_cat', ['fields' => 'names']); ?>
-        <article class="cb-product-card">
-            <figure class="cb-product-image"><a href="<?php echo esc_url($product->get_permalink()); ?>" aria-label="<?php echo esc_attr($product->get_name()); ?>"><?php echo $product->get_image('woocommerce_thumbnail', ['loading' => 'lazy']); ?></a><?php if ($product->is_on_sale()) : ?><span class="cb-badge"><?php esc_html_e('Oferta', 'commerce-base'); ?></span><?php endif; ?></figure>
-            <div class="cb-product-meta"><span class="cb-product-category"><?php echo esc_html(implode(' / ', $category_names)); ?></span><span class="cb-product-status"><?php echo esc_html($product->is_in_stock() ? __('Disponible', 'commerce-base') : __('Sin stock', 'commerce-base')); ?></span></div>
-            <h3 class="cb-product-title"><a href="<?php echo esc_url($product->get_permalink()); ?>"><?php echo esc_html($product->get_name()); ?></a></h3>
-            <div class="cb-product-price"><?php echo wp_kses_post($product->get_price_html()); ?></div>
-            <a class="cb-link" href="<?php echo esc_url($product->get_permalink()); ?>"><?php esc_html_e('Ver producto', 'commerce-base'); ?> <span aria-hidden="true">↗</span></a>
-        </article>
-    <?php endforeach; ?>
+    <?php foreach ($products as $product) { echo commerce_base_product_card($product, 3); } ?>
     </div>
     <?php if (!$products) { echo '<p>' . esc_html__('Todavía no hay productos publicados.', 'commerce-base') . '</p>'; }
     return ob_get_clean();

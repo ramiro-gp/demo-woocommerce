@@ -1,0 +1,197 @@
+{
+  "generator": "Built-in image_gen",
+  "assets": [
+    {
+      "file": "remera-base-nat.webp",
+      "name": "Remera Base",
+      "color": "Natural",
+      "prompt": "Use case: product-mockup. Asset: first product photograph for fictional Argentine clothing demo TRAMA. Portrait 4:5, high end realistic studio flat-lay catalog photography of a single unbranded heavyweight Natural ivory cotton crewneck t-shirt, relaxed straight fit, dropped shoulder, short sleeves, subtle visible cotton grain and clean stitching. Garment fills 78 percent of frame, whole garment visible, centered meticulously on warm light gray plaster background, soft directional daylight from upper left with quiet shadows. No hanger, no model, no objects, no words, no letters, no tags with text, no logos, no watermark, no collage. Restrained editorial photographic quality matching warm stone, charcoal and olive palette. This is Remera Base in Natural."
+    },
+    {
+      "file": "remera-base-neg.webp",
+      "name": "Remera Base",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Base in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavyweight cotton short sleeve crewneck t-shirt, dropped shoulders, relaxed straight fit; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "remera-trazo-neg.webp",
+      "name": "Remera Trazo",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Trazo in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded regular fit cotton crewneck short sleeve t-shirt with a single small square chest patch pocket; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "remera-trazo-gri.webp",
+      "name": "Remera Trazo",
+      "color": "Gris",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Trazo in Gris. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded regular fit cotton crewneck short sleeve t-shirt with a single small square chest patch pocket; ALL fabric must be heather medium gray, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "remera-aire-ver.webp",
+      "name": "Remera Aire",
+      "color": "Verde",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Aire in Verde. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded lightweight cotton relaxed boxy crewneck short sleeve t-shirt, muted olive green; ALL fabric must be muted olive green, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "remera-aire-nat.webp",
+      "name": "Remera Aire",
+      "color": "Natural",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Aire in Natural. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded lightweight cotton relaxed boxy crewneck short sleeve t-shirt, muted olive green; ALL fabric must be natural warm ivory, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "remera-horizonte-gri.webp",
+      "name": "Remera Horizonte",
+      "color": "Gris",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Horizonte in Gris. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded cotton long sleeve crewneck t-shirt, straight relaxed shape, simple cuffs; ALL fabric must be heather medium gray, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "remera-horizonte-neg.webp",
+      "name": "Remera Horizonte",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Remera Horizonte in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded cotton long sleeve crewneck t-shirt, straight relaxed shape, simple cuffs; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "buzo-pulso-gri.webp",
+      "name": "Buzo Pulso",
+      "color": "Gris",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Buzo Pulso in Gris. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavy cotton fleece crewneck sweatshirt, heather gray, dropped shoulders, ribbed cuffs collar and hem; ALL fabric must be heather medium gray, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "buzo-pulso-neg.webp",
+      "name": "Buzo Pulso",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Buzo Pulso in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavy cotton fleece crewneck sweatshirt, heather gray, dropped shoulders, ribbed cuffs collar and hem; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "buzo-refugio-ver.webp",
+      "name": "Buzo Refugio",
+      "color": "Verde",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Buzo Refugio in Verde. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavy cotton pullover hoodie, double layer hood without drawstrings, kangaroo pocket, ribbed cuffs and hem; ALL fabric must be muted olive green, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "buzo-refugio-neg.webp",
+      "name": "Buzo Refugio",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Buzo Refugio in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavy cotton pullover hoodie, double layer hood without drawstrings, kangaroo pocket, ribbed cuffs and hem; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "buzo-textura-bor.webp",
+      "name": "Buzo Textura",
+      "color": "Bordó",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Buzo Textura in Bordó. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded deep burgundy textured cotton half zip sweatshirt, short brushed metal zipper, stand collar, relaxed fit; ALL fabric must be deep burgundy, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "buzo-textura-detalle.webp",
+      "name": "Buzo Textura",
+      "color": "Bordó",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Buzo Textura for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the deep burgundy textured cotton half zip sweatshirt, short brushed metal zipper, stand collar, relaxed fit, all fabric deep burgundy. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "pantalon-cauce-neg.webp",
+      "name": "Pantalón Cauce",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Pantalón Cauce in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded straight leg cotton twill trousers, mid rise, button waist, side pockets, no cargo pockets; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "pantalon-cauce-ver.webp",
+      "name": "Pantalón Cauce",
+      "color": "Verde",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Pantalón Cauce in Verde. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded straight leg cotton twill trousers, mid rise, button waist, side pockets, no cargo pockets; ALL fabric must be muted olive green, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "pantalon-linea-nat.webp",
+      "name": "Pantalón Línea",
+      "color": "Natural",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Pantalón Línea in Natural. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded natural ivory cotton twill wide leg pleated trousers, one front pleat per leg, button waist; ALL fabric must be natural warm ivory, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "pantalon-linea-detalle.webp",
+      "name": "Pantalón Línea",
+      "color": "Natural",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Pantalón Línea for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the natural ivory cotton twill wide leg pleated trousers, one front pleat per leg, button waist, all fabric natural warm ivory. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "pantalon-pausa-gri.webp",
+      "name": "Pantalón Pausa",
+      "color": "Gris",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Pantalón Pausa in Gris. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavy cotton straight leg sweatpants, heather gray, elastic waist with discreet internal drawstring, side pockets, no ankle cuffs; ALL fabric must be heather medium gray, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "pantalon-pausa-neg.webp",
+      "name": "Pantalón Pausa",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Pantalón Pausa in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded heavy cotton straight leg sweatpants, heather gray, elastic waist with discreet internal drawstring, side pockets, no ankle cuffs; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "bolsa-diario-nat.webp",
+      "name": "Bolsa Diario",
+      "color": "Natural",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Bolsa Diario in Natural. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded natural ivory heavy cotton canvas tote bag with long handles, flat gusseted base, no print; ALL fabric must be natural warm ivory, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "bolsa-diario-detalle.webp",
+      "name": "Bolsa Diario",
+      "color": "Natural",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Bolsa Diario for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the natural ivory heavy cotton canvas tote bag with long handles, flat gusseted base, no print, all fabric natural warm ivory. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "gorra-sombra-neg.webp",
+      "name": "Gorra Sombra",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Gorra Sombra in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded black six panel cotton baseball cap with curved visor and adjustable metal buckle, no logo; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "gorra-sombra-detalle.webp",
+      "name": "Gorra Sombra",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Gorra Sombra for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the black six panel cotton baseball cap with curved visor and adjustable metal buckle, no logo, all fabric deep matte black. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "gorro-punto-ver.webp",
+      "name": "Gorro Punto",
+      "color": "Verde",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Gorro Punto in Verde. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded muted olive green rib knit beanie hat with wide folded cuff, fine knit, no logo; ALL fabric must be muted olive green, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "gorro-punto-detalle.webp",
+      "name": "Gorro Punto",
+      "color": "Verde",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Gorro Punto for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the muted olive green rib knit beanie hat with wide folded cuff, fine knit, no logo, all fabric muted olive green. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "medias-canal-cru.webp",
+      "name": "Medias Canal",
+      "color": "Crudo",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Medias Canal in Crudo. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded one matching pair of ecru ivory mid calf ribbed cotton socks, reinforced heel toe, neatly aligned pair; ALL fabric must be ecru, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "medias-canal-detalle.webp",
+      "name": "Medias Canal",
+      "color": "Crudo",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Medias Canal for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the one matching pair of ecru ivory mid calf ribbed cotton socks, reinforced heel toe, neatly aligned pair, all fabric ecru. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "panuelo-pliegue-bor.webp",
+      "name": "Pañuelo Pliegue",
+      "color": "Bordó",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Pañuelo Pliegue in Bordó. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded deep burgundy plain lightweight cotton square scarf, loosely folded into a triangle, fine hem visible; ALL fabric must be deep burgundy, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "panuelo-pliegue-detalle.webp",
+      "name": "Pañuelo Pliegue",
+      "color": "Bordó",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Pañuelo Pliegue for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the deep burgundy plain lightweight cotton square scarf, loosely folded into a triangle, fine hem visible, all fabric deep burgundy. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    },
+    {
+      "file": "bolso-transito-neg.webp",
+      "name": "Bolso Tránsito",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: fictional TRAMA clothing catalog, Bolso Tránsito in Negro. Portrait 4:5 realistic premium studio flat-lay product photograph. Single unbranded black compact cotton canvas crossbody bag with a top zipper, flat external pocket and adjustable woven shoulder strap neatly arranged; ALL fabric must be deep matte black, overriding any other color in description. Whole product completely visible, centered, fills roughly 78 percent of frame, photographed top down on warm light gray plaster. Soft directional daylight from upper left, quiet natural shadows, tactile fine fabric grain. Match a restrained Argentine editorial clothing brand with ivory, charcoal, olive and warm stone palette. No model, no hanger, no extra props, no letters, no logos, no watermark, no collage. Product construction must be plausible and clearly visible."
+    },
+    {
+      "file": "bolso-transito-detalle.webp",
+      "name": "Bolso Tránsito",
+      "color": "Negro",
+      "prompt": "Use case: product-mockup. Asset: second photograph of Bolso Tránsito for fictional TRAMA catalog. Portrait 4:5 realistic premium studio product photography. Close-up of the black compact cotton canvas crossbody bag with a top zipper, flat external pocket and adjustable woven shoulder strap neatly arranged, all fabric deep matte black. Show an informative off-center detail of material, seam and construction, with enough context to recognize the product. On warm light gray plaster, soft directional daylight from upper left. Fine tactile texture, subdued shadows, exact plausible construction. No model, no extra props, no words, no letters, no logos, no watermark, no collage."
+    }
+  ]
+}

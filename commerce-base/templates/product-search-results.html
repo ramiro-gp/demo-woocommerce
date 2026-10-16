@@ -1,26 +1,28 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
-<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content cb-search-results","layout":{"type":"default"}} -->
-<main class="wp-block-group cb-container cb-page-content cb-search-results" id="main-content">
-<!-- wp:paragraph {"className":"cb-eyebrow"} --><p class="cb-eyebrow">Buscar en el catálogo</p><!-- /wp:paragraph -->
-<!-- wp:query-title {"type":"search","showPrefix":true} /-->
-<!-- wp:commerce-base/search-tools /-->
+<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content cb-catalog cb-search-results","layout":{"type":"default"}} -->
+<main class="wp-block-group cb-container cb-page-content cb-catalog cb-search-results" id="main-content">
+<!-- wp:woocommerce/breadcrumbs /-->
+<!-- wp:commerce-base/catalog-heading /--><!-- wp:commerce-base/search-tools /-->
 <!-- wp:woocommerce/store-notices /-->
-<!-- wp:woocommerce/product-results-count /-->
-<!-- wp:woocommerce/product-collection {"queryId":0,"query":{"woocommerceAttributes":[],"woocommerceStockStatus":["instock","outofstock","onbackorder"],"taxQuery":{},"isProductCollectionBlock":true,"perPage":12,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":true},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"queryContextIncludes":["collection"]} -->
-<div class="wp-block-woocommerce-product-collection">
-<!-- wp:woocommerce/product-template -->
-<!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true} --><!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true} /--><!-- /wp:woocommerce/product-image -->
-<!-- wp:post-title {"level":2,"isLink":true,"__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
-<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true} /-->
-<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true} /-->
-<!-- /wp:woocommerce/product-template -->
+<!-- wp:group {"className":"cb-shop-layout","layout":{"type":"default"}} -->
+<div class="wp-block-group cb-shop-layout">
+<!-- wp:group {"tagName":"aside","className":"cb-shop-sidebar","layout":{"type":"default"}} --><aside class="wp-block-group cb-shop-sidebar"><!-- wp:pattern {"slug":"commerce-base/catalog-filters"} /--></aside><!-- /wp:group -->
+<!-- wp:group {"className":"cb-shop-results","layout":{"type":"default"}} --><div class="wp-block-group cb-shop-results">
+<!-- wp:group {"className":"cb-catalog-toolbar","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} --><div class="wp-block-group cb-catalog-toolbar"><!-- wp:woocommerce/product-results-count /--><!-- wp:woocommerce/catalog-sorting /--></div><!-- /wp:group -->
+<!-- wp:woocommerce/product-collection {"queryId":0,"query":{"woocommerceAttributes":[],"woocommerceStockStatus":["instock","outofstock","onbackorder"],"taxQuery":{},"isProductCollectionBlock":true,"perPage":16,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"menu_order","author":"","search":"","exclude":[],"sticky":"","inherit":true},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"queryContextIncludes":["collection"],"className":"cb-catalog-collection"} -->
+<div class="wp-block-woocommerce-product-collection cb-catalog-collection">
+<!-- wp:woocommerce/product-template --><!-- wp:commerce-base/product-card /--><!-- /wp:woocommerce/product-template -->
 <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"left"}} --><!-- wp:query-pagination-previous /--><!-- wp:query-pagination-numbers /--><!-- wp:query-pagination-next /--><!-- /wp:query-pagination -->
 <!-- wp:woocommerce/product-collection-no-results -->
 <!-- wp:group {"className":"cb-empty-results","layout":{"type":"default"}} --><div class="wp-block-group cb-empty-results">
-<!-- wp:heading --><h2 class="wp-block-heading">No encontramos ese producto.</h2><!-- /wp:heading -->
-<!-- wp:paragraph --><p>Probá con el tipo de prenda o revisá cómo lo escribiste. El catálogo completo sigue acá para explorar.</p><!-- /wp:paragraph -->
+<!-- wp:heading --><h2 class="wp-block-heading">No hay prendas con esta selección.</h2><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Probá con otro talle, color o rango de precio. Podés quitar los filtros o volver a explorar el catálogo.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><a class="wc-link-clear-any-filters" href="#">Limpiar filtros</a></p><!-- /wp:paragraph -->
+<!-- wp:commerce-base/search-tools /-->
 </div><!-- /wp:group -->
 <!-- /wp:woocommerce/product-collection-no-results -->
 </div><!-- /wp:woocommerce/product-collection -->
+</div><!-- /wp:group -->
+</div><!-- /wp:group -->
 </main><!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

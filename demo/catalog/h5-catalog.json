@@ -1,0 +1,515 @@
+{
+  "version": 1,
+  "currency": "ARS",
+  "collection": {
+    "name": "Ritmo diario",
+    "slug": "ritmo-diario",
+    "description": "Una selección de formas simples, texturas y capas para todos los días."
+  },
+  "categories": [
+    {
+      "name": "Remeras",
+      "slug": "remeras",
+      "description": "Punto de algodón. Distintos pesos, la misma línea simple."
+    },
+    {
+      "name": "Buzos",
+      "slug": "buzos",
+      "description": "Capas de abrigo, texturas y volumen medido."
+    },
+    {
+      "name": "Pantalones",
+      "slug": "pantalones",
+      "description": "Cortes rectos y amplios para moverse con espacio."
+    },
+    {
+      "name": "Accesorios",
+      "slug": "accesorios",
+      "description": "Lo que acompaña. Piezas pequeñas de uso diario."
+    }
+  ],
+  "color_codes": {
+    "Natural": "NAT",
+    "Negro": "NEG",
+    "Gris": "GRI",
+    "Verde": "VER",
+    "Bordó": "BOR",
+    "Crudo": "CRU"
+  },
+  "products": [
+    {
+      "sku": "TRM-REM-001",
+      "name": "Remera Base",
+      "slug": "remera-base",
+      "category": "Remeras",
+      "type": "variable",
+      "short": "Remera de algodón pesado. Corte recto, hombro caído y cuello compacto.",
+      "description": "Algodón, punto jersey. Un básico amplio, sin estampa. El peso del tejido sostiene la forma sin quitar movimiento.",
+      "price": 32000,
+      "sale": 0,
+      "colors": [
+        "Natural",
+        "Negro"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": true,
+      "collection": true,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "remera-base-nat.webp",
+        "remera-base-neg.webp"
+      ],
+      "subject": "heavyweight cotton short sleeve crewneck t-shirt, dropped shoulders, relaxed straight fit"
+    },
+    {
+      "sku": "TRM-REM-002",
+      "name": "Remera Trazo",
+      "slug": "remera-trazo",
+      "category": "Remeras",
+      "type": "variable",
+      "short": "Bolsillo al pecho y una línea limpia. Calce regular.",
+      "description": "Algodón suave de peso medio. Bolsillo rectangular al pecho, cuello redondo y terminaciones dobles.",
+      "price": 34000,
+      "sale": 29000,
+      "colors": [
+        "Negro",
+        "Gris"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": false,
+      "collection": false,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "remera-trazo-neg.webp",
+        "remera-trazo-gri.webp"
+      ],
+      "subject": "regular fit cotton crewneck short sleeve t-shirt with a single small square chest patch pocket"
+    },
+    {
+      "sku": "TRM-REM-003",
+      "name": "Remera Aire",
+      "slug": "remera-aire",
+      "category": "Remeras",
+      "type": "variable",
+      "short": "Liviana, amplia y de manga corta. Para los días largos.",
+      "description": "Jersey de algodón liviano. Corte holgado, hombro bajo y ruedo recto. Una silueta simple que deja pasar el aire.",
+      "price": 30000,
+      "sale": 0,
+      "colors": [
+        "Verde",
+        "Natural"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": true,
+      "collection": true,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "remera-aire-ver.webp",
+        "remera-aire-nat.webp"
+      ],
+      "subject": "lightweight cotton relaxed boxy crewneck short sleeve t-shirt, muted olive green"
+    },
+    {
+      "sku": "TRM-REM-004",
+      "name": "Remera Horizonte",
+      "slug": "remera-horizonte",
+      "category": "Remeras",
+      "type": "variable",
+      "short": "Manga larga, cuello redondo y caída recta.",
+      "description": "Jersey de algodón de peso medio. Manga larga con puño simple, hombro regular y ruedo recto. Pensada para usar sola o en capas.",
+      "price": 39000,
+      "sale": 0,
+      "colors": [
+        "Gris",
+        "Negro"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": false,
+      "collection": false,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "remera-horizonte-gri.webp",
+        "remera-horizonte-neg.webp"
+      ],
+      "subject": "cotton long sleeve crewneck t-shirt, straight relaxed shape, simple cuffs"
+    },
+    {
+      "sku": "TRM-BUZ-001",
+      "name": "Buzo Pulso",
+      "slug": "buzo-pulso",
+      "category": "Buzos",
+      "type": "variable",
+      "short": "Frisa suave, cuello redondo y volumen justo.",
+      "description": "Tejido de algodón con interior de frisa. Cuello, puños y cintura en rib. Corte amplio con hombro caído y sin estampa.",
+      "price": 69000,
+      "sale": 59000,
+      "colors": [
+        "Gris",
+        "Negro"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": true,
+      "collection": true,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "buzo-pulso-gri.webp",
+        "buzo-pulso-neg.webp"
+      ],
+      "subject": "heavy cotton fleece crewneck sweatshirt, heather gray, dropped shoulders, ribbed cuffs collar and hem"
+    },
+    {
+      "sku": "TRM-BUZ-002",
+      "name": "Buzo Refugio",
+      "slug": "buzo-refugio",
+      "category": "Buzos",
+      "type": "variable",
+      "short": "Capucha amplia y bolsillo canguro. Un abrigo cotidiano.",
+      "description": "Frisa de algodón de peso alto. Capucha doble sin cordones, bolsillo canguro y puños tejidos. Silueta holgada.",
+      "price": 78000,
+      "sale": 0,
+      "colors": [
+        "Verde",
+        "Negro"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": false,
+      "collection": false,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "buzo-refugio-ver.webp",
+        "buzo-refugio-neg.webp"
+      ],
+      "subject": "heavy cotton pullover hoodie, double layer hood without drawstrings, kangaroo pocket, ribbed cuffs and hem"
+    },
+    {
+      "sku": "TRM-BUZ-003",
+      "name": "Buzo Textura",
+      "slug": "buzo-textura",
+      "category": "Buzos",
+      "type": "variable",
+      "short": "Medio cierre y textura compacta en un bordó profundo.",
+      "description": "Algodón de punto compacto con cara exterior texturada. Cuello alto y cierre corto metálico, sin logos. Calce recto.",
+      "price": 82000,
+      "sale": 0,
+      "colors": [
+        "Bordó"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "tops",
+      "featured": false,
+      "collection": false,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "buzo-textura-bor.webp",
+        "buzo-textura-detalle.webp"
+      ],
+      "subject": "deep burgundy textured cotton half zip sweatshirt, short brushed metal zipper, stand collar, relaxed fit"
+    },
+    {
+      "sku": "TRM-PAN-001",
+      "name": "Pantalón Cauce",
+      "slug": "pantalon-cauce",
+      "category": "Pantalones",
+      "type": "variable",
+      "short": "Sarga recta, tiro medio y bolsillos laterales.",
+      "description": "Sarga de algodón. Pierna recta, cintura con botón y cierre, bolsillos laterales y dos bolsillos traseros. Un corte simple para uso diario.",
+      "price": 74000,
+      "sale": 0,
+      "colors": [
+        "Negro",
+        "Verde"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "bottoms",
+      "featured": true,
+      "collection": true,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "pantalon-cauce-neg.webp",
+        "pantalon-cauce-ver.webp"
+      ],
+      "subject": "straight leg cotton twill trousers, mid rise, button waist, side pockets, no cargo pockets"
+    },
+    {
+      "sku": "TRM-PAN-002",
+      "name": "Pantalón Línea",
+      "slug": "pantalon-linea",
+      "category": "Pantalones",
+      "type": "variable",
+      "short": "Pierna amplia y pinza frontal en tono natural.",
+      "description": "Sarga de algodón de peso medio. Tiro medio alto, una pinza al frente y pierna amplia. Esta partida demo está agotada.",
+      "price": 79000,
+      "sale": 0,
+      "colors": [
+        "Natural"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "bottoms",
+      "featured": false,
+      "collection": false,
+      "stock": null,
+      "out_of_stock": true,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "pantalon-linea-nat.webp",
+        "pantalon-linea-detalle.webp"
+      ],
+      "subject": "natural ivory cotton twill wide leg pleated trousers, one front pleat per leg, button waist"
+    },
+    {
+      "sku": "TRM-PAN-003",
+      "name": "Pantalón Pausa",
+      "slug": "pantalon-pausa",
+      "category": "Pantalones",
+      "type": "variable",
+      "short": "Jersey pesado y cintura elástica. Sin ajustar el ritmo.",
+      "description": "Algodón con interior suave. Cintura elástica con cordón interno, bolsillos al costado y pierna recta sin puño.",
+      "price": 62000,
+      "sale": 0,
+      "colors": [
+        "Gris",
+        "Negro"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "guide": "bottoms",
+      "featured": false,
+      "collection": false,
+      "stock": null,
+      "out_of_stock": false,
+      "care": "Lavar del revés con agua fría y colores similares. Secar a la sombra. No usar lavandina ni secadora.",
+      "images": [
+        "pantalon-pausa-gri.webp",
+        "pantalon-pausa-neg.webp"
+      ],
+      "subject": "heavy cotton straight leg sweatpants, heather gray, elastic waist with discreet internal drawstring, side pockets, no ankle cuffs"
+    },
+    {
+      "sku": "TRM-ACC-001",
+      "name": "Bolsa Diario",
+      "slug": "bolsa-diario",
+      "category": "Accesorios",
+      "type": "simple",
+      "short": "Lona natural, asas largas y espacio para lo de todos los días.",
+      "description": "Bolsa de lona de algodón. Un compartimento, asas reforzadas y base plana. Medidas demo: 38 × 42 × 10 cm.",
+      "price": 19000,
+      "sale": 0,
+      "colors": [
+        "Natural"
+      ],
+      "sizes": [],
+      "guide": "",
+      "featured": false,
+      "collection": true,
+      "stock": 22,
+      "out_of_stock": false,
+      "care": "Lavar a mano con agua fría. Secar a la sombra. No usar lavandina.",
+      "images": [
+        "bolsa-diario-nat.webp",
+        "bolsa-diario-detalle.webp"
+      ],
+      "subject": "natural ivory heavy cotton canvas tote bag with long handles, flat gusseted base, no print"
+    },
+    {
+      "sku": "TRM-ACC-002",
+      "name": "Gorra Sombra",
+      "slug": "gorra-sombra",
+      "category": "Accesorios",
+      "type": "simple",
+      "short": "Seis paneles, visera curva y ajuste posterior.",
+      "description": "Gabardina de algodón. Gorra de seis paneles con visera curva y hebilla metálica posterior. Contorno regulable demo: 54–60 cm.",
+      "price": 24000,
+      "sale": 0,
+      "colors": [
+        "Negro"
+      ],
+      "sizes": [],
+      "guide": "",
+      "featured": false,
+      "collection": false,
+      "stock": 23,
+      "out_of_stock": false,
+      "care": "Lavar a mano con agua fría. Secar a la sombra. No usar lavandina.",
+      "images": [
+        "gorra-sombra-neg.webp",
+        "gorra-sombra-detalle.webp"
+      ],
+      "subject": "black six panel cotton baseball cap with curved visor and adjustable metal buckle, no logo"
+    },
+    {
+      "sku": "TRM-ACC-003",
+      "name": "Gorro Punto",
+      "slug": "gorro-punto",
+      "category": "Accesorios",
+      "type": "simple",
+      "short": "Punto acanalado y doblez ancho en verde seco.",
+      "description": "Gorro tejido de acrílico suave. Punto elástico y doblez ancho. Medida única demo para contorno de 54–60 cm.",
+      "price": 21000,
+      "sale": 0,
+      "colors": [
+        "Verde"
+      ],
+      "sizes": [],
+      "guide": "",
+      "featured": false,
+      "collection": false,
+      "stock": 24,
+      "out_of_stock": false,
+      "care": "Lavar a mano con agua fría. Secar en plano, sin retorcer.",
+      "images": [
+        "gorro-punto-ver.webp",
+        "gorro-punto-detalle.webp"
+      ],
+      "subject": "muted olive green rib knit beanie hat with wide folded cuff, fine knit, no logo"
+    },
+    {
+      "sku": "TRM-ACC-004",
+      "name": "Medias Canal",
+      "slug": "medias-canal",
+      "category": "Accesorios",
+      "type": "simple",
+      "short": "Caña media, canalé y base acolchada.",
+      "description": "Mezcla demo de algodón, poliamida y elastano. Un par de medias acanaladas con talón y puntera reforzados. Talle único demo: 38–43.",
+      "price": 11000,
+      "sale": 0,
+      "colors": [
+        "Crudo"
+      ],
+      "sizes": [],
+      "guide": "",
+      "featured": false,
+      "collection": false,
+      "stock": 25,
+      "out_of_stock": false,
+      "care": "Lavar a mano con agua fría. Secar a la sombra. No usar lavandina.",
+      "images": [
+        "medias-canal-cru.webp",
+        "medias-canal-detalle.webp"
+      ],
+      "subject": "one matching pair of ecru ivory mid calf ribbed cotton socks, reinforced heel toe, neatly aligned pair"
+    },
+    {
+      "sku": "TRM-ACC-005",
+      "name": "Pañuelo Pliegue",
+      "slug": "panuelo-pliegue",
+      "category": "Accesorios",
+      "type": "simple",
+      "short": "Algodón liviano, tono bordó y borde limpio.",
+      "description": "Pañuelo cuadrado de algodón, liso y sin estampa. Terminación con dobladillo fino. Medidas demo: 60 × 60 cm.",
+      "price": 17000,
+      "sale": 14000,
+      "colors": [
+        "Bordó"
+      ],
+      "sizes": [],
+      "guide": "",
+      "featured": false,
+      "collection": false,
+      "stock": 26,
+      "out_of_stock": false,
+      "care": "Lavar a mano con agua fría. Secar a la sombra. No usar lavandina.",
+      "images": [
+        "panuelo-pliegue-bor.webp",
+        "panuelo-pliegue-detalle.webp"
+      ],
+      "subject": "deep burgundy plain lightweight cotton square scarf, loosely folded into a triangle, fine hem visible"
+    },
+    {
+      "sku": "TRM-ACC-006",
+      "name": "Bolso Tránsito",
+      "slug": "bolso-transito",
+      "category": "Accesorios",
+      "type": "simple",
+      "short": "Formato compacto, cierre superior y correa regulable.",
+      "description": "Bolso de lona de algodón. Un compartimento principal con cierre y bolsillo exterior plano. Medidas demo: 24 × 18 × 7 cm.",
+      "price": 36000,
+      "sale": 0,
+      "colors": [
+        "Negro"
+      ],
+      "sizes": [],
+      "guide": "",
+      "featured": false,
+      "collection": true,
+      "stock": 27,
+      "out_of_stock": false,
+      "care": "Lavar a mano con agua fría. Secar a la sombra. No usar lavandina.",
+      "images": [
+        "bolso-transito-neg.webp",
+        "bolso-transito-detalle.webp"
+      ],
+      "subject": "black compact cotton canvas crossbody bag with a top zipper, flat external pocket and adjustable woven shoulder strap neatly arranged"
+    }
+  ]
+}

@@ -5,6 +5,7 @@ if (!defined('ABSPATH')) { exit; }
 require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/checkout-labels.php';
 require_once __DIR__ . '/inc/discovery.php';
+require_once __DIR__ . '/inc/catalog.php';
 
 // With plain permalinks and an Apache front controller, core has no rewrite
 // rules to distinguish an unknown path from the root. Preserve native query
@@ -19,10 +20,13 @@ add_action('parse_request', static function ($wp) {
 
 add_action('after_setup_theme', static function () {
     add_theme_support('woocommerce');
+    add_theme_support('wc-product-gallery-slider');
+    add_theme_support('wc-product-gallery-lightbox');
     add_theme_support('custom-logo', ['height' => 80, 'width' => 280, 'flex-width' => true, 'flex-height' => true]);
     add_theme_support('editor-styles');
     add_editor_style('assets/css/system.css');
     add_editor_style('assets/css/pages.css');
+    add_editor_style('assets/css/catalog.css');
     register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
 });
 
@@ -50,7 +54,11 @@ add_action('wp_enqueue_scripts', static function () {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('commerce-base', get_theme_file_uri('assets/css/system.css'), [], $version);
     wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
+    wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), ['commerce-base-pages'], $version);
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
+    if (function_exists('is_woocommerce') && (is_woocommerce() || is_search())) {
+        wp_enqueue_script('commerce-base-catalog', get_theme_file_uri('assets/js/catalog.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
+    }
     if (function_exists('is_product') && is_product()) {
         $product = wc_get_product(get_queried_object_id());
         if ($product && $product->is_type('variable')) {
@@ -78,7 +86,7 @@ add_action('init', static function () {
             'api_version' => 3,
             'editor_script' => 'commerce-base-editor',
             'attributes' => $attributes,
-            'supports' => ['html' => false, 'inserter' => !in_array($component, ['header', 'footer'], true)],
+            'supports' => ['html' => false, 'inserter' => !in_array($component, ['header', 'footer'], true), 'interactivity' => ['clientNavigation' => true]],
             'render_callback' => static function ($attributes) use ($component) {
                 return call_user_func('commerce_base_' . str_replace('-', '_', $component), $attributes);
             },

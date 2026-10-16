@@ -1,0 +1,24 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+<!-- wp:group {"tagName":"main","anchor":"main-content","className":"cb-container cb-page-content cb-product-page","layout":{"type":"default"}} -->
+<main class="wp-block-group cb-container cb-page-content cb-product-page" id="main-content">
+<!-- wp:woocommerce/breadcrumbs /-->
+<!-- wp:woocommerce/store-notices /-->
+<!-- wp:group {"className":"cb-product-layout","layout":{"type":"default"}} --><div class="wp-block-group cb-product-layout">
+<!-- wp:group {"className":"cb-product-gallery","layout":{"type":"default"}} --><div class="wp-block-group cb-product-gallery"><!-- wp:woocommerce/product-image-gallery /--></div><!-- /wp:group -->
+<!-- wp:group {"className":"cb-product-purchase","layout":{"type":"default"}} --><div class="wp-block-group cb-product-purchase">
+<!-- wp:post-terms {"term":"product_cat","className":"cb-eyebrow"} /-->
+<!-- wp:post-terms {"term":"product_tag","className":"cb-product-collection-link"} /-->
+<!-- wp:post-title {"level":1,"__woocommerceNamespace":"woocommerce/product-query/product-title"} /-->
+<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true} /-->
+<!-- wp:post-excerpt {"__woocommerceNamespace":"woocommerce/product-query/product-summary","excerptLength":100} /-->
+<!-- wp:woocommerce/add-to-cart-form /-->
+<!-- wp:commerce-base/product-information /-->
+</div><!-- /wp:group -->
+</div><!-- /wp:group -->
+<!-- wp:woocommerce/product-collection {"queryId":5,"query":{"perPage":4,"pages":1,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"collection":"woocommerce/product-collection/related","queryContextIncludes":["collection"],"className":"cb-related"} --><div class="wp-block-woocommerce-product-collection cb-related">
+<!-- wp:paragraph {"className":"cb-eyebrow"} --><p class="cb-eyebrow">En la misma trama</p><!-- /wp:paragraph -->
+<!-- wp:heading --><h2 class="wp-block-heading">También pueden acompañarte.</h2><!-- /wp:heading -->
+<!-- wp:woocommerce/product-template --><!-- wp:commerce-base/product-card /--><!-- /wp:woocommerce/product-template -->
+</div><!-- /wp:woocommerce/product-collection -->
+</main><!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
