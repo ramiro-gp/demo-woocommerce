@@ -68,6 +68,9 @@
   letter-spacing: .1em;
   text-transform: uppercase;
 }
+/* One row border, rather than separate table-cell/flex-cell top borders. */
+.cb-cart-page .wc-block-cart table.wc-block-cart-items .wc-block-cart-items__header { border-block-end: 1px solid var(--cb-border); }
+.cb-cart-page .wc-block-cart table.wc-block-cart-items tbody > .wc-block-cart-items__row:first-child td { border-block-start: 0; }
 .cb-cart-page .wc-block-cart table.wc-block-cart-items .wc-block-cart-items__header-image {
   inline-size: clamp(6rem, 9vw, 9rem);
 }
@@ -211,12 +214,19 @@
   font-size: 1rem;
 }
 .cb-cart-page .wc-block-cart .wc-block-components-totals-coupon .wc-block-components-panel__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--cb-space-3);
+  padding-inline-end: 0;
   min-block-size: 44px;
   color: var(--cb-text-muted);
   font-family: var(--cb-font-interface);
   font-size: 1rem;
   font-weight: 500;
 }
+.cb-cart-page .wc-block-cart .wc-block-components-totals-coupon .wc-block-components-panel__button-icon { position: static; flex: 0 0 24px; margin: 0; transform: none; order: 1; }
+.cb-cart-page .wc-block-cart .wc-block-components-totals-coupon .wc-block-components-panel__button[aria-expanded="true"] .wc-block-components-panel__button-icon { transform: rotate(180deg); }
 .cb-cart-page .wc-block-cart .wc-block-components-totals-coupon__form { align-items: stretch; }
 .cb-cart-page .wc-block-cart .wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__input {
   min-inline-size: 0;

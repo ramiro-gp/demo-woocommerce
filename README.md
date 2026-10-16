@@ -10,6 +10,8 @@ La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`com
 
 Ver [arquitectura, configuración protegida, QA, límites y URLs H6.1](docs/h6-1-cart-checkout.md). No ejecutar configuración para navegar; agregar un producto desde la tienda. `verify` revisa huellas sin importar datos.
 
+Las correcciones post-H6.1 (Commerce Base 1.4.1) ajustan el mini-cart, las alineaciones de carrito/checkout e incorporan Exit Intent discreto en escritorio: carrito con productos, interacción previa, mínimo 15 segundos y cooldown de 24 horas. Excluye checkout y paneles abiertos; copy configurable mediante `commerce_base_exit_intent_config`.
+
 ```powershell
 .\scripts\h6-1.ps1 inspect
 .\scripts\h6-1.ps1 verify

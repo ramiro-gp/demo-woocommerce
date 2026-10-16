@@ -3,15 +3,21 @@
   --wp--preset--font-size--small: 1rem;
   --wp--preset--font-size--x-small: 1rem;
   --wc-separator-color: var(--cb-border);
-  inline-size: min(100vw, 32rem);
-  width: min(100vw, 32rem);
-  max-inline-size: 100vw;
+  --drawer-width: min(100%, 32rem);
+  --neg-drawer-width: -100%;
+  inline-size: var(--drawer-width);
+  width: var(--drawer-width);
+  max-inline-size: 100%;
   background: var(--cb-background);
   color: var(--cb-text);
   font-family: var(--cb-font-interface);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 .wc-block-mini-cart__drawer .wp-block-woocommerce-mini-cart-contents {
-  background: var(--cb-background);
+  /* Woo snapshots the background into an inline style when the drawer mounts.
+     Keep the live theme token authoritative when appearance changes. */
+  background: var(--cb-background) !important;
   color: var(--cb-text);
 }
 .wc-block-mini-cart__drawer h2.wc-block-mini-cart__title {
@@ -50,9 +56,10 @@
   padding: 0 var(--cb-space-5);
 }
 .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-items__header { display: none; }
-.wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-items__row {
-  display: grid;
-  grid-template-columns: 64px minmax(0, 1fr);
+.wc-block-mini-cart__drawer .wc-block-mini-cart__items table.wc-block-cart-items .wc-block-cart-items__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   gap: var(--cb-space-3) var(--cb-space-4);
   padding-block: var(--cb-space-5);
   border-block-start: 1px solid var(--cb-border);
@@ -63,14 +70,14 @@
   padding: 0;
   border: 0;
 }
-.wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__image { grid-column: 1; grid-row: 1; }
+.wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__image { flex: 0 0 64px; }
 .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__image img {
   inline-size: 64px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   background: var(--cb-surface);
 }
-.wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__product { grid-column: 2; grid-row: 1; }
+.wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__product { flex: 1 1 11.5rem; }
 .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__wrap { gap: var(--cb-space-2); }
 .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-components-product-name {
   max-inline-size: 100%;
@@ -87,6 +94,9 @@
   text-underline-offset: .2em;
 }
 .wc-block-mini-cart__drawer .wc-block-cart-item__prices { flex-wrap: wrap; }
+.wc-block-mini-cart__drawer .wc-block-cart-item__prices { order: 2; }
+.wc-block-mini-cart__drawer .wc-block-components-product-metadata { order: 1; }
+.wc-block-mini-cart__drawer .wc-block-cart-item__quantity { order: 3; }
 .wc-block-mini-cart__drawer :is(.wc-block-components-product-metadata, .wc-block-components-product-details) {
   color: var(--cb-text-muted);
   font-size: 1rem;
@@ -203,13 +213,19 @@
 .wc-block-mini-cart__drawer .wc-block-mini-cart__empty-cart-wrapper {
   padding: 4rem var(--cb-space-5) var(--cb-space-6);
   text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--cb-space-5);
 }
 .wc-block-mini-cart__drawer .wc-block-mini-cart__empty-cart-wrapper p {
   max-inline-size: 36ch;
   color: var(--cb-text-muted);
   font-size: 1rem;
+  margin: 0;
+  text-align: start;
 }
-.wc-block-mini-cart__drawer .wc-block-mini-cart__shopping-button { justify-content: flex-start; }
+.wc-block-mini-cart__drawer .wc-block-mini-cart__shopping-button { justify-content: flex-start; margin: 0; }
 .wc-block-mini-cart__drawer .wc-block-mini-cart__shopping-button a {
   display: inline-flex;
   min-block-size: 48px;
@@ -275,3 +291,11 @@
 @media (forced-colors: active) {
   .wc-block-mini-cart__drawer .wc-block-mini-cart__footer-actions .wc-block-components-button { border-color: ButtonText; }
 }
+
+/* Unit price + native quantity is sufficient here; the footer supplies the
+   cart subtotal. Woo's narrow-container total otherwise occupies row 1 and
+   overlays the product and its controls. No commercial values are changed. */
+.wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total { display: none; }
+.wc-block-mini-cart__drawer .wc-block-mini-cart__items { scrollbar-gutter: stable; }
+.wc-block-mini-cart__drawer :is(.wc-block-components-drawer__content, .wp-block-woocommerce-mini-cart-contents, .wc-block-mini-cart__footer, .wc-block-mini-cart__items) { min-inline-size: 0; max-inline-size: 100%; box-sizing: border-box; }
+.wc-block-mini-cart__drawer .wc-block-mini-cart__footer-subtotal .wc-block-components-totals-item__value { overflow-wrap: anywhere; }

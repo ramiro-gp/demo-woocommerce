@@ -6,6 +6,7 @@ require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/checkout-labels.php';
 require_once __DIR__ . '/inc/discovery.php';
 require_once __DIR__ . '/inc/catalog.php';
+require_once __DIR__ . '/inc/exit-intent.php';
 
 // With plain permalinks and an Apache front controller, core has no rewrite
 // rules to distinguish an unknown path from the root. Preserve native query

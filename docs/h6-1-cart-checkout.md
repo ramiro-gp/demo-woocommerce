@@ -144,6 +144,44 @@ Las pruebas de envío de formulario usan comprador ficticio `h6-1-qa@example.tes
 
 WebKit emulado en Windows no acredita Safari físico/iOS. Viewports táctiles y altura reducida no reproducen un teclado virtual de iOS/Android: esa comprobación física queda explícitamente como revisión manual. No hay sticky CTA que tape el área inferior.
 
+## Correcciones post-H6.1 y Exit Intent (Commerce Base 1.4.1)
+
+Baseline manualmente aprobado: `d11ab4ca5f4d3c522003934d6bced48d7b0957b6`. Se trabaja sobre la misma rama, sin merge a main, H6.2 ni H7.
+
+### Mini-Cart: diagnóstico y presentación
+
+El importe de `.wc-block-cart-item__prices` es el precio unitario nativo (original/actual en oferta). `.wc-block-cart-item__total` es el importe de la línea por cantidad. Las reglas responsivas oficiales `.is-small ... .wc-block-cart-items__row .wc-block-cart-item__total` tenían más especificidad que la regla H6.1 y imponían `grid-row-start: 1`. El total se superponía al título y al área de controles: el hit-test llegaba a esa celda en lugar de `−`/papelera. No era un fallo del store ni de sus listeners.
+
+Presentación elegida: nombre, variación, precio unitario y selector de cantidad; subtotal general al pie. Se omite deliberadamente el subtotal por línea en el drawer para evitar redundancia. Ofertas conservan precio original tachado y actual; Woo calcula todos los importes. La página Carrito conserva subtotales por línea. El layout final usa flex-wrap: imagen de 64px y producto con base de lectura de 11,5rem. Evita las columnas implícitas del grid responsivo del core y apila automáticamente cuando el espacio es estrecho, incluso bajo zoom; no se reducen los targets de 44px.
+
+El drawer nativo posiciona/desplaza usando `--drawer-width` y `--neg-drawer-width`; H6.1 había cambiado `width` sin armonizar esas variables. Ahora ancho y desplazamiento comparten una medida de hasta 32rem y 100% del espacio disponible. `box-sizing`, `min-inline-size` y `max-inline-size` mantienen el contenido dentro del panel. `scrollbar-gutter: stable` reserva espacio en drawer y lista desplazable; en motores sin soporte queda el overflow nativo con padding. No se oculta la scrollbar ni se agrega una personalizada.
+
+Vacío: wrapper flex en columna con alineación inicial, gap por token, mensaje y grupo de botón sin márgenes automáticos/centrado. Comparten referencia horizontal. Para las cabeceras Producto/Total, los bordes superiores de celdas con distintos modos de display (`table-cell` y `flex`) y border-collapse daban referencias separadas. Se usa un único borde en la fila del encabezado y se retira el borde superior de la primera fila de datos. El cupón pasa a flex centrado, con icono estático al final: se elimina el translateY que correspondía al posicionamiento absoluto nativo; al abrir rota 180°. El enlace oficial Volver al carrito usa inline-flex centrado, gap común y SVG sin margen; hover desplaza la flecha horizontalmente y reduced motion lo desactiva.
+
+### Exit Intent reutilizable
+
+Archivos: `inc/exit-intent.php`, `assets/js/exit-intent.js`, `assets/css/exit-intent.css`. El filtro `commerce_base_exit_intent_config` permite desactivar y cambiar copy/tiempos (mínimos 15s/24h). No hay nombres técnicos acoplados a TRAMA, librerías, servicios, tracking ni backend.
+
+Trigger: `mouseout` del documento con `relatedTarget === null`, `clientY <= 0` y `0 < clientX < innerWidth`. No responde a cruces internos ni salidas laterales. Exige viewport mínimo 960px, `(hover: hover)` y `(pointer: fine)`, página visible, interacción real previa (pointerdown/teclado/scroll), 15 segundos desde inicio del script, store listo con al menos una unidad, cooldown vencido y ausencia de otro panel/modal. No intenta adivinar el cierre de pestaña ni distinguir con certeza DevTools.
+
+El Mini-Cart carga sus datos de forma diferida. En escritorio elegible se usa una resolución inicial pública `wp.data.resolveSelect(cartStore).getCartData()`; luego el trigger lee `wp.data.select(cartStore).getCartData().itemsCount`. No hay petición en el evento de salida, endpoint manual, polling, lectura del contador ni estado paralelo de cantidades. Si el store no está listo, no muestra el recordatorio.
+
+Se guarda timestamp al mostrar en **`commerce_exit_intent_v1`**: localStorage, fallback sessionStorage y finalmente memoria. Se consulta almacenamiento de nuevo en cada intento para respetar otras pestañas. Con localStorage bloqueado, la garantía se limita a la sesión; con ambos bloqueados, al documento actual. Un timestamp vigente impide volver a mostrar tras cerrar, cambiar de pestaña o recargar. La prueba de 24h modifica sólo esa key de un contexto aislado.
+
+Exclusiones de servidor: wp-admin, checkout (incluye pago/order received), endpoints order-pay/order-received, Mi Cuenta y vista de personalización. No se sirve en páginas externas de Mercado Pago. En cliente se excluyen menú fullscreen, mini-cart, cualquier dialog modal visible y galería PhotoSwipe. En móvil/touch no se registran listeners ni se resuelve el store para esta feature. Si se carga inicialmente en móvil y luego se conecta un mouse, se habilita en una navegación posterior elegible.
+
+Copy: **¿Te vas sin tus cosas?** / **Tu carrito sigue acá.** Acciones: **Ver carrito** (enlace Woo) y **Seguir comprando** (cierra). En Carrito: sólo **Seguir con mi compra** (cierra en el mismo lugar). Cierre adicional con botón accesible y Escape. No ofrece promociones ni urgencia.
+
+`<dialog>` nativo con aria-modal, título/descripción asociados, foco inicial en título, trap de Tab/Shift+Tab y restauración de foco al cerrar. Apertura y cierre de 220ms con opacidad/desplazamiento leve; reduced motion elimina animación y espera. Light/dark usa tokens existentes. No modifica title/favicon, no usa visibilitychange como trigger, beforeunload/unload, alert/confirm, sonidos ni notificaciones. Sin soporte de showModal se omite la feature.
+
+QA y capturas post-H6.1 se guardan privados en `.local/local/h6-1/post/`. Suites reproducibles: `node tests/verify-h6-1-post.cjs` y `node tests/verify-h6-1-post-extra.cjs`, con NODE_PATH bundled. Usan sesiones/carritos aislados y los limpian en finally. Se conservan los diagnósticos iniciales y revalidaciones; el reloj simulado alteraba APIs performance que Woo consume, por eso el QA definitivo espera el intervalo real.
+
+Resultado post-H6.1: **98 casos únicos aprobados por su última observación**, según `post/final-audit.json`. Incluye 72 combinaciones de mini-cart (Chromium/Firefox/WebKit, 320/390/1366/1920, claro/oscuro y ampliación CSS 100/125/150%), secuencias nativas de simple/variable/oferta, cantidad y eliminar; 81 comprobaciones finales de layout/interacción y seis revalidaciones del tema vivo sin errores JS. La celda flex evita además el recorte extremo Firefox 320/150%. Ocho escenarios extra verifican salida real del puntero, ausencia de interacción, menú/galería/cruces internos/laterales, storage local/session/memoria, cero solicitudes en la salida, title/favicon intactos, acciones específicas de Carrito, reduced motion, bordes/chevron a 1366/1920 y ampliación, retorno alineado, touch y scroll largo. Se conserva el historial de fallos y correcciones de los tests (favicon ausente, sesión iniciada por formulario, espera del cierre nativo), sin filtrar errores.
+
+Regresión: H5 **304/304**, H5.1 **87/87**, integridad H6.1 **27/27**, stock/HPOS/invitado **13/13**, Mercado Pago H2 visible con script oficial y sin enviar pedido/pago. La matriz nativa carrito/checkout dio 147/148 sin errores JS; el único caso de submit Chromium se revalidó mediante Enter real (`post-checkout-revalidation.json`, 2/2 contando alta de productos), con los mensajes españoles exactos. Cierre: cero cupones y borradores ficticios restantes, carritos aislados vacíos.
+
+La revisión visual directa incluyó el drawer con scrollbar nativa Windows, móvil oscuro y cambio de tema; detectó el fondo inline de Woo que retenía el color al montar el drawer. Se anula exclusivamente esa propiedad inline con el token dinámico (prioridad necesaria), y se verificó claro/oscuro después de montar. Se miraron las capturas de Exit Intent, carrito, checkout y scroll largo. La ampliación CSS automatizada no acredita zoom real de la interfaz del navegador ni scrollbar overlay de macOS/iOS; esas variantes quedan para revisión manual en dispositivo. El fallback de almacenamiento se prueba tras resolver Woo, aislándolo de plugins que asumen acceso al storage durante su inicialización; si Woo no puede resolver el carrito, Exit Intent no se muestra.
+
 ## Pendientes fuera del alcance
 
 - **H6.2:** decisión comercial de zonas/métodos/costos, cobertura, preparación logística, pesos/dimensiones y evaluación/integración de transportistas cuando corresponda. Permanecen únicamente los métodos técnicos preexistentes H2; no se configuraron tarifas definitivas.
