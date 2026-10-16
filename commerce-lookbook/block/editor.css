@@ -1,0 +1,11 @@
+.slb-editor { border: 1px solid #b4b4b4; padding: 12px; color: #202a24; background: #fff; }
+.slb-editor-stage { position: relative; }
+.slb-editor-stage img { display: block; width: 100%; height: auto; max-height: none; aspect-ratio: auto; object-fit: contain; transform: none; }
+.slb-editor-point { position: absolute; transform: translate(-50%, -50%); border-radius: 50%; width: 36px; height: 36px; border: 2px solid #fff; background: #405b35; color: #fff; font: 600 14px/1 sans-serif; cursor: pointer; box-shadow: 0 0 0 1px #202a24; }
+.slb-editor-point.is-selected { outline: 3px solid #285f7b; outline-offset: 3px; }
+.slb-editor-controls { padding: 16px 0 0; font: 14px/1.5 sans-serif; }
+.slb-editor-empty { padding: 24px; }
+.slb-editor-tabs, .slb-editor-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.slb-editor-fields { padding: 16px; border: 1px solid #ddd; margin-top: 16px; }
+.slb-editor-product { margin: 0 0 16px; }
+.slb-editor-help { margin: 12px 0 0; font-size: 12px; }

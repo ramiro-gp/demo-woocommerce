@@ -12,7 +12,8 @@ La separación acordada es:
 | WordPress | Contenido, usuarios y administración nativa | H1 |
 | WooCommerce | Catálogo, variantes, stock, carrito, pedidos y clientes | Desde H2 |
 | `commerce-base` / Commerce Base | Presentación y composición del Block Theme | H3 en adelante |
-| `commerce-core` / Commerce Core | Funcionalidad persistente propia que realmente se necesite | H8 |
+| `commerce-lookbook` / Commerce Lookbook | Bloque editorial persistente Shoppable Lookbook, independiente del theme | H5.1 |
+| `commerce-core` / Commerce Core | Funcionalidad persistente comercial completa; podrá integrar el bloque existente | H8 |
 | TRAMA | Identidad ficticia y contenido de la demo | Hitos visuales y de contenido |
 
 H1 no crea directorios vacíos del theme o plugin comercial ni un esqueleto de funcionalidad futura. La marca no debe quedar escrita dentro de templates o lógica reutilizable.

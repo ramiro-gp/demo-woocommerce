@@ -1,0 +1,70 @@
+/* Small standalone baseline. Themes can map the slb tokens to their own system. */
+.slb-lookbook {
+  --slb-surface: #faf9f2;
+  --slb-text: #202a24;
+  --slb-border: #777e70;
+  --slb-accent: #405b35;
+  --slb-on-accent: #faf9f2;
+  --slb-focus: #285f7b;
+  --slb-duration: 180ms;
+  min-width: 0;
+  margin: 0;
+}
+.slb-stage { position: relative; isolation: isolate; z-index: 0; container-type: inline-size; }
+.slb-lookbook .slb-image { display: block; width: 100%; height: auto; max-height: none; contain-intrinsic-size: none; object-fit: contain; transform: none; filter: none; }
+.slb-hotspot {
+  position: absolute;
+  left: clamp(22px, var(--slb-x), calc(100% - 22px));
+  top: clamp(22px, var(--slb-y), calc(100% - 22px));
+  width: 44px; height: 44px; transform: translate(-50%, -50%);
+  display: grid; place-items: center; z-index: 1;
+  color: var(--slb-text); text-decoration: none; border-radius: 50%;
+  touch-action: manipulation;
+}
+.slb-dot {
+  width: 18px; height: 18px; box-sizing: border-box; border-radius: 50%;
+  background: var(--slb-accent); border: 3px solid var(--slb-on-accent);
+  box-shadow: 0 0 0 1px #202a24, 0 0 0 5px #faf9f233;
+  transition: transform var(--slb-duration) ease;
+}
+.slb-pill {
+  position: absolute; left: 36px; top: 0;
+  box-sizing: border-box; width: max-content; max-width: min(19rem, 78vw);
+  display: flex; align-items: center; flex-wrap: wrap; gap: 2px 8px;
+  min-height: 44px; padding: 10px 13px;
+  border: 1px solid var(--slb-border); border-radius: 24px;
+  background: var(--slb-surface); color: var(--slb-text);
+  font: 400 13px/1.45 var(--wp--preset--font-family--interface, sans-serif);
+  box-shadow: 0 2px 6px #00000014;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity var(--slb-duration) ease, visibility var(--slb-duration) ease;
+}
+.slb-product-name { font-weight: 650; overflow-wrap: anywhere; }
+.slb-price { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+.slb-price::before { content: '·'; }
+.slb-price del { font-size: 11px; opacity: .75; }
+.slb-price ins { text-decoration: none; }
+.slb-stock { font-size: 11px; font-weight: 650; }
+.slb-arrow { margin-left: auto; }
+.slb-pill .screen-reader-text { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.slb-hotspot.is-active { z-index: 2; }
+/* Clip closed content to its hit target: no hidden overflow, while keeping
+   the pill measurable and its opening opacity transition continuous. */
+.slb-enhanced .slb-hotspot:not(.is-active) { overflow: clip; }
+.slb-hotspot.is-active .slb-pill { opacity: 1; visibility: visible; pointer-events: auto; }
+.slb-hotspot.is-active .slb-dot { transform: scale(1.12); }
+.slb-hotspot:focus-visible { outline: 2px solid var(--slb-focus); outline-offset: 2px; box-shadow: 0 0 0 4px var(--slb-surface); }
+.slb-hint { margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: var(--slb-text); }
+.slb-fallback { color: var(--slb-text); }
+/* If the script cannot run, real links and CSS focus/hover still work. */
+.slb-lookbook:not(.slb-enhanced) .slb-hotspot:focus .slb-pill { opacity: 1; visibility: visible; pointer-events: auto; }
+.slb-lookbook:not(.slb-enhanced) .slb-hotspot:nth-of-type(n) { z-index: 1; }
+.slb-lookbook:not(.slb-enhanced) .slb-hotspot:focus { z-index: 2; }
+.slb-lookbook:not(.slb-enhanced) .slb-pill { max-width: min(19rem, calc(50cqw - 24px)); }
+.slb-lookbook:not(.slb-enhanced) .slb-hotspot[data-side="left"] .slb-pill { left: auto; right: 36px; }
+.slb-lookbook:not(.slb-enhanced) .slb-hotspot[data-vertical="above"] .slb-pill { top: auto; bottom: 0; }
+@media (hover: hover) {
+  .slb-lookbook:not(.slb-enhanced) .slb-hotspot:hover { z-index: 2; }
+  .slb-lookbook:not(.slb-enhanced) .slb-hotspot:hover .slb-pill { opacity: 1; visibility: visible; pointer-events: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .slb-lookbook { --slb-duration: 0ms; } }

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "commerce-lookbook/shoppable-lookbook",
+  "version": "1.0.0",
+  "title": "Shoppable Lookbook",
+  "category": "media",
+  "icon": "location-alt",
+  "description": "Una imagen editorial con puntos enlazados a productos reales de WooCommerce.",
+  "textdomain": "commerce-lookbook",
+  "attributes": {
+    "imageId": { "type": "number", "default": 0 },
+    "imageUrl": { "type": "string", "default": "" },
+    "imageAlt": { "type": "string", "default": "" },
+    "imageWidth": { "type": "number", "default": 0 },
+    "imageHeight": { "type": "number", "default": 0 },
+    "hotspots": { "type": "array", "default": [], "items": {
+      "type": "object", "properties": {
+        "productId": { "type": "number" }, "x": { "type": "number" }, "y": { "type": "number" }
+      }
+    } }
+  },
+  "supports": { "html": false, "align": ["wide", "full"] },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js"
+}

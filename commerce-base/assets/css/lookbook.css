@@ -1,0 +1,16 @@
+/* Commerce Base owns the art direction; Commerce Lookbook owns content and behavior. */
+.wp-block-commerce-lookbook-shoppable-lookbook.slb-lookbook {
+  --slb-surface: var(--cb-background);
+  --slb-text: var(--cb-text);
+  --slb-border: var(--cb-border);
+  --slb-accent: var(--cb-accent);
+  --slb-on-accent: var(--cb-accent-contrast);
+  --slb-focus: var(--cb-focus);
+  --slb-duration: var(--cb-duration-short);
+}
+.cb-home-lookbook .slb-lookbook { align-self: center; }
+.cb-home-lookbook .slb-lookbook .slb-image { aspect-ratio: auto; object-fit: contain; transform: none; }
+.cb-home-lookbook .slb-hint { color: var(--cb-text-muted); }
+@media (prefers-reduced-motion: reduce) {
+  .wp-block-commerce-lookbook-shoppable-lookbook.slb-lookbook { --slb-duration: 0ms; }
+}

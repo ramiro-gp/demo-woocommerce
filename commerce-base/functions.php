@@ -27,6 +27,7 @@ add_action('after_setup_theme', static function () {
     add_editor_style('assets/css/system.css');
     add_editor_style('assets/css/pages.css');
     add_editor_style('assets/css/catalog.css');
+    add_editor_style('assets/css/lookbook.css');
     register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
 });
 
@@ -55,6 +56,7 @@ add_action('wp_enqueue_scripts', static function () {
     wp_enqueue_style('commerce-base', get_theme_file_uri('assets/css/system.css'), [], $version);
     wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
     wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), ['commerce-base-pages'], $version);
+    wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version);
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
     if (function_exists('WC')) {
         wp_enqueue_script('commerce-base-cart-presentation', get_theme_file_uri('assets/js/cart-presentation.js'), ['wp-element', 'wp-data', 'wc-blocks-data-store'], $version, true);
