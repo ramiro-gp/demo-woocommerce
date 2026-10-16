@@ -11,9 +11,12 @@
   background: var(--cb-background);
   color: var(--cb-text);
   font-family: var(--cb-font-interface);
-  overflow-y: auto;
-  scrollbar-gutter: stable;
+  overflow-y: hidden;
 }
+/* Reserve the rail only in the scrolling item list. The page's own stable
+   gutter must not leave a second strip outside a full-screen drawer overlay. */
+:root:has(.wc-block-mini-cart__drawer[aria-hidden="false"]) { overflow: hidden; scrollbar-gutter: auto; }
+@media (max-height: 500px) { .wc-block-mini-cart__drawer { overflow-y: auto; } }
 .wc-block-mini-cart__drawer .wp-block-woocommerce-mini-cart-contents {
   /* Woo snapshots the background into an inline style when the drawer mounts.
      Keep the live theme token authoritative when appearance changes. */

@@ -182,6 +182,12 @@ Regresión: H5 **304/304**, H5.1 **87/87**, integridad H6.1 **27/27**, stock/HPO
 
 La revisión visual directa incluyó el drawer con scrollbar nativa Windows, móvil oscuro y cambio de tema; detectó el fondo inline de Woo que retenía el color al montar el drawer. Se anula exclusivamente esa propiedad inline con el token dinámico (prioridad necesaria), y se verificó claro/oscuro después de montar. Se miraron las capturas de Exit Intent, carrito, checkout y scroll largo. La ampliación CSS automatizada no acredita zoom real de la interfaz del navegador ni scrollbar overlay de macOS/iOS; esas variantes quedan para revisión manual en dispositivo. El fallback de almacenamiento se prueba tras resolver Woo, aislándolo de plugins que asumen acceso al storage durante su inicialización; si Woo no puede resolver el carrito, Exit Intent no se muestra.
 
+### Segunda revisión visual (Commerce Base 1.4.2)
+
+El cupón de Checkout conservaba un control block de 44px con texto alineado arriba y SVG absoluto centrado; ahora el control específico del cupón usa flex y centra ambos. No afecta el encabezado expansible del resumen. La franja derecha del mini-cart era una reserva permanente de scrollbar en el drawer exterior, sumada a la reserva de la página. Se mantiene `scrollbar-gutter: stable` exclusivamente en la lista desplazable; el panel exterior usa overflow oculto y conserva overflow auto para alturas menores a 500px. Mientras el drawer nativo está abierto se suspende el gutter/scroll de la página mediante CSS `:has`; al cerrar se restaura la regla normal. El footer y su fondo alcanzan el borde de la ventana, sin ocultar la scrollbar de productos.
+
+Revalidación dirigida: **36 comprobaciones** en Chromium, Firefox y WebKit; 390/1366px, light/dark, cupón abierto/cerrado, centro compartido, borde del drawer/footer coincidente con viewport y recuperación del gutter al cerrar. Cero errores JS; sesiones aisladas limpiadas. Evidencia privada: `alignment-review.json`, `checkout-coupon-final.png`, `mini-cart-edge-final.png`. Se inspeccionaron además ambas superficies directamente en navegador.
+
 ## Pendientes fuera del alcance
 
 - **H6.2:** decisión comercial de zonas/métodos/costos, cobertura, preparación logística, pesos/dimensiones y evaluación/integración de transportistas cuando corresponda. Permanecen únicamente los métodos técnicos preexistentes H2; no se configuraron tarifas definitivas.

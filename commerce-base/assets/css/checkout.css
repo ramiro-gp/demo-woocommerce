@@ -258,6 +258,17 @@ body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-pa
   font-size: 1rem;
   line-height: 1.5;
 }
+/* Coupon text and icon share one flex center; the native block aligned only
+   its absolutely positioned icon within the minimum-height control. */
+body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-totals-coupon .wc-block-components-panel__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--cb-space-3);
+  padding: 0;
+}
+body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-totals-coupon .wc-block-components-panel__button-icon { position: static; transform: none; flex: 0 0 24px; order: 1; margin: 0; }
+body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-totals-coupon .wc-block-components-panel__button[aria-expanded="true"] .wc-block-components-panel__button-icon { transform: rotate(180deg); }
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-panel__button {
   min-block-size: 48px;
   padding-block: 0 var(--cb-space-4);
