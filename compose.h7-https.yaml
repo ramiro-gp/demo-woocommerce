@@ -2,6 +2,10 @@
 # Only scripts/h7-https.ps1 supplies this origin during a supervised DEMO run.
 services:
   wordpress:
+    healthcheck:
+      test: ["CMD", "php", "-r", "exit(@file_get_contents('http://127.0.0.1/wp-includes/images/blank.gif') === false ? 1 : 0);"]
+    volumes:
+      - ./docker/apache/h7-tunnel-access.conf:/etc/apache2/conf-enabled/zzz-h7-tunnel-access.conf:ro
     environment:
       LOCAL_SITE_URL: ${H7_PUBLIC_SITE_URL:?Use scripts/h7-https.ps1 start}
   wpcli:

@@ -1,7 +1,8 @@
 [CmdletBinding()]
 param(
   [Parameter(Position = 0, Mandatory = $true)]
-  [ValidateSet('start', 'status', 'stop', 'verify')][string]$Action
+  [ValidateSet('start', 'status', 'stop', 'verify')][string]$Action,
+  [ValidatePattern('^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$')][string]$BackupId = 'h7-1-before-payments'
 )
 
 # start temporarily publishes the principal DEMO WordPress to the public Internet. Obtain
@@ -78,8 +79,15 @@ function Invoke-Compose {
     if ($nativeExitCode -ne 0) { throw "Docker Compose failed with exit code $nativeExitCode." }
     return ($result | ForEach-Object { "$_" })
   }
-  & docker @dockerArgs
-  if ($LASTEXITCODE -ne 0) { throw "Docker Compose failed with exit code $LASTEXITCODE." }
+  # Also protect the streaming path: the Windows PowerShell watchdog redirects
+  # all streams, which turns successful Docker progress into NativeCommandError.
+  $previousErrorPreference = $ErrorActionPreference
+  try {
+    $ErrorActionPreference = 'Continue'
+    & docker @dockerArgs
+    $nativeExitCode = $LASTEXITCODE
+  } finally { $ErrorActionPreference = $previousErrorPreference }
+  if ($nativeExitCode -ne 0) { throw "Docker Compose failed with exit code $nativeExitCode." }
 }
 
 function Read-State {
@@ -96,7 +104,11 @@ function Save-State {
   param([object]$State)
   $json = ($State | ConvertTo-Json -Depth 5) + "`n"
   [IO.File]::WriteAllText((Join-Path $httpsRoot ($State.runId + '.state.json')), $json, $utf8)
-  [IO.File]::WriteAllText($stateFile, $json, $utf8)
+  # The watchdog must never observe a half-written JSON document.
+  $pendingState = Join-Path $httpsRoot ($State.runId + '.pending.json')
+  [IO.File]::WriteAllText($pendingState, $json, $utf8)
+  if (Test-Path -LiteralPath $stateFile) { [IO.File]::Replace($pendingState, $stateFile, [System.Management.Automation.Language.NullString]::Value) }
+  else { [IO.File]::Move($pendingState, $stateFile) }
 }
 
 function Get-OwnedProcess {
@@ -177,7 +189,7 @@ function Read-LiveLog {
 }
 
 function Read-PublicResponse {
-  param([string]$Url, [string]$Origin)
+  param([string]$Url, [string]$Origin, [int]$ExpectedStatus = 200)
   $current = [Uri]$Url
   for ($redirect = 0; $redirect -le 5; $redirect++) {
     if ($current.Scheme -cne 'https' -or $current.GetLeftPart([UriPartial]::Authority) -cne $Origin -or $current.UserInfo) {
@@ -204,7 +216,7 @@ function Read-PublicResponse {
         $current = New-Object Uri($current, $location)
         continue
       }
-      if ($status -ne 200) { throw "Public HTTPS verification returned HTTP $status." }
+      if ($status -ne $ExpectedStatus) { throw "Public HTTPS verification returned HTTP $status." }
       $reader = New-Object IO.StreamReader($response.GetResponseStream())
       try { $body = $reader.ReadToEnd() } finally { $reader.Dispose() }
       # Never return response headers: login/cart endpoints can set sensitive cookies.
@@ -221,7 +233,7 @@ function Test-PublicSite {
   [Net.ServicePointManager]::SecurityProtocol = $oldProtocols -bor [Net.SecurityProtocolType]::Tls12
   try {
     $homeResponse = Read-PublicResponse -Url ($Origin + '/') -Origin $Origin
-    $login = Read-PublicResponse -Url ($Origin + '/wp-login.php') -Origin $Origin
+    $login = Read-PublicResponse -Url ($Origin + '/wp-login.php') -Origin $Origin -ExpectedStatus 403
     $apiResponse = Read-PublicResponse -Url ($Origin + '/index.php?rest_route=/wc/store/v1') -Origin $Origin
     try { $api = $apiResponse.Body | ConvertFrom-Json }
     catch { throw 'The public Store API namespace did not return JSON.' }
@@ -238,7 +250,7 @@ function Test-PublicSite {
       $checkedLinks++
     }
     if ($checkedLinks -eq 0) { throw 'The Store API response did not include a verifiable public HTTPS base/link.' }
-    Write-Host "PASS: public HTTPS home and wp-login HTTP 200; same-origin redirects; Store API rest_route and $checkedLinks HTTPS links."
+    Write-Host "PASS: public HTTPS home HTTP 200; login blocked HTTP 403; same-origin redirects; Store API and $checkedLinks HTTPS links."
   } finally { [Net.ServicePointManager]::SecurityProtocol = $oldProtocols }
 }
 
@@ -248,9 +260,9 @@ function Start-Https {
   $previousState = Read-State
   if (Get-OwnedProcess $previousState) { throw 'The recorded local tunnel is already running. Use status or verify.' }
   Assert-NoInheritedTunnelConfig
-  $backup = Join-Path $instanceRoot 'backups/h7-1-before-payments'
+  $backup = Join-Path $instanceRoot ("backups/" + $BackupId)
   $manifest = Get-Content -Raw -LiteralPath (Join-Path $backup 'manifest.json') | ConvertFrom-Json
-  if ($manifest.project -cne $projectName) { throw 'H7.1 preventive backup required.' }
+  if ($manifest.project -cne $projectName -or $manifest.backupId -cne $BackupId -or $manifest.formatVersion -ne 1 -or @($manifest.files).Count -ne 2) { throw 'H7.1 preventive backup required.' }
   foreach ($name in @('database.sql', 'wordpress.tar.gz')) {
     $entry = @($manifest.files | Where-Object { $_.name -ceq $name })
     if ($entry.Count -ne 1 -or (Get-FileHash -LiteralPath (Join-Path $backup $name) -Algorithm SHA256).Hash.ToLowerInvariant() -cne $entry[0].sha256) { throw 'H7.1 backup integrity failed.' }
@@ -269,7 +281,8 @@ function Start-Https {
     processId = 0; processStartedAtUtc = $null; executable = $cloudflaredPath
     publicUrl = $null; createdAtUtc = [DateTime]::UtcNow.ToString('o')
     stdout = [IO.Path]::GetFileName($stdout); stderr = [IO.Path]::GetFileName($stderr)
-    stoppedAtUtc = $null; failure = $null
+    stoppedAtUtc = $null; failure = $null; backupId = $BackupId
+    expiresAtUtc = $null; watchdogProcessId = 0
   }
   Save-State $state
   $wordpressStopped = $false
@@ -314,6 +327,10 @@ function Start-Https {
       }
     } while ($true)
     $state.status = 'running'
+    $state.expiresAtUtc = [DateTime]::UtcNow.AddMinutes(90).ToString('o')
+    Save-State $state
+    $watchdog = Start-Process -FilePath 'powershell.exe' -ArgumentList @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $PSScriptRoot 'h7-https-watchdog.ps1'), '-RunId', $state.runId) -WindowStyle Hidden -PassThru
+    $state.watchdogProcessId = $watchdog.Id
     Save-State $state
     Write-Host "Public test site: $($state.publicUrl) | Owned cloudflared PID: $($state.processId)"
     Write-Host 'Keep this computer and Docker running. Stop with scripts/h7-https.ps1 stop when finished.'
@@ -359,6 +376,9 @@ function Show-Status {
 }
 
 function Stop-Https {
+  # A stopped/expired tunnel must not leave a gateway offered with broken returns.
+  try { $null = Invoke-Compose -Arguments @('run', '--rm', '-T', '--no-deps', 'wpcli', 'eval-file', '/opt/local-tools/h7-mp-session.php', 'disable', '--quiet') -Capture }
+  catch { Write-Warning 'Could not confirm Pro disable; tunnel shutdown and local restoration will still be attempted.' }
   # Shut the origin first so an unreadable state, identity mismatch, or process
   # shutdown failure cannot leave a local site offered through a live tunnel.
   Invoke-Compose -Arguments @('stop', 'wordpress')

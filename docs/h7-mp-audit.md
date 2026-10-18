@@ -1,10 +1,10 @@
 # H7.1 — Auditoría acotada de Mercado Pago
 
-Revisión del 18/10/2026, Argentina. Este documento separa la evidencia histórica de H2 de las comprobaciones nuevas de H7.1. No certifica pagos externos nuevos ni preparación para producción. Complementa [H7.1](h7-1-payments.md) y la [guía de pruebas](h7-payment-testing.md).
+Revisión del 18/10/2026, Argentina. Separa H2, auditoría estática y [prueba externa nueva H7.1](h7-external-qa.md). No certifica preparación para producción. Complementa [H7.1](h7-1-payments.md) y la [guía de pruebas](h7-payment-testing.md).
 
 ## Alcance y método
 
-Se leyeron completos el prompt H7.1, [H2](h2-validation.md), [HTTPS H2](h2-temporary-https.md), y las skills `mp-integrate`, `mp-webhooks` y `mp-review` v1.0.0 con sus referencias aplicables. Se contrastó documentación oficial pública vigente. El alcance de `mp-review` es `security`: no se conectó MCP, no se consultaron cuentas reales, no se importaron credenciales, no se registraron webhooks y no se ejecutó ningún handler de notificación ni operación monetaria durante esta auditoría.
+Se leyeron completos el prompt H7.1, [H2](h2-validation.md), [HTTPS H2](h2-temporary-https.md), y las skills `mp-integrate`, `mp-webhooks` y `mp-review` v1.0.0 con sus referencias aplicables. Se contrastó documentación oficial pública vigente. El alcance de `mp-review` es `security`: no se conectó MCP ni se consultaron cuentas reales. La prueba externa posterior utilizó onboarding y plugin oficiales con cuentas ficticias; sí ejecutó pagos simulados y el receptor nativo. No hubo importación de secretos entre instancias ni webhook paralelo.
 
 Las instrucciones genéricas de las skills sobre scaffolding, SDK, CTA y receptor propio no se aplican: H7.1 exige conservar Checkout Blocks y el plugin oficial sin desarrollar otra integración. No se crearon variables MP de entorno porque este plugin utiliza su configuración nativa. La vinculación de una cuenta debe realizarse por su onboarding soportado.
 
@@ -32,11 +32,13 @@ El paquete instalado declara WordPress mínimo 6.3, probado hasta 7.1, PHP míni
 
 WooCommerce 11.2.1 supera el techo declarado de pruebas de MP 11.0.1. H2 documenta pruebas funcionales de esa combinación; eso no amplía la declaración del fabricante. La release oficial consultada continúa identificando 8.9.6 como la última publicada. No se justificó reemplazar ni parchear el proveedor. [Release oficial](https://github.com/mercadopago/cart-woocommerce/releases/tag/v8.9.6).
 
-## Qué acreditó H2 y qué falta repetir en principal
+## Evidencia histórica H2 y repetición en principal
 
 H2 acreditó operaciones externas con cuentas ficticias distintas: aprobado, rechazado, pendiente con navegador cerrado, confirmación posterior al primer retorno y dos devoluciones efectivas de saldo ficticio. HPOS, stock, correo y retorno se verificaron entonces. No se deben repetir devoluciones como parte de H7.1: este hito prohíbe reembolsos monetarios.
 
 H2 no reprodujo la notificación idéntica. Faltaba el cuerpo original y el historial del vendedor no era accesible con el OAuth de la cuenta Developers principal. Una devolución seguida de callback no equivale a repetir una notificación. Ningún resultado H2 se presenta como prueba externa realizada en H7.1.
+
+La sesión externa H7.1 ya repitió aprobado, OTHE rechazado, CONT pendiente, abandono, retornos, importes y recepción de callback antes del retorno. El [informe nuevo](h7-external-qa.md) conserva el resultado real de cada pedido, la indisponibilidad controlada y la distinción entre reintento del proveedor y solicitudes reconstruidas por QA.
 
 ## Cuenta de prueba y modo correcto
 
@@ -46,7 +48,7 @@ El procedimiento seguro para reutilizar las cuentas conocidas de H2 es volver a 
 
 El prefijo de una credencial y `live_mode` aislados no acreditan que el receptor sea de prueba. No se solicitó ningún secreto por chat. Sin vinculación segura, Pro debe permanecer técnicamente indisponible; no corresponde registrar un método visual ficticio.
 
-El inspector `docker/tools/h7-mp-seller-check.php` admite `inspect` sin consultar identidad y `verify-linked-test-seller` mediante el lector oficial `getSellerInfo`. Emite únicamente booleanos de cuenta de prueba, MLA, coincidencia del collector configurado, modo y origen HTTPS; nunca devuelve identidad ni credenciales. No activa métodos ni genera preferencias. El lector oficial puede usar su cache; el resultado no acredita TLS, conectividad de callback ni identidad del comprador, que deben verificarse durante la sesión de prueba. Su sintaxis pasó `php -l`; no se ejecutó la consulta antes de la vinculación.
+El inspector `docker/tools/h7-mp-seller-check.php` admite `inspect` sin consultar identidad y `verify-linked-test-seller <vendedor-esperado>` mediante `getSellerInfo`. Se ejecutó tras el onboarding y pasó `test_user`, MLA, vendedor esperado y HTTPS. El onboarding actual no rellena el collector legacy: vacío se informa `null`, sin inventarlo; si existe, se contrasta. Nunca devuelve identidad ni credenciales. No activa métodos ni genera preferencias. El lector puede usar su cache; TLS, comprador distinto y callback fueron comprobados por separado en la prueba externa.
 
 ## HTTPS
 
@@ -97,7 +99,6 @@ El plugin toma productos y variaciones del pedido, agrega sus importes luego de 
 
 ### CRITICAL
 
-- Principal carece de vinculación/credenciales verificadas de vendedor de prueba. Bloquea pruebas externas seguras, no BACS ni QA interno.
 - Autenticidad HMAC y replay externo no acreditados. No hay autorización de producción.
 
 ### WARNINGS
@@ -105,12 +106,14 @@ El plugin toma productos y variaciones del pedido, agrega sus importes luego de 
 - WooCommerce 11.2.1 está por encima del `WC tested up to` declarado de MP.
 - Pro todavía contiene ruta IPN y rama `sandbox_init_point` en el proveedor; no se parcheó.
 - La guarda de estados no equivale a orden temporal para cualquier estado final.
+- `OrderStatus::getNotificationId()` reconoce merchant orders por un texto legacy de la URL. El puente actual puede devolver 404 para la búsqueda P- aunque el recurso M- exista; detalle y alternativa diagnóstica soportada mediante SDK en el informe externo. No se modificó el proveedor.
+- Abrir otro checkout en la misma sesión mientras hay un pedido MP pendiente alteró su método. Se reparó el dato de QA, sin alterar estado/stock; ver incidencia y fuente nativa en el informe externo. No se certifica concurrencia productiva.
 
 ### PASS
 
 - Plugin oficial instalado/activo; declaraciones HPOS/Blocks y adaptador Pro nativo.
 - Credenciales consultadas sólo como booleanos y ausentes en principal al inicio.
-- No se copiaron secretos ni datos H2; no se ejecutaron pagos ni reembolsos.
+- Vendedor y comprador ficticios distintos comprobados; pagos externos exclusivamente simulados, sin reembolsos ni copia de secretos H2 a principal.
 - El receptor consulta recursos autenticados; referencia y persistencia usan APIs WooCommerce.
 
 ### Quality Standards
@@ -132,20 +135,20 @@ No evaluadas mediante `quality_checklist`.
 | 1 | Token fuera del código | Pass | Barrido versionado sin tokens completos; opciones nativas privadas |
 | 2 | `.env` ignorado; `.env.example` permitido | Pass | `.gitignore:3`; `git check-ignore` |
 | 3 | HMAC `x-signature` | Not verified | Búsqueda receptores sin implementación; consulta autenticada no equivale a HMAC |
-| 4 | HTTPS para retorno/callback | Pending | Principal en localhost; H2 histórico HTTPS no acredita H7.1 |
-| 5 | Estado contrastado en servidor | Pass estático | `CoreNotification.php:93`; `WebhookNotification.php:78`; E2E H7.1 pendiente |
+| 4 | HTTPS para retorno/callback | Pass en QA | TLS, origen y callback externo comprobados en H7.1; restauración local al cierre |
+| 5 | Estado contrastado en servidor | Pass en QA | Código oficial y lecturas autenticadas: monto ARS, estado, receptor, comprador y referencia |
 | 6 | Clave de idempotencia al crear pago | N/A a llamada propia | No creador custom de pagos; Preferences no se presenta como Payments API |
-| 7 | `external_reference` | Pass estático | `AbstractTransaction.php:108`, `AbstractNotification.php:71` |
+| 7 | `external_reference` | Pass en QA | `AbstractTransaction.php:108`, `AbstractNotification.php:71`; coincide con los pedidos probados |
 | 8 | Credenciales fuera de entrega | Pass | `.local/` ignorado, volúmenes privados, sin copia automática |
 | 9 | Ausencia de `sandbox_init_point` | Partial | Ausente de integración propia; rama del proveedor `BasicGateway.php:240` |
 
 ### Recommendations
 
-1. Vincular principal con vendedor comprobado de prueba mediante onboarding oficial; mantener Pro indisponible hasta entonces.
-2. Preparar HTTPS reversible y validar el receptor exacto que genera el plugin. No sustituirlo por otro endpoint.
-3. Repetir matriz externa, retorno y replay del mismo evento con evidencia segura de estado/stock; resolver garantías de autenticidad con soporte/versión oficial antes de producción.
+1. Mantener Pro deshabilitado en localhost; reactivarlo sólo en otra sesión HTTPS con identidad ficticia verificada.
+2. Resolver garantías de autenticidad y migración del mecanismo IPN/Core con soporte/versión oficial antes de producción.
+3. Certificar el replay idéntico del evento original y la ordenación de todos los estados finales; no sustituirlos por una reconstrucción.
 
-**Summary**: Official quality: not requested. 5/9 controles con evidencia local/estática; uno no verificado, uno pendiente, uno no aplicable y uno parcial. No mide el éxito del E2E externo.
+**Summary**: Official quality: not requested. 6/9 controles con evidencia local/estática o externa; uno no verificado, uno no aplicable y uno parcial. No es una certificación productiva.
 
 ---
 
@@ -157,6 +160,7 @@ No evaluadas mediante `quality_checklist`.
 - [x] Ausencia inicial de credenciales en principal, comprobada sin revelar valores.
 - [x] Volúmenes H2 conservados, instancias separadas y sin migración de secretos.
 - [x] Mecanismo nativo de consulta de estado/referencia/CRUD y guardas de stock documentados.
+- [x] Vinculación ficticia verificada, pagos externos simulados, HTTPS y recepción antes del retorno comprobados en H7.1.
 
 ### Needs attention
 
@@ -167,21 +171,21 @@ No evaluadas mediante `quality_checklist`.
 
 ### Blockers (must fix before production)
 
-- [ ] Vinculación correcta y validación externa nueva en HTTPS estable.
 - [ ] Resolver/documentar garantías de autenticidad del receptor oficial de la versión elegida; HMAC no certificado aquí.
+- [ ] Resolver con una solución soportada la reutilización de la sesión pendiente al abrir otro checkout; no basta con evitarla durante QA.
 - [ ] Completar entorno comercial real en un hito autorizado, sin arrastrar secretos ni cuentas ficticias.
 
 ### Next steps
 
-1. Seguir el procedimiento mínimo de [pruebas H7](h7-payment-testing.md) para vincular una cuenta de prueba cuando estén disponibles los accesos.
-2. Repetir la matriz externa y conservar sólo evidencia saneada; no declarar E2E aprobado con mocks.
+1. Revisar los [resultados externos](h7-external-qa.md) y sus límites antes de adaptar la plantilla a un cliente.
+2. Repetir notificaciones con el evento original accesible y resolver las garantías pendientes con el proveedor.
 3. Reejecutar `mp-review` después de resolver estos puntos, antes de producción.
 
 ### Resources used
 
-- Local: fuentes oficiales instaladas y documentos H2; comprobaciones runtime sólo de lectura.
+- Local: fuentes oficiales instaladas, documentos H2, comprobaciones runtime y sesión ficticia nueva detallada en el informe externo.
 - Web: documentación pública oficial enlazada arriba, consultada el 18/10/2026.
 - Skills: `mp-integrate`, `mp-webhooks`, `mp-review` v1.0.0; adaptación a restricciones explícitas H7.1.
 - MCP: ninguna llamada de autenticación, calidad, cuenta, webhook o pagos.
 
-**Scores**: official quality: N/A; 5/9 controles locales/estáticos. **Verdict**: Partial — integración externa H7.1 y garantías pendientes; sin habilitación productiva.
+**Scores**: official quality: N/A; 6/9 controles locales/estáticos o externos. **Verdict**: Needs fixes before production — pruebas ficticias H7.1 realizadas; HMAC, replay original y orden temporal universal no certificados.

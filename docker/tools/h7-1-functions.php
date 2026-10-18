@@ -51,7 +51,10 @@ function h7_1_mp_report() {
         'other_mp_gateways_enabled' => $other_enabled,
         'credential_presence' => ['production_public_key' => h7_1_filled(get_option('_mp_public_key_prod')), 'production_access_token' => h7_1_filled(get_option('_mp_access_token_prod')), 'test_public_key' => h7_1_filled(get_option('_mp_public_key_test')), 'test_access_token' => h7_1_filled(get_option('_mp_access_token_test'))],
         'seller_marked_test_by_plugin' => $mp ? (bool) $mp->sellerConfig->isTestUser() : false,
-        'seller_linked' => h7_1_filled(get_option('_collector_id_v1')),
+        // Current onboarding stores credentials without the legacy collector.
+        // Presence is not an identity check; use h7-mp-seller-check for that.
+        'native_link_credentials_present' => h7_1_filled(get_option('_mp_public_key_prod')) && h7_1_filled(get_option('_mp_access_token_prod')),
+        'legacy_collector_present' => h7_1_filled(get_option('_collector_id_v1')),
         'test_mode_selected' => $mp ? $mp->storeConfig->isTestMode() : null,
         'sales_mode_selected' => $mp ? $mp->storeConfig->isProductionMode() : null,
         'external_payment_authorized_by_this_tool' => false,

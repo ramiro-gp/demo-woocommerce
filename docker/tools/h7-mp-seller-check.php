@@ -2,7 +2,7 @@
 /**
  * Read-only H7.1 seller preflight. Does not enable gateways, create a preference,
  * invoke a callback, submit a payment, refund, or import any credential.
- * Usage: wp eval-file /opt/local-tools/h7-mp-seller-check.php inspect|verify-linked-test-seller
+ * Usage: wp eval-file /opt/local-tools/h7-mp-seller-check.php inspect|verify-linked-test-seller [expected-seller]
  * Only the explicit second mode uses the official plugin's account reader.
  * Output is an allowlist of booleans/public version metadata, never raw identity.
  */
@@ -14,6 +14,7 @@ if (!defined('WP_CLI') || !WP_CLI || !function_exists('wp_get_environment_type')
 }
 
 $mode = $args[0] ?? 'inspect';
+$expectedSeller = $args[1] ?? '';
 if (!in_array($mode, ['inspect', 'verify-linked-test-seller'], true)) {
     WP_CLI::error('Usage: h7-mp-seller-check.php inspect|verify-linked-test-seller');
 }
@@ -31,6 +32,7 @@ $report = [
     'linked_account_is_test_user' => false,
     'linked_account_is_argentina' => false,
     'linked_account_matches_plugin_collector' => false,
+    'expected_seller_matches' => false,
     'safe_to_start_test_checkout' => false,
 ];
 
@@ -70,20 +72,29 @@ try {
             && in_array('test_user', (array) ($data['tags'] ?? []), true);
         $report['linked_account_is_argentina'] = $report['identity_lookup_ok']
             && ($data['site_id'] ?? '') === 'MLA';
-        $report['linked_account_matches_plugin_collector'] = $report['identity_lookup_ok']
-            && !empty($data['id'])
-            && (string) $data['id'] === (string) $mp->sellerConfig->getCollectorId();
+        // 8.9.6's current onboarding does not populate the legacy collector
+        // option. Authenticate /users/me and compare the explicitly expected
+        // seller instead of making that unused metadata a false blocker.
+        $collector = trim($mp->sellerConfig->getCollectorId());
+        $report['legacy_collector_present'] = $collector !== '';
+        $report['linked_account_matches_plugin_collector'] = $collector === '' ? null
+            : ($report['identity_lookup_ok'] && (string) ($data['id'] ?? '') === $collector);
+        $report['expected_seller_matches'] = $expectedSeller !== '' && $report['identity_lookup_ok']
+            && strcasecmp(trim((string) ($data['nickname'] ?? '')), $expectedSeller) === 0;
         unset($identity, $data);
     }
 
     $report['safe_to_start_test_checkout'] = $report['official_pro_registered']
+        && $report['pro_enabled']
+        && $report['pro_available']
         && $report['plugin_sales_mode']
         && $report['native_pro_credentials_present']
         && $report['public_https_origin']
         && $report['identity_lookup_ok']
         && $report['linked_account_is_test_user']
         && $report['linked_account_is_argentina']
-        && $report['linked_account_matches_plugin_collector'];
+        && $report['expected_seller_matches']
+        && $report['linked_account_matches_plugin_collector'] !== false;
 } catch (Throwable $error) {
     $report['preflight_failed'] = true;
     // Exception messages and traces may include credentials. Never emit them.

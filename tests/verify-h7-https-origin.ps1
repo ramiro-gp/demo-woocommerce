@@ -43,8 +43,7 @@ function Read-Origin([string]$Path) {
         continue
       }
       $body = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
-      $cookies = if ($response.Headers.Contains('Set-Cookie')) { @($response.Headers.GetValues('Set-Cookie')) } else { @() }
-      return [pscustomobject]@{Status=[int]$response.StatusCode; Body=$body; Redirects=$redirect; SecureCookie=(($cookies -join ' ') -match '(?i);\s*secure')}
+      return [pscustomobject]@{Status=[int]$response.StatusCode; Body=$body; Redirects=$redirect; NoIndex=($response.Headers.Contains('X-Robots-Tag') -and (($response.Headers.GetValues('X-Robots-Tag') -join ',') -match 'noindex'))}
     } finally { if ($response) { $response.Dispose() }; $request.Dispose(); $client.Dispose(); $handler.Dispose() }
   }
   throw 'Too many simulated-origin redirects.'
@@ -67,7 +66,6 @@ try {
   try {
     Invoke-CheckedDocker ($composeOverride + @('up', '-d', '--wait', '--wait-timeout', '180', 'wordpress'))
     $login = Read-Origin '/wp-login.php'
-    $report.proxySecureCookie = $login.SecureCookie
     $report.loginHttp = $login.Status
     $shop = Read-Origin '/?post_type=product'
     $report.storefrontHttp = $shop.Status
@@ -81,14 +79,18 @@ try {
       [IO.File]::WriteAllText((Join-Path $diagnosticRoot 'https-origin-storefront.html'), $shop.Body, $utf8)
     }
     if ($shop.Status -ne 200 -or $shop.Body -notmatch 'https://h7-origin-check\.invalid/\?product=' -or $shop.Body -match '(?:http:|https:)//localhost:8080') { throw 'Canonical HTTPS URLs did not apply to the storefront.' }
-    if ($login.Status -ne 200 -or -not $login.SecureCookie -or $login.Body -notmatch 'https://h7-origin-check\.invalid/wp-login\.php') { throw 'HTTPS login recognition or secure test cookie failed.' }
+    if ($login.Status -ne 403 -or -not $login.NoIndex -or -not $shop.NoIndex) { throw 'Public login block or noindex header failed.' }
+    foreach ($blockedPath in @('/wp-admin/', '/xmlrpc.php')) {
+      if ((Read-Origin $blockedPath).Status -ne 403) { throw 'Sensitive public route was not blocked.' }
+    }
     $cart = Read-Origin '/index.php?rest_route=/wc/store/v1/cart'
     $cartData = $cart.Body | ConvertFrom-Json
     if ($cart.Status -ne 200 -or $cartData.totals.currency_code -ne 'ARS') { throw 'Store API did not respond through the simulated HTTPS origin.' }
     $report.passed=$true
     $report.canonicalHttpsUrls=$true
-    $report.loginHttp=200
-    $report.secureLoginCookie=$true
+    $report.loginHttp=403
+    $report.sensitiveRoutesBlocked=$true
+    $report.noIndexHeader=$true
     $report.storeApiHttp=200
     $report.currency='ARS'
   } finally {
