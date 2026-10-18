@@ -290,6 +290,9 @@ body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-or
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-order-summary-item__image > img { inline-size: 64px; max-inline-size: 64px; border-radius: 0; }
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-order-summary-item__description { min-inline-size: 0; padding: 0 var(--cb-space-4); gap: var(--cb-space-2); }
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-order-summary-item__total-price { flex: 0 0 auto; padding-block-start: 0; font-size: 1rem; font-weight: 600; }
+/* The native sale badge is redundant in the receipt: the regular price and
+   current price already communicate the saving without translating a label. */
+body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-sale-badge { display: none; }
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-product-name { color: var(--cb-text); font-size: 1rem; font-weight: 600; line-height: 1.5; }
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-product-metadata { color: var(--cb-text-muted); font-size: 1rem; line-height: 1.5; }
 body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-product-metadata__description { display: none; }
@@ -399,6 +402,12 @@ body.woocommerce-checkout .wp-block-woocommerce-checkout :is([aria-busy="true"],
 @media (max-width: 39.999rem) {
   body.woocommerce-checkout .cb-checkout-intro { padding-block-end: var(--cb-space-6); margin-block-end: var(--cb-space-6); }
   body.woocommerce-checkout .cb-checkout-intro h1 { font-size: clamp(2.25rem, 9vw, 3rem); }
+}
+@media (max-width: 994px) {
+  /* Keep the receipt's image and amount inside the same visual gutter as its
+     coupon and totals when the sidebar becomes narrow. */
+  body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-order-summary-item__image { margin-inline-start: var(--cb-space-2); }
+  body.woocommerce-checkout .wp-block-woocommerce-checkout .wc-block-components-order-summary .wc-block-components-order-summary-item__total-price { margin-inline-end: var(--cb-space-2); }
 }
 @media (forced-colors: active) {
   body.woocommerce-checkout .wp-block-woocommerce-checkout :is(.wc-block-components-checkbox__input, .wc-block-components-radio-control__input) { appearance: auto; }
