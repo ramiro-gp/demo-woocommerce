@@ -1,0 +1,9 @@
+# Reversible runtime override; no home/siteurl writes or database replacement.
+# Only scripts/h7-https.ps1 supplies this origin during a supervised DEMO run.
+services:
+  wordpress:
+    environment:
+      LOCAL_SITE_URL: ${H7_PUBLIC_SITE_URL:?Use scripts/h7-https.ps1 start}
+  wpcli:
+    environment:
+      LOCAL_SITE_URL: ${H7_PUBLIC_SITE_URL:?Use scripts/h7-https.ps1 start}

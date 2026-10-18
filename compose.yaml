@@ -52,6 +52,7 @@ services:
       - wordpress_data:/var/www/html
       - ./docker/local-mail.php:/var/www/html/wp-content/mu-plugins/000-local-mail.php:ro
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/zz-local.ini:ro
+      - ./docker/apache/demo-log-privacy.conf:/etc/apache2/conf-enabled/zz-demo-log-privacy.conf:ro
     healthcheck:
       test: ["CMD", "php", "-r", "exit(@file_get_contents('http://127.0.0.1/wp-login.php', false, stream_context_create(['http' => ['follow_location' => 0]])) === false ? 1 : 0);"]
       interval: 5s

@@ -1,8 +1,22 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H6.1 y sus correcciones están aprobados y consolidados en main (`0db3289`). H6.2 se desarrolla en `codex/h6-2-shipping-logistics` para revisión manual, sin merge a main. H7 no comenzó.** H2 conserva la validación funcional de HPOS, Blocks y Mercado Pago con datos ficticios; el túnel está apagado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H6.2 y sus correcciones están aprobados y consolidados en main (`c736cdc`). H7.1 se entrega en `codex/h7-1-payments` para revisión manual, sin merge a main. H7.2 y H8 no comenzaron.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
 
 La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
+
+## H7.1 — Pagos y pedidos
+
+**Transferencia bancaria nativa (BACS)** disponible en Checkout Blocks: pedido en espera, sin pago automático y con instrucciones DEMO que no permiten transferir dinero. Mercado Pago oficial 8.9.6 conserva Checkout Pro como opción elegida; su habilitación exige vendedor de prueba verificado y HTTPS. No se transportan credenciales mediante fixtures ni se presenta el QA interno como un pago externo confirmado.
+
+Ver [informe H7.1 y resultados reales](docs/h7-1-payments.md), [guía de pruebas](docs/h7-payment-testing.md) y [auditoría MP, autenticidad y límites](docs/h7-mp-audit.md). La documentación distingue pruebas nuevas de la evidencia histórica H2. El theme sólo aclara la confirmación pendiente/pagada usando el pedido WooCommerce. Emails y operación se reservan para H7.2.
+
+```powershell
+.\scripts\h7-1.ps1 inspect
+.\scripts\h7-1.ps1 verify
+.\tests\verify-h7-1.ps1
+```
+
+No ejecutar QA mientras haya una sesión de pago manual o HTTPS activa. Los scripts de configuración requieren backup, conservan cuentas/credenciales y bloquean datos bancarios existentes. No realizar pagos, transferencias o reembolsos reales.
 
 ## H6.2 — Envíos y preparación logística
 
@@ -71,7 +85,7 @@ H4 (Commerce Base **1.1.0**) fue aprobado visualmente: hero **Vestir lo cotidian
 
 La demo principal es la instancia **`local` en http://localhost:8080**. Commerce Base 1.0.3 cerró las correcciones post-H3; H4 extiende esa base. Abrí la [tienda](http://localhost:8080/?post_type=product) o el [showcase del sistema visual](http://localhost:8080/?commerce-base-showcase=1) para revisar el sistema. El showcase es una vista de desarrollo sin página publicada ni indexación; la home real corresponde a H4.
 
-**`localhost:18081` es `h2-public`**, instalación técnica aislada para pagos/pruebas H2. Conserva sus productos, pedidos, credenciales, contenido inicial y Commerce Base 1.0.0 usado en la revisión original de H3. No es la URL de las correcciones actuales. La demo 8080 conserva sus métodos de pago previos, actualmente sin gateway habilitado; no se trasladaron credenciales de H2. Ver [informe post-H3 e instancias](docs/h3-corrections.md).
+**`localhost:18081` es `h2-public`**, instalación técnica aislada para pagos/pruebas H2. Conserva sus productos, pedidos, credenciales, contenido inicial y Commerce Base 1.0.0 usado en la revisión original de H3. No es la URL de las correcciones actuales. Durante H3 la demo 8080 permaneció sin gateway habilitado; H7.1 incorpora BACS y la preparación de Pro sin trasladar credenciales de H2. Ver [informe post-H3 e instancias](docs/h3-corrections.md).
 
 ```powershell
 powershell -NoProfile -File .\scripts\dev.ps1 start -Instance local

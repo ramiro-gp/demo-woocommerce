@@ -4,6 +4,7 @@ if (!defined('ABSPATH')) { exit; }
 
 require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/checkout-labels.php';
+require_once __DIR__ . '/inc/order-confirmation.php';
 require_once __DIR__ . '/inc/discovery.php';
 require_once __DIR__ . '/inc/catalog.php';
 require_once __DIR__ . '/inc/exit-intent.php';

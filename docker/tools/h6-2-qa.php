@@ -174,7 +174,13 @@ try {
     $set_address('', '', '', ''); $scenarios['pickup_no_delivery_address'] = $calculate('pickup_location:0');
     $checks['pickup_no_delivery_address'] = $has($scenarios['pickup_no_delivery_address'], 'pickup_location') && 0.0 === $scenarios['pickup_no_delivery_address']['shipping'] && ['pickup_location:0'] === $scenarios['pickup_no_delivery_address']['chosen'];
     $checks['hpos'] = \Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled();
-    $checks['no_new_gateway'] = count(WC()->payment_gateways()->get_available_payment_gateways()) === 0;
+    // H7.1 explicitly adds native BACS and official Checkout Pro. Keep the
+    // original no-gateway contract until that guarded migration is complete.
+    $payment_ids = array_keys(WC()->payment_gateways()->get_available_payment_gateways());
+    $h71_complete = 'complete' === (get_option('trama_h7_1', [])['phase'] ?? '');
+    $checks['payment_gateways_preserved'] = $h71_complete
+        ? !array_diff($payment_ids, ['bacs', 'woo-mercado-pago-basic'])
+        : !$payment_ids;
     $checks['native_selection_state_consistent'] = !array_filter($scenarios, static function ($row) {
         if (!is_array($row['chosen']) || count($row['chosen']) !== 1) { return true; }
         $chosen = current($row['chosen']);
