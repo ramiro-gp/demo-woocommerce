@@ -2,6 +2,8 @@
 
 Sesión del 18/10/2026 sobre la instancia principal, rama `codex/h7-1-payments`. Complementa la [implementación](h7-1-payments.md), la [guía reproducible](h7-payment-testing.md) y la [auditoría](h7-mp-audit.md). No habilita producción ni comienza H7.2.
 
+**Cierre 19/10/2026:** evidencia histórica aprobada para desarrollo, preservada sin nuevos pagos externos. Los límites de autenticidad, replay, tiempo, validaciones independientes y compatibilidad siguen bloqueando producción. El cierre posterior de Git se documenta en H7.1; este informe conserva los resultados originales y sus correcciones auditadas.
+
 ## Entorno y protección
 
 WooCommerce 11.2.1, Mercado Pago oficial 8.9.6, WordPress 7.1.3 y PHP 8.4.26. HPOS, invitado y Checkout Blocks conservados. Ambos plugins volvieron a pasar checksums oficiales estrictos (2/2).

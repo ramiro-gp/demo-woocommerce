@@ -2,6 +2,8 @@
 
 Sólo demo local, cuentas ficticias y destinatarios controlados. Ninguna transferencia, tarjeta personal, cuenta comercial real ni reembolso monetario. Mantener H2 separado. Ver [arquitectura y resultados](h7-1-payments.md).
 
+**Cierre 19/10/2026:** H7.1 aprobado únicamente en desarrollo; Pro permanece deshabilitado. Esta guía conserva procedimientos históricos, no autoriza nuevas sesiones externas ni producción. HMAC, replay original, orden temporal, timestamp, transición obsoleta desde cancelado, validaciones independientes y certificación MP/WC siguen pendientes según la [auditoría](h7-concurrency-audit.md). Para operación y correos continuar en H7.2 desde su rama propia.
+
 ## BACS completo
 
 1. Abrir la [tienda](http://localhost:8080/?post_type=product) como invitado en una sesión nueva. Agregar un producto simple o una variación disponible.

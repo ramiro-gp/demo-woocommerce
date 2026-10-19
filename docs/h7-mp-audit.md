@@ -2,6 +2,8 @@
 
 Revisión del 18/10/2026, Argentina. Separa H2, auditoría estática y [prueba externa nueva H7.1](h7-external-qa.md). No certifica preparación para producción. Complementa [H7.1](h7-1-payments.md) y la [guía de pruebas](h7-payment-testing.md).
 
+**Cierre 19/10/2026:** aprobado como desarrollo. Todos los bloqueos productivos siguientes permanecen abiertos, incluidos monto/moneda/asociación independientes y compatibilidad oficial WC 11.2.1. Pro deshabilitado; no se parchea el plugin, no se improvisa HMAC ni se añade receptor paralelo. La consolidación Git no altera este veredicto.
+
 Ampliación de cierre: [integridad de sesión y auditoría dinámica](h7-concurrency-audit.md). La incidencia de método se reprodujo y corrigió con una extensión soportada; se comprobaron además límites concretos de timestamp diagnóstico y orden temporal del receptor. Se intentó `notifications_history` para la aplicación vinculada: rechazo por propiedad OAuth diferente. El replay externo original continúa sin ejecutarse; las reconstrucciones HTTP y las simulaciones aisladas se identifican por separado.
 
 ## Alcance y método

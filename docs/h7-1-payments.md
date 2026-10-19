@@ -1,7 +1,17 @@
 # H7.1 — Pagos y pedidos
 
 Implementación del 18/10/2026, Argentina, en `C:\Codigo\demo-woocommerce`.
-H7.2 y H8 no se iniciaron. Entrega para revisión manual, sin merge de H7.1 a main.
+H7.1 aprobado y cerrado como hito de **desarrollo** el 19/10/2026. No autoriza cobros reales. H8 no se inició.
+
+## Cierre de desarrollo del 19/10/2026
+
+Base aprobada `686006c736f283c9ea013815b43e382d6a8fc922`, idéntica a `origin/codex/h7-1-payments`, sin cambios locales inesperados. Consolidación prevista por fast-forward, preservando los tres commits H7.1 y este cierre documental, sin force push. El commit de cierre se identifica con `git log --oneline --grep='close H7.1 development'`; la documentación H7.2 registra el SHA final integrado y la coincidencia de main/origin/main.
+
+Regresión nueva: 33/33 funcionales, 7/7 guardas, 21/21 envíos/cupones, 31/31 concurrencia HTTP/Blocks y 6/6 flujos Chromium (Home, catálogo, fichas, carrito, mini-cart, cross-sells, Exit Intent, checkout y envíos), sin errores JS/assets ni POST de compra. Reporte privado `h6-2/browser/h7-1-closure-browser.json`. Son pruebas locales, sin nuevos pagos ni callbacks externos. Backup nuevo íntegro `h7-2-before-communications-20261019`. Los pedidos históricos se conservan. Localhost:8080 y Mailpit:8025 restaurados; no hay túnel activo; BACS disponible y Checkout Pro deshabilitado.
+
+**Bloqueos productivos sin resolver:** HMAC ausente en el receptor efectivo; replay externo idéntico original sin comprobar; garantías insuficientes de eventos tardíos/orden temporal; timestamp diagnóstico cambiante; `cancelled` → `pending` con recurso obsoleto simulado; comprobaciones independientes insuficientes de importe, moneda y asociación pago/pedido; compatibilidad productiva MP 8.9.6/WC 11.2.1 pendiente. Las pruebas ficticias aprobadas no resuelven estos bloqueos. No se modifica el proveedor ni se crea otro receptor.
+
+Commerce Order Integrity 1.0.0 sigue activo, versionado y montado de sólo lectura en ambos servicios Compose. No depende de archivos temporales ni se mueve a Commerce Core. Para una instalación nueva: preparar H1/H2 y los hitos de contenido en orden, ejecutar `dev.ps1 start` con este Compose y `dev.ps1 wp -WpArgs @('plugin','activate','commerce-order-integrity')`; después ejecutar `verify-h7-concurrency.ps1`. La activación explícita es necesaria: `start` preserva la lista de plugins de una instalación existente. Mantener los flujos nativos de `order-pay` y reintento.
 
 ## Base Git y arquitectura
 

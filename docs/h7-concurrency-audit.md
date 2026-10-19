@@ -2,6 +2,8 @@
 
 Investigación del 18/10/2026 (los reportes nocturnos usan UTC del 19/10). Rama `codex/h7-1-payments`, base `9dfdb49edccf7f90ad5e335dc0361c433bddc8fc`. Alcance exclusivo H7.1; sin merge a main, Commerce Core ni H7.2.
 
+**Cierre posterior 19/10/2026:** H7.1 aprobado sólo para desarrollo. Reejecución local de concurrencia 31/31, conservando la extensión activa y los históricos; sin nuevas operaciones externas. La referencia a “sin merge” describe la investigación original. La consolidación posterior en main no resuelve ninguno de los bloqueos productivos del receptor listados abajo. Commerce Order Integrity permanece independiente e intacto; activación reproducible documentada en [H7.1](h7-1-payments.md).
+
 ## Causa comprobada
 
 WooCommerce **11.2.1**, Mercado Pago oficial **8.9.6**, WordPress **7.1.3**, PHP **8.4.26**, HPOS y Checkout Blocks. Se conservaron los checksums oficiales de ambos plugins. Los seis archivos centrales usados para explicar sesión, controlador, hidratación, Core y timestamp coincidieron por SHA-256 con los archivos realmente instalados.
