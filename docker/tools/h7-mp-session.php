@@ -75,6 +75,7 @@ try {
                 $notification = $core->getSdkInstance()->getNotificationInstance()->read(['id' => $notificationId])->toArray();
                 $target = (string) ($notification['notification_url'] ?? '');
                 $out['core_lookup'][$type] = ['found' => true, 'resource_id' => $notificationId, 'status' => $notification['status'] ?? null, 'destination_https' => wp_parse_url($target, PHP_URL_SCHEME) === 'https', 'destination_host_matches' => wp_parse_url($target, PHP_URL_HOST) === wp_parse_url(home_url(), PHP_URL_HOST), 'reference_matches' => ($notification['external_reference'] ?? '') === 'WC-' . $order->get_id()];
+                $out['core_lookup'][$type]['payment_date_presence'] = array_map(static fn($payment) => ['date' => !empty($payment['date']), 'date_created' => !empty($payment['date_created'])], $notification['payments_details'] ?? []);
             } catch (Throwable $lookupError) { $out['core_lookup'][$type] = ['found' => false, 'error_type' => get_class($lookupError), 'error_code' => $lookupError->getCode(), 'http_status' => method_exists($lookupError, 'getApiStatus') ? $lookupError->getApiStatus() : null]; }
         }
     } elseif ($action !== 'inspect') { throw new H71SessionException('Use prepare|enable|disable|inspect|payment.'); }

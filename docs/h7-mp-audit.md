@@ -2,6 +2,8 @@
 
 Revisión del 18/10/2026, Argentina. Separa H2, auditoría estática y [prueba externa nueva H7.1](h7-external-qa.md). No certifica preparación para producción. Complementa [H7.1](h7-1-payments.md) y la [guía de pruebas](h7-payment-testing.md).
 
+Ampliación de cierre: [integridad de sesión y auditoría dinámica](h7-concurrency-audit.md). La incidencia de método se reprodujo y corrigió con una extensión soportada; se comprobaron además límites concretos de timestamp diagnóstico y orden temporal del receptor. Se intentó `notifications_history` para la aplicación vinculada: rechazo por propiedad OAuth diferente. El replay externo original continúa sin ejecutarse; las reconstrucciones HTTP y las simulaciones aisladas se identifican por separado.
+
 ## Alcance y método
 
 Se leyeron completos el prompt H7.1, [H2](h2-validation.md), [HTTPS H2](h2-temporary-https.md), y las skills `mp-integrate`, `mp-webhooks` y `mp-review` v1.0.0 con sus referencias aplicables. Se contrastó documentación oficial pública vigente. El alcance de `mp-review` es `security`: no se conectó MCP ni se consultaron cuentas reales. La prueba externa posterior utilizó onboarding y plugin oficiales con cuentas ficticias; sí ejecutó pagos simulados y el receptor nativo. No hubo importación de secretos entre instancias ni webhook paralelo.
@@ -107,7 +109,9 @@ El plugin toma productos y variaciones del pedido, agrega sus importes luego de 
 - Pro todavía contiene ruta IPN y rama `sandbox_init_point` en el proveedor; no se parcheó.
 - La guarda de estados no equivale a orden temporal para cualquier estado final.
 - `OrderStatus::getNotificationId()` reconoce merchant orders por un texto legacy de la URL. El puente actual puede devolver 404 para la búsqueda P- aunque el recurso M- exista; detalle y alternativa diagnóstica soportada mediante SDK en el informe externo. No se modificó el proveedor.
-- Abrir otro checkout en la misma sesión mientras hay un pedido MP pendiente alteró su método. Se reparó el dato de QA, sin alterar estado/stock; ver incidencia y fuente nativa en el informe externo. No se certifica concurrencia productiva.
+- La reutilización del pendiente y su hidratación HTML alteraban el método sin enviar otro pago. Corregida mediante **Commerce Order Integrity**, con pruebas HTTP y dos pestañas reales; detalle del alcance y reintentos autorizados en el cierre auditado.
+- Core sin fecha de pago en el recurso reescribe `[Date …]` diagnóstico en cada notificación. Reconstrucciones autenticadas de #276 preservaron efectos financieros y stock, pero no la cadena completa de metadatos.
+- La simulación de un recurso pendiente obsoleto después de `cancelled` volvió a `pending`; la guarda no proporciona orden temporal universal. No se presentó como una entrega obsoleta externa real.
 
 ### PASS
 
@@ -165,14 +169,16 @@ No evaluadas mediante `quality_checklist`.
 ### Needs attention
 
 - [ ] `BasicGateway.php:240`: conservar el flujo oficial Pro con `init_point`; no activar la rama de modo de pruebas por su nombre.
-- [ ] `OrderStatus.php:453`: verificar callbacks tardíos y estados finales con evidencia externa; no inferir una garantía universal de la guarda.
+- [ ] `OrderStatus.php:453`: límite `cancelled` → `pending` reproducido en simulación aislada; resolver con el proveedor y volver a probar externamente.
+- [ ] `Helpers/PaymentMetadata.php::formatPaymentMetadata`: fallback a hora actual, cambio diagnóstico reproducido con el recurso Core auténtico; resolver con el proveedor si se exige idempotencia total de metadatos.
 - [ ] Repetición idéntica de notificación aún sin acreditar externamente.
 - [ ] Calidad/homologación oficiales no ejecutadas; fuera del alcance de habilitación productiva de H7.1.
 
 ### Blockers (must fix before production)
 
 - [ ] Resolver/documentar garantías de autenticidad del receptor oficial de la versión elegida; HMAC no certificado aquí.
-- [ ] Resolver con una solución soportada la reutilización de la sesión pendiente al abrir otro checkout; no basta con evitarla durante QA.
+- [x] Resolver con una solución soportada la reutilización de la sesión pendiente: extensión REST/hidratación, comparación de pedidos y reintentos nativos completados; sin modificar core/proveedor.
+- [ ] Obtener garantía/corrección oficial para timestamps e intercalación de estados finales; no congelar genéricamente las conciliaciones del plugin.
 - [ ] Completar entorno comercial real en un hito autorizado, sin arrastrar secretos ni cuentas ficticias.
 
 ### Next steps
@@ -186,6 +192,6 @@ No evaluadas mediante `quality_checklist`.
 - Local: fuentes oficiales instaladas, documentos H2, comprobaciones runtime y sesión ficticia nueva detallada en el informe externo.
 - Web: documentación pública oficial enlazada arriba, consultada el 18/10/2026.
 - Skills: `mp-integrate`, `mp-webhooks`, `mp-review` v1.0.0; adaptación a restricciones explícitas H7.1.
-- MCP: ninguna llamada de autenticación, calidad, cuenta, webhook o pagos.
+- MCP: la auditoría inicial no usó MCP. La ampliación intentó sólo `notifications_history` de la aplicación vinculada y recibió rechazo por propiedad OAuth; sin cambios de cuentas, webhooks, autenticación ni pagos.
 
 **Scores**: official quality: N/A; 6/9 controles locales/estáticos o externos. **Verdict**: Needs fixes before production — pruebas ficticias H7.1 realizadas; HMAC, replay original y orden temporal universal no certificados.
