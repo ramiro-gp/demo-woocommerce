@@ -13,6 +13,8 @@ La separación acordada es:
 | WooCommerce | Catálogo, variantes, stock, carrito, pedidos y clientes | Desde H2 |
 | `commerce-base` / Commerce Base | Presentación y composición del Block Theme | H3 en adelante |
 | `commerce-lookbook` / Commerce Lookbook | Bloque editorial persistente Shoppable Lookbook, independiente del theme | H5.1 |
+| `commerce-order-integrity` / Commerce Order Integrity | Integridad de sesión pendiente en Store API e hidratación Blocks; independiente y versionado | H7.1 |
+| `commerce-communications` / Commerce Communications | Presentación/copy de emails WooCommerce y BACS en vista autorizada; sin motor de pedidos o envíos | H7.2 |
 | `commerce-core` / Commerce Core | Funcionalidad persistente comercial completa; podrá integrar el bloque existente | H8 |
 | TRAMA | Identidad ficticia y contenido de la demo | Hitos visuales y de contenido |
 

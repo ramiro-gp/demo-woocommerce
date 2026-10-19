@@ -1,0 +1,33 @@
+{
+  "options": {
+    "woocommerce_email_from_address": "tienda@example.test",
+    "woocommerce_email_reply_to_enabled": "yes",
+    "woocommerce_email_reply_to_name": "",
+    "woocommerce_email_reply_to_address": "soporte@example.test",
+    "woocommerce_email_header_image": "",
+    "woocommerce_email_header_alignment": "left",
+    "woocommerce_email_font_family": "Arial",
+    "woocommerce_email_base_color": "#405b35",
+    "woocommerce_email_background_color": "#f3f0e8",
+    "woocommerce_email_body_background_color": "#fffdf8",
+    "woocommerce_email_text_color": "#202a24",
+    "woocommerce_email_footer_text_color": "#586157",
+    "woocommerce_email_footer_text": "{site_title}\nTienda de demostración. No realizar transferencias reales.\nConsultas sobre tu pedido: {store_email}"
+  },
+  "emails": {
+    "new_order": {"enabled":"yes","recipient":"operaciones@example.test","subject":"[{site_title}] Nuevo pedido #{order_number}","heading":"Nuevo pedido","additional_content":"Revisá el medio de pago y el estado del pedido en WooCommerce antes de prepararlo."},
+    "cancelled_order": {"enabled":"yes","recipient":"operaciones@example.test","subject":"[{site_title}] Pedido #{order_number} cancelado","heading":"Pedido cancelado","additional_content":"Cancelar un pedido no devuelve dinero automáticamente. Revisá el pago y coordiná la devolución si corresponde."},
+    "failed_order": {"enabled":"yes","recipient":"operaciones@example.test","subject":"[{site_title}] No se pudo confirmar el pedido #{order_number}","heading":"Pago sin confirmar","additional_content":"Revisá el estado del pago antes de solicitar un nuevo intento al comprador."},
+    "customer_on_hold_order": {"enabled":"yes","subject":"[{site_title}] Recibimos tu pedido #{order_number}","heading":"Recibimos tu pedido","additional_content":"Si elegiste transferencia, la confirmaremos después de verificar la acreditación. Un comprobante no confirma el pago."},
+    "customer_processing_order": {"enabled":"yes","subject":"[{site_title}] Pedido #{order_number} confirmado","heading":"Pedido confirmado","additional_content":"Podés responder este correo si necesitás consultar sobre tu pedido."},
+    "customer_completed_order": {"enabled":"yes","subject":"[{site_title}] Finalizamos tu pedido #{order_number}","heading":"Pedido completado","additional_content":"Conservá este correo como resumen de tu pedido."},
+    "customer_cancelled_order": {"enabled":"yes","subject":"[{site_title}] Pedido #{order_number} cancelado","heading":"Pedido cancelado","additional_content":"Podés responder este correo para consultar sobre la cancelación."},
+    "customer_failed_order": {"enabled":"yes","subject":"[{site_title}] Pago del pedido #{order_number} sin confirmar","heading":"No pudimos confirmar el pago","additional_content":"Podés responder este correo si necesitás ayuda."},
+    "customer_refunded_order": {"enabled":"yes","subject_partial":"[{site_title}] Reembolso parcial registrado · #{order_number}","subject_full":"[{site_title}] Reembolso total registrado · #{order_number}","heading_partial":"Reembolso parcial registrado","heading_full":"Reembolso total registrado","additional_content":"En esta demo los reembolsos son registros contables de prueba: no se mueve dinero."},
+    "customer_invoice": {"enabled":"no","subject":"[{site_title}] Detalles de tu pedido #{order_number}","heading":"Detalles de tu pedido","subject_paid":"[{site_title}] Detalles de tu pedido #{order_number}","heading_paid":"Detalles de tu pedido","additional_content":"Este resumen de pedido no es una factura fiscal."},
+    "customer_note": {"enabled":"yes","subject":"[{site_title}] Novedad sobre tu pedido #{order_number}","heading":"Una novedad sobre tu pedido","additional_content":"Podés responder este correo para consultar sobre la nota."},
+    "customer_new_account": {"enabled":"yes","subject":"[{site_title}] Tu cuenta está lista","heading":"Tu cuenta está lista","additional_content":"Usá Mi Cuenta para consultar tus pedidos. Comprar como invitado también está disponible."},
+    "customer_reset_password": {"enabled":"yes","subject":"[{site_title}] Restablecé tu contraseña","heading":"Restablecé tu contraseña","additional_content":"Si no solicitaste este cambio, podés ignorar este correo."},
+    "customer_verify_email": {"enabled":"yes","subject":"[{site_title}] Verificá tu correo","heading":"Verificá tu correo","additional_content":"Usá el enlace seguro de este correo para verificar tu dirección."}
+  }
+}

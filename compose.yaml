@@ -52,6 +52,7 @@ services:
       - wordpress_data:/var/www/html
       - ./docker/local-mail.php:/var/www/html/wp-content/mu-plugins/000-local-mail.php:ro
       - ./commerce-order-integrity:/var/www/html/wp-content/plugins/commerce-order-integrity:ro
+      - ./commerce-communications:/var/www/html/wp-content/plugins/commerce-communications:ro
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/zz-local.ini:ro
       - ./docker/apache/demo-log-privacy.conf:/etc/apache2/conf-enabled/zz-demo-log-privacy.conf:ro
     healthcheck:
@@ -80,11 +81,13 @@ services:
       - wordpress_data:/var/www/html
       - ./docker/local-mail.php:/var/www/html/wp-content/mu-plugins/000-local-mail.php:ro
       - ./commerce-order-integrity:/var/www/html/wp-content/plugins/commerce-order-integrity:ro
+      - ./commerce-communications:/var/www/html/wp-content/plugins/commerce-communications:ro
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/zz-local.ini:ro
       - ./docker/tools:/opt/local-tools:ro
       - ./demo/catalog:/opt/demo-catalog:ro
       - ./demo/cart-checkout:/opt/demo-cart-checkout:ro
       - ./demo/shipping:/opt/demo-shipping:ro
+      - ./demo/communications:/opt/demo-communications:ro
       - ./.local/${LOCAL_INSTANCE}/backups:/backups
 
   mailpit:

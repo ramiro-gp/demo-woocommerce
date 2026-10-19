@@ -204,6 +204,10 @@ H1 no instaló SEOPress, FluentSMTP ni LiteSpeed Cache, ni creó theme/plugin co
 
 ## Documentación
 
+- [H7.2: comunicaciones, emails, operación y revisión local](docs/h7-2-communications-operations.md).
+- [Preparación de correo productivo por cliente y Hostinger](docs/h7-email-production.md).
+- [H7.1 cerrado en desarrollo y bloqueos productivos de Mercado Pago](docs/h7-1-payments.md).
+
 - [Decisiones de H0 y orden de hitos](docs/h0-decisions.md).
 - [Arquitectura local y límites de esta entrega](docs/architecture.md).
 - [Comandos, instancias aisladas y recuperación](docs/operations.md).
