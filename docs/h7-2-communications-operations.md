@@ -2,6 +2,8 @@
 
 Implementación local del 19/10/2026, Argentina, en `C:\Codigo\demo-woocommerce`. Entrega para revisión visual del usuario; **no mergear H7.2 a main**. H8 no se inició.
 
+**Cierre del 20/10/2026:** el usuario aprobó H7.2 y las correcciones posteriores de Mi Cuenta. Se verificó origin y working tree limpio, se repitió la regresión (cuenta 25/25, configuración 14/14, navegación 11/11, integridad 31/31) y se consolidaron `9c86053` y `7e09c7c0e4a8206df00acbb6a22a53d85a0fdfa8` mediante fast-forward y push normal. `main = origin/main = 7e09c7c0e4a8206df00acbb6a22a53d85a0fdfa8`. Las menciones anteriores/posteriores a revisión pendiente describen el momento de entrega original. Continúa en [H8.1](h8-1-commerce-core.md), sin H8.2 ni cambios en los bloqueos productivos de Mercado Pago.
+
 ## Cierre previo de H7.1
 
 Se verificaron branch, remote, working tree limpio, historial y los cinco documentos H7.1 antes de editar. `686006c736f283c9ea013815b43e382d6a8fc922` coincidía con `origin/codex/h7-1-payments`. El cierre documental agregó **`64d57a4acaa66e5336d3738c8a9a6427a7aa197c`**; los cuatro commits H7.1 se integraron por fast-forward desde `c736cdc50d57821eca27a56867a069914c962659`. Push de main exitoso, main/origin/main idénticos. H7.2 se creó desde ese main en **`codex/h7-2-communications-operations`**. Sin force push ni descarte de commits.

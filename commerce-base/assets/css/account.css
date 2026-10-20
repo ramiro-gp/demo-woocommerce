@@ -1,6 +1,50 @@
 /* Native My Account templates. Cancel the block-theme 1000px cap and floats
    within this screen only; no offsets, hidden overflow or template copies. */
 body.woocommerce-account { --cb-account-width: 80rem; }
+
+/* Optional Commerce Core behavior; all presentation stays in the theme. */
+body.woocommerce-account .commerce-core-address-copy {
+  margin-block-end: var(--cb-space-6);
+  padding: var(--cb-space-4);
+  border: 1px solid var(--cb-border);
+  border-radius: var(--cb-radius-sm);
+  background: var(--cb-surface);
+  color: var(--cb-text);
+  overflow-wrap: anywhere;
+}
+body.woocommerce-account .commerce-core-address-copy [hidden] { display: none !important; }
+body.woocommerce-account .commerce-core-address-copy p { margin-block: 0 var(--cb-space-3); }
+body.woocommerce-account .commerce-core-address-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-inline-size: 100%;
+  min-block-size: 48px;
+  padding: var(--cb-space-3) var(--cb-space-4);
+  border: 1px solid var(--cb-accent);
+  border-radius: var(--cb-radius-sm);
+  background: var(--cb-accent);
+  color: var(--cb-accent-contrast);
+  font: inherit;
+  font-size: .9375rem;
+  font-weight: 600;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
+  cursor: pointer;
+}
+body.woocommerce-account .commerce-core-address-copy .commerce-core-copy-start,
+body.woocommerce-account .commerce-core-address-copy .commerce-core-copy-cancel {
+  background: transparent;
+  color: var(--cb-text);
+  border: 1px solid var(--cb-border);
+}
+body.woocommerce-account .commerce-core-address-copy .button:focus-visible { outline: 2px solid var(--cb-focus); outline-offset: 4px; }
+body.woocommerce-account #commerce-core-copy-confirm { display: flex; flex-wrap: wrap; gap: var(--cb-space-3); margin-block-start: var(--cb-space-4); }
+body.woocommerce-account #commerce-core-copy-confirm p { flex-basis: 100%; margin: 0; }
+body.woocommerce-account #commerce-core-copy-confirm .button { margin: 0; }
+body.woocommerce-account .commerce-core-address-copy .commerce-core-copy-status { margin-block: var(--cb-space-3) 0; }
+body.woocommerce-account .commerce-core-copy-status:empty { margin: 0; }
 body.cb-account-guest { --cb-account-width: 68rem; }
 body.cb-account-recovery { --cb-account-width: 46rem; }
 body.woocommerce-account main.cb-page-content {

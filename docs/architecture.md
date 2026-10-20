@@ -15,7 +15,8 @@ La separación acordada es:
 | `commerce-lookbook` / Commerce Lookbook | Bloque editorial persistente Shoppable Lookbook, independiente del theme | H5.1 |
 | `commerce-order-integrity` / Commerce Order Integrity | Integridad de sesión pendiente en Store API e hidratación Blocks; independiente y versionado | H7.1 |
 | `commerce-communications` / Commerce Communications | Presentación/copy de emails WooCommerce y BACS en vista autorizada; sin motor de pedidos o envíos | H7.2 |
-| `commerce-core` / Commerce Core | Funcionalidad persistente comercial completa; podrá integrar el bloque existente | H8 |
+| `commerce-account-navigation` / Commerce Account Navigation | Preferencia de Descargas en el menú nativo, sin alterar endpoints o permisos | H7.2 |
+| `commerce-core` / Commerce Core | Módulos pequeños opcionales; V1 copia explícita de direcciones en Mi Cuenta, con guardado WooCommerce | H8.1 |
 | TRAMA | Identidad ficticia y contenido de la demo | Hitos visuales y de contenido |
 
 H1 no crea directorios vacíos del theme o plugin comercial ni un esqueleto de funcionalidad futura. La marca no debe quedar escrita dentro de templates o lógica reutilizable.

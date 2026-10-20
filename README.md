@@ -210,6 +210,7 @@ H1 no instaló SEOPress, FluentSMTP ni LiteSpeed Cache, ni creó theme/plugin co
 
 - [Decisiones de H0 y orden de hitos](docs/h0-decisions.md).
 - [Arquitectura local y límites de esta entrega](docs/architecture.md).
+- [H8.1: Commerce Core, copia explícita de direcciones y auditoría de responsabilidades](docs/h8-1-commerce-core.md).
 - [Comandos, instancias aisladas y recuperación](docs/operations.md).
 - [Cierre de H1 y pruebas ejecutadas](docs/h1-validation.md).
 - [H4: implementación institucional y validación pendiente](docs/h4-validation.md).
