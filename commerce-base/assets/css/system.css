@@ -862,6 +862,12 @@ body.admin-bar { --cb-admin-offset: 32px; }
 .editor-styles-wrapper .cb-page-content { padding-block-start: var(--cb-space-7); }
 
 /* Each breakpoint is a change in composition, not a device exception. */
+@media (max-width: 22.499rem) {
+  .cb-header-inner { gap: var(--cb-space-1); }
+  .cb-header-actions { gap: 0; }
+  .cb-header .cb-menu-trigger { margin-inline-start: 0; }
+  .cb-header .cb-theme-select { inline-size: 4rem; }
+}
 @media (min-width: 22.5rem) {
   .cb-product-grid, .wp-block-woocommerce-product-collection .wc-block-product-template { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }

@@ -135,9 +135,6 @@ body .pswp, body .wc-block-components-drawer__screen-overlay { z-index: var(--cb
 .cb-product-disclosures :is(th, td) { text-align: start; padding: .5rem; border-block-end: 1px solid var(--cb-border); }
 .cb-product-disclosures :is(th, td) p { margin: 0; }
 .wc-block-mini-cart__drawer { background: var(--cb-background); color: var(--cb-text); font-family: var(--cb-font-interface); }
-.woocommerce-account .woocommerce-Addresses .woocommerce-Address-title h2 { font-family: var(--cb-font-interface); font-size: clamp(1.125rem, 1rem + .4vw, 1.5rem); line-height: 1.35; letter-spacing: normal; margin-block: 0 var(--cb-space-4); }
-.woocommerce-account .woocommerce-EditAccountForm fieldset { margin-block-end: var(--cb-space-6); }
-.woocommerce-account .woocommerce-EditAccountForm fieldset + p { margin-block-start: var(--cb-space-6); }
 .cb-related { margin-block-start: var(--cb-section-space) !important; }
 .cb-related > h2 { margin-block: .5rem 2rem; font-size: clamp(2rem, 3vw, 3.75rem); }
 .cb-related .cb-product-title { font-size: 1rem; }

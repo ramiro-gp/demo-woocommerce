@@ -8,6 +8,7 @@ require_once __DIR__ . '/inc/order-confirmation.php';
 require_once __DIR__ . '/inc/discovery.php';
 require_once __DIR__ . '/inc/catalog.php';
 require_once __DIR__ . '/inc/exit-intent.php';
+require_once __DIR__ . '/inc/account.php';
 
 // With plain permalinks and an Apache front controller, core has no rewrite
 // rules to distinguish an unknown path from the root. Preserve native query
@@ -65,12 +66,13 @@ add_action('wp_enqueue_scripts', static function () {
     if (!$cart && !$checkout && !$account) {
         wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
     }
-    // Cart reuses H5's cards; account retains its approved H5 presentation.
+    // Cart reuses H5's cards; account adds a scoped native-template layout.
     if (!$checkout) {
         wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), [$cart || $account ? 'commerce-base' : 'commerce-base-pages'], $version);
     }
     if (!$cart && !$checkout && !$account) { wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version); }
     if ($cart) { wp_enqueue_style('commerce-base-cart', get_theme_file_uri('assets/css/cart.css'), ['commerce-base-catalog'], $version); }
+    if ($account) { wp_enqueue_style('commerce-base-account', get_theme_file_uri('assets/css/account.css'), ['commerce-base-catalog'], $version); }
     if ($checkout) { wp_enqueue_style('commerce-base-checkout', get_theme_file_uri('assets/css/checkout.css'), ['commerce-base'], $version); }
     if ($cart || $checkout) {
         wp_enqueue_style('commerce-base-shipping', get_theme_file_uri('assets/css/shipping.css'), [$cart ? 'commerce-base-cart' : 'commerce-base-checkout'], $version);

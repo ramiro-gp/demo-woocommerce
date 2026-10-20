@@ -7,6 +7,7 @@ function commerce_base_icon($name) {
         'close' => '<path d="m6 6 12 12M18 6 6 18"/>',
         'bag' => '<path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',
         'search' => '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+        'user' => '<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
         'arrow' => '<path d="M4 12h16m-6-6 6 6-6 6"/>',
         'plus' => '<path d="M12 5v14M5 12h14"/>',
         'minus' => '<path d="M5 12h14"/>',
@@ -77,6 +78,9 @@ function commerce_base_header($attributes = []) {
             <div class="cb-header-actions">
                 <?php echo commerce_base_theme_select(); ?>
                 <button class="cb-icon-button cb-header-search" type="button" data-cb-menu-open data-cb-menu-search-open aria-controls="cb-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Buscar productos', 'commerce-base'); ?>"><?php echo commerce_base_icon('search'); ?></button>
+                <?php if (function_exists('wc_get_page_permalink')) : ?>
+                <a class="cb-icon-button cb-header-account" href="<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>" aria-label="<?php esc_attr_e('Mi cuenta', 'commerce-base'); ?>"><?php echo commerce_base_icon('user'); ?></a>
+                <?php endif; ?>
                 <?php if (function_exists('wc_get_cart_url')) : ?>
                 <?php if (is_cart() || is_checkout()) : // Mini-Cart deliberately hides itself on these native pages. ?>
                 <a class="cb-icon-button cb-header-cart cb-cart-page-link" href="<?php echo esc_url(wc_get_cart_url()); ?>"><?php echo commerce_base_icon('bag'); ?><span class="screen-reader-text"><?php esc_html_e('Carrito', 'commerce-base'); ?></span><span data-cb-cart-count-root data-cb-count-label="<?php esc_attr_e('%d artículos', 'commerce-base'); ?>"><?php $count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0; if ($count > 0) { echo '<span class="wc-block-mini-cart__badge">' . esc_html($count) . '</span>'; } ?></span></a>
