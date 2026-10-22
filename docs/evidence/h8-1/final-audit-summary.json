@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-21",
+  "base_commit": "609f826141b8715c652651fc33e3012bd1cf8595",
+  "scenarios": [
+    {
+      "number": 1,
+      "name": "Copiar todos los campos compatibles",
+      "result": "PASS",
+      "evidence": {
+        "copied_fields": [
+          "first_name",
+          "last_name",
+          "country",
+          "state",
+          "city",
+          "postcode",
+          "address_1",
+          "address_2",
+          "phone"
+        ],
+        "email_excluded": true,
+        "copy_http": 0
+      }
+    },
+    {
+      "number": 2,
+      "name": "Persistencia únicamente después de guardar",
+      "result": "PASS",
+      "evidence": {
+        "unsaved_reload_preserves_original": true,
+        "native_save_then_reload_matches_billing": true
+      }
+    },
+    {
+      "number": 3,
+      "name": "Confirmar reemplazo y cancelar sin cambios",
+      "result": "PASS",
+      "evidence": {
+        "existing_address_changed_only_in_owned_qa_user": true,
+        "confirmation_required": true,
+        "cancel_preserves_all_fields": true,
+        "confirmed_copy_saved": true
+      }
+    },
+    {
+      "number": 4,
+      "name": "Sin sincronización automática",
+      "result": "PASS",
+      "evidence": {
+        "billing_change_saved": true,
+        "saved_shipping_all_fields_unchanged": true,
+        "next_copy_source_reflects_new_billing": true
+      }
+    },
+    {
+      "number": 5,
+      "name": "Desktop/mobile, claro/oscuro y teclado",
+      "result": "PASS",
+      "evidence": {
+        "combinations": 12,
+        "full_keyboard": true,
+        "focus_visible": true,
+        "js_errors": 0,
+        "asset_errors": 0,
+        "alignment_and_overflow": "PASS"
+      }
+    }
+  ],
+  "responsive_combinations": 12,
+  "browser_errors": 0,
+  "asset_errors": 0,
+  "copy_network_requests": [
+    0,
+    0,
+    0
+  ],
+  "preservation": {
+    "result": "passed",
+    "checks": {
+      "orders_strictly_preserved": true,
+      "catalog_strictly_preserved": true,
+      "users_strictly_preserved": true,
+      "settings_strictly_preserved": true,
+      "pages_strictly_preserved": true,
+      "commerce_core_active": true,
+      "integrity_active": true,
+      "communications_active": true,
+      "checkout_pro_disabled": true,
+      "bacs_available": true
+    },
+    "baseline_counts": {
+      "orders": 235,
+      "catalog": 127,
+      "users": 5
+    },
+    "normalizations_or_exceptions": false
+  },
+  "fixture_checks": {
+    "all_16_h5_hashes_reconstructed_using_only_original_stock": true,
+    "all_16_h62_hashes_reconstructed": true,
+    "all_16_h61_prior_cross_sell_hashes_reconstructed": true,
+    "all_stock_changes_attributed_to_existing_order_items": true,
+    "fixture_sources_unchanged": true
+  },
+  "fixture_hash_counts": {
+    "live_matches": 9,
+    "stock_only_matches": 16,
+    "cross_only_matches": 9,
+    "stock_and_cross_matches": 16,
+    "h62_reconstructed_matches": 16,
+    "h61_before_reconstructed_matches": 16
+  },
+  "stock_changes": [
+    {
+      "id": 54,
+      "sku": "TRM-REM-001-NAT-M",
+      "fixture_stock": 4,
+      "current_stock": 2
+    },
+    {
+      "id": 70,
+      "sku": "TRM-REM-002-GRI-L",
+      "fixture_stock": 7,
+      "current_stock": 6
+    },
+    {
+      "id": 132,
+      "sku": "TRM-PAN-001-VER-L",
+      "fixture_stock": 4,
+      "current_stock": 3
+    },
+    {
+      "id": 154,
+      "sku": "TRM-ACC-001",
+      "fixture_stock": 22,
+      "current_stock": 21
+    },
+    {
+      "id": 163,
+      "sku": "TRM-ACC-004",
+      "fixture_stock": 25,
+      "current_stock": 23
+    },
+    {
+      "id": 166,
+      "sku": "TRM-ACC-005",
+      "fixture_stock": 26,
+      "current_stock": 25
+    },
+    {
+      "id": 169,
+      "sku": "TRM-ACC-006",
+      "fixture_stock": 27,
+      "current_stock": 26
+    }
+  ],
+  "fixture_cause": "Native reductions recorded on historical orders 454-457, predating H8.1; exactly nine units. No order/catalog changes during this audit.",
+  "cross_sell_metadata": "Persisted variation metadata matches parent; normalizing it alone recovers no failing hash. Only stock causes the guard mismatch.",
+  "clean_install_scope": "No full reinstall performed. Sources unchanged and exact in-memory reconstruction of all 16 H5/H6 product hashes supports reproducibility of initial fixtures.",
+  "commercial_code_changed": false,
+  "ready_to_consolidate": true,
+  "merged_to_main": false,
+  "h8_2_started": false
+}

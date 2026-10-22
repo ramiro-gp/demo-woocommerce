@@ -2,6 +2,8 @@
 
 Alcance: cierre de H7.2 e implementación de H8.1, exclusivamente en `C:\Codigo\demo-woocommerce`. H8.2 y H9 no iniciados.
 
+**Auditoría final del 21/10:** los cinco escenarios solicitados pasan. La advertencia histórica H5/H6 quedó atribuida exactamente a stock consumido por #454–457, anterior a Commerce Core; reconstrucción de huellas 16/16 sin escrituras. [Resultados, causa y evidencia de cierre](h8-1-final-audit.md). No hubo cambios en el plugin o el theme ni merge a main.
+
 ## Base y consolidación
 
 H7.2 y la corrección visual aprobada de Mi Cuenta estaban commiteados y sincronizados: `9c86053` + **`7e09c7c0e4a8206df00acbb6a22a53d85a0fdfa8`**. Working tree limpio, origin `https://github.com/ramiro-gp/demo-woocommerce.git`. Fetch sin divergencias; fast-forward de main desde `64d57a4`, push normal y comprobación **main = origin/main = 7e09c7c0e4a8206df00acbb6a22a53d85a0fdfa8**. Rama nueva `codex/h8-1-commerce-core`; no mergear esta entrega.
