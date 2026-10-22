@@ -1,0 +1,119 @@
+{
+  "checks": [
+    "No duplicate canonicals",
+    "Native robots route available, local noindex header",
+    "Local sitemap unavailable",
+    "Product JSON-LD native: one Product per simple/variable page",
+    "ARS and real price present",
+    "No invented ratings",
+    "Native 404 retained"
+  ],
+  "routes": [
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "canonicals": [],
+      "robots": [],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/wp-sitemap.xml",
+      "status": 404,
+      "canonicals": [],
+      "robots": [
+        "<meta name='robots' content='noindex, nofollow' />"
+      ],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/?product=bolso-transito",
+      "status": 200,
+      "canonicals": [
+        "<link rel=\"canonical\" href=\"http://localhost:8199/?product=bolso-transito\" />"
+      ],
+      "robots": [
+        "<meta name='robots' content='noindex, nofollow' />"
+      ],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/?product=remera-base",
+      "status": 200,
+      "canonicals": [
+        "<link rel=\"canonical\" href=\"http://localhost:8199/?product=remera-base\" />"
+      ],
+      "robots": [
+        "<meta name='robots' content='noindex, nofollow' />"
+      ],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/?post_type=product&paged=2",
+      "status": 404,
+      "canonicals": [],
+      "robots": [
+        "<meta name='robots' content='noindex, nofollow' />"
+      ],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/?post_type=product&filter_color=negro",
+      "status": 200,
+      "canonicals": [
+        "<link rel=\"canonical\" href=\"http://localhost:8199/?post_type=product\">"
+      ],
+      "robots": [
+        "<meta name='robots' content='noindex, nofollow' />"
+      ],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    },
+    {
+      "route": "/h9-this-page-does-not-exist",
+      "status": 404,
+      "canonicals": [],
+      "robots": [
+        "<meta name='robots' content='noindex, nofollow' />"
+      ],
+      "disallowAll": false,
+      "noindexHeader": "noindex, nofollow, noarchive"
+    }
+  ],
+  "structuredData": [
+    {
+      "route": "/?product=bolso-transito",
+      "productNodes": 1,
+      "offers": [
+        {
+          "type": "Offer",
+          "currency": "ARS",
+          "price": "36000.00",
+          "lowPrice": null,
+          "highPrice": null,
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "inventedRating": false
+    },
+    {
+      "route": "/?product=remera-base",
+      "productNodes": 1,
+      "offers": [
+        {
+          "type": "Offer",
+          "currency": "ARS",
+          "price": "32000.00",
+          "lowPrice": null,
+          "highPrice": null,
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "inventedRating": false
+    }
+  ]
+}

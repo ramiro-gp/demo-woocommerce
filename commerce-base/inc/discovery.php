@@ -73,5 +73,9 @@ add_filter('render_block_core/image', static function ($html, $block) {
         $image->set_attribute('srcset', $base . 'editorial-detail-small.webp 768w, ' . $source . ' 1536w');
         $image->set_attribute('sizes', '(min-width: 832px) 65vw, 100vw');
     }
+    if ($file === 'editorial-specimen.webp' && is_file(get_theme_file_path('assets/images/editorial-specimen-small.webp'))) {
+        $image->set_attribute('srcset', $base . 'editorial-specimen-small.webp 480w, ' . $source . ' 960w');
+        $image->set_attribute('sizes', '(min-width: 1024px) 48vw, 100vw');
+    }
     return $image->get_updated_html();
 }, 10, 2);

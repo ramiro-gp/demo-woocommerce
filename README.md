@@ -1,8 +1,21 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H8.1 están aprobados y consolidados en main (`18da5be`). H8.2 se entrega en `codex/h8-2-legal-consumer-rights` para revisión del usuario, sin merge a main. H9 no comenzó.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H8.2 están aprobados y consolidados en main (`2b998dc`). H9 se entrega en `codex/h9-security-performance-seo` para revisión, sin merge a main. H10/H11 no comenzaron.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
 
 La identidad de demostración es **TRAMA**. El theme es **Commerce Base** (`commerce-base`) y el plugin funcional es **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
+
+## H9 — Seguridad, rendimiento, accesibilidad y SEO
+
+**H9 READY como hito técnico local; producción NOT READY.** Commerce Core 1.1.2 protege datos legales en errores SQL y refuerza permisos. Las imágenes oficiales Apache/WP-CLI pasan a PHP **8.4.27** por el aviso crítico de seguridad del 21/10/2026. Commerce Base 1.8.0 añade carga contextual de assets, tamaños responsive, correcciones de foco/nombres/estados y metadatos reutilizables sin duplicar JSON-LD de WooCommerce.
+
+Revisar [seguridad e investigación de Mercado Pago](docs/h9-1-security-hardening.md), [comparación por página, accesibilidad y SEO](docs/h9-2-performance-accessibility-seo.md) y [matriz de preparación y requisitos de hosting](docs/h9-production-readiness.md). Lighthouse local no certifica Core Web Vitals ni WCAG AA: las fichas conservan un LCP mobile alto en laboratorio. La DEMO mantiene noindex y no publica sitemap.
+
+**Mercado Pago 8.9.6 permanece activo con Checkout Pro deshabilitado y bloqueos productivos abiertos.** La desactivación completa se probó sólo en clon aislado, donde elimina las cargas MP observadas; no se aplicó a la principal. Sin pagos reales, DNS ni despliegue. BACS sigue siendo DEMO. QA con escrituras sólo en `h9-audit`; no repetir fixtures/mediciones para navegar la tienda principal.
+
+```powershell
+.\scripts\h9.ps1 inventory
+node tests/verify-h9-secrets.cjs
+```
 
 ## H8.2 — Legales y consumidor argentino
 

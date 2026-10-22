@@ -9,6 +9,7 @@ require_once __DIR__ . '/inc/discovery.php';
 require_once __DIR__ . '/inc/catalog.php';
 require_once __DIR__ . '/inc/exit-intent.php';
 require_once __DIR__ . '/inc/account.php';
+require_once __DIR__ . '/inc/metadata.php';
 
 // With plain permalinks and an Apache front controller, core has no rewrite
 // rules to distinguish an unknown path from the root. Preserve native query
@@ -17,6 +18,9 @@ add_action('parse_request', static function ($wp) {
     if (is_admin() || get_option('permalink_structure') !== '' || !empty($wp->matched_rule) || isset($wp->query_vars['rest_route']) || isset($wp->query_vars['wc-api'])) { return; }
     $path = wp_parse_url(wp_unslash($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
     $root = trailingslashit(wp_parse_url(home_url('/'), PHP_URL_PATH) ?: '/');
+    // Plain permalinks have no rewrite rule for robots.txt. Delegate to core's
+    // native handler rather than turning this supported route into a theme 404.
+    if ($path === $root . 'robots.txt') { $wp->query_vars['robots'] = '1'; unset($wp->query_vars['error']); return; }
     if (!is_string($path) || $path === $root || $path === $root . 'index.php') { return; }
     $wp->query_vars['error'] = '404';
 }, 20);
@@ -27,6 +31,7 @@ add_action('after_setup_theme', static function () {
     add_theme_support('wc-product-gallery-lightbox');
     add_theme_support('custom-logo', ['height' => 80, 'width' => 280, 'flex-width' => true, 'flex-height' => true]);
     add_theme_support('editor-styles');
+    add_image_size('commerce-card', 360, 450, true);
     add_editor_style('assets/css/system.css');
     add_editor_style('assets/css/pages.css');
     add_editor_style('assets/css/catalog.css');
@@ -63,16 +68,20 @@ add_action('wp_enqueue_scripts', static function () {
     $cart = function_exists('is_cart') && is_cart();
     $checkout = function_exists('is_checkout') && is_checkout();
     $account = function_exists('is_account_page') && is_account_page();
+    $content = is_singular() ? (string) get_post_field('post_content', get_queried_object_id()) : '';
+    $cards = is_front_page() || (function_exists('is_woocommerce') && is_woocommerce()) || is_search()
+        || has_block('commerce-base/product-grid', $content) || has_block('woocommerce/product-collection', $content);
+    $lookbook = has_block('commerce-lookbook/shoppable-lookbook', $content);
     wp_enqueue_style('commerce-base', get_theme_file_uri('assets/css/system.css'), [], $version);
     wp_enqueue_style('commerce-base-legal', get_theme_file_uri('assets/css/legal.css'), ['commerce-base'], filemtime(get_theme_file_path('assets/css/legal.css')));
     if (!$cart && !$checkout && !$account) {
         wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
     }
     // Cart reuses H5's cards; account adds a scoped native-template layout.
-    if (!$checkout) {
+    if (!$checkout && ($cards || $cart || $account)) {
         wp_enqueue_style('commerce-base-catalog', get_theme_file_uri('assets/css/catalog.css'), [$cart || $account ? 'commerce-base' : 'commerce-base-pages'], $version);
     }
-    if (!$cart && !$checkout && !$account) { wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version); }
+    if ($lookbook) { wp_enqueue_style('commerce-base-lookbook', get_theme_file_uri('assets/css/lookbook.css'), ['commerce-base-pages'], $version); }
     if ($cart) { wp_enqueue_style('commerce-base-cart', get_theme_file_uri('assets/css/cart.css'), ['commerce-base-catalog'], $version); }
     if ($account) { wp_enqueue_style('commerce-base-account', get_theme_file_uri('assets/css/account.css'), ['commerce-base-catalog'], $version); }
     if ($checkout) { wp_enqueue_style('commerce-base-checkout', get_theme_file_uri('assets/css/checkout.css'), ['commerce-base'], $version); }
@@ -80,9 +89,9 @@ add_action('wp_enqueue_scripts', static function () {
         wp_enqueue_style('commerce-base-shipping', get_theme_file_uri('assets/css/shipping.css'), [$cart ? 'commerce-base-cart' : 'commerce-base-checkout'], $version);
     }
     // Mini-Cart can open throughout the storefront and uses the same native controls.
-    if (!$cart) { wp_enqueue_style('commerce-base-mini-cart', get_theme_file_uri('assets/css/mini-cart.css'), ['commerce-base'], $version); }
+    if (!$cart && !$checkout) { wp_enqueue_style('commerce-base-mini-cart', get_theme_file_uri('assets/css/mini-cart.css'), ['commerce-base'], $version); }
     wp_enqueue_script('commerce-base', get_theme_file_uri('assets/js/interaction.js'), [], $version, ['in_footer' => true, 'strategy' => 'defer']);
-    if (function_exists('WC')) {
+    if (function_exists('WC') && ($cards || $cart || $checkout)) {
         wp_enqueue_script('commerce-base-cart-presentation', get_theme_file_uri('assets/js/cart-presentation.js'), ['wp-element', 'wp-data', 'wp-i18n', 'wc-blocks-data-store'], $version, true);
     }
     if (function_exists('is_woocommerce') && (is_woocommerce() || is_search())) {

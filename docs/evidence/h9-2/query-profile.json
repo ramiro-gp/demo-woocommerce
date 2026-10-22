@@ -1,0 +1,51 @@
+[
+  {
+    "page": "home",
+    "queries_after_mu": 129,
+    "sql_ms": 25.85,
+    "exact_repeated_queries": 0,
+    "own_callers": {
+      "CommerceCore\\Legal": 2,
+      "commerce_base_header": 15,
+      "commerce_base_product_grid": 33,
+      "commerce_base_category_links": 3,
+      "commerce_base_footer": 7
+    }
+  },
+  {
+    "page": "catalog",
+    "queries_after_mu": 235,
+    "sql_ms": 59.34,
+    "exact_repeated_queries": 4,
+    "own_callers": {
+      "CommerceCore\\Legal": 2,
+      "commerce_base_header": 14,
+      "commerce_base_product_card": 36,
+      "commerce_base_footer": 8
+    }
+  },
+  {
+    "page": "product",
+    "queries_after_mu": 154,
+    "sql_ms": 33.24,
+    "exact_repeated_queries": 0,
+    "own_callers": {
+      "CommerceCore\\Legal": 2,
+      "commerce_base_header": 14,
+      "commerce_base_product_information": 4,
+      "commerce_base_product_card": 16,
+      "commerce_base_footer": 6
+    }
+  },
+  {
+    "page": "legal",
+    "queries_after_mu": 82,
+    "sql_ms": 16.92,
+    "exact_repeated_queries": 0,
+    "own_callers": {
+      "CommerceCore\\Legal": 5,
+      "commerce_base_header": 14,
+      "commerce_base_footer": 4
+    }
+  }
+]

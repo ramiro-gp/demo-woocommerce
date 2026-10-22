@@ -195,7 +195,7 @@
 
 		document.addEventListener('click', function (event) {
 			if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-			var link = event.target.closest('a[data-cb-anchor], [data-cb-menu] a[href]');
+			var link = event.target.closest('a[data-cb-anchor], #wp-skip-link, [data-cb-menu] a[href]');
 			if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
 			var url = new URL(link.href, window.location.href);
 			if (url.origin !== window.location.origin || url.pathname !== window.location.pathname || url.search !== window.location.search || !url.hash) return;

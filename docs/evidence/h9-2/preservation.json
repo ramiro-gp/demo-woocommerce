@@ -1,0 +1,18 @@
+{
+    "result": "passed",
+    "checks": {
+        "users": true,
+        "usermeta": true,
+        "wc_orders": true,
+        "wc_order_addresses": true,
+        "wc_orders_meta": true,
+        "woocommerce_order_items": true,
+        "woocommerce_order_itemmeta": true,
+        "commerce_legal_requests": true,
+        "commerce_legal_events": true,
+        "posts": true,
+        "non_attachment_meta": true,
+        "original_images_and_existing_metadata": true
+    },
+    "additive_card_sizes": 32
+}

@@ -10,6 +10,7 @@ Auditoría local iniciada el **21/10/2026, America/Buenos_Aires**; evidencias co
 | --- | --- |
 | WordPress | 7.1.3, última estable consultada; fixes oficiales de seguridad del 6/10 ya incluidos. Sin actualización de core. Checksums oficiales correctos; aviso esperado por `wp-config-docker.php`, archivo de la imagen Docker. |
 | PHP Apache y CLI | **8.4.26 → 8.4.27**, reconstrucciones oficiales fijadas por digest; actualización necesaria por aviso crítico del 21/10. Misma serie 8.4. |
+| Apache | **2.4.68 → 2.4.69**, paquete Debian `2.4.69-1~deb13u1` incluido en la reconstrucción oficial de WordPress, sin instalar paquetes manualmente. Revisión de [avisos Apache](https://httpd.apache.org/security/vulnerabilities_24.html): fixes de 2.4.69 incluidos; no se presume explotación de módulos no utilizados. |
 | WooCommerce | 11.2.1, activo; HPOS y Cart/Checkout Blocks. Incluye fixes 11.2 de descargas, Cc/Bcc de recuperación y capacidades de shop managers. Sin actualización indiscriminada. |
 | MariaDB | 10.11.19-MariaDB-ubu2204; rama LTS mantenida hasta febrero de 2028. Sin puerto publicado, sin migración. |
 | Mercado Pago | 8.9.6 activo; todos sus gateways deshabilitados. Última release oficial encontrada; probado por fabricante hasta WC 11.0.1, inferior a WC instalado. Sin modificación ni actualización. |

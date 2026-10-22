@@ -1,0 +1,89 @@
+{
+  "result": "passed",
+  "scope": "Origin behavior, no page cache/CDN installed; hosting exclusions must be configured in H11",
+  "cases": [
+    {
+      "who": "anonymous",
+      "route": "/?page_id=8",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, private"
+    },
+    {
+      "who": "anonymous",
+      "route": "/?page_id=9",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, private"
+    },
+    {
+      "who": "anonymous",
+      "route": "/?page_id=10",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, private"
+    },
+    {
+      "who": "anonymous",
+      "route": "/?page_id=514",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "anonymous",
+      "route": "/?rest_route=/wc/store/v1/cart",
+      "cacheControl": "no-store"
+    },
+    {
+      "who": "customer_a",
+      "route": "/?page_id=8",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_a",
+      "route": "/?page_id=9",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_a",
+      "route": "/?page_id=10",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_a",
+      "route": "/?page_id=514",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_a",
+      "route": "/?rest_route=/wc/store/v1/cart",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_a",
+      "foreignOrderPersonalData": false
+    },
+    {
+      "who": "customer_b",
+      "route": "/?page_id=8",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_b",
+      "route": "/?page_id=9",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_b",
+      "route": "/?page_id=10",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_b",
+      "route": "/?page_id=514",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_b",
+      "route": "/?rest_route=/wc/store/v1/cart",
+      "cacheControl": "no-cache, must-revalidate, max-age=0, no-store, private"
+    },
+    {
+      "who": "customer_b",
+      "foreignOrderPersonalData": false
+    }
+  ]
+}

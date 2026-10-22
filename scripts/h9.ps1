@@ -15,6 +15,8 @@ if($Action -eq 'sync') {
     if($LASTEXITCODE -ne 0){throw 'Theme copy failed'}
     & docker cp ./commerce-lookbook/. "demo-woocommerce-$Instance-wordpress-1:/var/www/html/wp-content/plugins/commerce-lookbook/"
     if($LASTEXITCODE -ne 0){throw 'Lookbook copy failed'}
+    & docker exec -u 0 "demo-woocommerce-$Instance-wordpress-1" sh -c 'chown -R 33:33 /var/www/html/wp-content/themes/commerce-base /var/www/html/wp-content/plugins/commerce-lookbook'
+    if($LASTEXITCODE -ne 0){throw 'Source ownership sync failed'}
     exit
 }
 if($Instance -ne 'h9-audit'){throw 'Clone requires explicit -Instance h9-audit'}

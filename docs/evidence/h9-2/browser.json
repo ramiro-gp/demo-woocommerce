@@ -1,0 +1,1956 @@
+{
+  "result": "passed",
+  "pages": [
+    {
+      "page": "home",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 15
+        }
+      ],
+      "title": "TRAMA – Ropa para todos los días.",
+      "h1s": [
+        "Vestir locotidiano."
+      ],
+      "description": "TRAMA / Ropa para todos los días Vestir locotidiano. Prendas simples, texturas que se sienten y espacio para moverte. Ropa para tu manera de habitar la ciudad.…",
+      "canonicals": [
+        "http://localhost:8199/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/themes/commerce-base/assets/images/editorial-specimen-small.webp",
+          "width": 348,
+          "naturalWidth": 389,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Sobrecamisa verde oliva sobre una remera cruda, junto a una pared iluminada por el sol"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/panuelo-pliegue-bor-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pañuelo Pliegue — Bordó"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/medias-canal-cru-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Medias Canal — Crudo"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorro-punto-ver-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorro Punto — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/editorial-lookbook-600x400.webp",
+          "width": 348,
+          "naturalWidth": 348,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Persona con remera cruda y pantalón oscuro sentada sobre piedra, con una sobrecamisa oliva al lado"
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "page": "catalog",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "title": "Shop – TRAMA",
+      "h1s": [
+        "Tienda"
+      ],
+      "description": "Ropa para todos los días.",
+      "canonicals": [
+        "http://localhost:8199/?post_type=product"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-240x300.webp",
+          "width": 166,
+          "naturalWidth": 171,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-trazo-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Trazo — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-aire-ver-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Aire — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-horizonte-gri-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Horizonte — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-pulso-gri-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Pulso — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-refugio-ver-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Refugio — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-textura-bor-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Textura — Bordó"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/pantalon-cauce-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pantalón Cauce — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/pantalon-pausa-gri-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pantalón Pausa — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolsa-diario-nat-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolsa Diario — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorra-sombra-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorra Sombra — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorro-punto-ver-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorro Punto — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/medias-canal-cru-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Medias Canal — Crudo"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/panuelo-pliegue-bor-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pañuelo Pliegue — Bordó"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Inicio",
+                "@id": "http://localhost:8199"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Tienda",
+                "@id": "http://localhost:8199/?post_type=product"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "category",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "title": "Remeras – TRAMA",
+      "h1s": [
+        "Remeras"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?product_cat=remeras"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-240x300.webp",
+          "width": 166,
+          "naturalWidth": 171,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-trazo-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Trazo — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-aire-ver-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Aire — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-horizonte-gri-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Horizonte — Gris"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Inicio",
+                "@id": "http://localhost:8199"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Remeras",
+                "@id": "http://localhost:8199/?product_cat=remeras"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "simple",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "title": "Bolso Tránsito – TRAMA",
+      "h1s": [
+        "Bolso Tránsito"
+      ],
+      "description": "Formato compacto, cierre superior y correa regulable.",
+      "canonicals": [
+        "http://localhost:8199/?product=bolso-transito"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description",
+        "og:image"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-600x750.webp",
+          "width": 348,
+          "naturalWidth": 390,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-detalle-360x450.webp",
+          "width": 348,
+          "naturalWidth": 348,
+          "loading": "lazy",
+          "priority": "low",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — detalle del tejido y terminaciones"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-600x750.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-detalle-240x300.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — detalle del tejido y terminaciones"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolsa-diario-nat-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolsa Diario — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-pulso-gri-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Pulso — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorra-sombra-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorra Sombra — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorro-punto-ver-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorro Punto — Verde"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@graph": [
+            {
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "name": "Inicio",
+                    "@id": "http://localhost:8199"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "name": "Accesorios",
+                    "@id": "http://localhost:8199/?product_cat=accesorios"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "name": "Bolso Tránsito",
+                    "@id": "http://localhost:8199/?product=bolso-transito"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "@id": "http://localhost:8199/?product=bolso-transito#product",
+              "name": "Bolso Tránsito",
+              "url": "http://localhost:8199/?product=bolso-transito",
+              "description": "Formato compacto, cierre superior y correa regulable.",
+              "image": "http://localhost:8199/wp-content/uploads/2026/10/bolso-transito-neg.webp",
+              "sku": "TRM-ACC-006",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "priceSpecification": [
+                    {
+                      "@type": "UnitPriceSpecification",
+                      "price": "36000.00",
+                      "priceCurrency": "ARS",
+                      "validThrough": "2027-12-31"
+                    }
+                  ],
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
+                  "url": "http://localhost:8199/?product=bolso-transito",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "TRAMA",
+                    "url": "http://localhost:8199"
+                  },
+                  "price": "36000.00",
+                  "priceCurrency": "ARS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "variable",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "title": "Remera Base – TRAMA",
+      "h1s": [
+        "Remera Base"
+      ],
+      "description": "Remera de algodón pesado. Corte recto, hombro caído y cuello compacto.",
+      "canonicals": [
+        "http://localhost:8199/?product=remera-base"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description",
+        "og:image"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-600x750.webp",
+          "width": 348,
+          "naturalWidth": 390,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-neg-360x450.webp",
+          "width": 348,
+          "naturalWidth": 348,
+          "loading": "lazy",
+          "priority": "low",
+          "hasDimensions": true,
+          "alt": "Remera Base — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-600x750.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-neg-240x300.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Base — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolsa-diario-nat-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolsa Diario — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-pulso-gri-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Pulso — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/pantalon-cauce-neg-240x300.webp",
+          "width": 166,
+          "naturalWidth": 166,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pantalón Cauce — Negro"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@graph": [
+            {
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "name": "Inicio",
+                    "@id": "http://localhost:8199"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "name": "Remeras",
+                    "@id": "http://localhost:8199/?product_cat=remeras"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "name": "Remera Base",
+                    "@id": "http://localhost:8199/?product=remera-base"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "@id": "http://localhost:8199/?product=remera-base#product",
+              "name": "Remera Base",
+              "url": "http://localhost:8199/?product=remera-base",
+              "description": "Remera de algodón pesado. Corte recto, hombro caído y cuello compacto.",
+              "image": "http://localhost:8199/wp-content/uploads/2026/10/remera-base-nat.webp",
+              "sku": "TRM-REM-001",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "priceSpecification": [
+                    {
+                      "@type": "UnitPriceSpecification",
+                      "price": "32000.00",
+                      "priceCurrency": "ARS",
+                      "validThrough": "2027-12-31"
+                    }
+                  ],
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
+                  "url": "http://localhost:8199/?product=remera-base",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "TRAMA",
+                    "url": "http://localhost:8199"
+                  },
+                  "price": "32000.00",
+                  "priceCurrency": "ARS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "cart",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Carrito – TRAMA",
+      "h1s": [
+        "Carrito"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?page_id=8"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "checkout",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Finalizar compra – TRAMA",
+      "h1s": [
+        "Finalizar compra"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?page_id=9"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/themes/commerce-base/assets/images/product-placeholder.svg",
+          "width": 48,
+          "naturalWidth": 640,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": ""
+        },
+        {
+          "src": "/wp-content/themes/commerce-base/assets/images/product-placeholder.svg",
+          "width": 48,
+          "naturalWidth": 640,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": ""
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "page": "account",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Mi cuenta – TRAMA",
+      "h1s": [
+        "Mi cuenta"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?page_id=10"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "privacy",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Política de privacidad – TRAMA",
+      "h1s": [
+        "Política de privacidad"
+      ],
+      "description": "Política de privacidadQué datos se usan en esta tienda, para qué y cómo podés ejercer tus derechos.DEMO · Contenido de muestra. Pendiente de datos del titular y…",
+      "canonicals": [
+        "http://localhost:8199/?page_id=3"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "terms",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Términos y condiciones – TRAMA",
+      "h1s": [
+        "Términos y condiciones"
+      ],
+      "description": "Términos y condicionesInformación para revisar tu compra y conocer los canales para ejercer tus derechos.DEMO · Contenido de muestra. Pendiente de datos del tit…",
+      "canonicals": [
+        "http://localhost:8199/?page_id=511"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "withdrawal",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Derecho de arrepentimiento – TRAMA",
+      "h1s": [
+        "Derecho de arrepentimiento"
+      ],
+      "description": "Derecho de arrepentimientoPodés comunicar tu decisión de revocar una compra a distancia desde acá, sin iniciar sesión.DEMO · Contenido de muestra. Pendiente de…",
+      "canonicals": [
+        "http://localhost:8199/?page_id=514"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "home",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "title": "TRAMA – Ropa para todos los días.",
+      "h1s": [
+        "Vestir locotidiano."
+      ],
+      "description": "TRAMA / Ropa para todos los días Vestir locotidiano. Prendas simples, texturas que se sienten y espacio para moverte. Ropa para tu manera de habitar la ciudad.…",
+      "canonicals": [
+        "http://localhost:8199/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/themes/commerce-base/assets/images/editorial-specimen.webp",
+          "width": 620,
+          "naturalWidth": 655,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Sobrecamisa verde oliva sobre una remera cruda, junto a una pared iluminada por el sol"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/panuelo-pliegue-bor-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pañuelo Pliegue — Bordó"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/medias-canal-cru-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Medias Canal — Crudo"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorro-punto-ver-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorro Punto — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/editorial-lookbook-1024x683.webp",
+          "width": 770,
+          "naturalWidth": 770,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Persona con remera cruda y pantalón oscuro sentada sobre piedra, con una sobrecamisa oliva al lado"
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "page": "catalog",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Shop – TRAMA",
+      "h1s": [
+        "Tienda"
+      ],
+      "description": "Ropa para todos los días.",
+      "canonicals": [
+        "http://localhost:8199/?post_type=product"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-360x450.webp",
+          "width": 328,
+          "naturalWidth": 327,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-trazo-neg-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Trazo — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-aire-ver-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Aire — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-horizonte-gri-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Horizonte — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-pulso-gri-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Pulso — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-refugio-ver-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Refugio — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-textura-bor-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Textura — Bordó"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/pantalon-cauce-neg-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pantalón Cauce — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/pantalon-pausa-gri-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pantalón Pausa — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolsa-diario-nat-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolsa Diario — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorra-sombra-neg-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorra Sombra — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorro-punto-ver-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorro Punto — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/medias-canal-cru-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Medias Canal — Crudo"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/panuelo-pliegue-bor-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pañuelo Pliegue — Bordó"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Inicio",
+                "@id": "http://localhost:8199"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Tienda",
+                "@id": "http://localhost:8199/?post_type=product"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "category",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Remeras – TRAMA",
+      "h1s": [
+        "Remeras"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?product_cat=remeras"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-360x450.webp",
+          "width": 328,
+          "naturalWidth": 327,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-trazo-neg-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Trazo — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-aire-ver-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Aire — Verde"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-horizonte-gri-360x450.webp",
+          "width": 328,
+          "naturalWidth": 328,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Horizonte — Gris"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Inicio",
+                "@id": "http://localhost:8199"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Remeras",
+                "@id": "http://localhost:8199/?product_cat=remeras"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "simple",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Bolso Tránsito – TRAMA",
+      "h1s": [
+        "Bolso Tránsito"
+      ],
+      "description": "Formato compacto, cierre superior y correa regulable.",
+      "canonicals": [
+        "http://localhost:8199/?product=bolso-transito"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description",
+        "og:image"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-768x960.webp",
+          "width": 653,
+          "naturalWidth": 751,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-detalle.webp",
+          "width": 653,
+          "naturalWidth": 653,
+          "loading": "lazy",
+          "priority": "low",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — detalle del tejido y terminaciones"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-768x960.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-detalle-240x300.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — detalle del tejido y terminaciones"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolsa-diario-nat-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolsa Diario — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-pulso-gri-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Pulso — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorra-sombra-neg-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorra Sombra — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/gorro-punto-ver-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Gorro Punto — Verde"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@graph": [
+            {
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "name": "Inicio",
+                    "@id": "http://localhost:8199"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "name": "Accesorios",
+                    "@id": "http://localhost:8199/?product_cat=accesorios"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "name": "Bolso Tránsito",
+                    "@id": "http://localhost:8199/?product=bolso-transito"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "@id": "http://localhost:8199/?product=bolso-transito#product",
+              "name": "Bolso Tránsito",
+              "url": "http://localhost:8199/?product=bolso-transito",
+              "description": "Formato compacto, cierre superior y correa regulable.",
+              "image": "http://localhost:8199/wp-content/uploads/2026/10/bolso-transito-neg.webp",
+              "sku": "TRM-ACC-006",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "priceSpecification": [
+                    {
+                      "@type": "UnitPriceSpecification",
+                      "price": "36000.00",
+                      "priceCurrency": "ARS",
+                      "validThrough": "2027-12-31"
+                    }
+                  ],
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
+                  "url": "http://localhost:8199/?product=bolso-transito",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "TRAMA",
+                    "url": "http://localhost:8199"
+                  },
+                  "price": "36000.00",
+                  "priceCurrency": "ARS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "variable",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 17
+        }
+      ],
+      "title": "Remera Base – TRAMA",
+      "h1s": [
+        "Remera Base"
+      ],
+      "description": "Remera de algodón pesado. Corte recto, hombro caído y cuello compacto.",
+      "canonicals": [
+        "http://localhost:8199/?product=remera-base"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description",
+        "og:image"
+      ],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-768x960.webp",
+          "width": 653,
+          "naturalWidth": 751,
+          "loading": "eager",
+          "priority": "high",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-neg-768x960.webp",
+          "width": 653,
+          "naturalWidth": 653,
+          "loading": "lazy",
+          "priority": "low",
+          "hasDimensions": true,
+          "alt": "Remera Base — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-nat-768x960.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Base — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/remera-base-neg-240x300.webp",
+          "width": 68,
+          "naturalWidth": 80,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Remera Base — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolsa-diario-nat-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolsa Diario — Natural"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/bolso-transito-neg-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Bolso Tránsito — Negro"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/buzo-pulso-gri-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Buzo Pulso — Gris"
+        },
+        {
+          "src": "/wp-content/uploads/2026/10/pantalon-cauce-neg-360x450.webp",
+          "width": 298,
+          "naturalWidth": 298,
+          "loading": "lazy",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": "Pantalón Cauce — Negro"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@graph": [
+            {
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "name": "Inicio",
+                    "@id": "http://localhost:8199"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "name": "Remeras",
+                    "@id": "http://localhost:8199/?product_cat=remeras"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "name": "Remera Base",
+                    "@id": "http://localhost:8199/?product=remera-base"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "@id": "http://localhost:8199/?product=remera-base#product",
+              "name": "Remera Base",
+              "url": "http://localhost:8199/?product=remera-base",
+              "description": "Remera de algodón pesado. Corte recto, hombro caído y cuello compacto.",
+              "image": "http://localhost:8199/wp-content/uploads/2026/10/remera-base-nat.webp",
+              "sku": "TRM-REM-001",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "priceSpecification": [
+                    {
+                      "@type": "UnitPriceSpecification",
+                      "price": "32000.00",
+                      "priceCurrency": "ARS",
+                      "validThrough": "2027-12-31"
+                    }
+                  ],
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
+                  "url": "http://localhost:8199/?product=remera-base",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "TRAMA",
+                    "url": "http://localhost:8199"
+                  },
+                  "price": "32000.00",
+                  "priceCurrency": "ARS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "cart",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Carrito – TRAMA",
+      "h1s": [
+        "Carrito"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?page_id=8"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "checkout",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Finalizar compra – TRAMA",
+      "h1s": [
+        "Finalizar compra"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?page_id=9"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [],
+      "overflow": false,
+      "images": [
+        {
+          "src": "/wp-content/themes/commerce-base/assets/images/product-placeholder.svg",
+          "width": 64,
+          "naturalWidth": 640,
+          "loading": "auto",
+          "priority": "auto",
+          "hasDimensions": true,
+          "alt": ""
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "page": "account",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Mi cuenta – TRAMA",
+      "h1s": [
+        "Mi cuenta"
+      ],
+      "description": null,
+      "canonicals": [
+        "http://localhost:8199/?page_id=10"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "privacy",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Política de privacidad – TRAMA",
+      "h1s": [
+        "Política de privacidad"
+      ],
+      "description": "Política de privacidadQué datos se usan en esta tienda, para qué y cómo podés ejercer tus derechos.DEMO · Contenido de muestra. Pendiente de datos del titular y…",
+      "canonicals": [
+        "http://localhost:8199/?page_id=3"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "terms",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Términos y condiciones – TRAMA",
+      "h1s": [
+        "Términos y condiciones"
+      ],
+      "description": "Términos y condicionesInformación para revisar tu compra y conocer los canales para ejercer tus derechos.DEMO · Contenido de muestra. Pendiente de datos del tit…",
+      "canonicals": [
+        "http://localhost:8199/?page_id=511"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "page": "withdrawal",
+      "width": 1366,
+      "theme": "light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 18
+        }
+      ],
+      "title": "Derecho de arrepentimiento – TRAMA",
+      "h1s": [
+        "Derecho de arrepentimiento"
+      ],
+      "description": "Derecho de arrepentimientoPodés comunicar tu decisión de revocar una compra a distancia desde acá, sin iniciar sesión.DEMO · Contenido de muestra. Pendiente de…",
+      "canonicals": [
+        "http://localhost:8199/?page_id=514"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "openGraph": [
+        "og:type",
+        "og:title",
+        "og:site_name",
+        "og:url",
+        "og:description"
+      ],
+      "overflow": false,
+      "images": [],
+      "jsonld": []
+    }
+  ],
+  "interactions": [
+    "No horizontal overflow home 390",
+    "One H1 home 390",
+    "No duplicate canonical home 390",
+    "No horizontal overflow catalog 390",
+    "One H1 catalog 390",
+    "No duplicate canonical catalog 390",
+    "No horizontal overflow category 390",
+    "One H1 category 390",
+    "No duplicate canonical category 390",
+    "No horizontal overflow simple 390",
+    "One H1 simple 390",
+    "No duplicate canonical simple 390",
+    "No horizontal overflow variable 390",
+    "One H1 variable 390",
+    "No duplicate canonical variable 390",
+    "No horizontal overflow cart 390",
+    "One H1 cart 390",
+    "No duplicate canonical cart 390",
+    "No horizontal overflow checkout 390",
+    "One H1 checkout 390",
+    "No duplicate canonical checkout 390",
+    "No horizontal overflow account 390",
+    "One H1 account 390",
+    "No duplicate canonical account 390",
+    "No horizontal overflow privacy 390",
+    "One H1 privacy 390",
+    "No duplicate canonical privacy 390",
+    "No horizontal overflow terms 390",
+    "One H1 terms 390",
+    "No duplicate canonical terms 390",
+    "No horizontal overflow withdrawal 390",
+    "One H1 withdrawal 390",
+    "No duplicate canonical withdrawal 390",
+    "No horizontal overflow home 1366",
+    "One H1 home 1366",
+    "No duplicate canonical home 1366",
+    "No horizontal overflow catalog 1366",
+    "One H1 catalog 1366",
+    "No duplicate canonical catalog 1366",
+    "No horizontal overflow category 1366",
+    "One H1 category 1366",
+    "No duplicate canonical category 1366",
+    "No horizontal overflow simple 1366",
+    "One H1 simple 1366",
+    "No duplicate canonical simple 1366",
+    "No horizontal overflow variable 1366",
+    "One H1 variable 1366",
+    "No duplicate canonical variable 1366",
+    "No horizontal overflow cart 1366",
+    "One H1 cart 1366",
+    "No duplicate canonical cart 1366",
+    "No horizontal overflow checkout 1366",
+    "One H1 checkout 1366",
+    "No duplicate canonical checkout 1366",
+    "No horizontal overflow account 1366",
+    "One H1 account 1366",
+    "No duplicate canonical account 1366",
+    "No horizontal overflow privacy 1366",
+    "One H1 privacy 1366",
+    "No duplicate canonical privacy 1366",
+    "No horizontal overflow terms 1366",
+    "One H1 terms 1366",
+    "No duplicate canonical terms 1366",
+    "No horizontal overflow withdrawal 1366",
+    "One H1 withdrawal 1366",
+    "No duplicate canonical withdrawal 1366",
+    "Skip link first keyboard target",
+    "Skip link focuses main",
+    "Menu focus inside",
+    "Menu keyboard trap",
+    "Escape restores opener focus",
+    "Search opener focuses labeled search",
+    "Lookbook focus reveals product",
+    "Lookbook Escape closes pill",
+    "MiniCart visible and focused",
+    "Closed MiniCart excluded from focus",
+    "Swatches keyboard radio selection",
+    "Native selects preserved",
+    "Gallery keyboard changes native active image",
+    "Reflow 320 home",
+    "Reflow 320 variable",
+    "Reflow 320 legal",
+    "Reflow 320 account",
+    "Reflow 640 home",
+    "Reflow 640 variable",
+    "Reflow 640 legal",
+    "Reflow 640 account",
+    "No-JS native variation selects visible",
+    "No-JS legal form available"
+  ],
+  "limitations": [
+    "No screen reader engine available",
+    "320/640 CSS px reflow equivalents; native browser zoom not certified",
+    "External HTTPS blocked; provider error is expected",
+    "Automated checks do not certify WCAG 2.2 AA"
+  ],
+  "unresolvedSerious": []
+}

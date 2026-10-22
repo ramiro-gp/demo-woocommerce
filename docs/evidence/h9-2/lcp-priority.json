@@ -1,0 +1,14 @@
+{
+  "before": {
+    "lcpMs": 4759.413200000003,
+    "element": "article.cb-product-card > figure.cb-product-image > a > img.attachment-woocommerce_thumbnail",
+    "fetchPriorityHigh": false,
+    "eagerlyLoaded": false
+  },
+  "after": {
+    "lcpMs": 3684.259650000002,
+    "element": "article.cb-product-card > figure.cb-product-image > a > img.attachment-commerce-card",
+    "fetchPriorityHigh": true,
+    "eagerlyLoaded": true
+  }
+}

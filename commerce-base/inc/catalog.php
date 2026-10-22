@@ -38,15 +38,28 @@ function commerce_base_card_button($product) {
     if (!$product->is_in_stock() || !$product->is_purchasable()) {
         return '<span class="cb-card-unavailable">' . esc_html__('No disponible', 'commerce-base') . '</span>';
     }
-    return (new WP_Block(['blockName' => 'woocommerce/product-button', 'attrs' => ['className' => 'cb-card-purchase'], 'innerBlocks' => [], 'innerHTML' => '', 'innerContent' => []], ['postId' => $product->get_id()]))->render();
+    $html = (new WP_Block(['blockName' => 'woocommerce/product-button', 'attrs' => ['className' => 'cb-card-purchase'], 'innerBlocks' => [], 'innerHTML' => '', 'innerContent' => []], ['postId' => $product->get_id()]))->render();
+    if ($product->is_type('variable')) {
+        $tag = new WP_HTML_Tag_Processor($html);
+        if ($tag->next_tag('a')) { $tag->set_attribute('aria-label', wp_strip_all_tags($product->add_to_cart_text()) . ': ' . $product->get_name()); }
+        $html = $tag->get_updated_html();
+    }
+    return $html;
 }
 
 function commerce_base_product_card($product, $level = 2) {
     if (!$product) { return ''; }
     $level = in_array($level, [2, 3], true) ? $level : 2;
+    // The first catalog image is above the fold and was the measured LCP.
+    // Home has its own hero; related cards stay lazy below product content.
+    static $eager_card_used = false;
+    $eager = !$eager_card_used && (is_shop() || is_product_taxonomy() || is_search());
+    if ($eager) { $eager_card_used = true; }
+    $image_args = ['loading' => $eager ? 'eager' : 'lazy', 'sizes' => '(max-width: 359px) calc(100vw - 32px), (max-width: 782px) calc((100vw - 48px) / 2), (min-width: 1800px) 360px, (min-width: 1100px) 24vw, 32vw'];
+    if ($eager) { $image_args['fetchpriority'] = 'high'; }
     ob_start(); ?>
     <article class="cb-product-card">
-        <figure class="cb-product-image"><a href="<?php echo esc_url($product->get_permalink()); ?>" aria-label="<?php echo esc_attr($product->get_name()); ?>"><?php echo $product->get_image('woocommerce_thumbnail', ['loading' => 'lazy', 'sizes' => '(min-width: 1800px) 360px, (min-width: 1100px) 24vw, (min-width: 783px) 32vw, 50vw']); ?></a>
+        <figure class="cb-product-image"><a href="<?php echo esc_url($product->get_permalink()); ?>" aria-label="<?php echo esc_attr($product->get_name()); ?>"><?php echo $product->get_image('commerce-card', $image_args); ?></a>
             <?php if (!$product->is_in_stock()) : ?><span class="cb-badge is-sold-out"><?php esc_html_e('Agotado', 'commerce-base'); ?></span>
             <?php elseif ($product->is_on_sale()) : ?><span class="cb-badge"><?php esc_html_e('Oferta', 'commerce-base'); ?></span><?php endif; ?>
         </figure>
@@ -135,10 +148,12 @@ add_filter('woocommerce_get_breadcrumb', static function ($crumbs) { if (is_shop
 add_filter('render_block_woocommerce/breadcrumbs', static function ($html) { $tags = new WP_HTML_Tag_Processor($html); if ($tags->next_tag('nav')) { $tags->set_attribute('aria-label', __('Ruta de navegación', 'commerce-base')); } return $tags->get_updated_html(); });
 add_filter('woocommerce_get_image_size_thumbnail', static function ($size) { return ['width' => 600, 'height' => 750, 'crop' => 1]; });
 add_filter('woocommerce_get_image_size_gallery_thumbnail', static function ($size) { return ['width' => 80, 'height' => 100, 'crop' => 1]; });
-add_filter('woocommerce_gallery_image_html_attachment_image_params', static function ($params) {
+add_filter('woocommerce_gallery_image_html_attachment_image_params', static function ($params, $id, $size, $main) {
     $params['sizes'] = '(min-width: 1800px) 950px, (min-width: 783px) 55vw, 100vw';
+    $params['loading'] = $main ? 'eager' : 'lazy';
+    $params['fetchpriority'] = $main ? 'high' : 'low';
     return $params;
-});
+}, 10, 4);
 add_action('woocommerce_after_variations_table', static function () { global $product; echo commerce_base_product_information($product, true); });
 add_action('woocommerce_before_variations_form', static function () {
     global $product;

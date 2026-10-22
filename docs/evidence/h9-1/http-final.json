@@ -1,0 +1,135 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": true,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-robots-tag": "noindex, nofollow, noarchive"
+    }
+  },
+  {
+    "route": "/wp-content/uploads/",
+    "status": 403,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "route": "/wp-content/plugins/",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "route": "/wp-config.php",
+    "status": 403,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "route": "/.env",
+    "status": 403,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "route": "/backup.sql",
+    "status": 403,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "route": "/?rest_route=/wp/v2/users",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": true,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-robots-tag": "noindex",
+      "x-wp-total": "1",
+      "x-wp-totalpages": "1"
+    }
+  },
+  {
+    "route": "/?author=1",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-robots-tag": "noindex, nofollow, noarchive"
+    }
+  },
+  {
+    "route": "/xmlrpc.php",
+    "status": 405,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "route": "/?rest_route=/wc/store/v1/cart",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "cache-control": "no-store",
+      "content-security-policy": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "Apache",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-robots-tag": "noindex"
+    }
+  }
+]

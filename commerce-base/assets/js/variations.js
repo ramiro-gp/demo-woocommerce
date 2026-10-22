@@ -5,6 +5,8 @@
         $('form.variations_form').each(function () {
             var $form = $(this), engine, groups = [], lastVariation;
             function sync() {
+                var purchase = $form.find('.single_add_to_cart_button')[0];
+                if (purchase) purchase.setAttribute('aria-disabled', String(purchase.classList.contains('disabled') || purchase.disabled));
                 groups.forEach(function (group) {
                     var selected = group.select.value;
                     group.buttons.forEach(function (button) {
@@ -93,6 +95,7 @@
             $form.on('found_variation.cbOptions', function (event, variation) { lastVariation = variation; sync(); });
             $form.on('reset_data.cbOptions', function () { lastVariation = null; sync(); });
             $form.on('change.cbOptions', '.variations select', sync);
+            $form.on('show_variation.cbOptions hide_variation.cbOptions', sync);
             // Covers forms initialized before this adapter was downloaded.
             window.setTimeout(function () { initialize(); }, 150);
         });

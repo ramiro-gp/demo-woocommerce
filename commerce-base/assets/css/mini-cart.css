@@ -1,4 +1,6 @@
 /* H6.1 — skin for WooCommerce's native mini-cart and accessible drawer. */
+/* Offscreen transforms alone leave the closed drawer in keyboard navigation. */
+.wc-block-mini-cart__drawer[aria-hidden="true"] { visibility: hidden; }
 .wc-block-mini-cart__drawer {
   --wp--preset--font-size--small: 1rem;
   --wp--preset--font-size--x-small: 1rem;

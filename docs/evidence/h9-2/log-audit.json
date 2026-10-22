@@ -1,0 +1,23 @@
+{
+    "scope": "Main local log files; aggregate pattern counts, not proof of every data category; no content or identifiers exported",
+    "logs": {
+        "php_debug": {
+            "files": 0,
+            "bytes": 0,
+            "email_occurrences": 0,
+            "non_test_email_occurrences": 0,
+            "credential_token_patterns": 0,
+            "order_key_patterns": 0,
+            "address_field_markers": 0
+        },
+        "woocommerce_files": {
+            "files": 66,
+            "bytes": 888037,
+            "email_occurrences": 0,
+            "non_test_email_occurrences": 0,
+            "credential_token_patterns": 0,
+            "order_key_patterns": 0,
+            "address_field_markers": 100
+        }
+    }
+}

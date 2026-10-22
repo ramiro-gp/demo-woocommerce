@@ -1,0 +1,420 @@
+[
+  {
+    "page": "home",
+    "device": "mobile",
+    "before": {
+      "performance": 74,
+      "accessibility": 97,
+      "best-practices": 96,
+      "seo": 58
+    },
+    "after": {
+      "performance": 85,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 69
+    },
+    "weightReductionPercent": 16.84371225026548,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 36.04060913705584
+  },
+  {
+    "page": "catalog",
+    "device": "mobile",
+    "before": {
+      "performance": 77,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 83,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 36.91591035408403,
+    "requestReductionPercent": 0.9900990099009901,
+    "lcpReductionPercent": 11.65278256896055
+  },
+  {
+    "page": "category",
+    "device": "mobile",
+    "before": {
+      "performance": 73,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 84,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 61
+    },
+    "weightReductionPercent": 13.57798843431659,
+    "requestReductionPercent": 1.1111111111111112,
+    "lcpReductionPercent": 22.59004429369571
+  },
+  {
+    "page": "simple",
+    "device": "mobile",
+    "before": {
+      "performance": 69,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "after": {
+      "performance": 70,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 12.929384036511006,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 9.950148491376034
+  },
+  {
+    "page": "variable",
+    "device": "mobile",
+    "before": {
+      "performance": 70,
+      "accessibility": 94,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "after": {
+      "performance": 70,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 12.871335188660929,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 8.6378923258883
+  },
+  {
+    "page": "cart",
+    "device": "mobile",
+    "before": {
+      "performance": 73,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 73,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "weightReductionPercent": 0.002881558028616852,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 0.007956466460720901
+  },
+  {
+    "page": "checkout",
+    "device": "mobile",
+    "before": {
+      "performance": 64,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 58
+    },
+    "after": {
+      "performance": 64,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 61
+    },
+    "weightReductionPercent": 0.31506004901595847,
+    "requestReductionPercent": 0.591715976331361,
+    "lcpReductionPercent": -0.008552661493317884
+  },
+  {
+    "page": "account",
+    "device": "mobile",
+    "before": {
+      "performance": 80,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "weightReductionPercent": 69.34091725724946,
+    "requestReductionPercent": 53.42465753424658,
+    "lcpReductionPercent": 30.823395553891704
+  },
+  {
+    "page": "privacy",
+    "device": "mobile",
+    "before": {
+      "performance": 80,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "weightReductionPercent": 72.20376056871241,
+    "requestReductionPercent": 58.57142857142857,
+    "lcpReductionPercent": 36.029522900191346
+  },
+  {
+    "page": "terms",
+    "device": "mobile",
+    "before": {
+      "performance": 81,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "weightReductionPercent": 72.34268962256571,
+    "requestReductionPercent": 58.57142857142857,
+    "lcpReductionPercent": 36.06286229824487
+  },
+  {
+    "page": "withdrawal",
+    "device": "mobile",
+    "before": {
+      "performance": 80,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "weightReductionPercent": 72.21244289611201,
+    "requestReductionPercent": 58.57142857142857,
+    "lcpReductionPercent": 36.03137870007831
+  },
+  {
+    "page": "home",
+    "device": "desktop",
+    "before": {
+      "performance": 97,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "after": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 17.398397002124188,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 3.36701889664498
+  },
+  {
+    "page": "catalog",
+    "device": "desktop",
+    "before": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 36.77782161586435,
+    "requestReductionPercent": 0.9615384615384616,
+    "lcpReductionPercent": 24.469141161999886
+  },
+  {
+    "page": "category",
+    "device": "desktop",
+    "before": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 61
+    },
+    "weightReductionPercent": 13.484673890280082,
+    "requestReductionPercent": 1.075268817204301,
+    "lcpReductionPercent": 6.89981896174731
+  },
+  {
+    "page": "simple",
+    "device": "desktop",
+    "before": {
+      "performance": 97,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "after": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 8.93542601500548,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 14.588931430127234
+  },
+  {
+    "page": "variable",
+    "device": "desktop",
+    "before": {
+      "performance": 99,
+      "accessibility": 94,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "after": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "weightReductionPercent": 8.293798972716534,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 7.775313860442621
+  },
+  {
+    "page": "cart",
+    "device": "desktop",
+    "before": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "weightReductionPercent": -0.002285378150592509,
+    "requestReductionPercent": 0,
+    "lcpReductionPercent": 0.05708391032548813
+  },
+  {
+    "page": "checkout",
+    "device": "desktop",
+    "before": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 58
+    },
+    "after": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 61
+    },
+    "weightReductionPercent": 0.31089008665614487,
+    "requestReductionPercent": 0.591715976331361,
+    "lcpReductionPercent": -27.592029075105064
+  },
+  {
+    "page": "account",
+    "device": "desktop",
+    "before": {
+      "performance": 99,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 58
+    },
+    "weightReductionPercent": 69.34091725724946,
+    "requestReductionPercent": 53.42465753424658,
+    "lcpReductionPercent": 28.667660754460282
+  },
+  {
+    "page": "privacy",
+    "device": "desktop",
+    "before": {
+      "performance": 99,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "weightReductionPercent": 72.20376056871241,
+    "requestReductionPercent": 58.57142857142857,
+    "lcpReductionPercent": 34.98803374241793
+  },
+  {
+    "page": "terms",
+    "device": "desktop",
+    "before": {
+      "performance": 99,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "weightReductionPercent": 72.34279889479188,
+    "requestReductionPercent": 58.57142857142857,
+    "lcpReductionPercent": 32.37694852606674
+  },
+  {
+    "page": "withdrawal",
+    "device": "desktop",
+    "before": {
+      "performance": 99,
+      "accessibility": 97,
+      "best-practices": 100,
+      "seo": 54
+    },
+    "after": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "weightReductionPercent": 72.21275700688858,
+    "requestReductionPercent": 58.57142857142857,
+    "lcpReductionPercent": 35.08830974956081
+  }
+]
