@@ -1,0 +1,20 @@
+{
+  "result": "passed",
+  "checks": [
+    "Code in first viewport after no-JS submit 390",
+    "Native result fragment 390",
+    "Reload preserves same code 390",
+    "Code in first viewport after no-JS submit 1366",
+    "Native result fragment 1366",
+    "Reload preserves same code 1366",
+    "Unverified manual link denied",
+    "Verified QA association saved",
+    "Association persists across reload",
+    "Native HPOS link available",
+    "Management event visible"
+  ],
+  "receipts": [
+    "ARR-20261022-CC175FA8AA629BB60C6C",
+    "ARR-20261022-D82A9810E73DEBD78D66"
+  ]
+}

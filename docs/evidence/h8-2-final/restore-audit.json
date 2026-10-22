@@ -1,0 +1,9 @@
+{
+    "result": "passed",
+    "legal_tables_restored_exactly": {
+        "requests": true,
+        "events": true,
+        "limits": true
+    },
+    "main_installation_restored": false
+}

@@ -2,7 +2,7 @@
 Requires at least: 6.5
 Requires PHP: 7.4
 Requires Plugins: woocommerce
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPL-2.0-or-later
 Text Domain: commerce-core
 

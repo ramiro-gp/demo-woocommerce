@@ -57,6 +57,9 @@ $contents['withdrawal']=h82_page('Derecho de arrepentimiento','Podés comunicar 
     'Excepciones y evaluación'=>['El artículo 1116 del Código Civil y Comercial contempla supuestos específicos, como productos confeccionados a medida o claramente personalizados, determinados contenidos digitales y publicaciones periódicas. La Disposición 954/2025 agrega previsiones para productos perecederos, uso o consumo efectivo y adquisiciones para reventa o procesos productivos.','Su alcance y la relación entre normas deben revisarse para cada caso, con interpretación favorable al consumidor cuando corresponda. El formulario recibe la solicitud y no aplica rechazos automáticos por estado del pedido, categoría, oferta o fecha. Un defecto o garantía tiene su propio procedimiento y no se confunde con arrepentimiento.'],
     'Consultas y reclamos'=>['Conservá el código para comunicarte por los canales del responsable. Para orientación pública podés consultar <a href="https://www.argentina.gob.ar/defensadelconsumidor">Defensa del Consumidor</a>. Los contactos y horarios propios de esta demo siguen pendientes.'],
 ],true);
+$privacy_storage='En esta DEMO se deshabilitó la atribución de campañas de WooCommerce mediante su ajuste nativo. Mercado Pago todavía puede guardar mp_st_variant (variante A/B, aproximadamente dos horas) y claves de sesión como _mp_flow_id, aun con Checkout Pro deshabilitado. Este tratamiento requiere revisión y una solución antes de publicar.';
+$privacy_anchor=h82_h('Conservación y seguridad','conservacion-y-seguridad');
+$contents['privacy']=str_replace($privacy_anchor,h82_p($privacy_storage).$privacy_anchor,$contents['privacy']);
 foreach($pages as $key=>$id) {
     $result=wp_update_post(['ID'=>$id,'post_title'=>['privacy'=>'Política de privacidad','terms'=>'Términos y condiciones','shipping'=>'Envíos','returns'=>'Cambios y devoluciones','withdrawal'=>'Derecho de arrepentimiento'][$key],'post_status'=>'publish','post_content'=>$contents[$key]],true);
     if(is_wp_error($result)) { WP_CLI::error($result->get_error_message()); }
@@ -66,6 +69,8 @@ update_option(Legal::OPTION,['pages'=>$pages,'trade_name'=>'TRAMA · demostraci�
 update_option('wp_page_for_privacy_policy',$pages['privacy']);update_option('woocommerce_terms_page_id',$pages['terms']);
 update_option('woocommerce_registration_privacy_policy_text','Usamos tu email y los datos de tu cuenta para gestionar el acceso, tus compras y su atención. Conocé las finalidades, destinatarios y tus derechos en nuestra [privacy_policy].');
 update_option('woocommerce_checkout_privacy_policy_text','Usamos los datos de tu compra para gestionar el pedido, la entrega y su atención. Conocé las finalidades, destinatarios y tus derechos en nuestra [privacy_policy].');
+// No campaign attribution case in the local demo; use WooCommerce's supported setting.
+update_option('woocommerce_feature_order_attribution_enabled','no');
 // Supported native terms block text/checkbox attributes, no custom acceptance control.
 $checkout=wc_get_page_id('checkout');$blocks=parse_blocks(get_post_field('post_content',$checkout));$found=0;
 $walk=function (&$items) use (&$walk,&$found,$link) { foreach($items as &$block) { if($block['blockName']==='woocommerce/checkout-terms-block') { $block['attrs']['checkbox']=true;$block['attrs']['text']='Leí y acepto '.$link('terms','los términos y condiciones').' y conozco '.$link('privacy','la política de privacidad').'. En compras a distancia, tenés un plazo legal general de 10 días corridos para comunicar tu arrepentimiento. Consultá el cómputo, devolución sin costo y excepciones en '.$link('withdrawal','Derecho de arrepentimiento').'.';$found++; }if(!empty($block['innerBlocks'])) { $walk($block['innerBlocks']); } } };

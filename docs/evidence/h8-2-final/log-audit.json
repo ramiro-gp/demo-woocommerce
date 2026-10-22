@@ -1,0 +1,7 @@
+{
+    "source": "wordpress web container \/tmp\/wordpress-debug.log",
+    "bytes": 2075,
+    "qa_addresses_found": false,
+    "form_bodies_found": false,
+    "runtime_helper_removed": true
+}

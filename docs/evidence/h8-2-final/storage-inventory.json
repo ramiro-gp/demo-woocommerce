@@ -1,0 +1,93 @@
+{
+  "cookies": [
+    {
+      "name": "woocommerce_items_in_cart",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "woocommerce_cart_hash",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "wp_woocommerce_session_37d007a56d816107ce5b52c10342db37",
+      "session": false,
+      "httpOnly": true,
+      "sameSite": "Lax",
+      "approxHoursRemaining": 48
+    },
+    {
+      "name": "sbjs_migrations",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "sbjs_current_add",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "sbjs_first_add",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "sbjs_current",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "sbjs_first",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "sbjs_udata",
+      "session": true,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": null
+    },
+    {
+      "name": "sbjs_session",
+      "session": false,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": 0
+    },
+    {
+      "name": "mp_st_variant",
+      "session": false,
+      "httpOnly": false,
+      "sameSite": "Lax",
+      "approxHoursRemaining": 2
+    }
+  ],
+  "storageKeys": {
+    "local": [
+      "storeApiCartHash",
+      "storeApiNonce",
+      "storeApiCartData"
+    ],
+    "session": [
+      "wpEmojiSettingsSupports",
+      "_mp_flow_id",
+      "_mp_public_key"
+    ]
+  }
+}

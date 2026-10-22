@@ -1,0 +1,665 @@
+{
+  "result": "passed",
+  "checks": [
+    "Guest without reference/reason received",
+    "Replay/reload returns same receipt",
+    "Replay does not resend mail",
+    "Two concurrent submissions deduplicated",
+    "Two legitimate concurrent requests have distinct codes",
+    "Server rejects empty",
+    "Server rejects email",
+    "Server rejects absent-token",
+    "Server rejects invalid-token",
+    "Server rejects expired-session",
+    "Server rejects csrf",
+    "Server rejects honeypot",
+    "Foreign/unknown reference accepted without disclosure 45",
+    "Foreign/unknown reference accepted without disclosure NO",
+    "Code/order query grants no data access",
+    "Anonymous admin mutation denied",
+    "Authenticated customer received",
+    "Customer admin mutation denied",
+    "Administrator can inspect persisted receipt",
+    "Authorized state/note update",
+    "State and event persist on reload",
+    "Tampered case ID rejected by case-bound nonce",
+    "Admin CSRF denied",
+    "Stored receipt survives smtp",
+    "Failure visible for management smtp",
+    "Administrative recovery smtp",
+    "Recovery sends only missing mails smtp",
+    "Stored receipt survives renderer",
+    "Failure visible for management renderer",
+    "Administrative recovery renderer",
+    "Recovery sends only missing mails renderer",
+    "Stored receipt survives consumer",
+    "Failure visible for management consumer",
+    "Admin success despite consumer-only failure",
+    "Administrative recovery consumer",
+    "Recovery sends only missing mails consumer",
+    "Stored receipt survives admin",
+    "Failure visible for management admin",
+    "Consumer success despite admin-only failure",
+    "Administrative recovery admin",
+    "Recovery sends only missing mails admin",
+    "Home first viewport without JS",
+    "Actual POST reload without JS retains code",
+    "Protection cookie session-only HttpOnly Lax",
+    "Real own-order authenticated reference received in fresh install",
+    "No overflow home390",
+    "Button visible without scroll 390",
+    "No overflow form390",
+    "Keyboard and visible focus 390",
+    "No overflow privacy390",
+    "No overflow login390",
+    "No overflow home1366",
+    "Button visible without scroll 1366",
+    "No overflow form1366",
+    "Keyboard and visible focus 1366",
+    "No overflow privacy1366",
+    "No overflow login1366",
+    "Native terms checkbox and 3 working links",
+    "BACS remains available",
+    "Within rate window 0",
+    "Within rate window 1",
+    "Within rate window 2",
+    "Within rate window 3",
+    "Within rate window 4",
+    "Within rate window 5",
+    "Seventh request is HTTP 429 with recovery guidance",
+    "Exactly two final mails ARR-20261022-9C38746E6C38663830F6",
+    "Multipart Spanish no order disclosure ARR-20261022-9C38746E6C38663830F6",
+    "Multipart Spanish no order disclosure ARR-20261022-9C38746E6C38663830F6",
+    "Exactly two final mails ARR-20261022-8A257084DBB28D662BB8",
+    "Multipart Spanish no order disclosure ARR-20261022-8A257084DBB28D662BB8",
+    "Multipart Spanish no order disclosure ARR-20261022-8A257084DBB28D662BB8",
+    "Exactly two final mails ARR-20261022-F04791CA7E2DF0023E1A",
+    "Multipart Spanish no order disclosure ARR-20261022-F04791CA7E2DF0023E1A",
+    "Multipart Spanish no order disclosure ARR-20261022-F04791CA7E2DF0023E1A",
+    "Exactly two final mails ARR-20261022-A7E44F2BC83F2FA2D995",
+    "Multipart Spanish no order disclosure ARR-20261022-A7E44F2BC83F2FA2D995",
+    "Multipart Spanish no order disclosure ARR-20261022-A7E44F2BC83F2FA2D995",
+    "Exactly two final mails ARR-20261022-CCA3A145CD26DC2D7631",
+    "Multipart Spanish no order disclosure ARR-20261022-CCA3A145CD26DC2D7631",
+    "Multipart Spanish no order disclosure ARR-20261022-CCA3A145CD26DC2D7631",
+    "Exactly two final mails ARR-20261022-67E5F1C8C86CEDF5C530",
+    "Multipart Spanish no order disclosure ARR-20261022-67E5F1C8C86CEDF5C530",
+    "Multipart Spanish no order disclosure ARR-20261022-67E5F1C8C86CEDF5C530",
+    "Exactly two final mails ARR-20261022-59F977750D0DCCBD7D6F",
+    "Multipart Spanish no order disclosure ARR-20261022-59F977750D0DCCBD7D6F",
+    "Multipart Spanish no order disclosure ARR-20261022-59F977750D0DCCBD7D6F",
+    "Exactly two final mails ARR-20261022-E6AECBB974BC19B5C9A4",
+    "Multipart Spanish no order disclosure ARR-20261022-E6AECBB974BC19B5C9A4",
+    "Multipart Spanish no order disclosure ARR-20261022-E6AECBB974BC19B5C9A4",
+    "Exactly two final mails ARR-20261022-10BE4D8A283847584A08",
+    "Multipart Spanish no order disclosure ARR-20261022-10BE4D8A283847584A08",
+    "Multipart Spanish no order disclosure ARR-20261022-10BE4D8A283847584A08",
+    "Exactly two final mails ARR-20261022-3AAA3D8A35C26E92106F",
+    "Multipart Spanish no order disclosure ARR-20261022-3AAA3D8A35C26E92106F",
+    "Multipart Spanish no order disclosure ARR-20261022-3AAA3D8A35C26E92106F",
+    "Exactly two final mails ARR-20261022-2F1AF2B10038719B99C0",
+    "Multipart Spanish no order disclosure ARR-20261022-2F1AF2B10038719B99C0",
+    "Multipart Spanish no order disclosure ARR-20261022-2F1AF2B10038719B99C0",
+    "Exactly two final mails ARR-20261022-ED5AE72F725A64A7778B",
+    "Multipart Spanish no order disclosure ARR-20261022-ED5AE72F725A64A7778B",
+    "Multipart Spanish no order disclosure ARR-20261022-ED5AE72F725A64A7778B",
+    "Exactly two final mails ARR-20261022-ADB387C6995D6348B874",
+    "Multipart Spanish no order disclosure ARR-20261022-ADB387C6995D6348B874",
+    "Multipart Spanish no order disclosure ARR-20261022-ADB387C6995D6348B874",
+    "Exactly two final mails ARR-20261022-4E3FDBF5FB945713F566",
+    "Multipart Spanish no order disclosure ARR-20261022-4E3FDBF5FB945713F566",
+    "Multipart Spanish no order disclosure ARR-20261022-4E3FDBF5FB945713F566",
+    "Exactly two final mails ARR-20261022-5A6E09904CD529CFEFB4",
+    "Multipart Spanish no order disclosure ARR-20261022-5A6E09904CD529CFEFB4",
+    "Multipart Spanish no order disclosure ARR-20261022-5A6E09904CD529CFEFB4",
+    "Exactly two final mails ARR-20261022-384846240129C66C9668",
+    "Multipart Spanish no order disclosure ARR-20261022-384846240129C66C9668",
+    "Multipart Spanish no order disclosure ARR-20261022-384846240129C66C9668",
+    "Exactly two final mails ARR-20261022-E0F0B9DA4981BA185E58",
+    "Multipart Spanish no order disclosure ARR-20261022-E0F0B9DA4981BA185E58",
+    "Multipart Spanish no order disclosure ARR-20261022-E0F0B9DA4981BA185E58",
+    "Exactly two final mails ARR-20261022-EB3FC6C66409281A5E37",
+    "Multipart Spanish no order disclosure ARR-20261022-EB3FC6C66409281A5E37",
+    "Multipart Spanish no order disclosure ARR-20261022-EB3FC6C66409281A5E37",
+    "No JS errors",
+    "No failed local assets"
+  ],
+  "codes": [
+    "ARR-20261022-9C38746E6C38663830F6",
+    "ARR-20261022-8A257084DBB28D662BB8",
+    "ARR-20261022-F04791CA7E2DF0023E1A",
+    "ARR-20261022-A7E44F2BC83F2FA2D995",
+    "ARR-20261022-CCA3A145CD26DC2D7631",
+    "ARR-20261022-67E5F1C8C86CEDF5C530",
+    "ARR-20261022-59F977750D0DCCBD7D6F",
+    "ARR-20261022-E6AECBB974BC19B5C9A4",
+    "ARR-20261022-10BE4D8A283847584A08",
+    "ARR-20261022-3AAA3D8A35C26E92106F",
+    "ARR-20261022-2F1AF2B10038719B99C0",
+    "ARR-20261022-ED5AE72F725A64A7778B",
+    "ARR-20261022-ADB387C6995D6348B874",
+    "ARR-20261022-4E3FDBF5FB945713F566",
+    "ARR-20261022-5A6E09904CD529CFEFB4",
+    "ARR-20261022-384846240129C66C9668",
+    "ARR-20261022-E0F0B9DA4981BA185E58",
+    "ARR-20261022-EB3FC6C66409281A5E37"
+  ],
+  "errors": [],
+  "assets": [],
+  "network": [
+    {
+      "page": "/wp-admin/",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/wp-admin/admin.php",
+      "pageId": null,
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "11",
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "11",
+      "origin": "https://secure.gravatar.com",
+      "path": "/avatar/[hash]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "catalog",
+      "localMpScripts": []
+    },
+    {
+      "page": "/",
+      "pageId": null,
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f50d.svg",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "product",
+      "localMpScripts": []
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://sdk.mercadopago.com",
+      "path": "/js/v2",
+      "queryKeys": [
+        "ver"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/config/super-token-variants.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/fetch_ab_config",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/super_token_ab_variant",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.css",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_css",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/failed_to_load_mp_behavior_tracking",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_js",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "8",
+      "origin": "https://www.mercadopago.com",
+      "path": "/v2/security.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "cart",
+      "localMpScripts": []
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://sdk.mercadopago.com",
+      "path": "/js/v2",
+      "queryKeys": [
+        "ver"
+      ],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/config/super-token-variants.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/fetch_ab_config",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/super_token_ab_variant",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.css",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_css",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/failed_to_load_mp_behavior_tracking",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_js",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "page": "/",
+      "pageId": "9",
+      "origin": "https://www.mercadopago.com",
+      "path": "/v2/security.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "page": "checkout",
+      "localMpScripts": [
+        "/wp-content/plugins/woocommerce-mercadopago/build/basic.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/custom.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/credits.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/ticket.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/scripts/mp-behavior-tracking.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/health/mp-health-monitor.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-error-dispatcher.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-fields-dispatcher.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-session-data-register.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-plugins-components.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-update.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-metrics.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-sdk-metrics.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/session.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/mp-card-form-error-codes.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-elements.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-page.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/card-form.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/three-ds-handler.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/mobile-checkout-classic-observer.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/event-handler.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-checkout.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/super-token-loader.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-page.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-elements.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-checkout.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/melidata/melidata-client.min.js"
+      ]
+    },
+    {
+      "page": "legal",
+      "localMpScripts": []
+    }
+  ],
+  "visual": [
+    {
+      "page": "home",
+      "width": 390,
+      "theme": "dark",
+      "reducedMotion": true
+    },
+    {
+      "page": "form",
+      "width": 390,
+      "theme": "dark",
+      "reducedMotion": true
+    },
+    {
+      "page": "privacy",
+      "width": 390,
+      "theme": "dark",
+      "reducedMotion": true
+    },
+    {
+      "page": "login",
+      "width": 390,
+      "theme": "dark",
+      "reducedMotion": true
+    },
+    {
+      "page": "home",
+      "width": 1366,
+      "theme": "light",
+      "reducedMotion": true
+    },
+    {
+      "page": "form",
+      "width": 1366,
+      "theme": "light",
+      "reducedMotion": true
+    },
+    {
+      "page": "privacy",
+      "width": 1366,
+      "theme": "light",
+      "reducedMotion": true
+    },
+    {
+      "page": "login",
+      "width": 1366,
+      "theme": "light",
+      "reducedMotion": true
+    }
+  ]
+}

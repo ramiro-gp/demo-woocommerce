@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Commerce Core
  * Description: Optional account conveniences and consumer rights workflows over native WooCommerce.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Requires Plugins: woocommerce
@@ -16,7 +16,7 @@ namespace CommerceCore;
 
 defined('ABSPATH') || exit;
 
-const VERSION = '1.1.0';
+const VERSION = '1.1.1';
 
 add_action('before_woocommerce_init', static function () {
     if (class_exists('Automattic\\WooCommerce\\Utilities\\FeaturesUtil')) {

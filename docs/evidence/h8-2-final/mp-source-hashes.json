@@ -1,0 +1,14 @@
+{
+    "version": "8.9.6",
+    "sha256": {
+        "src\/Hooks\/Scripts.php": "d9349f7fc35e9ed6f2cf64bf5d38ef3610c989af710d6ca986ddad1529d6808e",
+        "src\/Gateways\/AbstractGateway.php": "eafd2505b8aec9a6a6bc3ff0c38b20e4a1754e41fe4b2d0c11e353597f28f752",
+        "src\/Gateways\/BasicGateway.php": "81c239ad7625e525ffb22b1d63de8192387f1e087d7e3721a5ad873a0a7af859",
+        "src\/Blocks\/AbstractBlock.php": "25e1df16b3d6b748560a3d3d6e636f7fd422f09388af4f23ba2aafa051c874a5",
+        "src\/Configs\/Store.php": "41fbe80f06a8235894b650b8a942d65b69d5e9005de602a801817965d11023fd",
+        "assets\/js\/session.min.js": "e2fa780544eb73db27b04a5641bacd81d921a66993b2890551b23ce89a282eda",
+        "assets\/js\/scripts\/mp-behavior-tracking.min.js": "740475d5c2b145fb53628a26bfe3e5c5e5a4bf9a3d9020f3cda1959682635f30",
+        "assets\/js\/melidata\/melidata-client.min.js": "568deb39f3838f82228b5cb03eeb3a658d959013450945ebd10e9f5a2deccf45",
+        "assets\/js\/checkouts\/super-token-loader.min.js": "f618e6116a52cbf0042c1ba4aa7233130c6de8372bebd6a2235a8990b9d2150f"
+    }
+}

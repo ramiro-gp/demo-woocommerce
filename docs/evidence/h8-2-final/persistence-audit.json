@@ -1,0 +1,168 @@
+{
+    "result": "passed",
+    "checks": {
+        "ARR-20261022-9C38746E6C38663830F6": true,
+        "ARR-20261022-8A257084DBB28D662BB8": true,
+        "ARR-20261022-F04791CA7E2DF0023E1A": true,
+        "ARR-20261022-A7E44F2BC83F2FA2D995": true,
+        "ARR-20261022-CCA3A145CD26DC2D7631": true,
+        "ARR-20261022-67E5F1C8C86CEDF5C530": true,
+        "ARR-20261022-59F977750D0DCCBD7D6F": true,
+        "ARR-20261022-E6AECBB974BC19B5C9A4": true,
+        "ARR-20261022-10BE4D8A283847584A08": true,
+        "ARR-20261022-3AAA3D8A35C26E92106F": true,
+        "ARR-20261022-2F1AF2B10038719B99C0": true,
+        "ARR-20261022-ED5AE72F725A64A7778B": true,
+        "ARR-20261022-ADB387C6995D6348B874": true,
+        "ARR-20261022-4E3FDBF5FB945713F566": true,
+        "ARR-20261022-5A6E09904CD529CFEFB4": true,
+        "ARR-20261022-384846240129C66C9668": true,
+        "ARR-20261022-E0F0B9DA4981BA185E58": true,
+        "ARR-20261022-EB3FC6C66409281A5E37": true,
+        "hpos": true,
+        "bacs": true,
+        "pro_disabled": true
+    },
+    "requests": {
+        "ARR-20261022-9C38746E6C38663830F6": {
+            "rows": 1,
+            "status": "review",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-8A257084DBB28D662BB8": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-F04791CA7E2DF0023E1A": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-A7E44F2BC83F2FA2D995": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-CCA3A145CD26DC2D7631": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-67E5F1C8C86CEDF5C530": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-59F977750D0DCCBD7D6F": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-E6AECBB974BC19B5C9A4": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-10BE4D8A283847584A08": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-3AAA3D8A35C26E92106F": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-2F1AF2B10038719B99C0": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-ED5AE72F725A64A7778B": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-ADB387C6995D6348B874": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-4E3FDBF5FB945713F566": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-5A6E09904CD529CFEFB4": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-384846240129C66C9668": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-E0F0B9DA4981BA185E58": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        },
+        "ARR-20261022-EB3FC6C66409281A5E37": {
+            "rows": 1,
+            "status": "received",
+            "consumer_mail": "sent",
+            "admin_mail": "sent",
+            "linked_order": false
+        }
+    },
+    "backup_tables": {
+        "requests": {
+            "count": 57,
+            "sha256": "fc0899644fdf21e218976d235ae6b5ccc191740cc92cd27ecca563cf9d12ee60"
+        },
+        "events": {
+            "count": 203,
+            "sha256": "6e6433b8430212e6a2b23023b79c65e43f23f5a1f4e7f0c7d038adf22706960b"
+        },
+        "limits": {
+            "count": 50,
+            "sha256": "d7f6a3f297d3ad0c4b0170a4bc71399ae8f853961e094435a7f2760f3b4b4c07"
+        }
+    }
+}

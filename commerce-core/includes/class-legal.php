@@ -184,30 +184,36 @@ final class Legal {
         foreach (['consumer','admin'] as $kind) {
             $column=$kind.'_mail';
             if (!$wpdb->query($wpdb->prepare("UPDATE $table SET $column='sending',mail_attempt_at=%s WHERE id=%d AND $column IN ('pending','failed')",current_time('mysql',true),$id))) { continue; }
-            $recipient=$kind==='consumer' ? $row->email : (self::config()['notification_email'] ?? get_option('admin_email'));
-            $subject=($kind==='consumer'?'Constancia de recepción ':'Nueva solicitud de arrepentimiento ').$row->code;
-            $text="Código: $row->code\nFecha de recepción (UTC): $row->created_at\nEstado: recibida, pendiente de gestión.\n\nRecibir esta solicitud no significa que esté aprobada, que el pedido esté cancelado ni que se haya realizado un reembolso. Conservá este código. No respondas con documentos ni datos bancarios.\n";
-            if ($kind==='admin') { $text.="\nRevisá el caso en la administración autorizada de WordPress. Verificá identidad y pedido por medios razonables antes de operar.\n"; }
-            elseif (!empty(self::config()['email'])) { $text.="\nAtención del comercio: ".self::config()['email']."\n"; }
-            $html=WC()->mailer()->wrap_message($subject,'<p>'.nl2br(esc_html($text)).'</p>');
-            $alt=static function ($mailer) use ($text) { $mailer->AltBody=$text; };
-            add_action('phpmailer_init',$alt,100);
-            $safe=is_email($recipient) && (wp_get_environment_type()!=='local' || preg_match('/@[^@]+\.test$/i',$recipient));
-            try { $sent=$safe && wp_mail($recipient,$subject,$html,['Content-Type: text/html; charset=UTF-8']); } catch (\Throwable $e) { $sent=false; }
-            finally { remove_action('phpmailer_init',$alt,100); }
+            $alt=null; $level=ob_get_level();
+            try {
+                $recipient=$kind==='consumer' ? $row->email : (self::config()['notification_email'] ?? get_option('admin_email'));
+                $subject=($kind==='consumer'?'Constancia de recepción ':'Nueva solicitud de arrepentimiento ').$row->code;
+                $text="Código: $row->code\nFecha de recepción (UTC): $row->created_at\nEstado: recibida, pendiente de gestión.\n\nRecibir esta solicitud no significa que esté aprobada, que el pedido esté cancelado ni que se haya realizado un reembolso. Conservá este código. No respondas con documentos ni datos bancarios.\n";
+                if ($kind==='admin') { $text.="\nRevisá el caso en la administración autorizada de WordPress. Verificá identidad y pedido por medios razonables antes de operar.\n"; }
+                elseif (!empty(self::config()['email'])) { $text.="\nAtención del comercio: ".self::config()['email']."\n"; }
+                $html=WC()->mailer()->wrap_message($subject,'<p>'.nl2br(esc_html($text)).'</p>');
+                $alt=static function ($mailer) use ($text) { $mailer->AltBody=$text; };
+                add_action('phpmailer_init',$alt,100);
+                $safe=is_email($recipient) && (wp_get_environment_type()!=='local' || preg_match('/@[^@]+\.test$/i',$recipient));
+                $sent=$safe && wp_mail($recipient,$subject,$html,['Content-Type: text/html; charset=UTF-8']);
+            } catch (\Throwable $e) {
+                // Rendering/hooks can fail before wp_mail. The persisted receipt must survive.
+                $sent=false;
+                while(ob_get_level()>$level) { ob_end_clean(); }
+            } finally { if($alt) { remove_action('phpmailer_init',$alt,100); } }
             $wpdb->update($table,[$column=>$sent?'sent':'failed'],['id'=>$id]);
             self::event($id,'mail_'.$kind,$sent?'Entregado al transporte de correo; no prueba lectura.':'Falló el intento; registro conservado para reintento.',0);
         }
     }
     public static function form() {
         if (self::$result) {
-            return '<section class="cc-receipt" role="status" aria-labelledby="cc-receipt-title"><h2 id="cc-receipt-title">Recibimos tu solicitud</h2><p>Guardá esta constancia.</p><p class="cc-receipt-code">'.esc_html(self::$result->code).'</p><p>Fecha de recepción (UTC): '.esc_html(self::$result->created_at).'</p><p><strong>Estado: recibida, pendiente de gestión.</strong> No significa que esté aprobada, que tu pedido esté cancelado ni que el dinero haya sido devuelto.</p><p>'.(self::$result->consumer_mail==='sent'?'Enviamos una copia al email indicado. Si no la encontrás, conservá este código.':'No pudimos enviar la copia por email. Tu solicitud quedó registrada y esta constancia sigue siendo válida.').'</p><button type="button" class="cc-print" onclick="window.print()">Imprimir o guardar constancia</button></section>';
+            return '<section id="cc-form-result" class="cc-receipt" role="status" aria-labelledby="cc-receipt-title" tabindex="-1"><h2 id="cc-receipt-title">Recibimos tu solicitud</h2><p>Guardá esta constancia.</p><p class="cc-receipt-code">'.esc_html(self::$result->code).'</p><p>Fecha de recepción (UTC): '.esc_html(self::$result->created_at).'</p><p><strong>Estado: recibida, pendiente de gestión.</strong> No significa que esté aprobada, que tu pedido esté cancelado ni que el dinero haya sido devuelto.</p><p>'.(self::$result->consumer_mail==='sent'?'Enviamos una copia al email indicado. Si no la encontrás, conservá este código.':'No pudimos enviar la copia por email. Tu solicitud quedó registrada y esta constancia sigue siendo válida.').'</p><button type="button" class="cc-print" onclick="window.print()">Imprimir o guardar constancia</button></section>';
         }
         $value=static function($key) { return isset($_POST[$key]) && is_string($_POST[$key]) ? esc_attr(wp_unslash($_POST[$key])) : ''; };
         ob_start();
-        if (self::$errors) { echo '<div class="cc-errors" role="alert" tabindex="-1"><h2>Revisá el envío</h2><ul>'; foreach(self::$errors as $error) { echo '<li>'.esc_html($error).'</li>'; } echo '</ul></div>'; }
+        if (self::$errors) { echo '<div id="cc-form-result" class="cc-errors" role="alert" tabindex="-1"><h2>Revisá el envío</h2><ul>'; foreach(self::$errors as $error) { echo '<li>'.esc_html($error).'</li>'; } echo '</ul></div>'; }
         ?>
-        <form class="cc-withdrawal-form" method="post" action="<?php echo esc_url(self::url('withdrawal')); ?>" aria-describedby="cc-form-help">
+        <form class="cc-withdrawal-form" method="post" action="<?php echo esc_url(self::url('withdrawal').'#cc-form-result'); ?>" aria-describedby="cc-form-help">
           <h2>Solicitar arrepentimiento</h2>
           <p id="cc-form-help">No necesitás una cuenta ni explicar el motivo. Nombre y email son obligatorios para poder gestionar tu solicitud. El número de pedido y el mensaje son opcionales.</p>
           <?php if(wp_get_environment_type()==='local') { echo '<p class="cc-demo">DEMO local: usá sólo un email ficticio terminado en .test. No ingreses datos personales reales.</p>'; } ?>

@@ -2,6 +2,8 @@
 
 Entrega para revisión visual y funcional, **sin merge H8.2 a main, H9 ni producción**. Revisión normativa al 21/10/2026 (Argentina). Ver [matriz con fuentes oficiales y pendientes](h8-legal-compliance-matrix.md) y [adaptación por cliente](h8-client-legal-setup.md). La preparación técnica no acredita cumplimiento jurídico integral.
 
+**Auditoría autónoma posterior:** [informe final](h8-2-final-audit.md) y [recursos externos](h8-2-external-resources-audit.md). Commerce Core 1.1.1 corrige excepciones de plantilla previas a `wp_mail` y lleva a la constancia/error por ancla nativa sin JS. Se completó privacidad con cookies reales y se deshabilitó atribución de campañas mediante ajuste oficial WooCommerce. Los resultados posteriores amplían y, en estos puntos, sustituyen los de esta entrega inicial.
+
 ## Base consolidada
 
 Repositorio `C:\Codigo\demo-woocommerce`, remote `https://github.com/ramiro-gp/demo-woocommerce.git`. Se verificó árbol limpio, rama e historial, fetch de origin y coincidencia con el commit aprobado. Se hizo fast-forward de `main` desde `7e09c7c` hasta **`18da5be06f12fae286f7770b92ed5938a3ae61fa`**, que incluye la auditoría final H8.1, y push sin force. `main = origin/main`. Después se creó `codex/h8-2-legal-consumer-rights`.

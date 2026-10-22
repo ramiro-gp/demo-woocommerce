@@ -12,6 +12,8 @@ Commerce Core 1.1 registra solicitudes de arrepentimiento sin login, emite códi
 
 Revisar [formulario local](http://localhost:8080/?page_id=514), [informe técnico](docs/h8-2-legal-consumer-rights.md), [matriz normativa vigente](docs/h8-legal-compliance-matrix.md) y [guía por cliente](docs/h8-client-legal-setup.md). No volver a ejecutar el setup sobre páginas editadas.
 
+La [auditoría autónoma final](docs/h8-2-final-audit.md) incorpora correcciones de correo/constancia, pruebas de instalación y restauración aisladas, y la [evaluación específica de recursos externos](docs/h8-2-external-resources-audit.md). H8.2 está técnicamente listo para consolidación como DEMO, con requisitos comerciales/jurídicos y bloqueos productivos pendientes.
+
 ## H7.1 — Pagos y pedidos
 
 **Transferencia bancaria nativa (BACS)** disponible en Checkout Blocks: pedido en espera, sin pago automático y con instrucciones DEMO que no permiten transferir dinero. Mercado Pago oficial 8.9.6 conserva Checkout Pro como opción elegida; su habilitación exige vendedor de prueba verificado y HTTPS. No se transportan credenciales mediante fixtures ni se presenta el QA interno como un pago externo confirmado.

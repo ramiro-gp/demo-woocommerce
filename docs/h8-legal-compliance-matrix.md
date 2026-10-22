@@ -2,6 +2,8 @@
 
 Consulta oficial: **21/10/2026, Argentina**. Aplicación inicial: tienda DEMO de productos físicos. Es una matriz de preparación técnica, no un dictamen ni una certificación de cumplimiento. El titular y su asesoría deben confirmar el encuadre de su actividad, jurisdicción, productos y tratamientos efectivos antes de publicar.
 
+Revalidada en la [auditoría final autónoma](h8-2-final-audit.md). La [investigación de recursos](h8-2-external-resources-audit.md) amplía el inventario: atribución Woo desactivada mediante opción oficial, cookie A/B y recursos MP aún presentes. Su revisión sigue siendo un bloqueo productivo; el PASS técnico del flujo no declara legitimación de esos tratamientos.
+
 ## Fuentes verificadas y vigencia
 
 | Clave | Texto oficial y resultado de la consulta |

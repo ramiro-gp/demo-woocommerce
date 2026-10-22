@@ -1,0 +1,15 @@
+{
+    "wc_orders": true,
+    "wc_order_addresses": true,
+    "wc_order_operational_data": true,
+    "wc_orders_meta": true,
+    "woocommerce_order_items": true,
+    "woocommerce_order_itemmeta": true,
+    "woocommerce_shipping_zones": true,
+    "woocommerce_shipping_zone_locations": true,
+    "woocommerce_shipping_zone_methods": true,
+    "catalog": true,
+    "addresses": true,
+    "order_notes": true,
+    "commerce_settings": true
+}
