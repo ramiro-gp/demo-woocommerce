@@ -1,0 +1,15 @@
+{
+  "result": "passed",
+  "checks": [
+    "Isolated cart token",
+    "Synthetic product quantity 2",
+    "Coupon applied",
+    "Argentina shipping rates",
+    "Shipping selection",
+    "ARS totals",
+    "Native BACS order on-hold",
+    "Invalid order key denied"
+  ],
+  "orderId": 536,
+  "realPayment": false
+}

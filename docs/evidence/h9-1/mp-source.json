@@ -1,0 +1,13 @@
+{
+    "version": "8.9.6",
+    "files": {
+        "woocommerce-mercadopago.php": "eed3300471e7d16db2fc5569cec18f27d206eb5625c9c32c47d22fb9e0b07d5c",
+        "src\/Notification\/AbstractNotification.php": "e8ba4dd28c117537dd286c2cf815abbd061a26074635b928cf8ec0e6b718bfa6",
+        "src\/Notification\/CoreNotification.php": "971cf3062e4a36c34f041ae54e31147e8ae4af437e23491a0387a323ab3f2b24",
+        "src\/Notification\/IpnNotification.php": "16f90ae641e71c4016740b2a68cb7f373f7eb5486cff1a56dc168d0551480328",
+        "src\/Notification\/WebhookNotification.php": "516b26213a94d846c1280c3bacad6ac1df9c3475cee28958ce3f0970cc3a8ff0",
+        "src\/Hooks\/Scripts.php": "d9349f7fc35e9ed6f2cf64bf5d38ef3610c989af710d6ca986ddad1529d6808e",
+        "src\/Helpers\/PaymentMetadata.php": "f72ddb0cf8479c3cccdc5adc1e020963dc90a1c0eba2e1b75cff28d2c4b5acc4",
+        "src\/Order\/OrderStatus.php": "a8b15916bb6960265e5a843602416077a8104f987c0e782339d2391f72d388de"
+    }
+}

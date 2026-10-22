@@ -1,15 +1,15 @@
 {
-  "verifiedOn": "2026-10-10",
-  "scope": "H1 local only; update deliberately and reverify persisted WordPress core",
+  "verifiedOn": "2026-10-21",
+  "scope": "H9: official PHP security rebuild; WordPress core unchanged; clone tested before local rollout",
   "wordpress": {
     "version": "7.1.3",
     "image": "wordpress:7.1.3-php8.4-apache",
-    "digest": "sha256:309307430abf80009378a63a79df73554a6449b700fac59a991b4959e6dda8ca"
+    "digest": "sha256:41815427d043bc629359121b347e2f1e4b7aba502062c369c2922f1d666ebf2a"
   },
   "php": {
     "series": "8.4",
     "status": "provisional until the actual Hostinger Premium hPanel selection is verified",
-    "patch": "8.4.26 (Apache image verified by doctor); fixed by image digests"
+    "patch": "8.4.27 (official Apache and WP-CLI rebuilds); addresses CVE-2026-109618 and CVE-2026-109619"
   },
   "mariadb": {
     "version": "10.11.19",
@@ -20,7 +20,7 @@
   "wpcli": {
     "version": "2.12.0",
     "image": "wordpress:cli-2.12.0-php8.4",
-    "digest": "sha256:668db37ba48bc8d8ec4ca2f22163a1c74d17216c97bf509e327168963a687117"
+    "digest": "sha256:7d9d2d04401f1adcc4c4f6717d7a9763a084c2c54cd70dc4087a6fb58d905fc5"
   },
   "mailpit": {
     "version": "1.31.4",

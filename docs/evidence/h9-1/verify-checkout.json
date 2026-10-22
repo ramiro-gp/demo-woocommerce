@@ -1,0 +1,13 @@
+{
+    "result": "passed",
+    "checks": {
+        "hpos": true,
+        "bacs_on_hold": true,
+        "synthetic_buyer": true,
+        "coupon_preserved": true,
+        "shipping_preserved": true,
+        "native_stock_reduced": true,
+        "foreign_order_unchanged": true,
+        "pro_disabled": true
+    }
+}

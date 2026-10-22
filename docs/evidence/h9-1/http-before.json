@@ -1,0 +1,110 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": true,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/wp-content/uploads/",
+    "status": 403,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)"
+    }
+  },
+  {
+    "route": "/wp-content/plugins/",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/wp-config.php",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/.env",
+    "status": 404,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/backup.sql",
+    "status": 404,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/?rest_route=/wp/v2/users",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": true,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)",
+      "x-content-type-options": "nosniff",
+      "x-powered-by": "PHP/8.4.26",
+      "x-robots-tag": "noindex",
+      "x-wp-total": "1",
+      "x-wp-totalpages": "1"
+    }
+  },
+  {
+    "route": "/?author=1",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/xmlrpc.php",
+    "status": 405,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "server": "Apache/2.4.68 (Debian)",
+      "x-powered-by": "PHP/8.4.26"
+    }
+  },
+  {
+    "route": "/?rest_route=/wc/store/v1/cart",
+    "status": 200,
+    "directoryIndex": false,
+    "publicUserSlugs": false,
+    "headers": {
+      "cache-control": "no-store",
+      "server": "Apache/2.4.68 (Debian)",
+      "x-content-type-options": "nosniff",
+      "x-powered-by": "PHP/8.4.26",
+      "x-robots-tag": "noindex"
+    }
+  }
+]

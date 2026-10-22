@@ -1,0 +1,163 @@
+{
+  "phase": "active",
+  "pages": [
+    {
+      "pageId": 8,
+      "mpScripts": [
+        "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+        "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/basic.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/custom.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/credits.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/ticket.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/scripts/mp-behavior-tracking.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/health/mp-health-monitor.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-error-dispatcher.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-fields-dispatcher.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-session-data-register.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-plugins-components.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-update.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-metrics.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-sdk-metrics.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/session.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/mp-card-form-error-codes.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-elements.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-page.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/card-form.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/three-ds-handler.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/mobile-checkout-classic-observer.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/event-handler.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-checkout.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/super-token-loader.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-page.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-elements.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-checkout.min.js"
+      ]
+    },
+    {
+      "pageId": 9,
+      "mpScripts": [
+        "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+        "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/basic.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/custom.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/credits.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/build/ticket.block.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/scripts/mp-behavior-tracking.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/health/mp-health-monitor.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-error-dispatcher.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-fields-dispatcher.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-session-data-register.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-plugins-components.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-update.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-checkout-metrics.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/mp-sdk-metrics.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/session.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/mp-card-form-error-codes.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-elements.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-page.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/card-form.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/three-ds-handler.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/mobile-checkout-classic-observer.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/entities/event-handler.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/custom/mp-custom-checkout.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/super-token-loader.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-page.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-elements.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/checkouts/ticket/mp-ticket-checkout.min.js",
+        "/wp-content/plugins/woocommerce-mercadopago/assets/js/melidata/melidata-client.min.js"
+      ]
+    }
+  ],
+  "external": [
+    {
+      "host": "sdk.mercadopago.com",
+      "path": "/js/v2",
+      "queryKeys": [
+        "ver"
+      ]
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+      "queryKeys": []
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/config/super-token-variants.js",
+      "queryKeys": []
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/fetch_ab_config",
+      "queryKeys": []
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/super_token_ab_variant",
+      "queryKeys": []
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.css",
+      "queryKeys": []
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+      "queryKeys": []
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_css",
+      "queryKeys": []
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/failed_to_load_mp_behavior_tracking",
+      "queryKeys": []
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_js",
+      "queryKeys": []
+    },
+    {
+      "host": "www.mercadopago.com",
+      "path": "/v2/security.js",
+      "queryKeys": []
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/plugins/melidata/woocommerce.min.js",
+      "queryKeys": []
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/v1/plugins/melidata/errors",
+      "queryKeys": []
+    }
+  ],
+  "errors": [
+    "Unable to load melidata script on page"
+  ],
+  "cookies": [
+    "woocommerce_items_in_cart",
+    "woocommerce_cart_hash",
+    "wp_woocommerce_session_[hash]",
+    "mp_st_variant"
+  ],
+  "storage": {
+    "local": [
+      "storeApiCartHash",
+      "storeApiNonce",
+      "storeApiCartData"
+    ],
+    "session": [
+      "wpEmojiSettingsSupports",
+      "_mp_flow_id",
+      "_mp_public_key"
+    ]
+  },
+  "allExternalBlocked": true
+}

@@ -1,0 +1,31 @@
+{
+  "phase": "inactive",
+  "pages": [
+    {
+      "pageId": 8,
+      "mpScripts": []
+    },
+    {
+      "pageId": 9,
+      "mpScripts": []
+    }
+  ],
+  "external": [],
+  "errors": [],
+  "cookies": [
+    "woocommerce_items_in_cart",
+    "woocommerce_cart_hash",
+    "wp_woocommerce_session_[hash]"
+  ],
+  "storage": {
+    "local": [
+      "storeApiCartHash",
+      "storeApiNonce",
+      "storeApiCartData"
+    ],
+    "session": [
+      "wpEmojiSettingsSupports"
+    ]
+  },
+  "allExternalBlocked": true
+}

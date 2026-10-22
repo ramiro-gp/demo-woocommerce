@@ -1,0 +1,177 @@
+{
+  "result": "passed",
+  "checks": [
+    "Sensitive path denied /wp-config.php",
+    "Sensitive path denied /.env",
+    "Sensitive path denied /backup.sql",
+    "Sensitive path denied /wp-content/uploads/",
+    "Security headers",
+    "Local noindex header",
+    "Pingbacks removed, authenticated XMLRPC retained",
+    "Anonymous protected REST denied /?rest_route=/commerce-lookbook/v1/products",
+    "Anonymous protected REST denied /?rest_route=/wp/v2/users&context=edit",
+    "Anonymous protected REST denied /?rest_route=/wc/v3/orders",
+    "Anonymous legal accepted and escaped",
+    "Legal CSRF rejected",
+    "Legal expired/invalid token rejected",
+    "Receipt code grants no private lookup",
+    "Login customer_a",
+    "Login customer_b",
+    "Login subscriber",
+    "Customer A reads own order",
+    "Customer A cannot read foreign order",
+    "Customer A cannot commerce_legal_manage",
+    "Customer A cannot commerce_legal_settings",
+    "Customer A cannot read customer REST",
+    "Customer B reads own order",
+    "Customer B cannot read foreign order",
+    "Customer B cannot commerce_legal_manage",
+    "Customer B cannot commerce_legal_settings",
+    "Customer B cannot read customer REST",
+    "Address copy uses current owner",
+    "Address expired nonce rejected",
+    "Subscriber cannot editor product REST",
+    "Login manager",
+    "Manager legal access",
+    "Login admin",
+    "Stored payload cannot execute XSS",
+    "Admin authorized HPOS association",
+    "Case-bound nonce rejects IDOR",
+    "Admin legal CSRF rejected",
+    "Valid nonce cannot replace order authorization",
+    "Native password recovery accepted",
+    "BACS shown; Pro absent",
+    "Legal cookie HttpOnly Lax session",
+    "Order attribution remains off"
+  ],
+  "network": [
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/failed_to_load_mp_behavior_tracking",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "host": "secure.gravatar.com",
+      "path": "/avatar/[redacted]",
+      "queryKeys": [
+        "s",
+        "d",
+        "r"
+      ],
+      "method": "GET"
+    },
+    {
+      "host": "sdk.mercadopago.com",
+      "path": "/js/v2",
+      "queryKeys": [
+        "ver"
+      ],
+      "method": "GET"
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/config/super-token-variants.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/fetch_ab_config",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/super_token_ab_variant",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.css",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_css",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_js",
+      "queryKeys": [],
+      "method": "POST"
+    },
+    {
+      "host": "www.mercadopago.com",
+      "path": "/v2/security.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "host": "http2.mlstatic.com",
+      "path": "/storage/v1/plugins/melidata/woocommerce.min.js",
+      "queryKeys": [],
+      "method": "GET"
+    },
+    {
+      "host": "api.mercadopago.com",
+      "path": "/v1/plugins/melidata/errors",
+      "queryKeys": [],
+      "method": "POST"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "cc_legal_browser",
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax",
+      "session": true
+    },
+    {
+      "name": "woocommerce_items_in_cart",
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax",
+      "session": true
+    },
+    {
+      "name": "woocommerce_cart_hash",
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax",
+      "session": true
+    },
+    {
+      "name": "wp_woocommerce_session_[hash]",
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax",
+      "session": false
+    },
+    {
+      "name": "mp_st_variant",
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax",
+      "session": false
+    }
+  ],
+  "externalRequestsBlocked": true
+}

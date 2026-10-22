@@ -30,6 +30,16 @@ final class Legal {
 
     public static function config() { return (array) get_option(self::OPTION, []); }
     public static function table($kind = 'requests') { global $wpdb; return $wpdb->prefix . 'commerce_legal_' . $kind; }
+    /** wpdb logs failed SQL, including bound PII, even with display_errors off. */
+    private static function private_query($operation) {
+        global $wpdb;
+        $previous = $wpdb->suppress_errors(true);
+        try {
+            $result = $operation();
+            if ($wpdb->last_error) { error_log('Commerce Core: legal database operation failed; private query details withheld.'); }
+            return $result;
+        } finally { $wpdb->suppress_errors($previous); }
+    }
     public static function install() {
         if (get_option('commerce_legal_schema') === '1') { return; }
         if (!is_admin() && !(defined('WP_CLI') && WP_CLI)) { return; }
@@ -117,7 +127,7 @@ final class Legal {
         if (wp_get_environment_type() !== 'local' && get_post_meta(get_queried_object_id(), '_commerce_legal_demo', true)) { wp_die('Contenido DEMO pendiente de adaptación y revisión.', 'Contenido no disponible', ['response'=>503]); }
         if (get_queried_object_id() !== absint(self::config()['pages']['withdrawal'] ?? 0)) { return; }
         nocache_headers(); header('Referrer-Policy: no-referrer'); header('X-Robots-Tag: noindex, noarchive');
-        self::$cookie = (string)($_COOKIE['cc_legal_browser'] ?? '');
+        self::$cookie = is_string($_COOKIE['cc_legal_browser'] ?? null) ? $_COOKIE['cc_legal_browser'] : '';
         if (!preg_match('/^[a-f0-9]{64}$/D', self::$cookie)) {
             self::$cookie=bin2hex(random_bytes(32));
             setcookie('cc_legal_browser', self::$cookie, ['expires'=>0,'path'=>COOKIEPATH ?: '/','secure'=>is_ssl(),'httponly'=>true,'samesite'=>'Lax']);
@@ -168,7 +178,7 @@ final class Legal {
         $data+=['code'=>'ARR-'.gmdate('Ymd').'-'.strtoupper(bin2hex(random_bytes(10))),'token_hash'=>$token,'payload_hash'=>$payload,'created_at'=>current_time('mysql',true)];
         $wpdb->query('START TRANSACTION');
         // Expected concurrent retries must not log a duplicate-key query containing PII.
-        $ok=$wpdb->query($wpdb->prepare("INSERT INTO $table (name,email,reference,message,code,token_hash,payload_hash,created_at) VALUES (%s,%s,%s,%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id)",$data['name'],$data['email'],$data['reference'],$data['message'],$data['code'],$data['token_hash'],$data['payload_hash'],$data['created_at'])); $id=(int)$wpdb->insert_id;
+        $ok=self::private_query(static function() use ($wpdb,$table,$data) { return $wpdb->query($wpdb->prepare("INSERT INTO $table (name,email,reference,message,code,token_hash,payload_hash,created_at) VALUES (%s,%s,%s,%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id)",$data['name'],$data['email'],$data['reference'],$data['message'],$data['code'],$data['token_hash'],$data['payload_hash'],$data['created_at'])); }); $id=(int)$wpdb->insert_id;
         if ($ok!==1) { $wpdb->query('ROLLBACK'); $existing=$wpdb->get_row($wpdb->prepare("SELECT * FROM $table WHERE token_hash=%s",$token)); return $existing && hash_equals($existing->payload_hash,$payload) ? $existing : new \WP_Error('storage','No pudimos registrar la solicitud. No hay constancia emitida: intentá nuevamente o usá el canal de atención publicado.'); }
         if (!self::event($id,'received','Solicitud recibida; pendiente de gestión.',0)) { $wpdb->query('ROLLBACK'); return new \WP_Error('storage','No pudimos registrar la solicitud. Intentá nuevamente.'); }
         $wpdb->query('COMMIT');
@@ -177,7 +187,7 @@ final class Legal {
     }
     public static function event($id,$kind,$detail,$actor=null) {
         global $wpdb;
-        return $wpdb->insert(self::table('events'),['request_id'=>$id,'created_at'=>current_time('mysql',true),'actor_id'=>$actor ?? get_current_user_id(),'kind'=>$kind,'detail'=>$detail]);
+        return self::private_query(static function() use ($wpdb,$id,$kind,$detail,$actor) { return $wpdb->insert(self::table('events'),['request_id'=>$id,'created_at'=>current_time('mysql',true),'actor_id'=>$actor ?? get_current_user_id(),'kind'=>$kind,'detail'=>$detail]); });
     }
     public static function notify($id) {
         global $wpdb; $table=self::table(); $row=$wpdb->get_row($wpdb->prepare("SELECT * FROM $table WHERE id=%d",$id)); if (!$row) { return; }
@@ -242,7 +252,7 @@ final class Legal {
             $row=$wpdb->get_row($wpdb->prepare("SELECT * FROM $table WHERE id=%d",$id)); if(!$row) { echo '<p>Solicitud no encontrada.</p></div>';return; }
             echo '<h2>'.esc_html($row->code).'</h2><dl>';
             foreach(['created_at'=>'Fecha UTC','name'=>'Nombre informado','email'=>'Email informado (no verificado)','reference'=>'Referencia informada (no verificada)','message'=>'Mensaje','consumer_mail'=>'Correo consumidor','admin_mail'=>'Correo administrador'] as $key=>$label) { echo '<dt><strong>'.esc_html($label).'</strong></dt><dd style="white-space:pre-wrap;overflow-wrap:anywhere">'.esc_html($row->$key).'</dd>'; } echo '</dl>';
-            if($row->order_id && ($order=wc_get_order($row->order_id))) { echo '<p>Pedido vinculado tras verificación: <a href="'.esc_url($order->get_edit_order_url()).'">#'.esc_html($order->get_order_number()).'</a></p>'; }
+            if($row->order_id && current_user_can('edit_shop_order',$row->order_id) && ($order=wc_get_order($row->order_id))) { echo '<p>Pedido vinculado tras verificación: <a href="'.esc_url($order->get_edit_order_url()).'">#'.esc_html($order->get_order_number()).'</a></p>'; }
             echo '<form method="post" action="'.esc_url(admin_url('admin-post.php')).'">'; wp_nonce_field('cc_legal_manage_'.$id);
             echo '<input type="hidden" name="action" value="commerce_legal_manage"><input type="hidden" name="case" value="'.esc_attr($id).'"><p><label>Estado de gestión <select name="status">';
             foreach(self::states() as $value=>$label) { echo '<option value="'.esc_attr($value).'" '.selected($row->status,$value,false).'>'.esc_html($label).'</option>'; }
@@ -264,9 +274,11 @@ final class Legal {
         else {
             $state=sanitize_key($_POST['status'] ?? ''); $note=sanitize_textarea_field(wp_unslash($_POST['note'] ?? '')); $order=absint($_POST['order_id'] ?? 0);
             if(!isset(self::states()[$state]) || !$note || mb_strlen($note)>2000) { wp_die('Estado o nota inválidos.'); }
-            if($order!== (int)$row->order_id && $order && (empty($_POST['verified']) || !wc_get_order($order))) { wp_die('Verificá identidad y pedido, y registrá cómo lo hiciste.'); }
             $wpdb->query('START TRANSACTION');
             $locked=$wpdb->get_row($wpdb->prepare("SELECT * FROM $table WHERE id=%d FOR UPDATE",$id));
+            if(!$locked || ($order && (!current_user_can('edit_shop_order',$order) || !wc_get_order($order))) || ($order && $order!== (int)$locked->order_id && empty($_POST['verified']))) {
+                $wpdb->query('ROLLBACK'); wp_die('Verificá identidad, permisos y pedido, y registrá cómo lo hiciste.','Gestión no guardada',['response'=>403]);
+            }
             $ok=$wpdb->update($table,['status'=>$state,'order_id'=>$order],['id'=>$id]);
             $event=self::event($id,'management',"Estado: $locked->status → $state. Pedido: $locked->order_id → $order.\n".$note);
             if($ok===false || !$event) { $wpdb->query('ROLLBACK');wp_die('No se guardó la gestión. Intentá nuevamente.'); } $wpdb->query('COMMIT');
@@ -298,16 +310,17 @@ final class Legal {
             else { $v=sanitize_text_field($raw); }
             if($v!=='') { $c[$key]=$v; } else { unset($c[$key]); }
         }
-        foreach(['privacy','terms','shipping','returns','withdrawal'] as $key) { $id=absint($_POST['pages'][$key] ?? 0);if($id && get_post_status($id)!=='publish') { wp_die('Seleccioná páginas publicadas.'); }$c['pages'][$key]=$id; }
+        if(isset($_POST['pages']) && !is_array($_POST['pages'])) { wp_die('Páginas inválidas.'); }
+        foreach(['privacy','terms','shipping','returns','withdrawal'] as $key) { $id=absint($_POST['pages'][$key] ?? 0);if($id && (get_post_type($id)!=='page' || get_post_status($id)!=='publish' || !current_user_can('edit_post',$id))) { wp_die('Seleccioná páginas publicadas que puedas editar.'); }$c['pages'][$key]=$id; }
         update_option(self::OPTION,$c,false); update_option('wp_page_for_privacy_policy',$c['pages']['privacy']);update_option('woocommerce_terms_page_id',$c['pages']['terms']);
         wp_safe_redirect(admin_url('options-general.php?page=commerce-legal-settings'));exit;
     }
     public static function exporters($list) { $list['commerce-legal']=['exporter_friendly_name'=>'Solicitudes de arrepentimiento','callback'=>[__CLASS__,'export']];return $list; }
     public static function export($email,$page=1) {
-        global $wpdb; $rows=$wpdb->get_results($wpdb->prepare('SELECT * FROM '.self::table().' WHERE email=%s ORDER BY id LIMIT 50 OFFSET %d',$email,(max(1,(int)$page)-1)*50));$data=[];
+        global $wpdb; $rows=self::private_query(static function() use ($wpdb,$email,$page) { return $wpdb->get_results($wpdb->prepare('SELECT * FROM '.self::table().' WHERE email=%s ORDER BY id LIMIT 50 OFFSET %d',$email,(max(1,(int)$page)-1)*50)); });$data=[];
         foreach($rows as $row) { $fields=[];foreach(['code'=>'Código','created_at'=>'Recepción UTC','name'=>'Nombre','email'=>'Email','reference'=>'Referencia informada','message'=>'Mensaje','status'=>'Estado de gestión'] as $key=>$label) { $fields[]=['name'=>$label,'value'=>$row->$key]; }$data[]=['group_id'=>'commerce-legal','group_label'=>'Solicitudes de arrepentimiento','item_id'=>'commerce-legal-'.$row->id,'data'=>$fields]; }
         return ['data'=>$data,'done'=>count($rows)<50];
     }
     public static function erasers($list) { $list['commerce-legal']=['eraser_friendly_name'=>'Solicitudes de arrepentimiento (revisión de conservación)','callback'=>[__CLASS__,'erase']];return $list; }
-    public static function erase($email,$page=1) { global $wpdb;$found=(bool)$wpdb->get_var($wpdb->prepare('SELECT id FROM '.self::table().' WHERE email=%s LIMIT 1',$email));return ['items_removed'=>false,'items_retained'=>$found,'messages'=>$found?['Las solicitudes requieren revisión de conservación por obligaciones legales y defensa de reclamos. Evaluar supresión o disociación del caso y sus notas con personal autorizado; no se borran automáticamente.']:[],'done'=>true]; }
+    public static function erase($email,$page=1) { global $wpdb;$found=(bool)self::private_query(static function() use ($wpdb,$email) { return $wpdb->get_var($wpdb->prepare('SELECT id FROM '.self::table().' WHERE email=%s LIMIT 1',$email)); });return ['items_removed'=>false,'items_retained'=>$found,'messages'=>$found?['Las solicitudes requieren revisión de conservación por obligaciones legales y defensa de reclamos. Evaluar supresión o disociación del caso y sus notas con personal autorizado; no se borran automáticamente.']:[],'done'=>true]; }
 }
