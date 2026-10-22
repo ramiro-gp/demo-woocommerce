@@ -34,6 +34,7 @@ add_action('after_setup_theme', static function () {
     add_editor_style('assets/css/cart.css');
     add_editor_style('assets/css/checkout.css');
     add_editor_style('assets/css/shipping.css');
+    add_editor_style('assets/css/legal.css');
     register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
 });
 
@@ -63,6 +64,7 @@ add_action('wp_enqueue_scripts', static function () {
     $checkout = function_exists('is_checkout') && is_checkout();
     $account = function_exists('is_account_page') && is_account_page();
     wp_enqueue_style('commerce-base', get_theme_file_uri('assets/css/system.css'), [], $version);
+    wp_enqueue_style('commerce-base-legal', get_theme_file_uri('assets/css/legal.css'), ['commerce-base'], filemtime(get_theme_file_path('assets/css/legal.css')));
     if (!$cart && !$checkout && !$account) {
         wp_enqueue_style('commerce-base-pages', get_theme_file_uri('assets/css/pages.css'), ['commerce-base'], $version);
     }

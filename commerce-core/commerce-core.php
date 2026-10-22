@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Commerce Core
- * Description: Small, optional account conveniences over native WooCommerce data and forms.
- * Version: 1.0.0
+ * Description: Optional account conveniences and consumer rights workflows over native WooCommerce.
+ * Version: 1.1.0
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Requires Plugins: woocommerce
@@ -16,7 +16,7 @@ namespace CommerceCore;
 
 defined('ABSPATH') || exit;
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 
 add_action('before_woocommerce_init', static function () {
     if (class_exists('Automattic\\WooCommerce\\Utilities\\FeaturesUtil')) {
@@ -32,6 +32,10 @@ add_action('plugins_loaded', static function () {
         require_once __DIR__ . '/includes/class-address-copy.php';
         Address_Copy::register();
     }
+    if (apply_filters('commerce_core_legal_enabled', true)) {
+        require_once __DIR__ . '/includes/class-legal.php';
+        Legal::register();
+    }
 });
 
-// No activation, deactivation or uninstall writes. WooCommerce owns all data.
+// No uninstall deletion. WooCommerce owns orders; Legal owns its request tables.

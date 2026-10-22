@@ -2,6 +2,7 @@
 /** Optional presentation reminder; WooCommerce remains the cart authority. */
 if (!defined('ABSPATH')) { exit; }
 function commerce_base_exit_intent_enabled() {
+    if (class_exists('CommerceCore\\Legal') && \CommerceCore\Legal::is_page()) { return false; }
     return function_exists('WC') && !is_admin() && !is_checkout() && !is_account_page() && !is_wc_endpoint_url('order-pay') && !is_wc_endpoint_url('order-received') && !is_customize_preview();
 }
 add_action('wp_enqueue_scripts', static function () {

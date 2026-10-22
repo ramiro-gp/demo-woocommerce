@@ -1,0 +1,60 @@
+/* Consumer information inherits Commerce Base's established visual language. */
+.cb-legal-access { position:absolute; inset-block-start:calc(var(--cb-header-size) + var(--cb-admin-offset)); inset-inline:0; z-index:10; background:var(--cb-surface); border-block:1px solid var(--cb-border); }
+.cb-legal-access .cb-container { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.cb-legal-access a { display:inline-flex; align-items:center; min-block-size:44px; font-size:.75rem; font-weight:700; text-underline-offset:.25em; }
+.cb-legal-access span { font-size:.75rem; color:var(--cb-text-muted); }
+body.home:has(.cb-legal-access) .cb-home-hero { padding-block-start:calc(var(--cb-header-height) + var(--cb-space-5) + 48px); }
+.cc-legal { padding-block:clamp(3rem,6vw,6rem); }
+.cc-legal-heading { max-inline-size:70rem; margin-block-end:3rem; }
+.cc-legal-heading h1 { font-size:clamp(2.75rem,6vw,5.5rem); max-inline-size:20ch; margin-block:0 1.5rem; overflow-wrap:normal; }
+.cc-legal-lead { font-size:clamp(1.125rem,2vw,1.5rem); max-inline-size:52ch; }
+.cc-demo { padding:1rem 1.25rem; border-inline-start:3px solid var(--cb-warning); background:var(--cb-surface); color:var(--cb-text); font-size:.875rem; }
+.cc-legal-layout { display:grid; grid-template-columns:minmax(12rem,1fr) minmax(0,3fr); gap:clamp(2rem,5vw,6rem); align-items:start; }
+.cc-legal-nav { display:grid; gap:.375rem; align-content:start; }
+.cc-legal-nav a { display:flex; align-items:center; min-block-size:44px; padding-block:.5rem; font-size:.875rem; text-underline-offset:.25em; }
+.cc-legal-nav [aria-current=page] { font-weight:700; text-decoration-thickness:2px; }
+.cc-legal-copy { max-inline-size:68ch; min-inline-size:0; }
+.cc-legal-copy h2 { font-size:clamp(1.75rem,2.5vw,2.5rem); line-height:1.15; margin-block:3rem 1rem; scroll-margin-block-start:calc(var(--cb-header-height) + 2rem); }
+.cc-legal-copy > :first-child { margin-block-start:0; }
+.cc-legal-copy p { margin-block:0 1.25rem; overflow-wrap:anywhere; }
+.cc-legal-copy a { text-underline-offset:.2em; }
+.cc-withdrawal-form { display:grid; grid-template-columns:minmax(0,1fr); padding-block:0 2rem; border-block-end:1px solid var(--cb-border); }
+.cc-withdrawal-form h2 { margin-block-start:0; }
+.cc-withdrawal-form label { display:block; font-weight:600; margin-block:1rem .5rem; }
+.cc-withdrawal-form :is(input:not([type=hidden]),textarea) { font:inherit; inline-size:100%; min-inline-size:0; min-block-size:48px; padding:.75rem; color:var(--cb-text); background:var(--cb-background); border:1px solid var(--cb-border); border-radius:var(--cb-radius-sm); }
+.cc-withdrawal-form textarea { resize:vertical; }
+.cc-withdrawal-form :is(#cc-reference-help,#cc-message-help) { color:var(--cb-text-muted); font-size:.875rem; margin-block:.5rem 1rem; }
+.cc-withdrawal-form button,.cc-print { display:inline-flex; align-items:center; justify-content:center; min-block-size:48px; font:inherit; font-weight:600; line-height:1.4; padding:.9rem 1.25rem; color:var(--cb-accent-contrast); background:var(--cb-accent); border:1px solid var(--cb-accent); border-radius:var(--cb-radius-sm); cursor:pointer; white-space:normal; }
+.cc-withdrawal-form button:hover,.cc-print:hover { background:var(--cb-accent-hover); }
+.cc-withdrawal-form button + p { margin-block-start:1rem; font-size:.875rem; }
+.cc-withdrawal-form .cc-honeypot { position:absolute; inset-inline-start:-10000px; inline-size:1px; block-size:1px; overflow:hidden; }
+:is(.cc-withdrawal-form,.cc-receipt,.cc-legal-nav,.cb-legal-access) :is(input,textarea,button,a):focus-visible { outline:3px solid var(--cb-focus); outline-offset:4px; }
+.cc-errors { border:2px solid var(--cb-danger); padding:1rem; margin-block-end:2rem; }
+.cc-errors h2 { margin-block:0 1rem; }
+.cc-receipt { border-block:2px solid var(--cb-accent); padding-block:2rem; }
+.cc-receipt h2 { margin-block-start:0; }
+.cc-receipt-code { font-weight:700; font-size:clamp(1rem,2vw,1.4rem); overflow-wrap:anywhere; padding-block:1rem; }
+.cc-identity { margin-block-start:3rem; padding-block-start:2rem; border-block-start:1px solid var(--cb-border); }
+.cc-identity h2 { margin-block-start:0; }
+.cc-identity dl { display:grid; gap:1rem; font-size:.875rem; }
+.cc-identity dl > div { min-inline-size:0; }
+.cc-identity dt { font-weight:600; }
+.cc-identity dd { margin:0; color:var(--cb-text-muted); overflow-wrap:anywhere; }
+.cc-fiscal { display:inline-block; padding:1rem; background:white; }
+.cc-fiscal img { display:block; max-inline-size:100%; block-size:auto; }
+.cb-footer-legal .cc-identity h2 { font-family:var(--cb-font-interface); font-size:1rem; }
+.cb-footer-legal .cc-identity dl { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.cc-contact-legal { padding-block:3rem; }
+.cc-contact-legal .cc-legal-nav { margin-block-start:2rem; }
+.cc-rights-notice { font-size:.875rem; }
+@media (max-width:767px) {
+  .cc-legal-layout { grid-template-columns:minmax(0,1fr); gap:2rem; }
+  .cc-legal-nav { border-block:1px solid var(--cb-border); padding-block:.75rem; }
+  .cb-footer-legal .cc-identity dl { grid-template-columns:minmax(0,1fr); }
+  .cb-legal-access span { display:none; }
+  .cc-withdrawal-form button { inline-size:100%; }
+}
+@media print {
+  .cb-header,.cb-footer,.cc-legal-nav,.cb-legal-access,.cc-print { display:none!important; }
+  .cc-legal-layout { display:block; }.cc-legal { padding:0; }.cc-receipt { break-inside:avoid; }
+}

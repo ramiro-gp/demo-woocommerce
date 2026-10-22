@@ -92,6 +92,9 @@ function commerce_base_header($attributes = []) {
             </div>
         </div>
     </header>
+    <?php if (is_front_page() && class_exists('CommerceCore\\Legal') && ($rights_url = \CommerceCore\Legal::url('withdrawal'))) : ?>
+    <div class="cb-legal-access"><div class="cb-container"><a href="<?php echo esc_url($rights_url); ?>">BOTÓN DE ARREPENTIMIENTO</a><span>Compras a distancia · sin iniciar sesión</span></div></div>
+    <?php endif; ?>
     <dialog class="cb-menu" id="cb-menu" data-cb-menu aria-label="<?php esc_attr_e('Navegación principal', 'commerce-base'); ?>">
         <div class="cb-menu-masthead"><div class="cb-menu-top cb-container"><span class="cb-brand"><?php echo esc_html(get_bloginfo('name')); ?></span><span class="cb-eyebrow"><?php esc_html_e('Explorar', 'commerce-base'); ?></span><button class="cb-icon-button" type="button" data-cb-menu-close aria-label="<?php esc_attr_e('Cerrar menú', 'commerce-base'); ?>"><?php echo commerce_base_icon('close'); ?></button></div></div>
         <div class="cb-menu-panel" data-cb-menu-panel><div class="cb-menu-inner cb-container">
@@ -119,9 +122,16 @@ function commerce_base_footer($attributes = []) {
     $about = get_page_by_path('conocenos');
     if ($about && 'publish' === $about->post_status) { $shop_links[] = ['url' => get_permalink($about), 'label' => __('Conocenos', 'commerce-base')]; }
     // Publish links only when the merchant has created and published the pages.
-    foreach (['contacto' => 'Contacto', 'preguntas-frecuentes' => 'Preguntas frecuentes', 'envios' => 'Envíos', 'cambios-y-devoluciones' => 'Cambios y devoluciones', 'terminos' => 'Términos', 'boton-de-arrepentimiento' => 'Botón de Arrepentimiento'] as $slug => $label) {
+    $footer_slugs = ['contacto' => 'Contacto', 'preguntas-frecuentes' => 'Preguntas frecuentes'];
+    if (!class_exists('CommerceCore\\Legal')) { $footer_slugs += ['envios'=>'Envíos','cambios-y-devoluciones'=>'Cambios y devoluciones','terminos'=>'Términos','boton-de-arrepentimiento'=>'BOTÓN DE ARREPENTIMIENTO']; }
+    foreach ($footer_slugs as $slug => $label) {
         $page = get_page_by_path($slug);
         if ($page && 'publish' === $page->post_status) { $help_links[] = ['url' => get_permalink($page), 'label' => $label]; }
+    }
+    if (class_exists('CommerceCore\\Legal')) {
+        foreach (['shipping'=>'Envíos','returns'=>'Cambios y devoluciones','terms'=>'Términos y condiciones','withdrawal'=>'BOTÓN DE ARREPENTIMIENTO'] as $key=>$label) {
+            if ($url=\CommerceCore\Legal::url($key)) { $help_links[]=['url'=>$url,'label'=>$label]; }
+        }
     }
     if (get_privacy_policy_url()) { $help_links[] = ['url' => get_privacy_policy_url(), 'label' => __('Privacidad', 'commerce-base')]; }
     ob_start(); ?>
@@ -132,6 +142,7 @@ function commerce_base_footer($attributes = []) {
             <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Ayuda e información', 'commerce-base'); ?>"><h2><?php esc_html_e('Ayuda e información', 'commerce-base'); ?></h2><?php foreach ($help_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
             <?php if (has_nav_menu('footer-social')) : ?><nav class="cb-footer-column" aria-label="<?php esc_attr_e('Redes sociales', 'commerce-base'); ?>"><h2><?php esc_html_e('Encontranos', 'commerce-base'); ?></h2><?php wp_nav_menu(['theme_location' => 'footer-social', 'container' => false, 'depth' => 1, 'fallback_cb' => false]); ?></nav><?php endif; ?>
         </div>
+        <?php if (class_exists('CommerceCore\\Legal') && \CommerceCore\Legal::config()) : ?><div class="cb-footer-legal"><?php echo \CommerceCore\Legal::identity(); ?></div><?php endif; ?>
         <div class="cb-footer-bottom">
             <?php if (function_exists('get_woocommerce_currency') && 'ARS' === get_woocommerce_currency()) : ?><p><?php esc_html_e('Precios expresados en pesos argentinos (ARS).', 'commerce-base'); ?></p><?php endif; ?>
             <p class="cb-footer-credit">Hecho con <span class="cb-credit-heart" role="img" aria-label="amor"><?php echo commerce_base_icon('heart'); ?></span> por <a class="cb-link" href="https://ramita.dev" target="_blank" rel="noopener noreferrer">Ramiro Garcia<span class="screen-reader-text"> (abre en una nueva pestaña)</span></a></p>

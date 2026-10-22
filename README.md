@@ -1,8 +1,16 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H6.2 y sus correcciones están aprobados y consolidados en main (`c736cdc`). H7.1 se entrega en `codex/h7-1-payments` para revisión manual, sin merge a main. H7.2 y H8 no comenzaron.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H8.1 están aprobados y consolidados en main (`18da5be`). H8.2 se entrega en `codex/h8-2-legal-consumer-rights` para revisión del usuario, sin merge a main. H9 no comenzó.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
 
-La identidad ficticia aprobada es **TRAMA**. El theme es **Commerce Base** (`commerce-base`); el futuro plugin, cuando corresponda, será **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
+La identidad de demostración es **TRAMA**. El theme es **Commerce Base** (`commerce-base`) y el plugin funcional es **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
+
+## H8.2 — Legales y consumidor argentino
+
+Commerce Core 1.1 registra solicitudes de arrepentimiento sin login, emite código inmediato, intenta constancia/aviso por Mailpit y permite gestión autorizada sin modificar pedidos ni pagos. Commerce Base 1.7 integra el acceso visible en Home, páginas Gutenberg, identidad compartida, privacidad en registro y bloque nativo de Términos del checkout.
+
+**Contenido legal DEMO, pendiente de datos auténticos y revisión jurídica por comercio.** Data Fiscal está preparado sin CUIT ni QR ficticio. Checkout Pro sigue deshabilitado; no se habilita producción.
+
+Revisar [formulario local](http://localhost:8080/?page_id=514), [informe técnico](docs/h8-2-legal-consumer-rights.md), [matriz normativa vigente](docs/h8-legal-compliance-matrix.md) y [guía por cliente](docs/h8-client-legal-setup.md). No volver a ejecutar el setup sobre páginas editadas.
 
 ## H7.1 — Pagos y pedidos
 

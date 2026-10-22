@@ -1,0 +1,577 @@
+{
+  "result": "passed",
+  "checks": [
+    "Home access exact and visible",
+    "Home access in first viewport",
+    "Home leads directly to form",
+    "No Exit Intent on legal page",
+    "Published legal privacy",
+    "Published legal terms",
+    "Published legal shipping",
+    "Published legal returns",
+    "Published legal withdrawal",
+    "Footer link 3",
+    "Footer link 511",
+    "Footer link 512",
+    "Footer link 513",
+    "Footer link 514",
+    "Registration Spanish privacy",
+    "Registration valid privacy URL",
+    "Empty fields rejected server-side",
+    "Invalid email rejected server-side",
+    "Invalid CSRF nonce denied",
+    "Token bound to browser cookie",
+    "Honeypot server denial",
+    "Guest without JS, order number or reason",
+    "Guest persisted and confirmed",
+    "Accidental repeat same code",
+    "Concurrent duplicate one code",
+    "Unknown reference accepted without disclosure",
+    "Query cannot look up any order",
+    "Native My Account still works",
+    "Authenticated request with QA order reference",
+    "Customer cannot access administration",
+    "Unauthorized mutation denied",
+    "Subscriber mutation denied",
+    "Manager receives persisted case",
+    "Order association needs verification",
+    "Admin CSRF denied",
+    "Authorized state, note and verified link saved",
+    "State persisted",
+    "Internal note audit visible",
+    "Native HPOS order link",
+    "Keyboard logical order 320 light",
+    "Visible keyboard focus 320 light",
+    "Home first access visible 320 light",
+    "Keyboard logical order 320 dark",
+    "Visible keyboard focus 320 dark",
+    "Home first access visible 320 dark",
+    "Keyboard logical order 390 light",
+    "Visible keyboard focus 390 light",
+    "Home first access visible 390 light",
+    "Keyboard logical order 390 dark",
+    "Visible keyboard focus 390 dark",
+    "Home first access visible 390 dark",
+    "Keyboard logical order 768 light",
+    "Visible keyboard focus 768 light",
+    "Home first access visible 768 light",
+    "Keyboard logical order 768 dark",
+    "Visible keyboard focus 768 dark",
+    "Home first access visible 768 dark",
+    "Keyboard logical order 1366 light",
+    "Visible keyboard focus 1366 light",
+    "Home first access visible 1366 light",
+    "Keyboard logical order 1366 dark",
+    "Visible keyboard focus 1366 dark",
+    "Home first access visible 1366 dark",
+    "Keyboard logical order 1920 light",
+    "Visible keyboard focus 1920 light",
+    "Home first access visible 1920 light",
+    "Keyboard logical order 1920 dark",
+    "Visible keyboard focus 1920 dark",
+    "Home first access visible 1920 dark",
+    "Checkout Spanish native terms and withdrawal",
+    "Native terms checkbox only",
+    "Checkout valid privacy and terms links",
+    "BACS still offered",
+    "Two mails per successful unique code ARR-20261022-D98FF1F3263616DFF405",
+    "Two mails per successful unique code ARR-20261022-FF79A0E7792677593AEF",
+    "Two mails per successful unique code ARR-20261022-573ACBD1520D2F424837",
+    "Two mails per successful unique code ARR-20261022-A47819AD3703D5B71301",
+    "Two mails per successful unique code ARR-20261022-76E06F83AC2BD2AA5FBA",
+    "No browser runtime errors",
+    "No failed assets",
+    "Only audited existing Gravatar and MP origins"
+  ],
+  "matrix": [
+    {
+      "width": 320,
+      "mode": "light",
+      "page": "privacy",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "mode": "light",
+      "page": "terms",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "mode": "light",
+      "page": "shipping",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "mode": "light",
+      "page": "returns",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "mode": "light",
+      "page": "withdrawal",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "light",
+      "formWidth": 278
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "page": "privacy",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "page": "terms",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "page": "shipping",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "page": "returns",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "mode": "dark",
+      "page": "withdrawal",
+      "scroll": 312,
+      "h1": 1,
+      "theme": "dark",
+      "formWidth": 278
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "page": "privacy",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "page": "terms",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "page": "shipping",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "page": "returns",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "mode": "light",
+      "page": "withdrawal",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "light",
+      "formWidth": 348
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "page": "privacy",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "page": "terms",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "page": "shipping",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "page": "returns",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "page": "withdrawal",
+      "scroll": 380,
+      "h1": 1,
+      "theme": "dark",
+      "formWidth": 348
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "page": "privacy",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "page": "terms",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "page": "shipping",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "page": "returns",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "page": "withdrawal",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "light",
+      "formWidth": 476.90625
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "page": "privacy",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "page": "terms",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "page": "shipping",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "page": "returns",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "page": "withdrawal",
+      "scroll": 758,
+      "h1": 1,
+      "theme": "dark",
+      "formWidth": 476.90625
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "page": "privacy",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "page": "terms",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "page": "shipping",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "page": "returns",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "page": "withdrawal",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "light",
+      "formWidth": 746.625
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "page": "privacy",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "page": "terms",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "page": "shipping",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "page": "returns",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "page": "withdrawal",
+      "scroll": 1356,
+      "h1": 1,
+      "theme": "dark",
+      "formWidth": 746.625
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "page": "privacy",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "page": "terms",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "page": "shipping",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "page": "returns",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "light"
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "page": "withdrawal",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "light",
+      "formWidth": 746.625
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "page": "privacy",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "page": "terms",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "page": "shipping",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "page": "returns",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "dark"
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "page": "withdrawal",
+      "scroll": 1910,
+      "h1": 1,
+      "theme": "dark",
+      "formWidth": 746.625
+    }
+  ],
+  "errors": [],
+  "assetErrors": [],
+  "externalRequests": [
+    "https://secure.gravatar.com",
+    "https://sdk.mercadopago.com",
+    "https://http2.mlstatic.com",
+    "https://api.mercadopago.com",
+    "https://www.mercadopago.com"
+  ],
+  "codes": [
+    "ARR-20261022-D98FF1F3263616DFF405",
+    "ARR-20261022-FF79A0E7792677593AEF",
+    "ARR-20261022-573ACBD1520D2F424837",
+    "ARR-20261022-A47819AD3703D5B71301",
+    "ARR-20261022-76E06F83AC2BD2AA5FBA"
+  ],
+  "mail": [
+    {
+      "code": "ARR-20261022-D98FF1F3263616DFF405",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-D98FF1F3263616DFF405",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-FF79A0E7792677593AEF",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-FF79A0E7792677593AEF",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-573ACBD1520D2F424837",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-573ACBD1520D2F424837",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-A47819AD3703D5B71301",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-A47819AD3703D5B71301",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-76E06F83AC2BD2AA5FBA",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    },
+    {
+      "code": "ARR-20261022-76E06F83AC2BD2AA5FBA",
+      "multipart": true,
+      "syntheticRecipients": true,
+      "spanish": true
+    }
+  ],
+  "resumedAfter": "Native terms integration repaired; previously passed functional and layout assertions preserved."
+}
