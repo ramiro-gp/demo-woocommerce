@@ -52,6 +52,8 @@ foreach ($slug in @('commerce-base','commerce-core','commerce-communications','c
     } finally { $zip.Dispose(); $stream.Dispose() }
     $packages += @{ slug=$slug; version=$version; zip=(Split-Path -Leaf $target); sha256=(Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash.ToLowerInvariant(); files=$inventory }
 }
+$unknownZips=@(Get-ChildItem -LiteralPath $output -File -Filter '*.zip' | Where-Object { $_.Name -notin @($packages | ForEach-Object { $_.zip }) })
+if($unknownZips.Count){throw 'Unexpected ZIP in release folder. Preserve preliminary packages outside this distribution before rebuilding.'}
 $manifest = [ordered]@{ distribution='commerce-clean'; version=$ReleaseVersion; sourceCommit=(git rev-parse HEAD).Trim(); demoContent=$false; credentials=$false; packages=$packages }
 $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $output 'manifest.json') -Encoding UTF8
 # Support material is a separate handoff, never installed into WordPress.
