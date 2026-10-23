@@ -2,7 +2,7 @@
 
 Fecha: **23/10/2026, Argentina**. Alcance: distribución reutilizable, investigación oficial, procedimientos y laboratorio exclusivamente local. **H11 TECHNICAL READY. PRODUCTION NOT READY; lanzamiento NO AUTORIZADO.** Nada de este informe autoriza ventas, pagos, correo real, contratación, DNS o publicación.
 
-**Cierre documental formal de H11 — 23/10/2026:** se incorporan los datos reales de hPanel aportados por el titular y su decisión definitiva de conservar Premium Web Hosting legacy. Esta actualización modifica únicamente los dos informes de hosting/preparación: no cambia código ni paquetes, no repite QA funcional, no inicia hitos ni ejecuta pruebas de carga o trabajos remotos. Los PASS de este documento corresponden al laboratorio H11 ya registrado, no a Hostinger.
+**Cierre documental de H11 — 23/10/2026, commit `baae9e4`:** incorporó los datos reales de hPanel aportados por el titular y su decisión definitiva de conservar Premium Web Hosting legacy. Esa actualización modificó únicamente los dos informes de hosting/preparación: no cambió código ni paquetes ni repitió QA funcional. Los PASS de este documento corresponden al laboratorio H11 ya registrado, no a Hostinger. El cierre definitivo del roadmap autoriza ahora la consolidación por fast-forward y una etiqueta Git candidata; el [estado ejecutivo](PROJECT-STATUS.md) registra esa referencia sin habilitar producción.
 
 ## 1. H10 consolidado y alcance preservado
 
@@ -11,7 +11,7 @@ Repositorio `ramiro-gp/demo-woocommerce`. Antes de trabajar se comprobó la rama
 - `2adc01169c7bae44721946578158e55b67f2f94b`.
 - `40dd2a1ba4588e1fd5d618fcdaae433c31d23912`.
 
-El scanner H10/H9 pasó; no se encontraron secretos conocidos, dumps, uploads privados ni archivos runtime entre candidatos versionados. Se adelantó `main` **sólo mediante fast-forward**, se hizo push normal y se confirmó `main = origin/main = 40dd2a1ba4588e1fd5d618fcdaae433c31d23912`. H11 trabaja en `codex/h11-production-readiness`; no se integra a main. [Registro sanitizado](evidence/h11/bootstrap.json).
+El scanner H10/H9 pasó; no se encontraron secretos conocidos, dumps, uploads privados ni archivos runtime entre candidatos versionados. Al consolidar H10 se adelantó `main` **sólo mediante fast-forward**, se hizo push normal y se confirmó entonces `main = origin/main = 40dd2a1ba4588e1fd5d618fcdaae433c31d23912`. H11 se desarrolló en `codex/h11-production-readiness`. La autorización posterior de cierre permite integrarlo por fast-forward y crear `template-v1.0.0-rc1`; se mantiene el [registro histórico sanitizado](evidence/h11/bootstrap.json) y el estado actual se resume en [PROJECT-STATUS](PROJECT-STATUS.md).
 
 No se ejecutaron seeds, pedidos, restauraciones ni cambios de contenido en TRAMA u ORIGEN CASA. No se alteraron pruebas históricas H7–H10. El cambio compartido mínimo es **Commerce Base 1.9.1**: si la vista de muestra opcional no se distribuye, su URL responde 404; con el archivo original presente conserva su comportamiento anterior. Las instalaciones históricas no recibieron sincronización del theme.
 
@@ -149,14 +149,14 @@ El [runbook](h11-deployment-runbook.md) contiene los pasos de instalación, actu
 2. Elegir el cliente/modelo de titularidad/aislamiento, responsable operativo, cobertura y presupuesto real. Reunir identidad, catálogo, medios, condiciones, datos fiscales y revisión del titular/asesores.
 3. Autorizar separadamente un staging remoto restringido; ejecutar allí compatibilidad, restore, cron sin visitas, caché y TLS reales. El laboratorio no certifica LiteSpeed ni recursos del Premium heredado.
 4. Elegir y autorizar proveedor/dominio/destinatarios para correo real; resolver pagos reales en un trabajo separado, conservando el bloqueo MP.
-5. Revisar H11 antes de integrar su rama a main. Aprobar cada publicación/DNS/pago/envío concreto sólo cuando sus gates estén cerrados.
+5. Ejecutar la consolidación Git y etiqueta candidata autorizadas para este cierre sólo tras sus verificaciones, sin force push ni sobrescribir etiquetas. Cada publicación/DNS/pago/envío mantiene su aprobación y validación independientes.
 6. Mantener Gordon desactivado y no modificar configuraciones globales ni reiniciar Docker para reactivarlo: el titular lo denegó por ahora. No queda una aprobación de Gordon pendiente para cerrar este hito.
 
 No hubo publicación, compras, cambios DNS, pagos reales, envío externo ni cuentas Google conectadas. El entorno local HTTP no demuestra Secure cookies/TLS, entregabilidad, rendimiento bajo carga ni aislamiento entre clientes del proveedor. Los límites de plan ahora aportados no demuestran esas prestaciones. Los tiempos locales del ensayo no son un RTO productivo.
 
 **Efecto de esta actualización:** se completa la identificación del Premium, sus límites principales, ubicaciones, ocho sitios, importe mostrado y fechas; se cierra la elección de infraestructura existente. No cambia la conclusión técnica local ni levanta bloqueos de staging remoto, Mercado Pago, correo real, privacidad, configuración legal o lanzamiento. La información todavía pendiente pertenece a validación productiva y futuras decisiones autorizadas; no mantiene abierto el desarrollo de H11.
 
-**H11 queda formalmente cerrado como hito técnico y documental**, en `codex/h11-production-readiness` para revisión, sin merge a main. Esta actualización sólo requiere revisión documental, commit y push; no se repiten pruebas funcionales ni se regeneran paquetes, y no se comienza un hito nuevo.
+**H11 queda formalmente cerrado como hito técnico y documental.** La restricción anterior de no integrar su rama queda sustituida por la autorización expresa de consolidación final H0–H11 en main mediante fast-forward y etiqueta candidata `template-v1.0.0-rc1`. No se reescriben la historia ni las evidencias, no se repiten suites funcionales, no se regeneran ZIP válidos y no se comienza H12. [Estado ejecutivo y referencia](PROJECT-STATUS.md).
 
 **H11 TECHNICAL READY.**
 

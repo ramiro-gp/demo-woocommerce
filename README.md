@@ -1,6 +1,6 @@
 # demo-woocommerce
 
-Base local reproducible para WordPress y WooCommerce. **H10 está consolidado en main (`40dd2a1`). H11 se entrega en `codex/h11-production-readiness` para revisión, sin merge automático. H11 TECHNICAL READY; PRODUCTION NOT READY.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo de H5.
+Base comercial reutilizable de WordPress y WooCommerce. **Roadmap H0–H11 completado técnicamente y consolidado mediante fast-forward en main. TEMPLATE TECHNICAL READY; PRODUCTION NOT READY.** Referencia Git candidata: `template-v1.0.0-rc1`; no certifica producción. Ver [estado ejecutivo y bloqueos](docs/PROJECT-STATUS.md). H2 conserva su evidencia histórica con datos ficticios y sus límites; no constituye aprobación de pagos reales.
 
 La identidad de demostración es **TRAMA**. El theme es **Commerce Base** (`commerce-base`) y el plugin funcional es **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
 
@@ -16,11 +16,13 @@ Seis ZIP limpios y verificables en `.local/h11-release/1.0.0/`: Commerce Base **
 ./scripts/h11.ps1 install -Instance qa
 ```
 
-El Premium heredado (hasta 25 sitios, aproximadamente 3 usados) mantiene renovación y recursos pendientes de hPanel. Hosting real, staging, TLS/caché/cron remotos, emails/pagos reales, identidad legal y lanzamiento requieren validación/autorización separadas. No se contrató, publicó ni modificó DNS. Mercado Pago no se instala en H11; los bloqueos históricos siguen abiertos. DockerAI/Gordon sigue desactivado por su incidencia de arranque; la matriz H11 registra el respaldo y la decisión pendiente.
+Se conserva **Hostinger Premium legacy**, con 25 sitios permitidos y 8 creados, 25 GB, 2048 MB de RAM y 1 núcleo compartidos; 40 PHP workers y 80 procesos no garantizan capacidad para esa cantidad de tiendas. hPanel muestra ARS 130.788 de renovación, facturación 15/08/2029 y vencimiento 29/08/2029; el precio no está garantizado para 2029 y faltan ciclo/impuestos. La [decisión documentada](docs/h11-hosting-decision.md) distingue estos datos aportados por el titular de la validación productiva aún pendiente. No se actualiza, contrata ni renueva anticipadamente.
+
+Hosting real, staging, HTTPS/DNS, caché/cron remotos, emails/pagos reales, privacidad, identidad fiscal/legal y lanzamiento requieren validación/autorización propias. Mercado Pago está ausente de la distribución nueva y mantiene los bloqueos históricos. DockerAI/Gordon conserva el estado desactivado documentado; el titular no autoriza cambios globales ni reinicios para reactivarlo. Este cierre sólo consolida Git/documentación y verifica estructura, secretos y ZIP existentes; no modifica instalaciones ni infraestructura.
 
 ## H10 — Dos tiendas, una base común
 
-**H10 READY como demostración técnica local; producción NOT READY.** TRAMA continúa en [localhost:8080](http://localhost:8080), conservando datos, configuración y uploads. [ORIGEN CASA · DEMO](http://localhost:8082) tiene identidad, Home, diez productos, categorías, atributos de hogar, cuentas, pedido BACS y legales propios, con DB/volúmenes/secretos/Mailpit aislados. Ambas utilizan Commerce Base 1.9.0, Commerce Core y los mismos plugins; Communications 1.0.1 corrige el reflow de direcciones largas en emails.
+**H10 READY como demostración técnica local; producción NOT READY.** URLs locales documentadas: [TRAMA :8080](http://localhost:8080) y [ORIGEN CASA · DEMO :8082](http://localhost:8082). La última validación H10 conserva TRAMA y demuestra identidad, Home, diez productos, categorías, atributos de hogar, cuentas, pedido BACS y legales propios en ORIGEN, con DB/volúmenes/secretos/Mailpit aislados. H10 utilizó Commerce Base 1.9.0 y Communications 1.0.1; la referencia de código/ZIP H11 contiene Base 1.9.1 y Core 1.1.2. Este cierre no sincroniza código hacia esas instalaciones, no modifica sus datos ni comprueba su disponibilidad en vivo.
 
 Revisar [informe y evidencia H10](docs/h10-rebranding-portability.md), [guía práctica de un nuevo cliente](docs/h10-new-client-playbook.md), [checklist de entrega](docs/h10-delivery-checklist.md) y [auditoría de dependencias](docs/h10-dependency-audit.md). Mailpit ORIGEN: [localhost:8027](http://localhost:8027). Mercado Pago está completamente inactivo en ORIGEN; TRAMA conserva H7/H9. No hubo publicación.
 
