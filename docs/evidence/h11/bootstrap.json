@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-23",
+  "repository": "ramiro-gp/demo-woocommerce",
+  "h10Commits": ["2adc01169c7bae44721946578158e55b67f2f94b", "40dd2a1ba4588e1fd5d618fcdaae433c31d23912"],
+  "h10RemoteVerifiedBeforeMerge": true,
+  "h10WorkingTreeClean": true,
+  "h10SecretAudit": "PASS verify-h10-secrets.cjs (includes H9 scan)",
+  "h10Merge": "fast-forward only",
+  "mainAndOriginMain": "40dd2a1ba4588e1fd5d618fcdaae433c31d23912",
+  "mainPush": true,
+  "h11Branch": "codex/h11-production-readiness",
+  "dockerAI": {
+    "identity": "Docker Desktop Gordon feature; not a project service",
+    "beforeH10Enabled": true,
+    "currentEnabled": false,
+    "h10SettingsBackupPresent": true,
+    "reasonDisabled": "Docker Desktop Inference manager AF_UNIX startup failure; historical backup and current log agree",
+    "h11Startup": "failed again on stale dockerInference socket; recovered after preserving only the two socket directories with .h11-stale suffix",
+    "engineRecovered": "29.6.1",
+    "restoredAI": false,
+    "restorationDecision": "Pending explicit approval and upstream fix/controlled tool-wide restart; keep current setting to avoid recurrence",
+    "imagesVolumesOrWSLDestroyed": false,
+    "unrelatedContainersManuallyChanged": false
+  },
+  "hostingerAccountAccess": "unavailable; no registered tool in this session; contract unknown",
+  "publicDeployment": false,
+  "dnsChanges": false,
+  "purchases": false,
+  "realPayments": false
+}
