@@ -1,0 +1,66 @@
+{
+    "site": "http://localhost:8080",
+    "database": "commerce_local",
+    "tables": {
+        "posts": {
+            "count": 444,
+            "sha256": "658ed162cc316e9542d2d37b9da5d813c93e4330fe7e9a89fbf87c7524d423dc"
+        },
+        "postmeta": {
+            "count": 3082,
+            "sha256": "48f546d7a8ff0cfb49e556ff93302a940b4867d482002c6ba8fd0aa148585290"
+        },
+        "users": {
+            "count": 10,
+            "sha256": "604d365205fcb5ea6a4900f70096df134a09f47398da74e445796c3efbca8913"
+        },
+        "usermeta": {
+            "count": 325,
+            "sha256": "949ffc819dec94089a85e862c59f7ffe195d77812ef275f96db0b4895320e1c8"
+        },
+        "wc_orders": {
+            "count": 235,
+            "sha256": "59552353b2dd531b73bf1b8853be6735b90dd3a4563f21fba9464e867a32c640"
+        },
+        "wc_order_addresses": {
+            "count": 345,
+            "sha256": "851ebb4d45a2ab3d911ab142fd28fcded8e1b510126e6ebf808679e85106e82c"
+        },
+        "wc_orders_meta": {
+            "count": 1697,
+            "sha256": "2afea6add633d1c1893674093ed012a334bf1459f42f4291e472c077871b5ea9"
+        },
+        "woocommerce_order_items": {
+            "count": 406,
+            "sha256": "aba089e1e1ef7213c62ef8ecae8ba100024598a6e4ecc3903a552a5ee3a6545b"
+        },
+        "woocommerce_order_itemmeta": {
+            "count": 3304,
+            "sha256": "5e9abf36b453b0b4c0aaef648eb10cbccca5104b4e85141b651ba4873d7edfdd"
+        },
+        "commerce_legal_requests": {
+            "count": 59,
+            "sha256": "4f4527ceaad3cd196762bc7b9872ac980fcc95b47b3a7c06af116aeeaeab4f08"
+        },
+        "commerce_legal_events": {
+            "count": 210,
+            "sha256": "e93adff121ae693ba8e51304840d9368df6cacdcb165d55637cd9f9c9955337d"
+        }
+    },
+    "configuration_sha256": "49a9835aa538a475ef5341482e45fa78583fc7c53b58c2fba79971ecd3a37cda",
+    "uploads": {
+        "count": 342,
+        "sha256": "bcf59e1845ad14bbf0fa53c099f28845d9273bd77be4c1559ff3055e8e059f9d"
+    },
+    "salts_sha256": {
+        "AUTH_KEY": "30c5992c0d05447194002d4485e5eeb2e0e63fea6107817f77537b685d16a693",
+        "SECURE_AUTH_KEY": "66b58cac94897884ebe6c0d3e7cf8fb69cd032949145299aa3b7595df9d99850",
+        "LOGGED_IN_KEY": "46349a05a6a9315a00906ac107d612467c6b4197eafd64196ca1548c46316791",
+        "NONCE_KEY": "555292b613f72047741f4c21a51c8a284c6bee67938fce0e3ba2891ee0dde017",
+        "AUTH_SALT": "2df4b7437542c117f75645dbe48ac0886ae36f9630d090cbd69fe26004c9f42e",
+        "SECURE_AUTH_SALT": "93d9296b1064e18bc49cc1e2d1ac28145e10510d96a1c94a75d45634c0e0b70a",
+        "LOGGED_IN_SALT": "b8a8d5209c5dc35d448d552ea0ffd33870683d42f2990c7ae089ad88487d6186",
+        "NONCE_SALT": "0f32deaec730555b29018c6cf41e189899163cfee48216f02962640a88e3a1d7"
+    },
+    "products": 43
+}

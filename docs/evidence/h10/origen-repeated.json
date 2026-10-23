@@ -1,0 +1,242 @@
+{
+    "result": "passed",
+    "home": "http://localhost:8082/",
+    "brand": "ORIGEN CASA · DEMO",
+    "checks": {
+        "fixture_complete": true,
+        "ten_independent_products": true,
+        "two_variable_products": true,
+        "source_and_owned_data_intact": true,
+        "mercado_pago_deactivated": true,
+        "private_demo": true,
+        "native_bacs": true,
+        "no_bank_details": true,
+        "native_legal": true,
+        "independent_theme": true
+    },
+    "conflicts": [],
+    "products": {
+        "OCG-ILU-001": {
+            "id": 20,
+            "name": "Lámpara de mesa Alba",
+            "url": "http://localhost:8082/?product=lampara-mesa-alba",
+            "type": "variable",
+            "stock_status": "instock",
+            "variations": [
+                {
+                    "id": 21,
+                    "sku": "OCG-ILU-001-1",
+                    "attributes": {
+                        "pa_material": "ceramica",
+                        "pa_acabado": "natural"
+                    },
+                    "stock": 9,
+                    "price": "84000"
+                },
+                {
+                    "id": 22,
+                    "sku": "OCG-ILU-001-2",
+                    "attributes": {
+                        "pa_material": "ceramica",
+                        "pa_acabado": "satinado"
+                    },
+                    "stock": 6,
+                    "price": "89000"
+                },
+                {
+                    "id": 23,
+                    "sku": "OCG-ILU-001-3",
+                    "attributes": {
+                        "pa_material": "madera",
+                        "pa_acabado": "natural"
+                    },
+                    "stock": 7,
+                    "price": "92000"
+                },
+                {
+                    "id": 24,
+                    "sku": "OCG-ILU-001-4",
+                    "attributes": {
+                        "pa_material": "madera",
+                        "pa_acabado": "satinado"
+                    },
+                    "stock": 0,
+                    "price": "97000"
+                }
+            ]
+        },
+        "OCG-ILU-002": {
+            "id": 26,
+            "name": "Colgante Duna",
+            "url": "http://localhost:8082/?product=colgante-duna",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-CER-001": {
+            "id": 27,
+            "name": "Jarrón Tierra",
+            "url": "http://localhost:8082/?product=jarron-tierra",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-CER-002": {
+            "id": 29,
+            "name": "Jarra Río",
+            "url": "http://localhost:8082/?product=jarra-rio",
+            "type": "variable",
+            "stock_status": "instock",
+            "variations": [
+                {
+                    "id": 30,
+                    "sku": "OCG-CER-002-1",
+                    "attributes": {
+                        "pa_capacidad": "750-ml",
+                        "pa_acabado": "crudo"
+                    },
+                    "stock": 12,
+                    "price": "28000"
+                },
+                {
+                    "id": 31,
+                    "sku": "OCG-CER-002-2",
+                    "attributes": {
+                        "pa_capacidad": "750-ml",
+                        "pa_acabado": "arena"
+                    },
+                    "stock": 10,
+                    "price": "28000"
+                },
+                {
+                    "id": 32,
+                    "sku": "OCG-CER-002-3",
+                    "attributes": {
+                        "pa_capacidad": "1200-ml",
+                        "pa_acabado": "crudo"
+                    },
+                    "stock": 8,
+                    "price": "36000"
+                },
+                {
+                    "id": 33,
+                    "sku": "OCG-CER-002-4",
+                    "attributes": {
+                        "pa_capacidad": "1200-ml",
+                        "pa_acabado": "arena"
+                    },
+                    "stock": 7,
+                    "price": "36000"
+                }
+            ]
+        },
+        "OCG-TEX-001": {
+            "id": 34,
+            "name": "Almohadón Lino",
+            "url": "http://localhost:8082/?product=almohadon-lino",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-TEX-002": {
+            "id": 36,
+            "name": "Manta Calma",
+            "url": "http://localhost:8082/?product=manta-calma",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-ORG-001": {
+            "id": 37,
+            "name": "Cesto Nido",
+            "url": "http://localhost:8082/?product=cesto-nido",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-ORG-002": {
+            "id": 39,
+            "name": "Organizador Roble",
+            "url": "http://localhost:8082/?product=organizador-roble",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-CER-003": {
+            "id": 41,
+            "name": "Cuencos Orilla · dúo",
+            "url": "http://localhost:8082/?product=cuencos-orilla",
+            "type": "simple",
+            "stock_status": "instock",
+            "variations": []
+        },
+        "OCG-ORG-003": {
+            "id": 43,
+            "name": "Vela Ámbar",
+            "url": "http://localhost:8082/?product=vela-ambar",
+            "type": "simple",
+            "stock_status": "outofstock",
+            "variations": []
+        }
+    },
+    "pages": {
+        "conocenos": {
+            "id": 44,
+            "url": "http://localhost:8082/?page_id=44"
+        },
+        "contacto": {
+            "id": 45,
+            "url": "http://localhost:8082/?page_id=45"
+        },
+        "preguntas-frecuentes": {
+            "id": 46,
+            "url": "http://localhost:8082/?page_id=46"
+        },
+        "privacy": {
+            "id": 47,
+            "url": "http://localhost:8082/?page_id=47"
+        },
+        "terms": {
+            "id": 48,
+            "url": "http://localhost:8082/?page_id=48"
+        },
+        "shipping": {
+            "id": 49,
+            "url": "http://localhost:8082/?page_id=49"
+        },
+        "returns": {
+            "id": 50,
+            "url": "http://localhost:8082/?page_id=50"
+        },
+        "withdrawal": {
+            "id": 51,
+            "url": "http://localhost:8082/?page_id=51"
+        },
+        "shop": {
+            "id": 5,
+            "url": "http://localhost:8082/?page_id=5"
+        },
+        "cart": {
+            "id": 6,
+            "url": "http://localhost:8082/?page_id=6"
+        },
+        "checkout": {
+            "id": 7,
+            "url": "http://localhost:8082/?page_id=7"
+        },
+        "myaccount": {
+            "id": 8,
+            "url": "http://localhost:8082/?page_id=8"
+        },
+        "home": {
+            "id": 58,
+            "url": "http://localhost:8082/"
+        }
+    },
+    "coupon": "CASADEMO10",
+    "shipping": {
+        "flat_rate": "6200",
+        "free_from": "150000"
+    },
+    "repeat_behavior": "Completed import validates owned content and settings, then performs no writes. Edited content, stock or settings are preserved and cause refusal; prepare an explicit migration."
+}

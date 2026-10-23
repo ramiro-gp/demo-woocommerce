@@ -1,0 +1,58 @@
+{
+  "scenario": "Required hero absent in a fresh independent third installation",
+  "home": "http://localhost:8083/",
+  "preflight_exit": 1,
+  "error": " Container demo-woocommerce-h10-repeat-wpcli-run-d6c56fbbb26b Creating \n Container demo-woocommerce-h10-repeat-wpcli-run-d6c56fbbb26b Created \nError: Missing required asset before import: ambiente-origen.jpg\n",
+  "before": {
+    "fixture_exists": false,
+    "ids": {
+      "page": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "product": [],
+      "product_variation": [],
+      "attachment": [
+        4
+      ],
+      "nav_menu_item": [],
+      "wp_global_styles": []
+    },
+    "menus": [],
+    "orders": [],
+    "customers": [],
+    "credentials_fingerprint": "889d24a639f7931157edca25c76069c7cb3daff48d0646c63eccb4658136a3f4"
+  },
+  "after": {
+    "fixture_exists": false,
+    "ids": {
+      "page": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "product": [],
+      "product_variation": [],
+      "attachment": [
+        4
+      ],
+      "nav_menu_item": [],
+      "wp_global_styles": []
+    },
+    "menus": [],
+    "orders": [],
+    "customers": [],
+    "credentials_fingerprint": "889d24a639f7931157edca25c76069c7cb3daff48d0646c63eccb4658136a3f4"
+  },
+  "no_database_objects_or_credentials_changed": true,
+  "source_asset_restored": true
+}

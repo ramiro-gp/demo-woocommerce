@@ -1,0 +1,25 @@
+{
+  "result": "passed",
+  "checks": [
+    "Own variable published",
+    "Generic native attribute selectors",
+    "Non apparel variation resolves",
+    "Cart token available",
+    "Variable added using storefront",
+    "Simple and variable in cart",
+    "Coupon applied",
+    "ARS totals",
+    "Independent shipping 6200 ARS",
+    "Checkout BACS rendered",
+    "MP absent from checkout",
+    "BACS order on hold from native Place Order UI",
+    "Native order confirmation",
+    "Invalid order key rejected"
+  ],
+  "realPayment": false,
+  "orderId": 74,
+  "variationAttributes": [
+    "pa_material",
+    "pa_acabado"
+  ]
+}

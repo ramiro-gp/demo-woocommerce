@@ -1,0 +1,14 @@
+{
+  "result": "passed",
+  "checks": [
+    "Second variable uses Capacidad/Acabado",
+    "Capacity variation resolves",
+    "Capacity product appears in mini-cart",
+    "Free shipping above own 150000 threshold",
+    "Discount lowers threshold base and removes free shipping",
+    "Own flat rate remains after discount",
+    "Removing coupon restores free shipping",
+    "Sold-out product cannot be added"
+  ],
+  "realPayment": false
+}

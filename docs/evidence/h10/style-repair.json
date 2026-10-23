@@ -1,0 +1,14 @@
+{
+    "result": "repaired",
+    "style_id": 14,
+    "native_theme_terms": [
+        "commerce-base"
+    ],
+    "blank_diagnostic_styles_trashed": [
+        68,
+        69
+    ],
+    "source_content_unchanged": true,
+    "all_other_owned_resource_hashes_preserved": true,
+    "configuration_change_proven": "Only absent to -1 native CSS reference; all other prior configuration hash input exactly matched."
+}

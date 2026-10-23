@@ -1,0 +1,154 @@
+{
+  "theme": "Commerce Base 1.9.0",
+  "site": "http://localhost:8080",
+  "readOnly": true,
+  "views": [
+    {
+      "width": 390,
+      "mode": "light",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(243, 240, 232)",
+      "text": "rgb(32, 42, 36)",
+      "accent": "#405b35",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 380,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(23, 31, 27)",
+      "text": "rgb(240, 238, 228)",
+      "accent": "#c5d6a2",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 380,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(243, 240, 232)",
+      "text": "rgb(32, 42, 36)",
+      "accent": "#405b35",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 758,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(23, 31, 27)",
+      "text": "rgb(240, 238, 228)",
+      "accent": "#c5d6a2",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 758,
+      "overflow": []
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(243, 240, 232)",
+      "text": "rgb(32, 42, 36)",
+      "accent": "#405b35",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 1356,
+      "overflow": []
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(23, 31, 27)",
+      "text": "rgb(240, 238, 228)",
+      "accent": "#c5d6a2",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 1356,
+      "overflow": []
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(243, 240, 232)",
+      "text": "rgb(32, 42, 36)",
+      "accent": "#405b35",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 1910,
+      "overflow": []
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "title": "TRAMA – Ropa para todos los días.",
+      "heading": "Vestir locotidiano.",
+      "background": "rgb(23, 31, 27)",
+      "text": "rgb(240, 238, 228)",
+      "accent": "#c5d6a2",
+      "font": "Manrope, sans-serif",
+      "scrollWidth": 1910,
+      "overflow": []
+    }
+  ],
+  "errors": [],
+  "externalRequestsBlocked": [
+    "https://s.w.org/images/core/emoji/17.0.2/svg/1f50d.svg"
+  ],
+  "catalog": {
+    "headings": [
+      "Categoría",
+      "Color",
+      "Talle",
+      "Precio",
+      "Disponibilidad"
+    ],
+    "cards": 15,
+    "swatches": 8
+  },
+  "variations": {
+    "url": "http://localhost:8080/?product=remera-base",
+    "instruction": [
+      "Elegí las opciones de Color, Talle para consultar disponibilidad."
+    ],
+    "groups": 2,
+    "guide": [
+      "Guía de talles"
+    ]
+  },
+  "keyboard": {
+    "firstFocus": "Saltar al contenido",
+    "outline": "solid"
+  },
+  "homeScreenshotComparison": {
+    "dimensionsEqual": true,
+    "changedChannelsAbove2": 0,
+    "meanAbsoluteChannelDifference": 0
+  },
+  "phpLint": {
+    "passed": true,
+    "files": [
+      "commerce-base/functions.php",
+      "commerce-base/inc/catalog.php",
+      "commerce-base/inc/components.php",
+      "commerce-base/inc/exit-intent.php"
+    ]
+  },
+  "nativeStyleVariation": {
+    "discoveredBy": "WP_Theme_JSON_Resolver::get_style_variations",
+    "title": "Origen Casa · cálido editorial",
+    "lightPaletteEntries": 13,
+    "darkBackground": "#211d19",
+    "customCssSupported": true,
+    "appliedToTrama": false
+  }
+}

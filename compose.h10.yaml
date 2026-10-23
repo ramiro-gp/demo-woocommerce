@@ -1,0 +1,5 @@
+# Clean client fixture input only. Each Compose project keeps its own runtime volumes.
+services:
+  wpcli:
+    volumes:
+      - ./demo/origen-casa:/opt/client-fixture:ro

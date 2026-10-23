@@ -1,0 +1,23 @@
+{
+  "result": "passed",
+  "tramaPreservation": {
+    "users": true,
+    "configuration": true,
+    "wc_orders_meta": true,
+    "postmeta": true,
+    "wc_order_addresses": true,
+    "woocommerce_order_itemmeta": true,
+    "usermeta": true,
+    "woocommerce_order_items": true,
+    "uploads": true,
+    "commerce_legal_events": true,
+    "posts": true,
+    "commerce_legal_requests": true,
+    "wc_orders": true
+  },
+  "customerGroupsDisjoint": true,
+  "saltsIndependent": true,
+  "sharedCodeIdentical": true,
+  "originalOrdersUnchanged": true,
+  "originalLegalRequestsUnchanged": true
+}

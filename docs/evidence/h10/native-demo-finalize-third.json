@@ -1,0 +1,11 @@
+{
+    "result": "migrated",
+    "native_style_id": 12,
+    "css_change": "Hero top spacing +16px; all other preset settings and styles unchanged",
+    "source_change_proven": "Reconstructed prior source fingerprint by reversing exactly one CSS string substitution",
+    "email_options_restored_to_versioned_client_palette": [],
+    "email_auto_sync": "no",
+    "coming_soon": "no",
+    "blog_public": "0",
+    "other_owned_resource_hashes_unchanged": true
+}

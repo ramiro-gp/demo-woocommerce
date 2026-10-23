@@ -1,0 +1,23 @@
+{
+  "result": "passed",
+  "reason": "A long synthetic billing email set the intrinsic minimum width of the native address table; overflow-wrap:break-word did not reduce that minimum.",
+  "fix": "Shared mobile address rule uses overflow-wrap:anywhere; no logo or native template changes.",
+  "nativeRender": true,
+  "emailSent": false,
+  "views": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "logoWidth": 120,
+      "addressWrap": "anywhere",
+      "orderLineItems": 2
+    },
+    {
+      "width": 900,
+      "scrollWidth": 900,
+      "logoWidth": 120,
+      "addressWrap": "normal",
+      "orderLineItems": 2
+    }
+  ]
+}

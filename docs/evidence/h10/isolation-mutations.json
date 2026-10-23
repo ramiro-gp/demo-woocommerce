@@ -1,0 +1,35 @@
+{
+  "result": "passed",
+  "origenMutations": {
+    "result": "passed",
+    "mutations": {
+      "price_changed": true,
+      "home_changed": true,
+      "legal_changed": true
+    }
+  },
+  "seedRefusal": {
+    "result": "conflict",
+    "conflicts": [
+      "Product, price, stock or variation changed; preserved: OCG-ILU-001",
+      "Product, price, stock or variation changed; preserved: OCG-TEX-001",
+      "Native page edited; preserved: privacy",
+      "Native page edited; preserved: home"
+    ]
+  },
+  "trama": {
+    "usermeta": true,
+    "woocommerce_order_itemmeta": true,
+    "postmeta": true,
+    "commerce_legal_requests": true,
+    "woocommerce_order_items": true,
+    "wc_order_addresses": true,
+    "posts": true,
+    "uploads": true,
+    "users": true,
+    "wc_orders": true,
+    "configuration": true,
+    "wc_orders_meta": true,
+    "commerce_legal_events": true
+  }
+}

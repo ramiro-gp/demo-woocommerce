@@ -1,0 +1,200 @@
+{
+  "result": "passed",
+  "instances": [
+    {
+      "services": [
+        {
+          "container": "/demo-woocommerce-local-wordpress-1",
+          "service": "wordpress",
+          "networks": [
+            "demo-woocommerce-local_default"
+          ],
+          "ports": {
+            "80/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8080"
+              }
+            ]
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-local_wordpress_data",
+              "Destination": "/var/www/html"
+            }
+          ]
+        },
+        {
+          "container": "/demo-woocommerce-local-db-1",
+          "service": "db",
+          "networks": [
+            "demo-woocommerce-local_default"
+          ],
+          "ports": {
+            "3306/tcp": null
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-local_db_data",
+              "Destination": "/var/lib/mysql"
+            }
+          ]
+        },
+        {
+          "container": "/demo-woocommerce-local-mailpit-1",
+          "service": "mailpit",
+          "networks": [
+            "demo-woocommerce-local_default"
+          ],
+          "ports": {
+            "8025/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8025"
+              }
+            ]
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-local_mailpit_data",
+              "Destination": "/data"
+            }
+          ]
+        }
+      ],
+      "project": "demo-woocommerce-local",
+      "instance": "local"
+    },
+    {
+      "services": [
+        {
+          "container": "/demo-woocommerce-origen-casa-wordpress-1",
+          "service": "wordpress",
+          "networks": [
+            "demo-woocommerce-origen-casa_default"
+          ],
+          "ports": {
+            "80/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8082"
+              }
+            ]
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-origen-casa_wordpress_data",
+              "Destination": "/var/www/html"
+            }
+          ]
+        },
+        {
+          "container": "/demo-woocommerce-origen-casa-db-1",
+          "service": "db",
+          "networks": [
+            "demo-woocommerce-origen-casa_default"
+          ],
+          "ports": {
+            "3306/tcp": null
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-origen-casa_db_data",
+              "Destination": "/var/lib/mysql"
+            }
+          ]
+        },
+        {
+          "container": "/demo-woocommerce-origen-casa-mailpit-1",
+          "service": "mailpit",
+          "networks": [
+            "demo-woocommerce-origen-casa_default"
+          ],
+          "ports": {
+            "8025/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8027"
+              }
+            ]
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-origen-casa_mailpit_data",
+              "Destination": "/data"
+            }
+          ]
+        }
+      ],
+      "project": "demo-woocommerce-origen-casa",
+      "instance": "origen-casa"
+    },
+    {
+      "services": [
+        {
+          "container": "/demo-woocommerce-h10-repeat-wordpress-1",
+          "service": "wordpress",
+          "networks": [
+            "demo-woocommerce-h10-repeat_default"
+          ],
+          "ports": {
+            "80/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8083"
+              }
+            ]
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-h10-repeat_wordpress_data",
+              "Destination": "/var/www/html"
+            }
+          ]
+        },
+        {
+          "container": "/demo-woocommerce-h10-repeat-db-1",
+          "service": "db",
+          "networks": [
+            "demo-woocommerce-h10-repeat_default"
+          ],
+          "ports": {
+            "3306/tcp": null
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-h10-repeat_db_data",
+              "Destination": "/var/lib/mysql"
+            }
+          ]
+        },
+        {
+          "container": "/demo-woocommerce-h10-repeat-mailpit-1",
+          "service": "mailpit",
+          "networks": [
+            "demo-woocommerce-h10-repeat_default"
+          ],
+          "ports": {
+            "8025/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8028"
+              }
+            ]
+          },
+          "volumes": [
+            {
+              "Name": "demo-woocommerce-h10-repeat_mailpit_data",
+              "Destination": "/data"
+            }
+          ]
+        }
+      ],
+      "project": "demo-woocommerce-h10-repeat",
+      "instance": "h10-repeat"
+    }
+  ],
+  "secretsIndependent": true,
+  "mailpitIndependent": true,
+  "productionDeployment": false
+}

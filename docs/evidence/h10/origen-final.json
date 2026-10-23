@@ -1,0 +1,75 @@
+{
+    "site": "http://localhost:8082",
+    "database": "commerce_local",
+    "tables": {
+        "posts": {
+            "count": 77,
+            "sha256": "7c6027f0ea84be05c1fa712dca1cd908e1b4e3f449b8d6d8eae58f1789d47424"
+        },
+        "postmeta": {
+            "count": 633,
+            "sha256": "39e6728e89b46facce3e76bb33152943cce90a90fd88312e5b11fa9a47b2186c"
+        },
+        "users": {
+            "count": 6,
+            "sha256": "9881a532dd8e8376cb64f8a6d443a0e0f637204c25dde61f80d74d8196f056b5"
+        },
+        "usermeta": {
+            "count": 132,
+            "sha256": "3e4f092530b4d09a06b614035a774b753fa3a8c0f99469ecd67573e9954ee7fa"
+        },
+        "wc_orders": {
+            "count": 1,
+            "sha256": "4cea277e79f5854b828f767051bbb921a025915b7609a6f9a5db57c615a21c30"
+        },
+        "wc_order_addresses": {
+            "count": 2,
+            "sha256": "45f7ecdcceb7b6350d911fd89c209131b3e6f522e9b9377a2ea08e8b4adba846"
+        },
+        "wc_orders_meta": {
+            "count": 8,
+            "sha256": "a85abf80ed66249b42e119c09c6d210c9f3f75102fcfd5edeb5f6d8d73b8172f"
+        },
+        "woocommerce_order_items": {
+            "count": 4,
+            "sha256": "fc1d67618ce73f777bcc9281bf61d0adadfb1918e43307207c5d7ef17e260bfd"
+        },
+        "woocommerce_order_itemmeta": {
+            "count": 31,
+            "sha256": "b65cb7e4497061751f6cac6ea47d5ade0e916cffc34ac370b7d0dc84b73db1b5"
+        },
+        "commerce_legal_requests": {
+            "count": 2,
+            "sha256": "41b77cf39fc451e373773f5b00f819488639337568ff3299a0d855968ed04854"
+        },
+        "commerce_legal_events": {
+            "count": 7,
+            "sha256": "5ee129d1eb1082d59c3744c7ee7ff47eab1f88c058ddf98c7333e8b1c95375b0"
+        }
+    },
+    "configuration_sha256": "8cae4176219a6b550831c415b320710dcda258db73e5a75d3136e6c4d1967844",
+    "uploads": {
+        "count": 82,
+        "sha256": "0705b9d4e7ef2e374c70030a697dcfa1976247cc7c45e0cfb137854dc183db6f"
+    },
+    "salts_sha256": {
+        "AUTH_KEY": "afdd870ca294989eb37f0632d3601e89b496c822ca1d59fadf745f7918edaac7",
+        "SECURE_AUTH_KEY": "bec2de4ae525e5a7914e1305e0c99c19c79afcba3f70ff52d395aa173dff6bad",
+        "LOGGED_IN_KEY": "dd9cccc8983be4fbf4defb40a01fa850e6edd31c376d2c4a714a752be0f4b3eb",
+        "NONCE_KEY": "98f952e19677fb851e776c18e440f5a7769a189791d549567003c9797097f313",
+        "AUTH_SALT": "59d07df7a8563f7ac3fe0a4eb0cb166bdeda19053c1415952b8a365e2d162376",
+        "SECURE_AUTH_SALT": "0168dfb88bde075a5459e5c29eebcba1ea199d13bca45ac04e8f5aa49b8a6ee5",
+        "LOGGED_IN_SALT": "a6fbbee33287254dc9a377ad7871aa3b3028acc26b5e183c4be97553578fa9b6",
+        "NONCE_SALT": "c8f14ad051c6ab4e4196e87eaa457e529a2dc5742a959a611e49f105c9140c9d"
+    },
+    "products": 10,
+    "customer_count": 4,
+    "shared_code_sha256": {
+        "themes/commerce-base": "bd30d60d56ec4a641a1f5ac48e79033c422aa5315e19b27c331ef2db4f7f4bf3",
+        "plugins/commerce-core": "c00e83bbf8523ede7c51d09c76b3bcccefd4fbcd712a9d65ee396fd101475410",
+        "plugins/commerce-lookbook": "eac318f127e50b51db908f8416e2912b73f12aa9b9bc1d34002ed6faf7e1e43c",
+        "plugins/commerce-communications": "51f450f0af54e483aaa9078bbdfacc0e8dad3e01719296be138a39d1dbe76fee",
+        "plugins/commerce-account-navigation": "b4f7ea02ec96570c620a1c547b82a9e67caeaa90d9f9a890dadae5115814bfb6",
+        "plugins/commerce-order-integrity": "a7dde3354abdde8d86dcc74a12307b9a9c238ab673da9ceb57d52e7aadcdc8ad"
+    }
+}

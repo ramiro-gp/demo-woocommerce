@@ -1,0 +1,30 @@
+{
+  "result": "passed",
+  "checks": {
+    "bacsAdminAndCustomer": true,
+    "syntheticRecipients": true,
+    "ownSender": true,
+    "ownSenderName": true,
+    "multipart": true,
+    "ownBrand": true,
+    "pendingPayment": true,
+    "demoBankCopy": true,
+    "legalReceipt": true,
+    "noTramaOrigin": true
+  },
+  "bacsMessages": 3,
+  "totalCaptured": 13,
+  "onboardingAlerts": 1,
+  "previews": [
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 900,
+      "overflow": false
+    }
+  ],
+  "externalDelivery": false,
+  "realSmtp": false
+}

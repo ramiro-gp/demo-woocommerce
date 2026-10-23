@@ -1,0 +1,422 @@
+{
+  "result": "passed",
+  "pages": [
+    {
+      "route": "/",
+      "title": "ORIGEN CASA · DEMO – Objetos simples, espacios que se sienten propios. Decoración contemporánea de demostración.",
+      "robots": "noindex, nofollow",
+      "canonical": [
+        "http://localhost:8082/"
+      ],
+      "og": [
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:title",
+          "ORIGEN CASA · DEMO – Objetos simples, espacios que se sienten propios. Decoración contemporánea de demostración."
+        ],
+        [
+          "og:site_name",
+          "ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:url",
+          "http://localhost:8082/"
+        ],
+        [
+          "og:description",
+          "Objetos simples, espacios que se sienten propios. Decoración contemporánea de demostración."
+        ],
+        [
+          "og:image",
+          "http://localhost:8082/wp-content/uploads/2026/10/ambiente-origen-1024x683.jpg"
+        ]
+      ],
+      "schema": [],
+      "icons": [
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-150x150.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png"
+      ]
+    },
+    {
+      "route": "/?post_type=product",
+      "title": "Tienda – ORIGEN CASA · DEMO",
+      "robots": "noindex, nofollow",
+      "canonical": [
+        "http://localhost:8082/?post_type=product"
+      ],
+      "og": [
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:title",
+          "Tienda – ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:site_name",
+          "ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:url",
+          "http://localhost:8082/?post_type=product"
+        ],
+        [
+          "og:description",
+          "Objetos simples, espacios que se sienten propios. Decoración contemporánea de demostración."
+        ]
+      ],
+      "schema": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Inicio",
+                "@id": "http://localhost:8082"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Tienda",
+                "@id": "http://localhost:8082/?post_type=product"
+              }
+            }
+          ]
+        }
+      ],
+      "icons": [
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-150x150.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png"
+      ]
+    },
+    {
+      "route": "/?product_cat=ceramica",
+      "title": "Cerámica – ORIGEN CASA · DEMO",
+      "robots": "noindex, nofollow",
+      "canonical": [
+        "http://localhost:8082/?product_cat=ceramica"
+      ],
+      "og": [
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:title",
+          "Cerámica – ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:site_name",
+          "ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:url",
+          "http://localhost:8082/?product_cat=ceramica"
+        ],
+        [
+          "og:description",
+          "Piezas con volumen, textura y gestos simples. Catálogo ficticio DEMO."
+        ]
+      ],
+      "schema": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Inicio",
+                "@id": "http://localhost:8082"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Cerámica",
+                "@id": "http://localhost:8082/?product_cat=ceramica"
+              }
+            }
+          ]
+        }
+      ],
+      "icons": [
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-150x150.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png"
+      ]
+    },
+    {
+      "route": "/?product=jarron-tierra",
+      "title": "Jarrón Tierra – ORIGEN CASA · DEMO",
+      "robots": "noindex, nofollow",
+      "canonical": [
+        "http://localhost:8082/?product=jarron-tierra"
+      ],
+      "og": [
+        [
+          "og:type",
+          "product"
+        ],
+        [
+          "og:title",
+          "Jarrón Tierra – ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:site_name",
+          "ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:url",
+          "http://localhost:8082/?product=jarron-tierra"
+        ],
+        [
+          "og:description",
+          "Volumen redondo y textura cálida, incluso sin flores. Producto ficticio DEMO."
+        ],
+        [
+          "og:image",
+          "http://localhost:8082/wp-content/uploads/2026/10/jarron-tierra.jpg"
+        ]
+      ],
+      "schema": [
+        {
+          "@context": "https://schema.org/",
+          "@graph": [
+            {
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "name": "Inicio",
+                    "@id": "http://localhost:8082"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "name": "Cerámica",
+                    "@id": "http://localhost:8082/?product_cat=ceramica"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "name": "Jarrón Tierra",
+                    "@id": "http://localhost:8082/?product=jarron-tierra"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "@id": "http://localhost:8082/?product=jarron-tierra#product",
+              "name": "Jarrón Tierra",
+              "url": "http://localhost:8082/?product=jarron-tierra",
+              "description": "Volumen redondo y textura cálida, incluso sin flores. Producto ficticio DEMO.",
+              "image": "http://localhost:8082/wp-content/uploads/2026/10/jarron-tierra.jpg",
+              "sku": "OCG-CER-001",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "priceSpecification": [
+                    {
+                      "@type": "UnitPriceSpecification",
+                      "price": "27200",
+                      "priceCurrency": "ARS",
+                      "validThrough": "2027-12-31"
+                    },
+                    {
+                      "@type": "UnitPriceSpecification",
+                      "price": "32000",
+                      "priceCurrency": "ARS",
+                      "validThrough": "2027-12-31",
+                      "priceType": "https://schema.org/ListPrice"
+                    }
+                  ],
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
+                  "url": "http://localhost:8082/?product=jarron-tierra",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "ORIGEN CASA · DEMO",
+                    "url": "http://localhost:8082"
+                  },
+                  "price": "27200",
+                  "priceCurrency": "ARS"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icons": [
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-150x150.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png"
+      ]
+    },
+    {
+      "route": "/?product=lampara-mesa-alba",
+      "title": "Lámpara de mesa Alba – ORIGEN CASA · DEMO",
+      "robots": "noindex, nofollow",
+      "canonical": [
+        "http://localhost:8082/?product=lampara-mesa-alba"
+      ],
+      "og": [
+        [
+          "og:type",
+          "product"
+        ],
+        [
+          "og:title",
+          "Lámpara de mesa Alba – ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:site_name",
+          "ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:url",
+          "http://localhost:8082/?product=lampara-mesa-alba"
+        ],
+        [
+          "og:description",
+          "Una luz amable para la mesa de noche o un rincón de lectura. Producto ficticio DEMO."
+        ],
+        [
+          "og:image",
+          "http://localhost:8082/wp-content/uploads/2026/10/lampara-alba.jpg"
+        ]
+      ],
+      "schema": [
+        {
+          "@context": "https://schema.org/",
+          "@graph": [
+            {
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "name": "Inicio",
+                    "@id": "http://localhost:8082"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "name": "Iluminación",
+                    "@id": "http://localhost:8082/?product_cat=iluminacion"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "name": "Lámpara de mesa Alba",
+                    "@id": "http://localhost:8082/?product=lampara-mesa-alba"
+                  }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "@id": "http://localhost:8082/?product=lampara-mesa-alba#product",
+              "name": "Lámpara de mesa Alba",
+              "url": "http://localhost:8082/?product=lampara-mesa-alba",
+              "description": "Una luz amable para la mesa de noche o un rincón de lectura. Producto ficticio DEMO.",
+              "image": "http://localhost:8082/wp-content/uploads/2026/10/lampara-alba.jpg",
+              "sku": "OCG-ILU-001",
+              "offers": [
+                {
+                  "@type": "AggregateOffer",
+                  "lowPrice": "84000",
+                  "highPrice": "97000",
+                  "offerCount": 4,
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
+                  "url": "http://localhost:8082/?product=lampara-mesa-alba",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "ORIGEN CASA · DEMO",
+                    "url": "http://localhost:8082"
+                  },
+                  "priceCurrency": "ARS"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icons": [
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-150x150.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png"
+      ]
+    },
+    {
+      "route": "/?page_id=47",
+      "title": "Política de privacidad · DEMO – ORIGEN CASA · DEMO",
+      "robots": "noindex, nofollow",
+      "canonical": [
+        "http://localhost:8082/?page_id=47"
+      ],
+      "og": [
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:title",
+          "Política de privacidad · DEMO – ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:site_name",
+          "ORIGEN CASA · DEMO"
+        ],
+        [
+          "og:url",
+          "http://localhost:8082/?page_id=47"
+        ],
+        [
+          "og:description",
+          "ORIGEN CASA / DEMOPolítica de privacidad · DEMODatos y canales de esta instalación local de demostración.DEMO · Contenido ficticio. Pendiente de datos del titul…"
+        ]
+      ],
+      "schema": [],
+      "icons": [
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-150x150.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png",
+        "http://localhost:8082/wp-content/uploads/2026/10/origen-casa-icon-300x300.png"
+      ]
+    }
+  ],
+  "privateIndexing": {
+    "robotsDisallowAll": true,
+    "sitemapDisabled": true
+  }
+}

@@ -1,8 +1,22 @@
 # demo-woocommerce
 
-Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H8.2 están aprobados y consolidados en main (`2b998dc`). H9 se entrega en `codex/h9-security-performance-seo` para revisión, sin merge a main. H10/H11 no comenzaron.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
+Base local reproducible para una demo comercial de WordPress y WooCommerce. **H0–H9 están aprobados y consolidados en main (`1921b3f`). H10 se entrega en `codex/h10-rebranding-portability` para revisión, sin merge a main. H11 no comenzó.** H2 conserva su validación histórica de HPOS, Blocks y Mercado Pago con datos ficticios y permanece aislado. Commerce Base mantiene el sistema H3/H4 y el catálogo real de H5.
 
 La identidad de demostración es **TRAMA**. El theme es **Commerce Base** (`commerce-base`) y el plugin funcional es **Commerce Core** (`commerce-core`). La marca se mantiene como datos de WordPress, independiente del theme.
+
+## H10 — Dos tiendas, una base común
+
+**H10 READY como demostración técnica local; producción NOT READY.** TRAMA continúa en [localhost:8080](http://localhost:8080), conservando datos, configuración y uploads. [ORIGEN CASA · DEMO](http://localhost:8082) tiene identidad, Home, diez productos, categorías, atributos de hogar, cuentas, pedido BACS y legales propios, con DB/volúmenes/secretos/Mailpit aislados. Ambas utilizan Commerce Base 1.9.0, Commerce Core y los mismos plugins; Communications 1.0.1 corrige el reflow de direcciones largas en emails.
+
+Revisar [informe y evidencia H10](docs/h10-rebranding-portability.md), [guía práctica de un nuevo cliente](docs/h10-new-client-playbook.md), [checklist de entrega](docs/h10-delivery-checklist.md) y [auditoría de dependencias](docs/h10-dependency-audit.md). Mailpit ORIGEN: [localhost:8027](http://localhost:8027). Mercado Pago está completamente inactivo en ORIGEN; TRAMA conserva H7/H9. No hubo publicación ni inicio de H11.
+
+```powershell
+./scripts/h10.ps1 inspect
+# Sólo para una DEMO nueva y limpia; nunca sobre TRAMA:
+./scripts/h10.ps1 install -Instance nueva-demo -WordPressPort 8083 -MailpitPort 8028
+```
+
+El fixture no sobrescribe contenido/stock editado: `seed` y `verify` rechazan diferencias legítimas después de operar. Para navegar no ejecutar seeds. La instalación de prueba `h10-repeat` conserva sus volúmenes y prueba repetibilidad; el informe explica sus puertos y cómo reanudarla. Los bloqueos productivos de H9 permanecen abiertos.
 
 ## H9 — Seguridad, rendimiento, accesibilidad y SEO
 

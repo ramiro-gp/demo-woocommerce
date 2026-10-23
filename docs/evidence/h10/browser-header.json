@@ -1,0 +1,2671 @@
+{
+  "result": "passed",
+  "stores": [
+    {
+      "key": "trama",
+      "origin": "http://localhost:8080",
+      "brand": "TRAMA",
+      "products": [
+        {
+          "id": 472,
+          "slug": "prueba-h7-2-remera-40f007188e",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 471,
+          "slug": "prueba-h7-2-bolso-40f007188e",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 427,
+          "slug": "prueba-h7-2-remera-dff0738730",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 426,
+          "slug": "prueba-h7-2-bolso-dff0738730",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 421,
+          "slug": "prueba-browser-h7-2-remera-36d6ec05aa",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 420,
+          "slug": "prueba-browser-h7-2-bolso-36d6ec05aa",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 407,
+          "slug": "prueba-h7-2-remera-2a9089ea51",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 406,
+          "slug": "prueba-h7-2-bolso-2a9089ea51",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 393,
+          "slug": "prueba-h7-2-remera-afcdc776d2",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 392,
+          "slug": "prueba-h7-2-bolso-afcdc776d2",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 295,
+          "slug": "h71-concurrency-b",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 294,
+          "slug": "h71-concurrency-a",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 272,
+          "slug": "h71-mp-variable",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 271,
+          "slug": "h71-mp-simple",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 225,
+          "slug": "h7-1-qa-variable",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 169,
+          "slug": "bolso-transito",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 166,
+          "slug": "panuelo-pliegue",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 163,
+          "slug": "medias-canal",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 160,
+          "slug": "gorro-punto",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 157,
+          "slug": "gorra-sombra",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 154,
+          "slug": "bolsa-diario",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 143,
+          "slug": "pantalon-pausa",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 125,
+          "slug": "pantalon-cauce",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 118,
+          "slug": "buzo-textura",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 107,
+          "slug": "buzo-refugio",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 96,
+          "slug": "buzo-pulso",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 85,
+          "slug": "remera-horizonte",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 74,
+          "slug": "remera-aire",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 63,
+          "slug": "remera-trazo",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 52,
+          "slug": "remera-base",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 13,
+          "slug": "h2-variable",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 12,
+          "slug": "h2-simple",
+          "type": "simple",
+          "stock": true
+        }
+      ],
+      "categories": [
+        "accesorios",
+        "pantalones",
+        "buzos",
+        "remeras"
+      ],
+      "routes": {
+        "home": "http://localhost:8080/",
+        "catalog": "http://localhost:8080/?post_type=product",
+        "category": "http://localhost:8080/?product_cat=accesorios",
+        "simple": "http://localhost:8080/?product=bolso-transito",
+        "variable": "http://localhost:8080/?product=remera-base",
+        "cart": "http://localhost:8080/?page_id=8",
+        "checkout": "http://localhost:8080/?page_id=9",
+        "account": "http://localhost:8080/?page_id=10",
+        "privacy": "http://localhost:8080/?page_id=3",
+        "terms": "http://localhost:8080/?page_id=511",
+        "withdrawal": "http://localhost:8080/?page_id=514"
+      }
+    },
+    {
+      "key": "origen",
+      "origin": "http://localhost:8082",
+      "brand": "ORIGEN CASA",
+      "products": [
+        {
+          "id": 43,
+          "slug": "vela-ambar",
+          "type": "simple",
+          "stock": false
+        },
+        {
+          "id": 41,
+          "slug": "cuencos-orilla",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 39,
+          "slug": "organizador-roble",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 37,
+          "slug": "cesto-nido",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 36,
+          "slug": "manta-calma",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 34,
+          "slug": "almohadon-lino",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 29,
+          "slug": "jarra-rio",
+          "type": "variable",
+          "stock": true
+        },
+        {
+          "id": 27,
+          "slug": "jarron-tierra",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 26,
+          "slug": "colgante-duna",
+          "type": "simple",
+          "stock": true
+        },
+        {
+          "id": 20,
+          "slug": "lampara-mesa-alba",
+          "type": "variable",
+          "stock": true
+        }
+      ],
+      "categories": [
+        "organizacion",
+        "ceramica",
+        "textiles",
+        "iluminacion"
+      ],
+      "routes": {
+        "home": "http://localhost:8082/",
+        "catalog": "http://localhost:8082/?post_type=product",
+        "category": "http://localhost:8082/?product_cat=organizacion",
+        "simple": "http://localhost:8082/?product=jarron-tierra",
+        "variable": "http://localhost:8082/?product=lampara-mesa-alba",
+        "cart": "http://localhost:8082/?page_id=6",
+        "checkout": "http://localhost:8082/?page_id=7",
+        "account": "http://localhost:8082/?page_id=8",
+        "privacy": "http://localhost:8082/?page_id=47",
+        "terms": "http://localhost:8082/?page_id=48",
+        "withdrawal": "http://localhost:8082/?page_id=51",
+        "soldout": "http://localhost:8082/?product=vela-ambar"
+      }
+    }
+  ],
+  "matrix": [
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 390,
+      "theme": "light",
+      "scrollWidth": 380,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 16,
+          "right": 85.03125,
+          "top": 18,
+          "bottom": 62,
+          "width": 69.03125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 390,
+      "theme": "dark",
+      "scrollWidth": 380,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 16,
+          "right": 85.03125,
+          "top": 18,
+          "bottom": 62,
+          "width": 69.03125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 768,
+      "theme": "light",
+      "scrollWidth": 758,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 25.34375,
+          "right": 107.046875,
+          "top": 18,
+          "bottom": 62,
+          "width": 81.703125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 768,
+      "theme": "dark",
+      "scrollWidth": 758,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 25.34375,
+          "right": 107.046875,
+          "top": 18,
+          "bottom": 62,
+          "width": 81.703125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 1366,
+      "theme": "light",
+      "scrollWidth": 1356,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 45.078125,
+          "right": 145.484375,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 205.484375,
+          "right": 326.109375,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 1366,
+      "theme": "dark",
+      "scrollWidth": 1356,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 45.078125,
+          "right": 145.484375,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 205.484375,
+          "right": 326.109375,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 1920,
+      "theme": "light",
+      "scrollWidth": 1910,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 75,
+          "right": 175.40625,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 235.40625,
+          "right": 356.03125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142
+    },
+    {
+      "store": "trama",
+      "scope": "header",
+      "width": 1920,
+      "theme": "dark",
+      "scrollWidth": 1910,
+      "controls": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 75,
+          "right": 175.40625,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 235.40625,
+          "right": 356.03125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 390,
+      "theme": "light",
+      "scrollWidth": 380,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 16,
+          "right": 135.203125,
+          "top": 18,
+          "bottom": 62,
+          "width": 119.203125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126,
+      "heroEyebrowTop": 136
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 390,
+      "theme": "dark",
+      "scrollWidth": 380,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 16,
+          "right": 135.203125,
+          "top": 18,
+          "bottom": 62,
+          "width": 119.203125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126,
+      "heroEyebrowTop": 136
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 768,
+      "theme": "light",
+      "scrollWidth": 758,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 25.34375,
+          "right": 205.34375,
+          "top": 16,
+          "bottom": 64,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126,
+      "heroEyebrowTop": 136
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 768,
+      "theme": "dark",
+      "scrollWidth": 758,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 25.34375,
+          "right": 205.34375,
+          "top": 16,
+          "bottom": 64,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 126,
+      "heroEyebrowTop": 136
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 1366,
+      "theme": "light",
+      "scrollWidth": 1356,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 45.078125,
+          "right": 225.078125,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 285.078125,
+          "right": 405.703125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142,
+      "heroEyebrowTop": 304.375
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 1366,
+      "theme": "dark",
+      "scrollWidth": 1356,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 45.078125,
+          "right": 225.078125,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 285.078125,
+          "right": 405.703125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142,
+      "heroEyebrowTop": 304.375
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 1920,
+      "theme": "light",
+      "scrollWidth": 1910,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 75,
+          "right": 255,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 315,
+          "right": 435.625,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142,
+      "heroEyebrowTop": 269.796875
+    },
+    {
+      "store": "origen",
+      "scope": "header",
+      "width": 1920,
+      "theme": "dark",
+      "scrollWidth": 1910,
+      "controls": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 75,
+          "right": 255,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 315,
+          "right": 435.625,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "legalBottom": 142,
+      "heroEyebrowTop": 269.796875
+    }
+  ],
+  "checks": [
+    {
+      "name": "trama header 390 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 16,
+          "right": 85.03125,
+          "top": 18,
+          "bottom": 62,
+          "width": 69.03125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 390 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 390 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 16,
+          "right": 85.03125,
+          "top": 18,
+          "bottom": 62,
+          "width": 69.03125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 390 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 768 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 25.34375,
+          "right": 107.046875,
+          "top": 18,
+          "bottom": 62,
+          "width": 81.703125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 768 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 768 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 25.34375,
+          "right": 107.046875,
+          "top": 18,
+          "bottom": 62,
+          "width": 81.703125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 768 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 1366 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 45.078125,
+          "right": 145.484375,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 205.484375,
+          "right": 326.109375,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 1366 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 1366 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 45.078125,
+          "right": 145.484375,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 205.484375,
+          "right": 326.109375,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 1366 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 1920 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 75,
+          "right": 175.40625,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 235.40625,
+          "right": 356.03125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 1920 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "trama header 1920 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "TRAMA — Inicio",
+          "left": 75,
+          "right": 175.40625,
+          "top": 26,
+          "bottom": 70,
+          "width": 100.40625,
+          "height": 44
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 235.40625,
+          "right": 356.03125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "trama header 1920 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "ORIGEN publishes 8–12 distinct products",
+      "passed": true,
+      "details": 10
+    },
+    {
+      "name": "ORIGEN includes at least two variable products",
+      "passed": true
+    },
+    {
+      "name": "ORIGEN includes an out-of-stock product",
+      "passed": true
+    },
+    {
+      "name": "ORIGEN includes a sale",
+      "passed": true
+    },
+    {
+      "name": "ORIGEN excludes original apparel SKUs/slugs",
+      "passed": true
+    },
+    {
+      "name": "origen header 390 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 16,
+          "right": 135.203125,
+          "top": 18,
+          "bottom": 62,
+          "width": 119.203125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 390 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 390 light: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 126,
+        "heroEyebrowTop": 136
+      }
+    },
+    {
+      "name": "origen header 390 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 16,
+          "right": 135.203125,
+          "top": 18,
+          "bottom": 62,
+          "width": 119.203125,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 147.203125,
+          "right": 216,
+          "top": 18,
+          "bottom": 62,
+          "width": 68.796875,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 220,
+          "right": 264,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 268,
+          "right": 312,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 320,
+          "right": 364,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 390 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 390 dark: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 126,
+        "heroEyebrowTop": 136
+      }
+    },
+    {
+      "name": "origen header 768 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 25.34375,
+          "right": 205.34375,
+          "top": 16,
+          "bottom": 64,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 768 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 768 light: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 126,
+        "heroEyebrowTop": 136
+      }
+    },
+    {
+      "name": "origen header 768 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 25.34375,
+          "right": 205.34375,
+          "top": 16,
+          "bottom": 64,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Apariencia",
+          "left": 420.640625,
+          "right": 504.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 516.640625,
+          "right": 560.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 572.640625,
+          "right": 616.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 628.640625,
+          "right": 672.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 688.640625,
+          "right": 732.640625,
+          "top": 18,
+          "bottom": 62,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 768 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 768 dark: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 126,
+        "heroEyebrowTop": 136
+      }
+    },
+    {
+      "name": "origen header 1366 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 45.078125,
+          "right": 225.078125,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 285.078125,
+          "right": 405.703125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 1366 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 1366 light: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 142,
+        "heroEyebrowTop": 304.375
+      }
+    },
+    {
+      "name": "origen header 1366 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 45.078125,
+          "right": 225.078125,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 285.078125,
+          "right": 405.703125,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 998.921875,
+          "right": 1082.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1094.921875,
+          "right": 1138.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1150.921875,
+          "right": 1194.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1206.921875,
+          "right": 1250.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1266.921875,
+          "right": 1310.921875,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 1366 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 1366 dark: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 142,
+        "heroEyebrowTop": 304.375
+      }
+    },
+    {
+      "name": "origen header 1920 light: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 75,
+          "right": 255,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 315,
+          "right": 435.625,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 1920 light: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 1920 light: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 142,
+        "heroEyebrowTop": 269.796875
+      }
+    },
+    {
+      "name": "origen header 1920 dark: all visible actionable controls inside viewport",
+      "passed": true,
+      "details": [
+        {
+          "name": "ORIGEN CASA · DEMO — Inicio",
+          "left": 75,
+          "right": 255,
+          "top": 24,
+          "bottom": 72,
+          "width": 180,
+          "height": 48
+        },
+        {
+          "name": "Explorar catálogo",
+          "left": 315,
+          "right": 435.625,
+          "top": 26,
+          "bottom": 70,
+          "width": 120.625,
+          "height": 44
+        },
+        {
+          "name": "Apariencia",
+          "left": 1523,
+          "right": 1607,
+          "top": 26,
+          "bottom": 70,
+          "width": 84,
+          "height": 44
+        },
+        {
+          "name": "Buscar productos",
+          "left": 1619,
+          "right": 1663,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Mi cuenta",
+          "left": 1675,
+          "right": 1719,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Número de artículos en el carrito: 1",
+          "left": 1731,
+          "right": 1775,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "name": "Abrir menú",
+          "left": 1791,
+          "right": 1835,
+          "top": 26,
+          "bottom": 70,
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "origen header 1920 dark: no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "origen header 1920 dark: hero clears legal bar",
+      "passed": true,
+      "details": {
+        "legalBottom": 142,
+        "heroEyebrowTop": 269.796875
+      }
+    },
+    {
+      "name": "No storefront uncaught JavaScript errors",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "No failed local resources",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "No unexpected browser console errors",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "ORIGEN never requests Mercado Pago resources",
+      "passed": true
+    },
+    {
+      "name": "Neither store loads resources from the other store",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "localResourceErrors": [],
+  "consoleErrors": [],
+  "externalRequests": [
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f50d.svg",
+      "type": "image"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://sdk.mercadopago.com",
+      "path": "/js/v2",
+      "type": "script"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/behavior-tracking.min.js",
+      "type": "script"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/config/super-token-variants.js",
+      "type": "fetch"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/fetch_ab_config",
+      "type": "ping"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/super_token_ab_variant",
+      "type": "ping"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.css",
+      "type": "stylesheet"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://http2.mlstatic.com",
+      "path": "/storage/v1/mercadopago/woocommerce/scripts/v1/super-token.bundle.min.js",
+      "type": "script"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_css",
+      "type": "ping"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/failed_to_load_mp_behavior_tracking",
+      "type": "ping"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://api.mercadopago.com",
+      "path": "/ppcore/prod/monitor/v1/event/datadog/big/load_super_token_bundle_js",
+      "type": "ping"
+    },
+    {
+      "store": "trama",
+      "page": "/",
+      "origin": "https://www.mercadopago.com",
+      "path": "/v2/security.js",
+      "type": "script"
+    },
+    {
+      "store": "origen",
+      "page": "/",
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f50d.svg",
+      "type": "image"
+    }
+  ],
+  "screenshots": [
+    "trama-home-390-light.png",
+    "trama-variable-390-light.png",
+    "trama-home-390-dark.png",
+    "trama-variable-390-dark.png",
+    "trama-cart-390-dark.png",
+    "trama-checkout-390-dark.png",
+    "trama-account-390-dark.png",
+    "trama-withdrawal-390-dark.png",
+    "origen-home-390-light.png",
+    "origen-variable-390-light.png",
+    "origen-home-390-dark.png",
+    "origen-variable-390-dark.png",
+    "origen-cart-390-dark.png",
+    "origen-checkout-390-dark.png",
+    "origen-account-390-dark.png",
+    "origen-withdrawal-390-dark.png"
+  ],
+  "limitations": [
+    "Guest contexts: account/order/address creation, BACS submission, mail and legal administration are verified by separate H10 functional checks.",
+    "External browser requests are inventoried and blocked; a blocked request does not certify provider functionality.",
+    "Automated geometry/focus/axe checks and screenshots require human review; no WCAG or real-device certification.",
+    "The test adds fixture products only to transient guest sessions; it does not create orders or decrement stock."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "result": "passed",
+    "checks": {
+        "theme_shared": true,
+        "core_active": true,
+        "mercadopago_inactive": true,
+        "noindex": true,
+        "ars": true,
+        "no_fake_fiscal": true,
+        "own_legal_identity": true,
+        "independent_catalog": true,
+        "two_non_apparel_variables": true,
+        "soldout": true,
+        "sale": true,
+        "demo_sender": true,
+        "bacs_order": true,
+        "bacs_customer_owns_order": true,
+        "native_hpos": true,
+        "legal_request": true
+    },
+    "products": 10,
+    "variables": 2,
+    "orders": 1,
+    "bacs_on_hold": 1,
+    "real_payment": false
+}

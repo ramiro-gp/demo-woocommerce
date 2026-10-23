@@ -1,0 +1,669 @@
+{
+  "site": "http://localhost:8082",
+  "views": [
+    {
+      "width": 390,
+      "mode": "light",
+      "background": "rgb(245, 240, 231)",
+      "accent": "#815033",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "348px",
+      "categoryColumns": "166px 166px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 136,
+      "barBottom": 126,
+      "overflow": false,
+      "headerRight": 364,
+      "headerLogoWidth": 119.203125,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 147.203125,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 216,
+          "width": 68.796875
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 0,
+          "width": 0
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 264,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 312,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 364,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "mode": "dark",
+      "background": "rgb(33, 29, 25)",
+      "accent": "#e3b38b",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "348px",
+      "categoryColumns": "166px 166px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 136,
+      "barBottom": 126,
+      "overflow": false,
+      "headerRight": 364,
+      "headerLogoWidth": 119.203125,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 147.203125,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 216,
+          "width": 68.796875
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 0,
+          "width": 0
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 264,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 312,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 364,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "background": "rgb(245, 240, 231)",
+      "accent": "#815033",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "707.297px",
+      "categoryColumns": "337.641px 337.656px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 136,
+      "barBottom": 126,
+      "overflow": false,
+      "headerRight": 732.640625,
+      "headerLogoWidth": 180,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 420.640625,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 504.640625,
+          "width": 84
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 560.640625,
+          "width": 44
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 616.640625,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 672.640625,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 732.640625,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "background": "rgb(33, 29, 25)",
+      "accent": "#e3b38b",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "707.297px",
+      "categoryColumns": "337.641px 337.656px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 136,
+      "barBottom": 126,
+      "overflow": false,
+      "headerRight": 732.640625,
+      "headerLogoWidth": 180,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 420.640625,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 504.640625,
+          "width": 84
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 560.640625,
+          "width": 44
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 616.640625,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 672.640625,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 732.640625,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "mode": "light",
+      "background": "rgb(245, 240, 231)",
+      "accent": "#815033",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "665.297px 532.25px",
+      "categoryColumns": "292.453px 292.469px 292.453px 292.469px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 304.375,
+      "barBottom": 142,
+      "overflow": false,
+      "headerRight": 1310.921875,
+      "headerLogoWidth": 180,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 998.921875,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 1082.921875,
+          "width": 84
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 1138.921875,
+          "width": 44
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 1194.921875,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 1250.921875,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 1310.921875,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "mode": "dark",
+      "background": "rgb(33, 29, 25)",
+      "accent": "#e3b38b",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "665.297px 532.25px",
+      "categoryColumns": "292.453px 292.469px 292.453px 292.469px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 304.375,
+      "barBottom": 142,
+      "overflow": false,
+      "headerRight": 1310.921875,
+      "headerLogoWidth": 180,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 998.921875,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 1082.921875,
+          "width": 84
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 1138.921875,
+          "width": 44
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 1194.921875,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 1250.921875,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 1310.921875,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "mode": "light",
+      "background": "rgb(245, 240, 231)",
+      "accent": "#815033",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "924.438px 739.562px",
+      "categoryColumns": "416px 416px 416px 416px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 269.796875,
+      "barBottom": 142,
+      "overflow": false,
+      "headerRight": 1835,
+      "headerLogoWidth": 180,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 1523,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 1607,
+          "width": 84
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 1663,
+          "width": 44
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 1719,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 1775,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 1835,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "mode": "dark",
+      "background": "rgb(33, 29, 25)",
+      "accent": "#e3b38b",
+      "headingFont": "Georgia, \"Times New Roman\", serif",
+      "heroColumns": "924.438px 739.562px",
+      "categoryColumns": "416px 416px 416px 416px",
+      "benefitTitleSize": "22px",
+      "eyebrowTop": 269.796875,
+      "barBottom": 142,
+      "overflow": false,
+      "headerRight": 1835,
+      "headerLogoWidth": 180,
+      "headerControls": [
+        {
+          "tag": "LABEL",
+          "class": "screen-reader-text",
+          "right": 1523,
+          "width": 1
+        },
+        {
+          "tag": "SELECT",
+          "class": "cb-theme-select",
+          "right": 1607,
+          "width": 84
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-header-search",
+          "right": 1663,
+          "width": 44
+        },
+        {
+          "tag": "A",
+          "class": "cb-icon-button cb-header-account",
+          "right": 1719,
+          "width": 44
+        },
+        {
+          "tag": "DIV",
+          "class": "wc-block-mini-cart wp-block-woocommerce-mini-cart cb-header-cart",
+          "right": 1775,
+          "width": 44
+        },
+        {
+          "tag": "BUTTON",
+          "class": "cb-icon-button cb-menu-trigger",
+          "right": 1835,
+          "width": 44
+        }
+      ],
+      "hotspots": [
+        {
+          "label": "Ver Lámpara de mesa Alba, $84.000 – $97.000",
+          "href": "http://localhost:8082/?product=lampara-mesa-alba",
+          "x": "88%",
+          "y": "42%"
+        },
+        {
+          "label": "Ver Jarrón Tierra, $27.200",
+          "href": "http://localhost:8082/?product=jarron-tierra",
+          "x": "74%",
+          "y": "54%"
+        },
+        {
+          "label": "Ver Cesto Nido, $38.000",
+          "href": "http://localhost:8082/?product=cesto-nido",
+          "x": "95%",
+          "y": "84%"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "checks": {
+    "headerControlsWithinViewport": true,
+    "nativeWarmStyle": true,
+    "nativeGeorgia": true,
+    "noHorizontalOverflow": true,
+    "heroAvoidsLegalBar": true,
+    "genericFilters": true,
+    "ownHotspots": true
+  },
+  "catalog": {
+    "headings": [
+      "Categoría",
+      "Acabado",
+      "Capacidad",
+      "Material",
+      "Medidas",
+      "Precio",
+      "Disponibilidad"
+    ],
+    "textPreviews": [
+      "Material: Cerámica · Madera",
+      "Capacidad: 750 ml · 1200 ml"
+    ],
+    "tramaText": false,
+    "materialFilter": {
+      "url": "http://localhost:8082/?post_type=product&filter_material=ceramica&query_type_material=or",
+      "checked": true,
+      "products": [
+        "Lámpara de mesa Alba",
+        "Jarra Río",
+        "Cuencos Orilla · dúo"
+      ]
+    }
+  },
+  "lampara-mesa-alba": {
+    "instruction": [
+      "Elegí las opciones de Material, Acabado para consultar disponibilidad."
+    ],
+    "groups": 2,
+    "names": [
+      "Material",
+      "Acabado"
+    ],
+    "guideCount": 0,
+    "variationResolved": true,
+    "chosen": [
+      {
+        "name": "attribute_pa_material",
+        "value": "ceramica"
+      },
+      {
+        "name": "attribute_pa_acabado",
+        "value": "natural"
+      }
+    ],
+    "soldoutCombinationDisabled": true
+  },
+  "jarra-rio": {
+    "instruction": [
+      "Elegí las opciones de Capacidad, Acabado para consultar disponibilidad."
+    ],
+    "groups": 2,
+    "names": [
+      "Capacidad",
+      "Acabado"
+    ],
+    "guideCount": 0,
+    "variationResolved": true,
+    "chosen": [
+      {
+        "name": "attribute_pa_capacidad",
+        "value": "1200-ml"
+      },
+      {
+        "name": "attribute_pa_acabado",
+        "value": "arena"
+      }
+    ]
+  }
+}

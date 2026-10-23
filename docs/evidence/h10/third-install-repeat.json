@@ -1,0 +1,179 @@
+{
+  "scenario": "Full documented installer rerun after successful independent import and logged-out frontend visit",
+  "home": "http://localhost:8083/",
+  "before": {
+    "fixture_exists": true,
+    "fixture_hash": "a2492652e48458c9503cd48d4698196a15de2104259a40a239989433d03bb1d8",
+    "ids": {
+      "page": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        56
+      ],
+      "product": [
+        18,
+        24,
+        25,
+        27,
+        32,
+        34,
+        35,
+        37,
+        39,
+        41
+      ],
+      "product_variation": [
+        19,
+        20,
+        21,
+        22,
+        28,
+        29,
+        30,
+        31
+      ],
+      "attachment": [
+        4,
+        10,
+        11,
+        14,
+        15,
+        16,
+        17,
+        23,
+        26,
+        33,
+        36,
+        38,
+        40,
+        55
+      ],
+      "nav_menu_item": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "wp_global_styles": [
+        12
+      ]
+    },
+    "menus": [
+      38
+    ],
+    "orders": [],
+    "customers": [],
+    "credentials_fingerprint": "889d24a639f7931157edca25c76069c7cb3daff48d0646c63eccb4658136a3f4",
+    "native_style_ids": [
+      12
+    ]
+  },
+  "after": {
+    "fixture_exists": true,
+    "fixture_hash": "a2492652e48458c9503cd48d4698196a15de2104259a40a239989433d03bb1d8",
+    "ids": {
+      "page": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        56
+      ],
+      "product": [
+        18,
+        24,
+        25,
+        27,
+        32,
+        34,
+        35,
+        37,
+        39,
+        41
+      ],
+      "product_variation": [
+        19,
+        20,
+        21,
+        22,
+        28,
+        29,
+        30,
+        31
+      ],
+      "attachment": [
+        4,
+        10,
+        11,
+        14,
+        15,
+        16,
+        17,
+        23,
+        26,
+        33,
+        36,
+        38,
+        40,
+        55
+      ],
+      "nav_menu_item": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "wp_global_styles": [
+        12
+      ]
+    },
+    "menus": [
+      38
+    ],
+    "orders": [],
+    "customers": [],
+    "credentials_fingerprint": "889d24a639f7931157edca25c76069c7cb3daff48d0646c63eccb4658136a3f4",
+    "native_style_ids": [
+      12
+    ]
+  },
+  "ids_fixture_and_credential_fingerprints_unchanged": true,
+  "native_product_visible_logged_out": true,
+  "duplicate_products": 0,
+  "duplicate_pages": 0,
+  "duplicate_variations": 0,
+  "duplicate_media": 0,
+  "duplicate_menu_items": 0,
+  "duplicate_native_styles": 0,
+  "result": "passed"
+}

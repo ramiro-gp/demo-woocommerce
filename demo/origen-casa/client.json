@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "fixture": "origen-casa",
+  "brand": {
+    "name": "ORIGEN CASA · DEMO",
+    "description": "Objetos simples, espacios que se sienten propios. Decoración contemporánea de demostración.",
+    "logo": "origen-casa-logo.png",
+    "icon": "origen-casa-icon.png",
+    "style": "origen-casa",
+    "contact": "hola@origen-casa.test",
+    "operations": "pedidos@origen-casa.test",
+    "legal": "derechos@origen-casa.test"
+  },
+  "commerce": {
+    "currency": "ARS",
+    "country": "AR:B",
+    "flat_rate": "6200",
+    "free_shipping_minimum": "150000",
+    "coupon": "CASADEMO10",
+    "coupon_percent": "10",
+    "bacs": {
+      "enabled": "yes",
+      "title": "Transferencia bancaria · DEMO",
+      "description": "Pedido de prueba de ORIGEN CASA. No realices transferencias reales.",
+      "instructions": "DEMO: no hay una cuenta bancaria operativa. Este pedido sólo prueba el circuito de compra y no requiere un pago real."
+    }
+  },
+  "email": {
+    "woocommerce_email_font_family": "Georgia",
+    "woocommerce_email_base_color": "#8a4d35",
+    "woocommerce_email_background_color": "#f5f0e8",
+    "woocommerce_email_body_background_color": "#fffaf3",
+    "woocommerce_email_text_color": "#332c26",
+    "woocommerce_email_footer_text_color": "#62574d",
+    "woocommerce_email_header_alignment": "left",
+    "woocommerce_email_footer_text": "{site_title}\nObjetos para habitar · tienda ficticia DEMO.\nNo realizar transferencias reales. Atención: {store_email}"
+  },
+  "legal": {
+    "trade_name": "ORIGEN CASA · tienda ficticia DEMO",
+    "legal_name": "DEMO · titular pendiente de completar antes de publicar",
+    "address": "DEMO · domicilio pendiente de completar",
+    "channel": "DEMO · canal alternativo pendiente de completar",
+    "area": "Atención al consumidor · DEMO",
+    "hours": "DEMO · días y horarios pendientes de definición"
+  },
+  "navigation": ["shop", "iluminacion", "ceramica", "textiles", "organizacion", "conocenos", "contacto"]
+}
