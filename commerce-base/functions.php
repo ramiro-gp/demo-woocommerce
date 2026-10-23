@@ -150,7 +150,7 @@ function commerce_base_is_showcase() {
 
 add_action('template_redirect', static function () {
     if (!commerce_base_is_showcase()) { return; }
-    if ('local' !== wp_get_environment_type() && !current_user_can('manage_options')) {
+    if (!is_file(__DIR__ . '/inc/showcase.php') || ('local' !== wp_get_environment_type() && !current_user_can('manage_options'))) {
         global $wp_query;
         $wp_query->set_404();
         status_header(404);
