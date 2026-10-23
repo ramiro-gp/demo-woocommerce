@@ -16,4 +16,4 @@ $checks = [
     'https' => is_ssl() || str_starts_with(home_url(), 'https://'),
     'debug_hidden' => !ini_get('display_errors') && !WP_DEBUG_DISPLAY,
 ];
-echo wp_json_encode(['php'=>PHP_VERSION,'wordpress'=>get_bloginfo('version'),'woocommerce'=>defined('WC_VERSION')?WC_VERSION:null,'db'=>$db,'memory_limit'=>ini_get('memory_limit'),'extensions'=>$extensions,'checks'=>$checks,'note'=>'Read-only; SSH/cron/mail/backups/isolation and host limits need separate validation. Local HTTP is expected to fail HTTPS.'], JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES) . "\n";
+echo wp_json_encode(['php'=>PHP_VERSION,'sapi'=>PHP_SAPI,'wordpress'=>get_bloginfo('version'),'woocommerce'=>defined('WC_VERSION')?WC_VERSION:null,'db'=>$db,'memory_limit'=>ini_get('memory_limit'),'extensions'=>$extensions,'checks'=>$checks,'note'=>'Read-only diagnostic, not an automatic release gate. WP-CLI overrides memory/display_errors; validate the web SAPI separately. SSH/cron/mail/backups/isolation and host limits need separate validation. Local HTTP is expected to fail HTTPS.'], JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES) . "\n";

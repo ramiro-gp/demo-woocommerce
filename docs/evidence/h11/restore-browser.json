@@ -1,0 +1,341 @@
+{
+  "result": "passed",
+  "mode": "restore-authenticated-read",
+  "origin": "http://localhost:8185",
+  "checks": [
+    {
+      "name": "Temporary HTTP SAPI probe responds",
+      "passed": true
+    },
+    {
+      "name": "Probe runs through web PHP SAPI",
+      "passed": true
+    },
+    {
+      "name": "Web PHP hides displayed errors and logs securely",
+      "passed": true
+    },
+    {
+      "name": "Web PHP memory and upload limits are compatible",
+      "passed": true
+    },
+    {
+      "name": "Web PHP enables OPcache",
+      "passed": true
+    },
+    {
+      "name": "Web process can write uploads",
+      "passed": true
+    },
+    {
+      "name": "Web process cannot write config/code files or code directories",
+      "passed": true
+    },
+    {
+      "name": "Native file editor is disabled",
+      "passed": true
+    },
+    {
+      "name": "Store API is available",
+      "passed": true
+    },
+    {
+      "name": "Only the two synthetic H11 products are published",
+      "passed": true
+    },
+    {
+      "name": "Variable product is discoverable",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "home has noindex header",
+      "passed": true
+    },
+    {
+      "name": "home uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "home images load",
+      "passed": true
+    },
+    {
+      "name": "home has one main",
+      "passed": true
+    },
+    {
+      "name": "home stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "catalog has noindex header",
+      "passed": true
+    },
+    {
+      "name": "catalog uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "catalog images load",
+      "passed": true
+    },
+    {
+      "name": "catalog has one main",
+      "passed": true
+    },
+    {
+      "name": "catalog stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "variable has noindex header",
+      "passed": true
+    },
+    {
+      "name": "variable uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "variable images load",
+      "passed": true
+    },
+    {
+      "name": "variable has one main",
+      "passed": true
+    },
+    {
+      "name": "variable stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "lookbook has noindex header",
+      "passed": true
+    },
+    {
+      "name": "lookbook uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "lookbook images load",
+      "passed": true
+    },
+    {
+      "name": "lookbook has one main",
+      "passed": true
+    },
+    {
+      "name": "lookbook stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Installed Lookbook resolves both product hotspots",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "privacy has noindex header",
+      "passed": true
+    },
+    {
+      "name": "privacy uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "privacy images load",
+      "passed": true
+    },
+    {
+      "name": "privacy has one main",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "withdrawal has noindex header",
+      "passed": true
+    },
+    {
+      "name": "withdrawal uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "withdrawal images load",
+      "passed": true
+    },
+    {
+      "name": "withdrawal has one main",
+      "passed": true
+    },
+    {
+      "name": "Installed legal form renders",
+      "passed": true
+    },
+    {
+      "name": "Exact restoration integrity comparison preceded authenticated smoke",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Native customer account authentication",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Restored customer sees its original BACS order",
+      "passed": true
+    },
+    {
+      "name": "Restored customer opens native order details",
+      "passed": true
+    },
+    {
+      "name": "Restored order details retain both synthetic products",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Restored billing address opens with the saved synthetic value",
+      "passed": true
+    },
+    {
+      "name": "Restored billing identity belongs to the fixture customer",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Native manager WordPress authentication",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Restored manager sees the native HPOS order list",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Restored manager opens the native HPOS order editor",
+      "passed": true
+    },
+    {
+      "name": "Restored native order still has on-hold status",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Restored legal list contains the original browser request",
+      "passed": true
+    },
+    {
+      "name": "Restored legal request keeps its management state",
+      "passed": true
+    },
+    {
+      "name": "Restored legal request keeps its verified order association",
+      "passed": true
+    },
+    {
+      "name": "Restored legal request displays its event audit",
+      "passed": true
+    },
+    {
+      "name": "No uncaught browser errors",
+      "passed": true
+    },
+    {
+      "name": "No failed local browser resources",
+      "passed": true
+    },
+    {
+      "name": "Every external resource request is blocked in the lab",
+      "passed": true
+    },
+    {
+      "name": "No Mercado Pago resources requested",
+      "passed": true
+    }
+  ],
+  "pageErrorCount": 0,
+  "failedResourceCount": 0,
+  "externalRequestCount": 2,
+  "externalRequestBlockedCount": 2,
+  "externalOrigins": [
+    "https://s.w.org"
+  ],
+  "synthetic": true,
+  "externalDelivery": false,
+  "realPayments": false,
+  "webSapi": {
+    "php_sapi": "apache2handler",
+    "php_version": "8.4.27",
+    "display_errors": false,
+    "log_errors": true,
+    "memory_limit_bytes": 268435456,
+    "upload_max_filesize_bytes": 33554432,
+    "post_max_size_bytes": 41943040,
+    "max_execution_time": 120,
+    "opcache_enabled": true,
+    "config_and_code_files_readonly": true,
+    "uploads_writable": true,
+    "code_directories_readonly": true,
+    "debug_display_off": true,
+    "file_editor_disabled": true
+  },
+  "integrityComparison": {
+    "beforeAuthenticatedSmoke": true,
+    "businessDigestSha256": "ae1295172691c769760b33a4aeb61f8b015e1dfa5fa890f690d3538101cf9c77",
+    "limitation": "Native logins legitimately update session metadata after the exact database comparison. This smoke reads restored business data without saving forms or submitting new orders/legal requests."
+  },
+  "orderId": 30,
+  "legalRequestId": 1,
+  "restoredCustomerAndManagerAccess": true,
+  "businessFormsSaved": false,
+  "externalResourceLimit": "Native WordPress emoji CDN requests, when present, are recorded by origin and blocked. This lab does not certify external services.",
+  "temporarySapiProbeRemoved": true,
+  "temporarySapiProbeStatusAfterRemoval": 404
+}

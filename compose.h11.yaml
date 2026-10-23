@@ -52,6 +52,7 @@ services:
       <<: *environment
       H11_URL: http://localhost:${H11_PORT}
       WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
+      WP_CLI_CONFIG_PATH: /opt/h11-deployment/lab-wp-cli.yml
     secrets: [db, admin]
     volumes:
       - wp:/var/www/html

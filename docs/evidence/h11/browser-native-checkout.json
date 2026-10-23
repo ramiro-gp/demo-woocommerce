@@ -1,0 +1,297 @@
+{
+  "result": "passed",
+  "scope": "Source native variation/Mini-Cart/Cart/Checkout/BACS completed before the account and administration checks.",
+  "orderId": 30,
+  "checks": [
+    {
+      "name": "Temporary HTTP SAPI probe responds",
+      "passed": true
+    },
+    {
+      "name": "Probe runs through web PHP SAPI",
+      "passed": true
+    },
+    {
+      "name": "Web PHP hides displayed errors and logs securely",
+      "passed": true
+    },
+    {
+      "name": "Web PHP memory and upload limits are compatible",
+      "passed": true
+    },
+    {
+      "name": "Web PHP enables OPcache",
+      "passed": true
+    },
+    {
+      "name": "Web process can write uploads",
+      "passed": true
+    },
+    {
+      "name": "Web process cannot write config/code files or code directories",
+      "passed": true
+    },
+    {
+      "name": "Native file editor is disabled",
+      "passed": true
+    },
+    {
+      "name": "Store API is available",
+      "passed": true
+    },
+    {
+      "name": "Only the two synthetic H11 products are published",
+      "passed": true
+    },
+    {
+      "name": "Variable product is discoverable",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "home has noindex header",
+      "passed": true
+    },
+    {
+      "name": "home uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "home images load",
+      "passed": true
+    },
+    {
+      "name": "home has one main",
+      "passed": true
+    },
+    {
+      "name": "home stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "catalog has noindex header",
+      "passed": true
+    },
+    {
+      "name": "catalog uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "catalog images load",
+      "passed": true
+    },
+    {
+      "name": "catalog has one main",
+      "passed": true
+    },
+    {
+      "name": "catalog stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "variable has noindex header",
+      "passed": true
+    },
+    {
+      "name": "variable uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "variable images load",
+      "passed": true
+    },
+    {
+      "name": "variable has one main",
+      "passed": true
+    },
+    {
+      "name": "variable stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "lookbook has noindex header",
+      "passed": true
+    },
+    {
+      "name": "lookbook uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "lookbook images load",
+      "passed": true
+    },
+    {
+      "name": "lookbook has one main",
+      "passed": true
+    },
+    {
+      "name": "lookbook stays inside desktop viewport",
+      "passed": true
+    },
+    {
+      "name": "Installed Lookbook resolves both product hotspots",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "privacy has noindex header",
+      "passed": true
+    },
+    {
+      "name": "privacy uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "privacy images load",
+      "passed": true
+    },
+    {
+      "name": "privacy has one main",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "withdrawal has noindex header",
+      "passed": true
+    },
+    {
+      "name": "withdrawal uses the generic H11 identity",
+      "passed": true
+    },
+    {
+      "name": "withdrawal images load",
+      "passed": true
+    },
+    {
+      "name": "withdrawal has one main",
+      "passed": true
+    },
+    {
+      "name": "Installed legal form renders",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Home fits mobile viewport",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Native customer account authentication",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Color swatches render from native attributes",
+      "passed": true
+    },
+    {
+      "name": "Native variable select remains available",
+      "passed": true
+    },
+    {
+      "name": "Selected variation resolves",
+      "passed": true
+    },
+    {
+      "name": "Mini-Cart opens with product",
+      "passed": true
+    },
+    {
+      "name": "Cart Store API accepts the current session",
+      "passed": true
+    },
+    {
+      "name": "Cart session token is supplied privately",
+      "passed": true
+    },
+    {
+      "name": "Store API cart/add-item succeeds",
+      "passed": true
+    },
+    {
+      "name": "Cart has both simple and variable items",
+      "passed": true
+    },
+    {
+      "name": "Store API cart/update-customer succeeds",
+      "passed": true
+    },
+    {
+      "name": "Local fictitious shipping rate is available",
+      "passed": true
+    },
+    {
+      "name": "Store API cart/select-shipping-rate succeeds",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Native Cart Block renders both products",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Native Checkout Block renders",
+      "passed": true
+    },
+    {
+      "name": "Fictitious BACS is available",
+      "passed": true
+    },
+    {
+      "name": "Mercado Pago is absent from checkout",
+      "passed": true
+    },
+    {
+      "name": "Captured native checkout confirms the existing own BACS order",
+      "passed": true
+    },
+    {
+      "name": "Local navigation returns a page",
+      "passed": true
+    },
+    {
+      "name": "Existing native confirmation displays fictitious payment instructions",
+      "passed": true
+    }
+  ],
+  "externalDelivery": false,
+  "realPayments": false
+}

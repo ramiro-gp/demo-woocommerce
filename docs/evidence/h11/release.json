@@ -1,0 +1,9 @@
+{
+  "result": "passed",
+  "packages": 6,
+  "entries": 80,
+  "deterministicRepeatedBuild": true,
+  "demoAndRuntimeExclusions": true,
+  "sourceCommit": "847c78f82f98efd475fe11559156ce11f77f463f",
+  "knownSecretScan": "PASS verify-h11-secrets.cjs, includes H10/H9 and actual H11 runtime credentials/private tokens"
+}

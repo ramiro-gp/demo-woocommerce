@@ -1,0 +1,12 @@
+{
+  "result": "passed",
+  "evidenceSource": "Persisted execution results re-read by h11-verify inspect after successful native CLI sentinel probes.",
+  "wp_cron_executed": true,
+  "action_scheduler_executed": true,
+  "native_scheduler_migration_completed": true,
+  "action_id": 17,
+  "scheduledTasksPresent": {
+    "wp_cron": true,
+    "action_scheduler": true
+  }
+}

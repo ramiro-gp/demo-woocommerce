@@ -1,0 +1,17 @@
+[
+  {
+    "mailpitLoopbackOnly": true,
+    "instance": "qa",
+    "databasePortsUnpublished": true
+  },
+  {
+    "mailpitLoopbackOnly": true,
+    "instance": "restore",
+    "databasePortsUnpublished": true
+  },
+  {
+    "mailpitLoopbackOnly": true,
+    "instance": "repeat",
+    "databasePortsUnpublished": true
+  }
+]

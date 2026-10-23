@@ -1,0 +1,12 @@
+{
+  "result": "passed",
+  "scope": "Complete isolated QA WordPress files and database, source web quiesced",
+  "elapsedSeconds": 10.81,
+  "databaseBytes": 1083325,
+  "archiveBytes": 50725237,
+  "integrity": "SHA256 manifest",
+  "externalCopy": false,
+  "encrypted": false,
+  "privateRuntimeOnly": true,
+  "databaseTLS": "disabled only for isolated local Docker network; production requires host-appropriate TLS"
+}

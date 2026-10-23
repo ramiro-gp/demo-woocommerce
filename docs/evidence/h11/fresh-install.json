@@ -1,0 +1,19 @@
+{
+  "result": "passed",
+  "instance": "repeat",
+  "checks": {
+    "noindex": true,
+    "coming_soon": true,
+    "one_initial_admin": true,
+    "no_products": true,
+    "no_orders": true,
+    "no_legal_history": true,
+    "cart_blocks": true,
+    "checkout_blocks": true,
+    "theme_version": true,
+    "gateway_disabled_bacs": true,
+    "gateway_disabled_cheque": true,
+    "gateway_disabled_cod": true,
+    "mercadopago_absent": true
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "result": "passed",
+  "mode": "compare-code",
+  "origin": "http://localhost:8184",
+  "synthetic": true,
+  "versions": {
+    "wordpress": "7.1.3",
+    "php": "8.4.27",
+    "database": "10.11.19",
+    "theme": "1.9.1",
+    "plugins": {
+      "woocommerce": "11.2.1",
+      "commerce-core": "1.1.2",
+      "commerce-communications": "1.0.1",
+      "commerce-order-integrity": "1.0.0",
+      "commerce-account-navigation": "1.0.0",
+      "commerce-lookbook": "1.0.0"
+    }
+  },
+  "checks": {
+    "fixture_exercised": true,
+    "commerce_base_active": true,
+    "active_woocommerce": true,
+    "active_commerce-core": true,
+    "active_commerce-communications": true,
+    "active_commerce-order-integrity": true,
+    "active_commerce-account-navigation": true,
+    "active_commerce-lookbook": true,
+    "mercadopago_inactive": true,
+    "noindex": true,
+    "debug_not_displayed": true,
+    "hpos_native": true,
+    "legacy_order_sync_disabled": true,
+    "bacs_enabled": true,
+    "no_bank_accounts": true,
+    "currency_ars": true,
+    "permalinks": true,
+    "legal_demo_only": true,
+    "native_blocks": true,
+    "home_native_page": true,
+    "two_fixture_products": true,
+    "two_color_variations": true,
+    "synthetic_user_1": true,
+    "synthetic_user_2": true,
+    "synthetic_user_3": true,
+    "order_exists_bacs": true,
+    "order_exists_completed": true,
+    "order_exists_cancelled": true,
+    "order_exists_refunded": true,
+    "order_exists_refund": true,
+    "post_backup_order_exists": true,
+    "post_backup_order_proves_recent_data": true,
+    "native_status_bacs": true,
+    "native_status_completed": true,
+    "native_status_cancelled": true,
+    "native_status_refunded": true,
+    "browser_and_api_legal_requests": true,
+    "legal_event_audit": true,
+    "legal_mails_sent": true,
+    "wordpress_cron_tasks_present": true,
+    "action_scheduler_tasks_present": true,
+    "wp_cron_execution_verified": true,
+    "action_scheduler_execution_verified": true,
+    "media_file_h11-technical-demo.png": true,
+    "media_file_h11-technical-demo-300x225.png": true,
+    "media_file_h11-technical-demo-150x150.png": true,
+    "media_file_h11-technical-demo-360x450.png": true,
+    "media_file_h11-technical-demo-600x480.png": true,
+    "media_file_h11-technical-demo-600x450.png": true,
+    "media_file_h11-technical-demo-80x100.png": true,
+    "attachment_original_and_sizes": true,
+    "restore_same_business_digest": true,
+    "restore_table_users": true,
+    "restore_table_usermeta": true,
+    "restore_table_posts": true,
+    "restore_table_postmeta": true,
+    "restore_table_terms": true,
+    "restore_table_termmeta": true,
+    "restore_table_term_taxonomy": true,
+    "restore_table_term_relationships": true,
+    "restore_table_woocommerce_order_items": true,
+    "restore_table_woocommerce_order_itemmeta": true,
+    "restore_table_wc_orders": true,
+    "restore_table_wc_order_addresses": true,
+    "restore_table_wc_order_operational_data": true,
+    "restore_table_wc_orders_meta": true,
+    "restore_table_commerce_legal_requests": true,
+    "restore_table_commerce_legal_events": true,
+    "restore_table_commerce_legal_limits": true,
+    "restore_table_business_options": true,
+    "restore_same_ids_and_statuses": true,
+    "restore_attachment_sha256": true
+  },
+  "business_digest_sha256": "4600e1d6f648b82d96e7e20c3cd7a8d4db635960f7bf883ac3c80c4cd3c978f0",
+  "business": {
+    "product_ids": [
+      12,
+      13
+    ],
+    "variation_ids": [
+      14,
+      15
+    ],
+    "user_ids": [
+      1,
+      2,
+      3
+    ],
+    "orders": {
+      "bacs": {
+        "id": 30,
+        "status": "on-hold",
+        "type": "shop_order"
+      },
+      "completed": {
+        "id": 32,
+        "status": "completed",
+        "type": "shop_order"
+      },
+      "cancelled": {
+        "id": 33,
+        "status": "cancelled",
+        "type": "shop_order"
+      },
+      "refunded": {
+        "id": 34,
+        "status": "refunded",
+        "type": "shop_order"
+      },
+      "refund": {
+        "id": 35,
+        "status": "completed",
+        "type": "shop_order_refund"
+      },
+      "post_backup": {
+        "id": 36,
+        "status": "pending",
+        "type": "shop_order"
+      }
+    },
+    "legal_request_ids": [
+      1,
+      2
+    ],
+    "legal_event_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "tables": {
+      "users": {
+        "rows": 3,
+        "sha256": "a4a5b911eed69b5e2ba37b22076e4f4f1e8c6e462be2e7c8804e49311e02c8ee",
+        "schema_sha256": "0dab92f63570c4e91ecd1e79213d4e9337b6df191daf1dcc356adef71c45cf3f"
+      },
+      "usermeta": {
+        "rows": 74,
+        "sha256": "ca338b0b8969f31bb403830daffa1a33edd9dacd398da643069b7086c9807bf7",
+        "schema_sha256": "1a70de885bc7ba7bab8707fc742a0ddefdb336b61ef61983b50ae463e0d4a534"
+      },
+      "posts": {
+        "rows": 36,
+        "sha256": "5b5966a212da8695a0e7fca64510fd4d6a5c4ae6088e78b173e77e7dcfd36441",
+        "schema_sha256": "241d856c63a4b96afc3ea5b3d4cc5cae70b5befb2422f7a4bfb891aea9d8f82e"
+      },
+      "postmeta": {
+        "rows": 160,
+        "sha256": "0f53ee655ac70f57519fc5d61e9cfd7a5baff6ff9eb740518141a51f7835612b",
+        "schema_sha256": "cee9f3cfdbdd304a753e88f353b7365a27afb266d33837448c54ce369df62430"
+      },
+      "terms": {
+        "rows": 19,
+        "sha256": "cf77d1932928e4389f5b4f8abe88f2bb222afd4f7af844fd1c11dac7184fd5f2",
+        "schema_sha256": "4ac95b755ff1dc2361ab3ee125ee0ea6face9296815a338c49c3f661fdc509a6"
+      },
+      "termmeta": {
+        "rows": 1,
+        "sha256": "aa9cc423725a9964e0ab0ffdc9a3019a8b2bb0d494b00037c68688a25c987f16",
+        "schema_sha256": "f53c9685ec288cd6480792cb4e07aef48dc5dd5ad378fc7f0caa6cbbfed58664"
+      },
+      "term_taxonomy": {
+        "rows": 19,
+        "sha256": "3c0ffdc54cf742167d7e141f5588df98b23278695a3bf07ef5215a6160efd8c0",
+        "schema_sha256": "27b909efb54f5ad0b46a31cbcc7a57b54736f3e5b6d1c5c013020f0f47623dd8"
+      },
+      "term_relationships": {
+        "rows": 10,
+        "sha256": "275369f7acf33d3a86550f850fadb98c7cc54599528bbd2d42558b65abecbfd1",
+        "schema_sha256": "8d1fd5c585da5b141d354c5f83705a80a51b8362798f1d4af60317b603456b45"
+      },
+      "woocommerce_order_items": {
+        "rows": 7,
+        "sha256": "341c6972f35aa1be6b353d6a435b24b78ff9b1367622eb37d60702e722d8dc3c",
+        "schema_sha256": "e105cb320e78d41b3c04700dc343c0ccf5397819f705718efe9e5dc13c28931f"
+      },
+      "woocommerce_order_itemmeta": {
+        "rows": 65,
+        "sha256": "404a9f045a294d59a9d700b6babe8d7a06f806be6d50d1b9060a954075912190",
+        "schema_sha256": "6ff9a41f9d7d1dbf30d5bf4e283127abde76d8659d6b9311f8caf8b7e16b1fc3"
+      },
+      "wc_orders": {
+        "rows": 6,
+        "sha256": "9861ae6a48174ea00f2947342b91fe08a9e99c1a7a92719b1be5c3afa1673cbc",
+        "schema_sha256": "84281f0e262379a2e1a538c5e24da8cdc4e3273fe3dc24188e6c8a562a039195"
+      },
+      "wc_order_addresses": {
+        "rows": 6,
+        "sha256": "83708b8e4b64f80cfa8002f194841ec4891594b8b034ad684dde5311fb4e3503",
+        "schema_sha256": "627ad43d40979e56ce2f20ff7ba0ccdd1938c6f846272172a08c1d994d7f72ba"
+      },
+      "wc_order_operational_data": {
+        "rows": 6,
+        "sha256": "9a7dad778dbb60ebd3ac5a62bbc7d78d3b82f0118f92c4132040bcf2ae5f2ed2",
+        "schema_sha256": "4d9cd05b5f7639c906f65272a1bfdce9324b6ce630e44b70ce777e37d4cd3740"
+      },
+      "wc_orders_meta": {
+        "rows": 21,
+        "sha256": "5805df0b3df89793576612cde759b94bf9ac4d9e5df005f7335c727702f7aa39",
+        "schema_sha256": "7bb5fc16d8d255bff6ecbbf6fe3e7290720ad683b65b3ca7beac3770daf67303"
+      },
+      "commerce_legal_requests": {
+        "rows": 2,
+        "sha256": "aabb2969b668ea1bf5702f6863243f24f193d30191742f695880a38639709904",
+        "schema_sha256": "c6380ecdc9886252f698d9889b2cef32f02c5525d128be94810d3d46451599c2"
+      },
+      "commerce_legal_events": {
+        "rows": 9,
+        "sha256": "c66769f7dd203e19fb61b1d110b4c5b1c92f27d884527572f160e7db04528d2f",
+        "schema_sha256": "007525cdf3bb745d00cfc831e91c2c78dfb771a194c7ea3eaf96db86bca8d669"
+      },
+      "commerce_legal_limits": {
+        "rows": 4,
+        "sha256": "c9ab20336d932e1d0ced7a1169641bca92d5a69d9b8ec563ed006ccfac7233ba",
+        "schema_sha256": "76b0b193c4b9ef537cbf5691cbae6d1fea8d9c0bb63b919a490b1a39ac13afde"
+      },
+      "business_options": {
+        "rows": 21,
+        "sha256": "323d6fa7db3631e1acb9cf3722a84d755d49d57dbba47d1aa3b097de07187265"
+      }
+    },
+    "attachment": {
+      "id": 11,
+      "files": {
+        "h11-technical-demo-150x150.png": "7292d5bd14ff0e0aeb11b1e3e1fc89a3fb5f7bd1230f261de38e9bcf65a4a74f",
+        "h11-technical-demo-300x225.png": "258e59b5f64228f2aae3508c2b312fa945848c9a46d073a5d720323d95deb4aa",
+        "h11-technical-demo-360x450.png": "09addbdb3ecb69350c61ae50c3083efb2a789b7d585b4393651dd959edc9e2b9",
+        "h11-technical-demo-600x450.png": "9733d7c50d12bcb1044dac149a6b52fb7d3f98a5b2d0f56fd5202801e646b324",
+        "h11-technical-demo-600x480.png": "2a3c1219442884d7c169624c66f868ee3c113f42b7d9edf50ceffb367e2849ac",
+        "h11-technical-demo-80x100.png": "cca5289f2da9c45cc3fd2fd33128be9163668afc0606689808f82780982d9138",
+        "h11-technical-demo.png": "ad35886b6d1b4886e69d5e306e837fd12fb6125622db56e39c07bbec82efeffa"
+      }
+    }
+  },
+  "operational_execution": {
+    "wp_cron_executed": true,
+    "action_scheduler_executed": true,
+    "native_scheduler_migration_completed": true,
+    "action_id": 17
+  },
+  "scheduled_tasks_present": {
+    "wp_cron": true,
+    "action_scheduler": true
+  },
+  "excluded_runtime_tables": [
+    "sessions",
+    "actionscheduler",
+    "logs",
+    "transients"
+  ],
+  "real_mail": false,
+  "real_payments": false
+}

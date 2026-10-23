@@ -1,0 +1,98 @@
+{
+  "result": "passed",
+  "mode": "captured-email",
+  "origin": "http://localhost:8184",
+  "checks": [
+    {
+      "name": "Isolated Mailpit API responds",
+      "passed": true
+    },
+    {
+      "name": "Native messages were captured",
+      "passed": true
+    },
+    {
+      "name": "Every captured recipient is synthetic",
+      "passed": true
+    },
+    {
+      "name": "Every sender is synthetic",
+      "passed": true
+    },
+    {
+      "name": "Native new_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_on_hold_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_processing_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_completed_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native cancelled_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_cancelled_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_refunded_order email captured",
+      "passed": true
+    },
+    {
+      "name": "Native order emails are multipart",
+      "passed": true
+    },
+    {
+      "name": "Native password recovery captured",
+      "passed": true
+    },
+    {
+      "name": "Consumer withdrawal receipt captured",
+      "passed": true
+    },
+    {
+      "name": "Internal withdrawal notification captured",
+      "passed": true
+    },
+    {
+      "name": "BACS email explains fictitious bank details",
+      "passed": true
+    },
+    {
+      "name": "Emails never disclose fixture plaintext passwords",
+      "passed": true
+    },
+    {
+      "name": "Mail does not link to the older DEMOs",
+      "passed": true
+    }
+  ],
+  "pageErrorCount": 0,
+  "failedResourceCount": 0,
+  "externalRequestCount": 0,
+  "externalRequestBlockedCount": 0,
+  "externalOrigins": [],
+  "synthetic": true,
+  "externalDelivery": false,
+  "realPayments": false,
+  "messagesCaptured": 21,
+  "requiredNativeEmailTypes": [
+    "new_order",
+    "customer_on_hold_order",
+    "customer_processing_order",
+    "customer_completed_order",
+    "cancelled_order",
+    "customer_cancelled_order",
+    "customer_refunded_order"
+  ],
+  "realSmtpConfigured": false
+}

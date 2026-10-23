@@ -1,0 +1,7 @@
+{
+  "result": "passed",
+  "restoreGuardRejectsCustomerCreatedAfterInstallation": true,
+  "probeRemovedWithIdentityCheck": true,
+  "pristineGuardPassesAfterProbeRemoval": true,
+  "existingDataOverwritten": false
+}

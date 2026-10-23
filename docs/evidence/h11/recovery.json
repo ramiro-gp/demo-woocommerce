@@ -1,0 +1,11 @@
+{
+  "result": "passed",
+  "elapsedRestoreSeconds": 21.7,
+  "sourceBackupPoint": "source-snapshot.json",
+  "target": "new independent restore volume",
+  "targetConfigAndSaltsPreserved": true,
+  "sourceDatabaseReplaced": false,
+  "businessDigestMatches": true,
+  "productionRTOValidated": false,
+  "databaseImport": "native MariaDB client, secret environment from file, TLS exception local only"
+}

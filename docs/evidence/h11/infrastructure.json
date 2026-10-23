@@ -1,0 +1,28 @@
+{
+  "result": "passed",
+  "web": [
+    {
+      "container": "commerce-h11-qa-h11-web-1",
+      "webLoopbackOnly": true,
+      "isolatedWordPressVolume": "commerce-h11-qa_wp",
+      "reusableCodeBinds": 0
+    },
+    {
+      "container": "commerce-h11-restore-h11-web-1",
+      "webLoopbackOnly": true,
+      "isolatedWordPressVolume": "commerce-h11-restore_wp",
+      "reusableCodeBinds": 0
+    },
+    {
+      "container": "commerce-h11-repeat-h11-web-1",
+      "webLoopbackOnly": true,
+      "isolatedWordPressVolume": "commerce-h11-repeat_wp",
+      "reusableCodeBinds": 0
+    }
+  ],
+  "databasePublishedPorts": false,
+  "mailpitLoopbackOnly": true,
+  "remoteHostingValidated": false,
+  "freshRepeatInstallCompleted": true,
+  "repeatFixtureImported": false
+}

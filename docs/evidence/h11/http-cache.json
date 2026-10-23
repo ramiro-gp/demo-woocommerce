@@ -1,0 +1,96 @@
+{
+  "result": "passed",
+  "origin": "http://localhost:8184",
+  "checks": [
+    {
+      "name": "cart responds",
+      "passed": true
+    },
+    {
+      "name": "cart excludes shared caching",
+      "passed": true
+    },
+    {
+      "name": "cart carries noindex",
+      "passed": true
+    },
+    {
+      "name": "checkout responds",
+      "passed": true
+    },
+    {
+      "name": "checkout excludes shared caching",
+      "passed": true
+    },
+    {
+      "name": "checkout carries noindex",
+      "passed": true
+    },
+    {
+      "name": "account responds",
+      "passed": true
+    },
+    {
+      "name": "account excludes shared caching",
+      "passed": true
+    },
+    {
+      "name": "account carries noindex",
+      "passed": true
+    },
+    {
+      "name": "Store API cart responds",
+      "passed": true
+    },
+    {
+      "name": "Store API cart excludes shared caching",
+      "passed": true
+    },
+    {
+      "name": "Store API cart carries noindex",
+      "passed": true
+    },
+    {
+      "name": "Sensitive file path is blocked /wp-config.php",
+      "passed": true
+    },
+    {
+      "name": "Sensitive file path is blocked /forbidden-backup.sql",
+      "passed": true
+    },
+    {
+      "name": "DEMO robots disallows crawling",
+      "passed": true
+    },
+    {
+      "name": "Native sitemap stays disabled for DEMO",
+      "passed": true
+    },
+    {
+      "name": "Excluded optional development showcase responds 404",
+      "passed": true
+    },
+    {
+      "name": "Excluded editorial DEMO image is absent",
+      "passed": true
+    },
+    {
+      "name": "Home has restrictive framing header",
+      "passed": true
+    },
+    {
+      "name": "Home prevents MIME sniffing",
+      "passed": true
+    },
+    {
+      "name": "Home is noindex",
+      "passed": true
+    },
+    {
+      "name": "PHP version is not disclosed",
+      "passed": true
+    }
+  ],
+  "httpsTested": false,
+  "hostCacheTested": false
+}

@@ -54,4 +54,15 @@ foreach ($slug in @('commerce-base','commerce-core','commerce-communications','c
 }
 $manifest = [ordered]@{ distribution='commerce-clean'; version=$ReleaseVersion; sourceCommit=(git rev-parse HEAD).Trim(); demoContent=$false; credentials=$false; packages=$packages }
 $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $output 'manifest.json') -Encoding UTF8
+# Support material is a separate handoff, never installed into WordPress.
+$supportFiles=@('deployment/preflight.php','deployment/initialize.php','docs/h11-hosting-decision.md','docs/h11-deployment-runbook.md','docs/h11-client-launch-checklist.md','docs/h11-production-readiness.md','docs/h11-mercadopago-review.md')
+foreach($file in $supportFiles) {
+    & git cat-file -e "HEAD:$file" 2>$null
+    if($LASTEXITCODE -ne 0){continue} # Early phases may not have their final docs committed yet.
+    $destination=Join-Path $output "support/$file"
+    New-Item -ItemType Directory -Path (Split-Path -Parent $destination) -Force | Out-Null
+    $content=(git show "HEAD:$file") -join "`n"
+    if($LASTEXITCODE -ne 0){throw 'Cannot read committed handoff material.'}
+    [IO.File]::WriteAllText($destination,$content+"`n",[Text.UTF8Encoding]::new($false))
+}
 Write-Output "Release ${ReleaseVersion}: six installable ZIPs + SHA256 manifest in .local/h11-release/$ReleaseVersion"
