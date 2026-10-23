@@ -1,0 +1,129 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Origen Casa · cálido editorial",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "background",
+          "name": "Lino",
+          "color": "#f5f0e7"
+        },
+        {
+          "slug": "surface",
+          "name": "Arena",
+          "color": "#e9dfd1"
+        },
+        {
+          "slug": "surface-elevated",
+          "name": "Arcilla clara",
+          "color": "#ddd0bf"
+        },
+        {
+          "slug": "text",
+          "name": "Tierra",
+          "color": "#352c25"
+        },
+        {
+          "slug": "text-muted",
+          "name": "Texto secundario",
+          "color": "#6d5c50"
+        },
+        {
+          "slug": "border",
+          "name": "Borde",
+          "color": "#8f7968"
+        },
+        {
+          "slug": "accent",
+          "name": "Terracota",
+          "color": "#815033"
+        },
+        {
+          "slug": "accent-hover",
+          "name": "Terracota intensa",
+          "color": "#633b25"
+        },
+        {
+          "slug": "accent-contrast",
+          "name": "Sobre terracota",
+          "color": "#fff9ef"
+        },
+        {
+          "slug": "focus",
+          "name": "Foco",
+          "color": "#285f7b"
+        },
+        {
+          "slug": "success",
+          "name": "Éxito",
+          "color": "#356343"
+        },
+        {
+          "slug": "warning",
+          "name": "Advertencia",
+          "color": "#805018"
+        },
+        {
+          "slug": "danger",
+          "name": "Error",
+          "color": "#a0372b"
+        }
+      ]
+    },
+    "custom": {
+      "dark": {
+        "background": "#211d19",
+        "surface": "#2e2721",
+        "surfaceElevated": "#3a3028",
+        "text": "#f5eadf",
+        "textMuted": "#c7b5a4",
+        "border": "#a18e7b",
+        "accent": "#e3b38b",
+        "accentHover": "#f0cbaa",
+        "accentContrast": "#2a2018",
+        "focus": "#9cc9df",
+        "success": "#a8cfaa",
+        "warning": "#e5bc72",
+        "danger": "#f0a295"
+      }
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "interface",
+          "name": "Manrope · interfaz",
+          "fontFamily": "Manrope, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Manrope",
+              "fontStyle": "normal",
+              "fontWeight": "400 700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/manrope-latin.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "editorial",
+          "name": "Georgia · hogar",
+          "fontFamily": "Georgia, 'Times New Roman', serif"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "elements": {
+      "heading": {
+        "typography": {
+          "letterSpacing": "-0.045em",
+          "lineHeight": "1.08"
+        }
+      }
+    },
+    "css": ".cb-brand { font-family: var(--cb-font-editorial); font-weight: 400; letter-spacing: .025em; }\n.cb-brand img { background: #f5f0e7; }\n.oc-hero { display: grid; gap: 2rem; padding-block: calc(var(--cb-header-height) + 3.5rem) 4rem; }\n.oc-hero-copy { min-inline-size: 0; align-self: center; }\n.oc-hero h1 { max-inline-size: 11ch; margin-block: 0 1.5rem; font-size: clamp(3.25rem, 6vw, 7.5rem); line-height: 1.04; }\n.oc-hero-copy > p:not(.cb-eyebrow) { max-inline-size: 38ch; color: var(--cb-text-muted); }\n.oc-hero-media { margin: 0; min-inline-size: 0; overflow: hidden; }\n.oc-hero-media img { inline-size: 100%; block-size: auto; aspect-ratio: 4 / 3; object-fit: cover; }\n.oc-section { padding-block: var(--cb-section-space); }\n.oc-section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; margin-block-end: 2rem; }\n.oc-section-heading > * { margin-block: 0; }\n.oc-section-heading h2 { max-inline-size: 18ch; font-size: clamp(2.25rem, 4vw, 4.5rem); }\n.oc-category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; }\n.oc-category-card { display: block; min-inline-size: 0; text-decoration: none; }\n.oc-category-card figure { margin-block: 0 1rem; overflow: hidden; }\n.oc-category-card img { inline-size: 100%; aspect-ratio: 1; object-fit: cover; }\n.oc-category-card h3 { margin-block: 1rem .5rem; font-size: clamp(1.5rem, 2.2vw, 2.5rem); }\n.oc-category-card > span { display: block; margin-block-start: 1rem; font-family: var(--cb-font-editorial); font-size: clamp(1.5rem, 2.2vw, 2.5rem); line-height: 1.2; }\n.oc-category-card p { margin: 0; color: var(--cb-text-muted); font-size: .875rem; }\n.oc-category-card:focus-visible { outline-offset: 6px; }\n.oc-benefits { display: grid; gap: 1.5rem; padding-block: 2.5rem; border-block: 1px solid var(--cb-border); }\n.oc-benefits > * { min-inline-size: 0; }\n.oc-benefits :is(h2, h3) { font-size: 1.375rem; margin-block-end: .75rem; }\n.oc-benefits p { margin: 0; color: var(--cb-text-muted); font-size: .9375rem; }\n.oc-editorial { display: grid; gap: 2rem; align-items: center; background: var(--cb-surface); padding: clamp(1.5rem, 4vw, 4rem); }\n.oc-editorial-media { margin: 0; min-inline-size: 0; }\n.oc-editorial-media img { inline-size: 100%; block-size: auto; }\n.oc-editorial-copy { min-inline-size: 0; max-inline-size: 42ch; }\n.oc-editorial h2 { font-size: clamp(2.5rem, 4vw, 4.75rem); }\n.oc-editorial-copy p { color: var(--cb-text-muted); }\n@media (min-width: 40rem) { .oc-category-grid { gap: 2rem; } .oc-benefits { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; } }\n@media (min-width: 52rem) { .oc-hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); padding-block-end: 5rem; } .oc-hero-copy { grid-column: 2; grid-row: 1; } .oc-hero-media { grid-column: 1; grid-row: 1; } .oc-hero-media img { aspect-ratio: 4 / 5; max-block-size: 45rem; } .oc-category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .oc-editorial { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(2rem, 5vw, 5rem); } }"
+  }
+}

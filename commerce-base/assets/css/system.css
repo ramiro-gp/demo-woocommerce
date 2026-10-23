@@ -4,20 +4,21 @@
   --cb-layer-overlay: 100;
   --cb-layer-skip-link: 200;
   color-scheme: light;
-  --cb-background: #f3f0e8;
-  --cb-surface: #e9e5db;
-  --cb-surface-elevated: #e0dfd3;
-  --cb-text: #202a24;
-  --cb-notice-text: #202a24;
-  --cb-text-muted: #586157;
-  --cb-border: #777e70;
-  --cb-accent: #405b35;
-  --cb-accent-hover: #30472a;
-  --cb-accent-contrast: #faf9f2;
-  --cb-focus: #285f7b;
-  --cb-success: #256449;
-  --cb-warning: #86531c;
-  --cb-danger: #a0372b;
+  /* Native Site Editor palette drives every shared commerce component. */
+  --cb-background: var(--wp--preset--color--background, #f3f0e8);
+  --cb-surface: var(--wp--preset--color--surface, #e9e5db);
+  --cb-surface-elevated: var(--wp--preset--color--surface-elevated, #e0dfd3);
+  --cb-text: var(--wp--preset--color--text, #202a24);
+  --cb-notice-text: var(--wp--custom--notice-text, #202a24);
+  --cb-text-muted: var(--wp--preset--color--text-muted, #586157);
+  --cb-border: var(--wp--preset--color--border, #777e70);
+  --cb-accent: var(--wp--preset--color--accent, #405b35);
+  --cb-accent-hover: var(--wp--preset--color--accent-hover, #30472a);
+  --cb-accent-contrast: var(--wp--preset--color--accent-contrast, #faf9f2);
+  --cb-focus: var(--wp--preset--color--focus, #285f7b);
+  --cb-success: var(--wp--preset--color--success, #256449);
+  --cb-warning: var(--wp--preset--color--warning, #86531c);
+  --cb-danger: var(--wp--preset--color--danger, #a0372b);
   --cb-radius-sm: 3px;
   --cb-control-selected: var(--cb-accent);
   --cb-control-mark: var(--cb-accent-contrast);
@@ -55,37 +56,37 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --cb-background: #171f1b;
-  --cb-surface: #222c25;
-  --cb-surface-elevated: #2d382f;
-  --cb-text: #f0eee4;
-  --cb-text-muted: #b2bbae;
-  --cb-border: #788574;
-  --cb-accent: #c5d6a2;
-  --cb-accent-hover: #d9e6bd;
-  --cb-accent-contrast: #1c281e;
-  --cb-focus: #93c3e0;
-  --cb-success: #86cdb0;
-  --cb-warning: #e5bc72;
-  --cb-danger: #f0a295;
+  --wp--preset--color--background: var(--wp--custom--dark--background, #171f1b);
+  --wp--preset--color--surface: var(--wp--custom--dark--surface, #222c25);
+  --wp--preset--color--surface-elevated: var(--wp--custom--dark--surface-elevated, #2d382f);
+  --wp--preset--color--text: var(--wp--custom--dark--text, #f0eee4);
+  --wp--preset--color--text-muted: var(--wp--custom--dark--text-muted, #b2bbae);
+  --wp--preset--color--border: var(--wp--custom--dark--border, #788574);
+  --wp--preset--color--accent: var(--wp--custom--dark--accent, #c5d6a2);
+  --wp--preset--color--accent-hover: var(--wp--custom--dark--accent-hover, #d9e6bd);
+  --wp--preset--color--accent-contrast: var(--wp--custom--dark--accent-contrast, #1c281e);
+  --wp--preset--color--focus: var(--wp--custom--dark--focus, #93c3e0);
+  --wp--preset--color--success: var(--wp--custom--dark--success, #86cdb0);
+  --wp--preset--color--warning: var(--wp--custom--dark--warning, #e5bc72);
+  --wp--preset--color--danger: var(--wp--custom--dark--danger, #f0a295);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --cb-background: #171f1b;
-    --cb-surface: #222c25;
-    --cb-surface-elevated: #2d382f;
-    --cb-text: #f0eee4;
-    --cb-text-muted: #b2bbae;
-    --cb-border: #788574;
-    --cb-accent: #c5d6a2;
-    --cb-accent-hover: #d9e6bd;
-    --cb-accent-contrast: #1c281e;
-    --cb-focus: #93c3e0;
-    --cb-success: #86cdb0;
-    --cb-warning: #e5bc72;
-    --cb-danger: #f0a295;
+    --wp--preset--color--background: var(--wp--custom--dark--background, #171f1b);
+    --wp--preset--color--surface: var(--wp--custom--dark--surface, #222c25);
+    --wp--preset--color--surface-elevated: var(--wp--custom--dark--surface-elevated, #2d382f);
+    --wp--preset--color--text: var(--wp--custom--dark--text, #f0eee4);
+    --wp--preset--color--text-muted: var(--wp--custom--dark--text-muted, #b2bbae);
+    --wp--preset--color--border: var(--wp--custom--dark--border, #788574);
+    --wp--preset--color--accent: var(--wp--custom--dark--accent, #c5d6a2);
+    --wp--preset--color--accent-hover: var(--wp--custom--dark--accent-hover, #d9e6bd);
+    --wp--preset--color--accent-contrast: var(--wp--custom--dark--accent-contrast, #1c281e);
+    --wp--preset--color--focus: var(--wp--custom--dark--focus, #93c3e0);
+    --wp--preset--color--success: var(--wp--custom--dark--success, #86cdb0);
+    --wp--preset--color--warning: var(--wp--custom--dark--warning, #e5bc72);
+    --wp--preset--color--danger: var(--wp--custom--dark--danger, #f0a295);
   }
 }
 
@@ -459,9 +460,10 @@ body.admin-bar { --cb-admin-offset: 32px; }
   overflow-wrap: anywhere;
 }
 .cb-brand img { max-inline-size: 100%; max-block-size: 3rem; inline-size: auto; object-fit: contain; }
+.cb-header .cb-brand { flex-shrink: 1; min-inline-size: 0; }
 .cb-header-catalog { display: none; }
 .cb-header-search { display: none; }
-.cb-header-actions { display: flex; min-inline-size: 0; align-items: center; gap: var(--cb-space-1); }
+.cb-header-actions { display: flex; flex-shrink: 0; min-inline-size: 0; align-items: center; gap: var(--cb-space-1); }
 /* Approved post-H5 header presentation is shared, including checkout. */
 .cb-header .cb-header-cart { margin: 0; }
 .cb-cart-page-link { position: relative; }

@@ -40,7 +40,12 @@ add_action('after_setup_theme', static function () {
     add_editor_style('assets/css/checkout.css');
     add_editor_style('assets/css/shipping.css');
     add_editor_style('assets/css/legal.css');
-    register_nav_menus(['primary' => __('Navegación principal', 'commerce-base'), 'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base')]);
+    register_nav_menus([
+        'primary' => __('Navegación principal', 'commerce-base'),
+        'footer-shop' => __('Footer: tienda (opcional)', 'commerce-base'),
+        'footer-help' => __('Footer: ayuda (opcional)', 'commerce-base'),
+        'footer-social' => __('Redes del footer (URLs del comercio)', 'commerce-base'),
+    ]);
 });
 
 add_filter('woocommerce_placeholder_img_src', static function ($source) {

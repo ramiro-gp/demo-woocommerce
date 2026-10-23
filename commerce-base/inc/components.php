@@ -45,14 +45,19 @@ add_filter('nav_menu_link_attributes', static function ($attributes, $item, $arg
     return $attributes;
 }, 10, 3);
 
-function commerce_base_navigation() {
+function commerce_base_menu_links($location) {
     $locations = get_nav_menu_locations();
-    $items = !empty($locations['primary']) ? wp_get_nav_menu_items($locations['primary']) : [];
+    $items = !empty($locations[$location]) ? wp_get_nav_menu_items($locations[$location]) : [];
     $links = [];
     foreach ($items ?: [] as $item) {
         if ((int) $item->menu_item_parent !== 0) { continue; }
         $links[] = ['label' => $item->title, 'url' => $item->url, 'target' => $item->target];
     }
+    return $links;
+}
+
+function commerce_base_navigation() {
+    $links = commerce_base_menu_links('primary');
     if (!$links) {
         $links[] = ['label' => __('Catálogo', 'commerce-base'), 'url' => function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/'), 'target' => ''];
         if (function_exists('wc_get_page_permalink')) {
@@ -134,12 +139,14 @@ function commerce_base_footer($attributes = []) {
         }
     }
     if (get_privacy_policy_url()) { $help_links[] = ['url' => get_privacy_policy_url(), 'label' => __('Privacidad', 'commerce-base')]; }
+    if (has_nav_menu('footer-shop')) { $shop_links = commerce_base_menu_links('footer-shop'); }
+    if (has_nav_menu('footer-help')) { $help_links = commerce_base_menu_links('footer-help'); }
     ob_start(); ?>
     <footer class="cb-footer"><div class="cb-container">
         <div class="cb-footer-inner">
             <div class="cb-footer-brand"><a class="cb-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a><p><?php echo esc_html(get_bloginfo('description')); ?></p></div>
-            <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Tienda', 'commerce-base'); ?>"><h2><?php esc_html_e('Tienda', 'commerce-base'); ?></h2><?php foreach ($shop_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
-            <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Ayuda e información', 'commerce-base'); ?>"><h2><?php esc_html_e('Ayuda e información', 'commerce-base'); ?></h2><?php foreach ($help_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
+            <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Tienda', 'commerce-base'); ?>"><h2><?php esc_html_e('Tienda', 'commerce-base'); ?></h2><?php foreach ($shop_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"<?php echo commerce_base_link_target($link['url']); ?>><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
+            <nav class="cb-footer-column" aria-label="<?php esc_attr_e('Ayuda e información', 'commerce-base'); ?>"><h2><?php esc_html_e('Ayuda e información', 'commerce-base'); ?></h2><?php foreach ($help_links as $link) : ?><a class="cb-link" href="<?php echo esc_url($link['url']); ?>"<?php echo commerce_base_link_target($link['url']); ?>><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></nav>
             <?php if (has_nav_menu('footer-social')) : ?><nav class="cb-footer-column" aria-label="<?php esc_attr_e('Redes sociales', 'commerce-base'); ?>"><h2><?php esc_html_e('Encontranos', 'commerce-base'); ?></h2><?php wp_nav_menu(['theme_location' => 'footer-social', 'container' => false, 'depth' => 1, 'fallback_cb' => false]); ?></nav><?php endif; ?>
         </div>
         <?php if (class_exists('CommerceCore\\Legal') && \CommerceCore\Legal::config()) : ?><div class="cb-footer-legal"><?php echo \CommerceCore\Legal::identity(); ?></div><?php endif; ?>

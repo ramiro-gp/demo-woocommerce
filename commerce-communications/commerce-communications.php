@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Commerce Communications
  * Description: Email presentation and clear order copy over native WooCommerce communications.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires Plugins: woocommerce
  * Requires PHP: 7.4
  * Text Domain: commerce-communications
@@ -50,7 +50,7 @@ add_filter('woocommerce_email_styles', static function ($css, $email) {
             #body_content .email-order-details td { padding:10px 2px !important; }
             #body_content .email-order-details .order-item-data td { padding:0 !important; }
             #addresses td { display:block !important; width:100% !important; padding:0 0 24px !important; }
-            #addresses .address { word-break:normal !important; word-wrap:break-word !important; }
+            #addresses .address { word-break:normal !important; word-wrap:break-word !important; overflow-wrap:anywhere !important; }
         }
     ';
 }, 20, 2);

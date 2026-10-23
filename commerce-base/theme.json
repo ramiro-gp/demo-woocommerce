@@ -13,19 +13,19 @@
       "defaultGradients": false,
       "customGradient": false,
       "palette": [
-        { "slug": "background", "name": "Fondo", "color": "var(--cb-background)" },
-        { "slug": "surface", "name": "Superficie", "color": "var(--cb-surface)" },
-        { "slug": "surface-elevated", "name": "Superficie elevada", "color": "var(--cb-surface-elevated)" },
-        { "slug": "text", "name": "Texto", "color": "var(--cb-text)" },
-        { "slug": "text-muted", "name": "Texto secundario", "color": "var(--cb-text-muted)" },
-        { "slug": "border", "name": "Borde", "color": "var(--cb-border)" },
-        { "slug": "accent", "name": "Acento", "color": "var(--cb-accent)" },
-        { "slug": "accent-hover", "name": "Acento activo", "color": "var(--cb-accent-hover)" },
-        { "slug": "accent-contrast", "name": "Sobre acento", "color": "var(--cb-accent-contrast)" },
-        { "slug": "focus", "name": "Foco", "color": "var(--cb-focus)" },
-        { "slug": "success", "name": "Éxito", "color": "var(--cb-success)" },
-        { "slug": "warning", "name": "Advertencia", "color": "var(--cb-warning)" },
-        { "slug": "danger", "name": "Error", "color": "var(--cb-danger)" }
+        { "slug": "background", "name": "Fondo", "color": "#f3f0e8" },
+        { "slug": "surface", "name": "Superficie", "color": "#e9e5db" },
+        { "slug": "surface-elevated", "name": "Superficie elevada", "color": "#e0dfd3" },
+        { "slug": "text", "name": "Texto", "color": "#202a24" },
+        { "slug": "text-muted", "name": "Texto secundario", "color": "#586157" },
+        { "slug": "border", "name": "Borde", "color": "#777e70" },
+        { "slug": "accent", "name": "Acento", "color": "#405b35" },
+        { "slug": "accent-hover", "name": "Acento activo", "color": "#30472a" },
+        { "slug": "accent-contrast", "name": "Sobre acento", "color": "#faf9f2" },
+        { "slug": "focus", "name": "Foco", "color": "#285f7b" },
+        { "slug": "success", "name": "Éxito", "color": "#256449" },
+        { "slug": "warning", "name": "Advertencia", "color": "#86531c" },
+        { "slug": "danger", "name": "Error", "color": "#a0372b" }
       ]
     },
     "spacing": {
@@ -90,6 +90,14 @@
         { "slug": "heading", "name": "Título", "size": "clamp(2.5rem, 1.75rem + 3vw, 5rem)", "fluid": false },
         { "slug": "display", "name": "Editorial", "size": "clamp(3.5rem, 1.5rem + 5.5vw, 8rem)", "fluid": false }
       ]
+    },
+    "custom": {
+      "dark": {
+        "background": "#171f1b", "surface": "#222c25", "surfaceElevated": "#2d382f",
+        "text": "#f0eee4", "textMuted": "#b2bbae", "border": "#788574",
+        "accent": "#c5d6a2", "accentHover": "#d9e6bd", "accentContrast": "#1c281e",
+        "focus": "#93c3e0", "success": "#86cdb0", "warning": "#e5bc72", "danger": "#f0a295"
+      }
     },
     "shadow": {
       "defaultPresets": false

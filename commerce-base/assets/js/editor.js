@@ -1,6 +1,6 @@
 (function (blocks, element, blockEditor, components, ServerSideRender) {
     'use strict';
-    const names = { header: 'Header', footer: 'Footer', 'product-grid': 'Grilla de productos', 'category-links': 'Categorías del catálogo', 'search-tools': 'Búsqueda y navegación', 'catalog-heading': 'Cabecera del catálogo', 'product-card': 'Producto de la colección', 'product-information': 'Información y guía de talles' };
+    const names = { header: 'Header', footer: 'Footer', 'product-grid': 'Grilla de productos', 'category-links': 'Categorías del catálogo', 'search-tools': 'Búsqueda y navegación', 'catalog-heading': 'Cabecera del catálogo', 'product-card': 'Producto de la colección', 'product-information': 'Información del producto y guía opcional' };
     const create = element.createElement;
     Object.entries(names).forEach(([slug, title]) => {
         const attributes = {};
