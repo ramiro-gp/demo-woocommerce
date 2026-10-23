@@ -2,6 +2,8 @@
 
 Fecha: **23/10/2026, Argentina**. Alcance: distribución reutilizable, investigación oficial, procedimientos y laboratorio exclusivamente local. **H11 TECHNICAL READY. PRODUCTION NOT READY; lanzamiento NO AUTORIZADO.** Nada de este informe autoriza ventas, pagos, correo real, contratación, DNS o publicación.
 
+**Cierre documental formal de H11 — 23/10/2026:** se incorporan los datos reales de hPanel aportados por el titular y su decisión definitiva de conservar Premium Web Hosting legacy. Esta actualización modifica únicamente los dos informes de hosting/preparación: no cambia código ni paquetes, no repite QA funcional, no inicia hitos ni ejecuta pruebas de carga o trabajos remotos. Los PASS de este documento corresponden al laboratorio H11 ya registrado, no a Hostinger.
+
 ## 1. H10 consolidado y alcance preservado
 
 Repositorio `ramiro-gp/demo-woocommerce`. Antes de trabajar se comprobó la rama aprobada, árbol limpio, fetch, coincidencia con el remoto y los commits completos:
@@ -19,21 +21,45 @@ No se ejecutaron seeds, pedidos, restauraciones ni cambios de contenido en TRAMA
 
 En H11 el intento de arrancar Desktop reprodujo el error AF_UNIX del socket `dockerInference`. Se cerró el intento fallido y se preservaron exclusivamente los dos directorios de sockets, con sufijo `.h11-stale-<fecha>`, sin borrar volúmenes, imágenes, bases o WSL. El motor volvió a arrancar, versión 29.6.1. Los contenedores ajenos se dejaron bajo sus propias políticas de reinicio; no se ejecutaron comandos de modificación sobre ellos. No hubo prune, reset de fábrica ni reinstalación.
 
-**DockerAI no se restauró.** Reactivarlo implica una configuración global y un posible reinicio con impacto en otros proyectos, además de riesgo de reproducir el fallo. Requiere aprobación explícita y una prueba controlada/fix del proveedor. Los respaldos se conservan; no se debe copiar el JSON antiguo entero sobre configuraciones nuevas. [Documentación Gordon](https://docs.docker.com/ai/gordon/how-to/docker-desktop/), [incidencia oficial aún abierta consultada](https://github.com/docker/desktop-feedback/issues/531).
+**DockerAI no se restauró y el titular no autoriza por ahora su reactivación.** Se mantiene desactivado según el último estado documentado; no se modifican configuraciones globales ni se reinicia Docker para recuperarlo. La actualización documental no interviene en el motor operativo. Una eventual reconsideración requiere una nueva autorización expresa por el impacto global y riesgo de repetir el fallo; no queda como tarea pendiente que impida cerrar H11. Los respaldos se conservan; no se debe copiar el JSON antiguo entero sobre configuraciones nuevas. [Documentación Gordon](https://docs.docker.com/ai/gordon/how-to/docker-desktop/), [incidencia oficial consultada durante la investigación H11](https://github.com/docker/desktop-feedback/issues/531).
 
 ## 3. Decisión económica y aislamiento
 
-El titular confirmó **Premium contratado con hasta 25 sitios y aproximadamente 3 en uso**. Vencimiento, renovación/moneda y límites efectivos siguen pendientes por su decisión expresa; no bloquean H11. No se equipara ese contrato al Premium nuevo. No hubo acceso a su hPanel ni modificación de configuración global para instalar un conector.
+**Datos verificados por el titular en hPanel y comunicados el 23/10/2026**, sin inspección directa del agente ni factura revisada. Sustituyen la estimación anterior de aproximadamente 3 sitios y los campos contractuales entonces desconocidos:
 
-La [comparación completa](h11-hosting-decision.md) recomienda conservar por ahora el plan ya pagado para el uso compatible con su contrato. Para el primer ecommerce real, preferir titularidad/cuenta propias del cliente y hosting administrado: candidato económico Unlimited/Business sujeto a contrato, presupuesto de renovación y QA privada remota. Landings de bajo riesgo pueden agruparse; ecommerce moderado o independiente necesita evaluación y aislamiento propios. Bases separadas dentro de una misma cuenta de sistema no constituyen aislamiento de seguridad completo. El VPS autogestionado queda descartado como opción inicial por su carga operativa.
+| Campo de la suscripción | Dato aportado |
+| --- | --- |
+| Producto | **Premium Web Hosting — legacy** |
+| Sitios permitidos / creados | **25 / 8** |
+| Disco / inodos | **25 GB / 400.000** |
+| CPU / RAM | **1 núcleo / 2048 MB**, compartidos por la suscripción |
+| Procesos / PHP workers | **80 / 40**, límites distintos; no garantizan concurrencia de checkout |
+| Ancho de banda | Ilimitado según el campo mostrado, sin implicar CPU/RAM ilimitadas |
+| Servidor / backups | **South America (Brazil) / Estados Unidos** |
+| Uso de Recursos observado | **0,04 GB de disco / 763 inodos**; alcance agregado de los ocho sitios no comprobado |
+| Renovación mostrada actualmente | **ARS 130.788** |
+| Renovación automática | **Activada**, sin cambios |
+| Próxima facturación / vencimiento | **15/08/2029 / 29/08/2029** |
 
-| Referencia pública, no cotización de la cuenta | Primer período | Renovación publicada |
+**Decisión del titular: conservar Premium. No actualizar a Unlimited, contratar otro servicio, renovar anticipadamente, cambiar de hosting ni modificar suscripción/facturación.** Premium queda destinado a las webs actuales, landings y eventuales pruebas controladas autorizadas por separado. La [evaluación completa](h11-hosting-decision.md) conserva las alternativas como referencias informativas, sin recomendar ni ejecutar un cambio del plan existente.
+
+Para ecommerce reales se priorizarán cuentas administradas independientes, preferentemente contratadas por el propio cliente, cuando aislamiento, volumen de ventas, recursos o autonomía lo justifiquen. No se agrupan tiendas indiscriminadamente bajo el Premium. El VPS autogestionado sigue descartado como opción inicial por su carga operativa; cualquier elección futura de un cliente requerirá su evaluación y autorización propias.
+
+**Evaluación técnica, sin mediciones de carga:** un núcleo y 2048 MB constituyen el presupuesto compartido del plan, no de cada sitio ni de cada worker. Solicitudes dinámicas de WooCommerce y cron/colas/administración de distintos sitios pueden competir por CPU y memoria, con límites de I/O/DB/conexiones aún por conocer. Los 40 workers y 80 procesos no garantizan ese número de checkouts fluidos; la caché pública no elimina el trabajo privado de carrito/checkout/Store API. El cupo de 25 sitios no es capacidad para 25 WooCommerce, y los ocho creados tampoco revelan su carga o actividad.
+
+Las lecturas de 0,04 GB/763 inodos no se extrapolan a CPU, RAM, margen disponible o visitas. Falta comprobar selector/alcance de pantalla, período/actualización y correspondencia con los ocho sitios. No se inspeccionaron sus aplicaciones ni se hizo instalación, QA remoto o prueba de carga en Hostinger o sitios públicos. Premium puede ser candidato a una instalación controlada si sus servicios cumplen H11; **no está validado para WooCommerce en producción**.
+
+Bases y usuarios SQL separados deben complementarse con restricciones reales de archivos y usuarios de sistema: PHP comprometido bajo permisos compartidos podría alcanzar archivos/credenciales de otros sitios. No se verificó aislamiento remoto entre estos sitios. Brasil como región de servidor no demuestra latencia efectiva; backups en EE.UU. requieren revisar cobertura, acceso/cifrado, retención y tratamiento/transferencias con el titular/asesores antes de datos reales. La ubicación de la copia no acredita por sí sola privacidad, independencia de cuenta ni recuperación.
+
+| Referencia económica | Primer período / estado | Renovación mostrada o publicada |
 | --- | --- | --- |
-| Hostinger Unlimited AR | ARS 239.952 adelantados por 48 meses; equivalente ARS 4.999/mes | ARS 21.999/mes; equivalente aritmético ARS 263.988/año |
-| SiteGround GrowBig | USD 59,88 por 12 meses, cálculo de USD 4,99/mes | USD 359,88 por 12 meses, cálculo de USD 29,99/mes |
-| Premium del titular | Ya contratado; importe y vencimiento no confirmados | **Pendiente de hPanel/factura** |
+| **Premium legacy del titular — seleccionado** | Contratado; importe original no aportado. Vencimiento mostrado 29/08/2029; H11 no añade compras ni renovación anticipada | **ARS 130.788** actualmente en hPanel; ciclo e impuestos pendientes, sin garantía para 2029 |
+| Hostinger Unlimited AR — referencia pública, no seleccionado | ARS 239.952 adelantados por 48 meses; equivalente ARS 4.999/mes | ARS 21.999/mes; equivalente aritmético ARS 263.988/año |
+| SiteGround GrowBig — referencia pública, no contratado | USD 59,88 por 12 meses, cálculo de USD 4,99/mes | USD 359,88 por 12 meses, cálculo de USD 29,99/mes |
 
-Precios públicos consultados el 23/10/2026; impuestos/extras no incluidos. No se presenta el equivalente anual de una promoción de 48 meses como contratación anual disponible. Cada cliente con cuenta individual suma el plan completo, dominio, transporte de email, backup externo, licencias que se elijan y mantenimiento acordado. Dentro del cupo del Premium podría no haber cargo incremental de instalación, pero no se garantiza capacidad ni costo operativo cero. [Hostinger AR](https://www.hostinger.com/ar/hosting-web), [SiteGround WooCommerce](https://www.siteground.com/woocommerce-hosting.htm).
+Los precios públicos se conservan de la investigación H11 del 23/10/2026, sin volver a consultarlos en esta actualización; impuestos/extras no incluidos. El importe de hPanel es un dato distinto: sin ciclo confirmado no se mensualiza, anualiza ni calcula ahorro frente a esas ofertas. No es un precio garantizado hasta 2029 ni una oferta anticipada aceptada. La próxima facturación del 15/08/2029 y el vencimiento del 29/08/2029 son campos separados, sin inferir la causa de su diferencia. Permanecen pendientes desglose fiscal, ciclo e importe original. [Hostinger AR](https://www.hostinger.com/ar/hosting-web), [SiteGround WooCommerce](https://www.siteground.com/woocommerce-hosting.htm).
+
+Conservar Premium no añade una contratación por H11. El costo incremental de futuras instalaciones no se deriva del cupo de sitios: hay consumo y mantenimiento, y servicios/dominios/email/backup pueden tener costos propios. Una cuenta independiente de un cliente requiere presupuesto completo y autorización futura; no se inventan precios ni condiciones comerciales.
 
 ## 4. Distribución y compatibilidad
 
@@ -51,6 +77,8 @@ Precios públicos consultados el 23/10/2026; impuestos/extras no incluidos. No s
 Los artefactos están en `.local/h11-release/1.0.0/`, ignorados por Git; se regeneran desde las fuentes. El material de entrega `support/` mantiene documentación y preflight/inicialización separados del webroot. Los ZIP no contienen WordPress, WooCommerce, MP, DB, credenciales, usuarios/pedidos/legales QA, logs, backups, uploads, fotografías editoriales DEMO, patrones hero/story, showcase ni preset ORIGEN CASA. Los originales DEMO siguen en el repositorio, optativos y fuera de esta distribución.
 
 Producción utiliza WordPress/WooCommerce oficiales, PHP y DB del hosting, instaladores nativos/WP-CLI y sus propios medios/configuración. **No utiliza Compose en producción**. `initialize.php` es opt-in y sólo acepta una instalación nueva: comprueba usuarios/contenido/historia/ajustes, mantiene noindex/Coming Soon y apaga gateways. El contenido comercial se configura desde cero; no se entrega una copia de las demos.
+
+La arquitectura de distribución permite evaluar una instalación futura sin Docker; su compatibilidad específica con Premium sigue pendiente. Faltan versiones/parches de PHP web y CLI, extensiones y `memory_limit`, motor/versión/tamaño/conexiones de DB, I/O/IOPS, SSH/WP-CLI, permisos, SSL, cron/Action Scheduler y caché efectivos. No se deduce memoria PHP a partir de los 2048 MB del plan. Los ZIP y resultados de instalación local permanecen sin cambios; no se ejecutó preflight ni se instaló la distribución en Hostinger.
 
 El laboratorio usa WP 7.1.3, WooCommerce 11.2.1, PHP 8.4.27, MariaDB 10.11.19 y WP-CLI 2.12.0, con imágenes fijadas. Tres proyectos/volúmenes propios: fuente `qa` :8184, destino `restore` :8185 y repetición sin fixture :8188. Mailpit sólo loopback :8186/:8187/:8189; MariaDB sin puerto publicado. El código funcional se instaló desde los ZIP, **sin bind del repositorio**. Los únicos montajes de herramientas son de laboratorio. [Infraestructura](evidence/h11/infrastructure.json).
 
@@ -85,11 +113,12 @@ El clon retiene configuración/salts propios de destino para no reutilizar crede
 
 | Área | Preparado / pendiente | Responsable y criterio de cierre |
 | --- | --- | --- |
-| Hosting | Comparación preparada; contrato y prueba real pendientes | Titular aporta factura/hPanel; técnico verifica PHP web/CLI, DB, recursos, cron, caché, SSL, SSH y restore en destino autorizado |
+| Hosting | **Premium legacy seleccionado**; límites y campos de facturación aportados por el titular; validación remota pendiente | Completar ciclo/impuestos, alcance de consumo, límites restantes y aislamiento; verificar PHP web/CLI, DB, cron, caché, SSL, SSH y restore sólo con autorización posterior |
 | Backups | Procedimiento y ensayo local; operación externa pendiente | Técnico/proveedor y suplente acordados: DB horaria/RPO orientativo ≤1 h, archivos diarios, completo semanal, retención y copia externa cifrada. RTO 4–8 h orientativo sujeto a cobertura/ensayo, sin SLA implícito |
 | Actualizaciones | Reemplazar código, vaciar cachés y comprobar esquema compatible | Técnico: backup actual y staging; jamás empujar DB de staging sobre pedidos recientes. Cambios de esquema/versiones requieren ensayo propio |
 | Recuperación | Restaurar aislado, proteger primero estado actual y conciliar posteriores | Técnico + comercio: inventario de pedidos/pagos/stock/cuentas/solicitudes posteriores y conciliación. Un backup antiguo no contiene actividad posterior |
 | Email | Un transporte SMTP/API futuro; SPF/DKIM/DMARC y matriz preparados | Titular elige proveedor/remitentes/destinatarios y autoriza prueba; técnico comprueba recepción autenticada, límites/rebotes/alertas/privacidad. Sin emails reales durante H11 |
+| Privacidad y ubicación de datos | Servidor Brasil y backups EE.UU. informados por el titular; revisión productiva pendiente | Comercio/asesores/técnico revisan tratamiento/transferencias, proveedores, retención, acceso y cifrado; ubicación por sí sola no acredita cumplimiento |
 | Dominio/DNS/HTTPS | Procedimientos NIC/Hostinger/otros y preservación de MX/TXT existentes | Titular autoriza cambio concreto; técnico inventaría zona, prueba TLS/canonical/www/IPv6 y prepara reversión. No transferencias ni modificaciones realizadas |
 | Caché | Exclusiones privadas y Store API comprobadas en origen local | Técnico valida caché real del proveedor, cookies y sesiones; un único sistema elegido. OPcache local sí, object cache sólo si disponible; sin plugins superpuestos por defecto |
 | Seguridad | Roles mínimos, MFA/canales, parches, logs privados, alertas e incidentes definidos | Cliente/proveedor/técnico asignan cuentas, accesos, aislamiento y cobertura. No se ha configurado MFA/monitoring remoto ni offsite en una cuenta real |
@@ -106,7 +135,7 @@ El [runbook](h11-deployment-runbook.md) contiene los pasos de instalación, actu
 | --- | --- | --- |
 | A. Código de la plantilla | **READY** | Código funcional/ZIP limpios y QA representativa; no incluye aprobación de MP |
 | B. Instalación local reproducible | **READY** | Instalación nueva por ZIP y repetición completa con script final |
-| C. Hosting seleccionado y validado | **PENDIENTE DE DATOS** | Contrato Premium y prueba del host candidato aún no verificados |
+| C. Hosting seleccionado y validado | **PENDIENTE DE DATOS** | **Selección Premium legacy confirmada**, con límites y facturación aportados. Quedan datos técnicos/fiscales y QA remoto; no está validado para producción |
 | D. Staging remoto | **NO REALIZADO** | No hubo entorno remoto autorizado |
 | E. Seguridad y backups | **CONDICIONAL** | Controles/procedimientos locales; cifrado/offsite/MFA/monitoring y recuperación remota pendientes |
 | F. Emails reales | **NO CONFIGURADOS** | Sólo Mailpit; no autorización de envío real |
@@ -116,14 +145,18 @@ El [runbook](h11-deployment-runbook.md) contiene los pasos de instalación, actu
 
 ## 8. Acciones manuales y límites de entrega
 
-1. Completar cuando esté disponible la ficha real de hPanel/factura, sin compartir secretos. Comparar presupuesto total de alta/renovación/upgrade, impuestos y extras; no contratar desde este informe.
+1. Conservar Premium y la configuración de facturación existente. Completar ciclo e impuestos del importe mostrado, factura/período original y datos técnicos aún ausentes; no solicitar ni aceptar upgrade o renovación anticipada como parte de H11.
 2. Elegir el cliente/modelo de titularidad/aislamiento, responsable operativo, cobertura y presupuesto real. Reunir identidad, catálogo, medios, condiciones, datos fiscales y revisión del titular/asesores.
 3. Autorizar separadamente un staging remoto restringido; ejecutar allí compatibilidad, restore, cron sin visitas, caché y TLS reales. El laboratorio no certifica LiteSpeed ni recursos del Premium heredado.
 4. Elegir y autorizar proveedor/dominio/destinatarios para correo real; resolver pagos reales en un trabajo separado, conservando el bloqueo MP.
 5. Revisar H11 antes de integrar su rama a main. Aprobar cada publicación/DNS/pago/envío concreto sólo cuando sus gates estén cerrados.
-6. Si se desea recuperar Gordon, solicitar y aprobar una prueba global controlada tras revisar el fallo de Docker; no se reactiva como parte del lanzamiento de una tienda.
+6. Mantener Gordon desactivado y no modificar configuraciones globales ni reiniciar Docker para reactivarlo: el titular lo denegó por ahora. No queda una aprobación de Gordon pendiente para cerrar este hito.
 
-No hubo publicación, compras, cambios DNS, pagos reales, envío externo ni cuentas Google conectadas. El entorno local HTTP no demuestra Secure cookies/TLS, entregabilidad, rendimiento bajo carga, límites contractuales ni aislamiento entre clientes del proveedor. Los tiempos locales del ensayo no son un RTO productivo.
+No hubo publicación, compras, cambios DNS, pagos reales, envío externo ni cuentas Google conectadas. El entorno local HTTP no demuestra Secure cookies/TLS, entregabilidad, rendimiento bajo carga ni aislamiento entre clientes del proveedor. Los límites de plan ahora aportados no demuestran esas prestaciones. Los tiempos locales del ensayo no son un RTO productivo.
+
+**Efecto de esta actualización:** se completa la identificación del Premium, sus límites principales, ubicaciones, ocho sitios, importe mostrado y fechas; se cierra la elección de infraestructura existente. No cambia la conclusión técnica local ni levanta bloqueos de staging remoto, Mercado Pago, correo real, privacidad, configuración legal o lanzamiento. La información todavía pendiente pertenece a validación productiva y futuras decisiones autorizadas; no mantiene abierto el desarrollo de H11.
+
+**H11 queda formalmente cerrado como hito técnico y documental**, en `codex/h11-production-readiness` para revisión, sin merge a main. Esta actualización sólo requiere revisión documental, commit y push; no se repiten pruebas funcionales ni se regeneran paquetes, y no se comienza un hito nuevo.
 
 **H11 TECHNICAL READY.**
 
