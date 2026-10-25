@@ -1,0 +1,330 @@
+{
+  "result": "passed",
+  "checks": [
+    {
+      "name": "http://localhost:8190 GET /%77p-login.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /%77p-login.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 GET /%77p-signup.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /%77p-signup.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 GET /%77p-activate.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /%77p-activate.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 GET /%78mlrpc.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /%78mlrpc.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 GET /%77p-cron.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /%77p-cron.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 GET /wc%2dapi/WC_Gateway_BACS/ denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /wc%2dapi/WC_Gateway_BACS/ noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 OPTIONS /?rest_route=/wc/v2/system_status/tools denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /?rest_route=/wc/v2/system_status/tools noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 catalog still available",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 simple fixture available",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 cart remains available for token-protected negatives",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 private cart token issued",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 PATCH /?rest_route=/wc/store/v1/checkout denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /?rest_route=/wc/store/v1/checkout noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST /?rest_route=/wc/store/v1/checkout denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /?rest_route=/wc/store/v1/checkout noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST /?rest_route=/wc/store/v1/batch denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /?rest_route=/wc/store/v1/batch noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST /?rest_route=/wc/store/v1/batch denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /?rest_route=/wc/store/v1/batch noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 POST /?rest_route=/wc/store/v1/batch denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 /?rest_route=/wc/store/v1/batch noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 GET /%77p-login.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /%77p-login.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 GET /%77p-signup.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /%77p-signup.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 GET /%77p-activate.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /%77p-activate.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 GET /%78mlrpc.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /%78mlrpc.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 GET /%77p-cron.php denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /%77p-cron.php noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 GET /wc%2dapi/WC_Gateway_BACS/ denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /wc%2dapi/WC_Gateway_BACS/ noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 OPTIONS /?rest_route=/wc/v2/system_status/tools denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /?rest_route=/wc/v2/system_status/tools noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 catalog still available",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 simple fixture available",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST / denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 / noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 cart remains available for token-protected negatives",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 private cart token issued",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 PATCH /?rest_route=/wc/store/v1/checkout denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /?rest_route=/wc/store/v1/checkout noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST /?rest_route=/wc/store/v1/checkout denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /?rest_route=/wc/store/v1/checkout noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST /?rest_route=/wc/store/v1/batch denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /?rest_route=/wc/store/v1/batch noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST /?rest_route=/wc/store/v1/batch denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /?rest_route=/wc/store/v1/batch noindex response",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 POST /?rest_route=/wc/store/v1/batch denied on server",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 /?rest_route=/wc/store/v1/batch noindex response",
+      "passed": true
+    }
+  ],
+  "origins": [
+    "http://localhost:8190",
+    "http://localhost:8191"
+  ],
+  "externalServices": false
+}

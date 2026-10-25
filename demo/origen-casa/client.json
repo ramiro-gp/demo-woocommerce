@@ -35,6 +35,12 @@
     "woocommerce_email_header_alignment": "left",
     "woocommerce_email_footer_text": "{site_title}\nObjetos para habitar · tienda ficticia DEMO.\nNo realizar transferencias reales. Atención: {store_email}"
   },
+  "emails": {
+    "customer_completed_order": {
+      "subject": "[{site_title}] Finalizamos tu pedido #{order_number}",
+      "heading": "Pedido completado"
+    }
+  },
   "legal": {
     "trade_name": "ORIGEN CASA · tienda ficticia DEMO",
     "legal_name": "DEMO · titular pendiente de completar antes de publicar",

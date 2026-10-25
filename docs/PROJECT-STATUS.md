@@ -1,5 +1,11 @@
 # TRAMA / Commerce Base — Estado del proyecto
 
+## Actualización D2 — 25/10/2026
+
+En `codex/d2-commercial-demos`, descendiente de D1 y D1.1 sin duplicar commits, se verificó el importador CSV nativo con Shop Manager: 120 simples, 20 variables, 80 variaciones y actualización exclusiva de 200 SKU conservando datos comerciales. [Resultado y límites](d2-bulk-import.md), [manual y plantillas](d1-seller-guide.md#carga-masiva-desde-excel).
+
+El asunto de Completado de ORIGEN CASA se corrigió mediante configuración nativa reutilizable y se comprobó en Mailpit; el texto aprobado de TRAMA se conserva. El modo DEMO D1 pasó otra vez 349 comprobaciones HTTP/navegador y sus auditorías de privacidad, sin MP ni pedidos. Se preparó [el plan Hostinger con GO/NO-GO individual](d2-demo-deployment.md). Faltan lecturas internas de la cuenta: **D2-A PREPARATION: NOT READY** para cierre completo. **REMOTE DEPLOYMENT: NOT AUTHORIZED**. No hay sitios, DB, DNS, archivos ni SSL modificados remotamente. `main` y `template-v1.0.0-rc1` conservan el cierre H0–H11 descrito a continuación.
+
 Referencia de cierre: **23/10/2026, Argentina**. Repositorio: [ramiro-gp/demo-woocommerce](https://github.com/ramiro-gp/demo-woocommerce).
 
 **TEMPLATE TECHNICAL READY.**

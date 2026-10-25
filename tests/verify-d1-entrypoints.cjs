@@ -31,6 +31,6 @@ async function denied(base,route,init={}){
   }
   report.result='passed';
 })().catch(error=>{report.result='failed';report.failedAt=current;console.error(error.message);process.exitCode=1;}).finally(()=>{
-  fs.mkdirSync('docs/evidence/d1',{recursive:true});fs.writeFileSync('docs/evidence/d1/entrypoints.json',JSON.stringify(report,null,2)+'\n');
+  const out=process.env.D1_EVIDENCE_DIR||'docs/evidence/d1';fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/entrypoints.json',JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({result:report.result,checks:report.checks.length,failedAt:report.failedAt}));
 });

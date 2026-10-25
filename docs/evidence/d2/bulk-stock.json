@@ -1,0 +1,159 @@
+{
+  "stage": "stock",
+  "result": "passed",
+  "origin": "http://localhost:8196",
+  "checks": [
+    {
+      "name": "Genuine Shop Manager logs in",
+      "passed": true
+    },
+    {
+      "name": "stock maps SKU",
+      "passed": true
+    },
+    {
+      "name": "stock maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "All 200 final quantities match CSV",
+      "passed": true
+    },
+    {
+      "name": "All commercial properties preserved for all 220 records",
+      "passed": true
+    },
+    {
+      "name": "No duplicate products and no new records",
+      "passed": true
+    },
+    {
+      "name": "Zero stock sets outofstock including variations",
+      "passed": true
+    }
+  ],
+  "imports": [
+    {
+      "label": "stock",
+      "update": true,
+      "seconds": 6.155,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 200 productos actualizados. Archivo subido: product-stock-ieg5ndhage.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": 432,
+            "percentage": 14,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 30,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 850,
+            "percentage": 28,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 30,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 1268,
+            "percentage": 42,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 30,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 1685,
+            "percentage": 56,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 30,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 2168,
+            "percentage": 72,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 30,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 2652,
+            "percentage": 89,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 30,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 20,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "upload-stock.png",
+    "mapping-stock.png",
+    "result-stock.png"
+  ],
+  "externalRequestsBlocked": 6,
+  "preserved": [
+    "IDs",
+    "types",
+    "parent",
+    "names",
+    "descriptions",
+    "status",
+    "regular prices",
+    "sale prices",
+    "image IDs",
+    "galleries",
+    "categories",
+    "attributes"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "stage": "prices",
+  "result": "passed",
+  "origin": "http://localhost:8196",
+  "checks": [
+    {
+      "name": "Genuine Shop Manager logs in",
+      "passed": true
+    },
+    {
+      "name": "prices maps SKU",
+      "passed": true
+    },
+    {
+      "name": "prices maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Bulk prices and stock update simple and variation",
+      "passed": true
+    },
+    {
+      "name": "Images and categories survive price update",
+      "passed": true
+    }
+  ],
+  "imports": [
+    {
+      "label": "prices",
+      "update": true,
+      "seconds": 1.579,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "regular_price"
+        },
+        {
+          "name": "map_to[2]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 2 productos actualizados. Archivo subido: product-prices-rinehlki3j.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 2,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "upload-prices.png",
+    "mapping-prices.png",
+    "result-prices.png"
+  ],
+  "externalRequestsBlocked": 6
+}

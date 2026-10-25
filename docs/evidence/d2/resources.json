@@ -1,0 +1,395 @@
+{
+  "scope": "Local Docker samples during D2 error probes; not Hostinger capacity or complete import peaks",
+  "samples": [
+    {
+      "utc": "2026-10-25T20:55:28.2606058Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "5.56%",
+          "MemUsage": "259.9MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "12"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "23.89%",
+          "MemUsage": "105.2MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.824MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:32.9037346Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "74.24%",
+          "MemUsage": "256.2MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "12"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "17.23%",
+          "MemUsage": "104.7MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.824MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:37.3036500Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "74.03%",
+          "MemUsage": "252.7MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "12"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "3.57%",
+          "MemUsage": "103.4MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.824MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:41.6300680Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "13.44%",
+          "MemUsage": "256.4MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "12"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "8.99%",
+          "MemUsage": "103.7MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "8.078MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:45.7928031Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "252.7MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "12"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.02%",
+          "MemUsage": "103.3MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.824MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:50.1509155Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "1.82%",
+          "MemUsage": "237.3MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "4.01%",
+          "MemUsage": "103.7MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.824MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:54.4285421Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "236.8MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "103.3MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "2.63%",
+          "MemUsage": "8.609MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:55:58.7772143Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "237.1MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "102.8MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "19"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "8.109MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:03.2529760Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "237MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "3.47%",
+          "MemUsage": "104.7MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.871MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:07.5971812Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "236.4MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "102.8MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.871MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:11.9590993Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "1.64%",
+          "MemUsage": "236.6MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "103MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "8.738MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:15.9931309Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "236.4MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "103.2MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.875MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:20.2616541Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "1.83%",
+          "MemUsage": "237.4MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "103.8MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.875MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:24.3588312Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "8.03%",
+          "MemUsage": "238.5MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "2.81%",
+          "MemUsage": "103.3MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "2.55%",
+          "MemUsage": "9.316MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-25T20:56:28.7082219Z",
+      "containers": [
+        {
+          "Name": "commerce-d2-bulk-web-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "236.6MiB / 15.2GiB",
+          "BlockIO": "0B / 127MB",
+          "PIDs": "11"
+        },
+        {
+          "Name": "commerce-d2-bulk-db-1",
+          "CPUPerc": "0.01%",
+          "MemUsage": "103.5MiB / 15.2GiB",
+          "BlockIO": "5.41MB / 106MB",
+          "PIDs": "18"
+        },
+        {
+          "Name": "commerce-d2-bulk-mail-1",
+          "CPUPerc": "0.00%",
+          "MemUsage": "7.879MiB / 15.2GiB",
+          "BlockIO": "0B / 500kB",
+          "PIDs": "14"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5664 @@
+{
+  "wordpress": "7.1.3",
+  "woocommerce": "11.2.1",
+  "php": "8.4.27",
+  "database": "10.11.19",
+  "manager": {
+    "roles": [
+      "shop_manager"
+    ],
+    "manage_woocommerce": true,
+    "edit_products": true,
+    "import": true,
+    "export": true
+  },
+  "counts": {
+    "simple": 120,
+    "variable": 20,
+    "variation": 80
+  },
+  "products": {
+    "D2-S-0001": {
+      "id": 13,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 1",
+      "description": "Descripción pública ficticia, número 1",
+      "status": "publish",
+      "regular": "12345.67",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 42,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0002": {
+      "id": 14,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 2",
+      "description": "Descripción pública ficticia, número 2",
+      "status": "publish",
+      "regular": "10226",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 62,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0003": {
+      "id": 15,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 3",
+      "description": "Descripción pública ficticia, número 3",
+      "status": "publish",
+      "regular": "10339",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 13,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0004": {
+      "id": 16,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 4",
+      "description": "Descripción pública ficticia, número 4",
+      "status": "publish",
+      "regular": "10452",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 14,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0005": {
+      "id": 17,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 5",
+      "description": "Descripción pública ficticia, número 5",
+      "status": "publish",
+      "regular": "10565",
+      "sale": "9500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 15,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0006": {
+      "id": 18,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 6",
+      "description": "Descripción pública ficticia, número 6",
+      "status": "publish",
+      "regular": "10678",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 16,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0007": {
+      "id": 19,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 7",
+      "description": "Descripción pública ficticia, número 7",
+      "status": "publish",
+      "regular": "10791",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 17,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0008": {
+      "id": 20,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 8",
+      "description": "Descripción pública ficticia, número 8",
+      "status": "publish",
+      "regular": "10904",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 18,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0009": {
+      "id": 21,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 9",
+      "description": "Descripción pública ficticia, número 9",
+      "status": "publish",
+      "regular": "11017",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 19,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0010": {
+      "id": 22,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 10",
+      "description": "Descripción pública ficticia, número 10",
+      "status": "publish",
+      "regular": "11130",
+      "sale": "10000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 20,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0011": {
+      "id": 23,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 11",
+      "description": "Descripción pública ficticia, número 11",
+      "status": "publish",
+      "regular": "11243",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 21,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0012": {
+      "id": 24,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 12",
+      "description": "Descripción pública ficticia, número 12",
+      "status": "publish",
+      "regular": "11356",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 22,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0013": {
+      "id": 25,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 13",
+      "description": "Descripción pública ficticia, número 13",
+      "status": "publish",
+      "regular": "11469",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0014": {
+      "id": 26,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 14",
+      "description": "Descripción pública ficticia, número 14",
+      "status": "publish",
+      "regular": "11582",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0015": {
+      "id": 27,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 15",
+      "description": "Descripción pública ficticia, número 15",
+      "status": "publish",
+      "regular": "11695",
+      "sale": "10500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0016": {
+      "id": 28,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 16",
+      "description": "Descripción pública ficticia, número 16",
+      "status": "publish",
+      "regular": "11808",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0017": {
+      "id": 29,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 17",
+      "description": "Descripción pública ficticia, número 17",
+      "status": "publish",
+      "regular": "11921",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 27,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0018": {
+      "id": 30,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 18",
+      "description": "Descripción pública ficticia, número 18",
+      "status": "publish",
+      "regular": "12034",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0019": {
+      "id": 31,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 19",
+      "description": "Descripción pública ficticia, número 19",
+      "status": "publish",
+      "regular": "12147",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0020": {
+      "id": 32,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 20",
+      "description": "Descripción pública ficticia, número 20",
+      "status": "publish",
+      "regular": "12260",
+      "sale": "11000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0021": {
+      "id": 33,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 21",
+      "description": "Descripción pública ficticia, número 21",
+      "status": "publish",
+      "regular": "12373",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0022": {
+      "id": 34,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 22",
+      "description": "Descripción pública ficticia, número 22",
+      "status": "publish",
+      "regular": "12486",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0023": {
+      "id": 35,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 23",
+      "description": "Descripción pública ficticia, número 23",
+      "status": "publish",
+      "regular": "12599",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 10,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0024": {
+      "id": 36,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 24",
+      "description": "Descripción pública ficticia, número 24",
+      "status": "publish",
+      "regular": "12712",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 11,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0025": {
+      "id": 37,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 25",
+      "description": "Descripción pública ficticia, número 25",
+      "status": "publish",
+      "regular": "12825",
+      "sale": "11500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 12,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0026": {
+      "id": 38,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 26",
+      "description": "Descripción pública ficticia, número 26",
+      "status": "publish",
+      "regular": "12938",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0027": {
+      "id": 39,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 27",
+      "description": "Descripción pública ficticia, número 27",
+      "status": "publish",
+      "regular": "13051",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 14,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0028": {
+      "id": 40,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 28",
+      "description": "Descripción pública ficticia, número 28",
+      "status": "publish",
+      "regular": "13164",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 15,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0029": {
+      "id": 41,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 29",
+      "description": "Descripción pública ficticia, número 29",
+      "status": "publish",
+      "regular": "13277",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 16,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0030": {
+      "id": 42,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 30",
+      "description": "Descripción pública ficticia, número 30",
+      "status": "publish",
+      "regular": "13390",
+      "sale": "12000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 17,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0031": {
+      "id": 43,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 31",
+      "description": "Descripción pública ficticia, número 31",
+      "status": "publish",
+      "regular": "13503",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 18,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0032": {
+      "id": 44,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 32",
+      "description": "Descripción pública ficticia, número 32",
+      "status": "publish",
+      "regular": "13616",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 19,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0033": {
+      "id": 45,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 33",
+      "description": "Descripción pública ficticia, número 33",
+      "status": "publish",
+      "regular": "13729",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 20,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0034": {
+      "id": 46,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 34",
+      "description": "Descripción pública ficticia, número 34",
+      "status": "publish",
+      "regular": "13842",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 21,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0035": {
+      "id": 47,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 35",
+      "description": "Descripción pública ficticia, número 35",
+      "status": "publish",
+      "regular": "13955",
+      "sale": "12500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 22,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0036": {
+      "id": 48,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 36",
+      "description": "Descripción pública ficticia, número 36",
+      "status": "publish",
+      "regular": "14068",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0037": {
+      "id": 49,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 37",
+      "description": "Descripción pública ficticia, número 37",
+      "status": "publish",
+      "regular": "14181",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0038": {
+      "id": 50,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 38",
+      "description": "Descripción pública ficticia, número 38",
+      "status": "publish",
+      "regular": "14294",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0039": {
+      "id": 51,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 39",
+      "description": "Descripción pública ficticia, número 39",
+      "status": "publish",
+      "regular": "14407",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0040": {
+      "id": 52,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 40",
+      "description": "Descripción pública ficticia, número 40",
+      "status": "publish",
+      "regular": "14520",
+      "sale": "13000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 27,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0041": {
+      "id": 53,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 41",
+      "description": "Descripción pública ficticia, número 41",
+      "status": "publish",
+      "regular": "14633",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0042": {
+      "id": 54,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 42",
+      "description": "Descripción pública ficticia, número 42",
+      "status": "publish",
+      "regular": "14746",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0043": {
+      "id": 55,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 43",
+      "description": "Descripción pública ficticia, número 43",
+      "status": "publish",
+      "regular": "14859",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0044": {
+      "id": 56,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 44",
+      "description": "Descripción pública ficticia, número 44",
+      "status": "publish",
+      "regular": "14972",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0045": {
+      "id": 57,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 45",
+      "description": "Descripción pública ficticia, número 45",
+      "status": "publish",
+      "regular": "15085",
+      "sale": "13500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0046": {
+      "id": 58,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 46",
+      "description": "Descripción pública ficticia, número 46",
+      "status": "publish",
+      "regular": "15198",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 10,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0047": {
+      "id": 59,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 47",
+      "description": "Descripción pública ficticia, número 47",
+      "status": "publish",
+      "regular": "15311",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 11,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0048": {
+      "id": 60,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 48",
+      "description": "Descripción pública ficticia, número 48",
+      "status": "publish",
+      "regular": "15424",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 12,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0049": {
+      "id": 61,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 49",
+      "description": "Descripción pública ficticia, número 49",
+      "status": "publish",
+      "regular": "15537",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 13,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0050": {
+      "id": 62,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 50",
+      "description": "Descripción pública ficticia, número 50",
+      "status": "publish",
+      "regular": "15650",
+      "sale": "14000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 14,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0051": {
+      "id": 63,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 51",
+      "description": "Descripción pública ficticia, número 51",
+      "status": "publish",
+      "regular": "15763",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 15,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0052": {
+      "id": 64,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 52",
+      "description": "Descripción pública ficticia, número 52",
+      "status": "publish",
+      "regular": "15876",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0053": {
+      "id": 65,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 53",
+      "description": "Descripción pública ficticia, número 53",
+      "status": "publish",
+      "regular": "15989",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 17,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0054": {
+      "id": 66,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 54",
+      "description": "Descripción pública ficticia, número 54",
+      "status": "publish",
+      "regular": "16102",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 18,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0055": {
+      "id": 67,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 55",
+      "description": "Descripción pública ficticia, número 55",
+      "status": "publish",
+      "regular": "16215",
+      "sale": "14500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 19,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0056": {
+      "id": 68,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 56",
+      "description": "Descripción pública ficticia, número 56",
+      "status": "publish",
+      "regular": "16328",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 20,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0057": {
+      "id": 69,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 57",
+      "description": "Descripción pública ficticia, número 57",
+      "status": "publish",
+      "regular": "16441",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 21,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0058": {
+      "id": 70,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 58",
+      "description": "Descripción pública ficticia, número 58",
+      "status": "publish",
+      "regular": "16554",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 22,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0059": {
+      "id": 71,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 59",
+      "description": "Descripción pública ficticia, número 59",
+      "status": "publish",
+      "regular": "16667",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0060": {
+      "id": 72,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 60",
+      "description": "Descripción pública ficticia, número 60",
+      "status": "publish",
+      "regular": "16780",
+      "sale": "15000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0061": {
+      "id": 73,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 61",
+      "description": "Descripción pública ficticia, número 61",
+      "status": "publish",
+      "regular": "16893",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0062": {
+      "id": 74,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 62",
+      "description": "Descripción pública ficticia, número 62",
+      "status": "publish",
+      "regular": "17006",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0063": {
+      "id": 75,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 63",
+      "description": "Descripción pública ficticia, número 63",
+      "status": "publish",
+      "regular": "17119",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 27,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0064": {
+      "id": 76,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 64",
+      "description": "Descripción pública ficticia, número 64",
+      "status": "publish",
+      "regular": "17232",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0065": {
+      "id": 77,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 65",
+      "description": "Descripción pública ficticia, número 65",
+      "status": "publish",
+      "regular": "17345",
+      "sale": "15500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0066": {
+      "id": 78,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 66",
+      "description": "Descripción pública ficticia, número 66",
+      "status": "publish",
+      "regular": "17458",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0067": {
+      "id": 79,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 67",
+      "description": "Descripción pública ficticia, número 67",
+      "status": "publish",
+      "regular": "17571",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0068": {
+      "id": 80,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 68",
+      "description": "Descripción pública ficticia, número 68",
+      "status": "publish",
+      "regular": "17684",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0069": {
+      "id": 81,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 69",
+      "description": "Descripción pública ficticia, número 69",
+      "status": "publish",
+      "regular": "17797",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 10,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0070": {
+      "id": 82,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 70",
+      "description": "Descripción pública ficticia, número 70",
+      "status": "publish",
+      "regular": "17910",
+      "sale": "16000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 11,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0071": {
+      "id": 83,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 71",
+      "description": "Descripción pública ficticia, número 71",
+      "status": "publish",
+      "regular": "18023",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 12,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0072": {
+      "id": 84,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 72",
+      "description": "Descripción pública ficticia, número 72",
+      "status": "publish",
+      "regular": "18136",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 13,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0073": {
+      "id": 85,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 73",
+      "description": "Descripción pública ficticia, número 73",
+      "status": "publish",
+      "regular": "18249",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 14,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0074": {
+      "id": 86,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 74",
+      "description": "Descripción pública ficticia, número 74",
+      "status": "publish",
+      "regular": "18362",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 15,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0075": {
+      "id": 87,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 75",
+      "description": "Descripción pública ficticia, número 75",
+      "status": "publish",
+      "regular": "18475",
+      "sale": "16500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 16,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0076": {
+      "id": 88,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 76",
+      "description": "Descripción pública ficticia, número 76",
+      "status": "publish",
+      "regular": "18588",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 17,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0077": {
+      "id": 89,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 77",
+      "description": "Descripción pública ficticia, número 77",
+      "status": "publish",
+      "regular": "18701",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 18,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0078": {
+      "id": 90,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 78",
+      "description": "Descripción pública ficticia, número 78",
+      "status": "publish",
+      "regular": "18814",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0079": {
+      "id": 91,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 79",
+      "description": "Descripción pública ficticia, número 79",
+      "status": "publish",
+      "regular": "18927",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 20,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0080": {
+      "id": 92,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 80",
+      "description": "Descripción pública ficticia, número 80",
+      "status": "publish",
+      "regular": "19040",
+      "sale": "17000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 21,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0081": {
+      "id": 93,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 81",
+      "description": "Descripción pública ficticia, número 81",
+      "status": "publish",
+      "regular": "19153",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 22,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0082": {
+      "id": 94,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 82",
+      "description": "Descripción pública ficticia, número 82",
+      "status": "publish",
+      "regular": "19266",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0083": {
+      "id": 95,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 83",
+      "description": "Descripción pública ficticia, número 83",
+      "status": "publish",
+      "regular": "19379",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0084": {
+      "id": 96,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 84",
+      "description": "Descripción pública ficticia, número 84",
+      "status": "publish",
+      "regular": "19492",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0085": {
+      "id": 97,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 85",
+      "description": "Descripción pública ficticia, número 85",
+      "status": "publish",
+      "regular": "19605",
+      "sale": "17500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0086": {
+      "id": 98,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 86",
+      "description": "Descripción pública ficticia, número 86",
+      "status": "publish",
+      "regular": "19718",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 27,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0087": {
+      "id": 99,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 87",
+      "description": "Descripción pública ficticia, número 87",
+      "status": "publish",
+      "regular": "19831",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0088": {
+      "id": 100,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 88",
+      "description": "Descripción pública ficticia, número 88",
+      "status": "publish",
+      "regular": "19944",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0089": {
+      "id": 101,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 89",
+      "description": "Descripción pública ficticia, número 89",
+      "status": "publish",
+      "regular": "20057",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0090": {
+      "id": 102,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 90",
+      "description": "Descripción pública ficticia, número 90",
+      "status": "publish",
+      "regular": "20170",
+      "sale": "18000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0091": {
+      "id": 103,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 91",
+      "description": "Descripción pública ficticia, número 91",
+      "status": "publish",
+      "regular": "20283",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0092": {
+      "id": 104,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 92",
+      "description": "Descripción pública ficticia, número 92",
+      "status": "publish",
+      "regular": "20396",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 10,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0093": {
+      "id": 105,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 93",
+      "description": "Descripción pública ficticia, número 93",
+      "status": "publish",
+      "regular": "20509",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 11,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0094": {
+      "id": 106,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 94",
+      "description": "Descripción pública ficticia, número 94",
+      "status": "publish",
+      "regular": "20622",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 12,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0095": {
+      "id": 107,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 95",
+      "description": "Descripción pública ficticia, número 95",
+      "status": "publish",
+      "regular": "20735",
+      "sale": "18500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 13,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0096": {
+      "id": 108,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 96",
+      "description": "Descripción pública ficticia, número 96",
+      "status": "publish",
+      "regular": "20848",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 14,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0097": {
+      "id": 109,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 97",
+      "description": "Descripción pública ficticia, número 97",
+      "status": "publish",
+      "regular": "20961",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 15,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0098": {
+      "id": 110,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 98",
+      "description": "Descripción pública ficticia, número 98",
+      "status": "publish",
+      "regular": "21074",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 16,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0099": {
+      "id": 111,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 99",
+      "description": "Descripción pública ficticia, número 99",
+      "status": "publish",
+      "regular": "21187",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 17,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0100": {
+      "id": 112,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 100",
+      "description": "Descripción pública ficticia, número 100",
+      "status": "publish",
+      "regular": "21300",
+      "sale": "19000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 18,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0101": {
+      "id": 113,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 101",
+      "description": "Descripción pública ficticia, número 101",
+      "status": "publish",
+      "regular": "21413",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 19,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0102": {
+      "id": 114,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 102",
+      "description": "Descripción pública ficticia, número 102",
+      "status": "publish",
+      "regular": "21526",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 20,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0103": {
+      "id": 115,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 103",
+      "description": "Descripción pública ficticia, número 103",
+      "status": "publish",
+      "regular": "21639",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 21,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0104": {
+      "id": 116,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 104",
+      "description": "Descripción pública ficticia, número 104",
+      "status": "publish",
+      "regular": "21752",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0105": {
+      "id": 117,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 105",
+      "description": "Descripción pública ficticia, número 105",
+      "status": "publish",
+      "regular": "21865",
+      "sale": "19500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0106": {
+      "id": 118,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 106",
+      "description": "Descripción pública ficticia, número 106",
+      "status": "publish",
+      "regular": "21978",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0107": {
+      "id": 119,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 107",
+      "description": "Descripción pública ficticia, número 107",
+      "status": "publish",
+      "regular": "22091",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0108": {
+      "id": 120,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 108",
+      "description": "Descripción pública ficticia, número 108",
+      "status": "publish",
+      "regular": "22204",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0109": {
+      "id": 121,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 109",
+      "description": "Descripción pública ficticia, número 109",
+      "status": "publish",
+      "regular": "22317",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 27,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0110": {
+      "id": 122,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 110",
+      "description": "Descripción pública ficticia, número 110",
+      "status": "publish",
+      "regular": "22430",
+      "sale": "20000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0111": {
+      "id": 123,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 111",
+      "description": "Descripción pública ficticia, número 111",
+      "status": "publish",
+      "regular": "22543",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0112": {
+      "id": 124,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 112",
+      "description": "Descripción pública ficticia, número 112",
+      "status": "publish",
+      "regular": "22656",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0113": {
+      "id": 125,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 113",
+      "description": "Descripción pública ficticia, número 113",
+      "status": "publish",
+      "regular": "22769",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0114": {
+      "id": 126,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 114",
+      "description": "Descripción pública ficticia, número 114",
+      "status": "publish",
+      "regular": "22882",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0115": {
+      "id": 127,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 115",
+      "description": "Descripción pública ficticia, número 115",
+      "status": "publish",
+      "regular": "22995",
+      "sale": "20500",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 10,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0116": {
+      "id": 128,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 116",
+      "description": "Descripción pública ficticia, número 116",
+      "status": "publish",
+      "regular": "23108",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 11,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0117": {
+      "id": 129,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 117",
+      "description": "Descripción pública ficticia, número 117",
+      "status": "publish",
+      "regular": "23221",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-S-0118": {
+      "id": 130,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 118",
+      "description": "Descripción pública ficticia, número 118",
+      "status": "publish",
+      "regular": "23334",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        17
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 13,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0119": {
+      "id": 131,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 119",
+      "description": "Descripción pública ficticia, número 119",
+      "status": "publish",
+      "regular": "23447",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        18
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 14,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-S-0120": {
+      "id": 132,
+      "type": "simple",
+      "parent": 0,
+      "name": "D2 Objeto 120",
+      "description": "Descripción pública ficticia, número 120",
+      "status": "publish",
+      "regular": "23560",
+      "sale": "21000",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        19
+      ],
+      "attributes": {
+        "material": {
+          "name": "Material",
+          "options": [
+            "Algodón"
+          ],
+          "visible": true,
+          "variation": false,
+          "id": 0
+        }
+      },
+      "stock": 15,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0001": {
+      "id": 133,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 1",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0002": {
+      "id": 134,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 2",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0003": {
+      "id": 135,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 3",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0004": {
+      "id": 136,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 4",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0005": {
+      "id": 137,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 5",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0006": {
+      "id": 138,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 6",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0001-S": {
+      "id": 139,
+      "type": "variation",
+      "parent": 133,
+      "name": "D2 Remera variable 1 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "23456.78",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 43,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0001-M": {
+      "id": 140,
+      "type": "variation",
+      "parent": 133,
+      "name": "D2 Remera variable 1 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20227",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 22,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0001-L": {
+      "id": 141,
+      "type": "variation",
+      "parent": 133,
+      "name": "D2 Remera variable 1 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "20327",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0001-XL": {
+      "id": 142,
+      "type": "variation",
+      "parent": 133,
+      "name": "D2 Remera variable 1 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "20427",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0002-S": {
+      "id": 143,
+      "type": "variation",
+      "parent": 134,
+      "name": "D2 Remera variable 2 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "20254",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 22,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0002-M": {
+      "id": 144,
+      "type": "variation",
+      "parent": 134,
+      "name": "D2 Remera variable 2 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20354",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0002-L": {
+      "id": 145,
+      "type": "variation",
+      "parent": 134,
+      "name": "D2 Remera variable 2 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "20454",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0002-XL": {
+      "id": 146,
+      "type": "variation",
+      "parent": 134,
+      "name": "D2 Remera variable 2 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "20554",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0003-S": {
+      "id": 147,
+      "type": "variation",
+      "parent": 135,
+      "name": "D2 Remera variable 3 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "20381",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 23,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0003-M": {
+      "id": 148,
+      "type": "variation",
+      "parent": 135,
+      "name": "D2 Remera variable 3 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20481",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0003-L": {
+      "id": 149,
+      "type": "variation",
+      "parent": 135,
+      "name": "D2 Remera variable 3 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "20581",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0003-XL": {
+      "id": 150,
+      "type": "variation",
+      "parent": 135,
+      "name": "D2 Remera variable 3 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "20681",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0004-S": {
+      "id": 151,
+      "type": "variation",
+      "parent": 136,
+      "name": "D2 Remera variable 4 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "20508",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 24,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0004-M": {
+      "id": 152,
+      "type": "variation",
+      "parent": 136,
+      "name": "D2 Remera variable 4 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20608",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0004-L": {
+      "id": 153,
+      "type": "variation",
+      "parent": 136,
+      "name": "D2 Remera variable 4 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "20708",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0004-XL": {
+      "id": 154,
+      "type": "variation",
+      "parent": 136,
+      "name": "D2 Remera variable 4 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "20808",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0005-S": {
+      "id": 155,
+      "type": "variation",
+      "parent": 137,
+      "name": "D2 Remera variable 5 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "20635",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 25,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0005-M": {
+      "id": 156,
+      "type": "variation",
+      "parent": 137,
+      "name": "D2 Remera variable 5 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20735",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0005-L": {
+      "id": 157,
+      "type": "variation",
+      "parent": 137,
+      "name": "D2 Remera variable 5 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "20835",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0005-XL": {
+      "id": 158,
+      "type": "variation",
+      "parent": 137,
+      "name": "D2 Remera variable 5 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "20935",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0006-S": {
+      "id": 159,
+      "type": "variation",
+      "parent": 138,
+      "name": "D2 Remera variable 6 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "20762",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 26,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0006-M": {
+      "id": 160,
+      "type": "variation",
+      "parent": 138,
+      "name": "D2 Remera variable 6 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20862",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0006-L": {
+      "id": 161,
+      "type": "variation",
+      "parent": 138,
+      "name": "D2 Remera variable 6 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "20962",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0006-XL": {
+      "id": 162,
+      "type": "variation",
+      "parent": 138,
+      "name": "D2 Remera variable 6 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21062",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0007": {
+      "id": 163,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 7",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0008": {
+      "id": 164,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 8",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0009": {
+      "id": 165,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 9",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0010": {
+      "id": 166,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 10",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0011": {
+      "id": 167,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 11",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0012": {
+      "id": 168,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 12",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0007-S": {
+      "id": 169,
+      "type": "variation",
+      "parent": 163,
+      "name": "D2 Remera variable 7 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "20889",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0007-M": {
+      "id": 170,
+      "type": "variation",
+      "parent": 163,
+      "name": "D2 Remera variable 7 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "20989",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0007-L": {
+      "id": 171,
+      "type": "variation",
+      "parent": 163,
+      "name": "D2 Remera variable 7 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21089",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0007-XL": {
+      "id": 172,
+      "type": "variation",
+      "parent": 163,
+      "name": "D2 Remera variable 7 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21189",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0008-S": {
+      "id": 173,
+      "type": "variation",
+      "parent": 164,
+      "name": "D2 Remera variable 8 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21016",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 28,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0008-M": {
+      "id": 174,
+      "type": "variation",
+      "parent": 164,
+      "name": "D2 Remera variable 8 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21116",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0008-L": {
+      "id": 175,
+      "type": "variation",
+      "parent": 164,
+      "name": "D2 Remera variable 8 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21216",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0008-XL": {
+      "id": 176,
+      "type": "variation",
+      "parent": 164,
+      "name": "D2 Remera variable 8 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21316",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0009-S": {
+      "id": 177,
+      "type": "variation",
+      "parent": 165,
+      "name": "D2 Remera variable 9 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21143",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 29,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0009-M": {
+      "id": 178,
+      "type": "variation",
+      "parent": 165,
+      "name": "D2 Remera variable 9 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21243",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0009-L": {
+      "id": 179,
+      "type": "variation",
+      "parent": 165,
+      "name": "D2 Remera variable 9 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21343",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0009-XL": {
+      "id": 180,
+      "type": "variation",
+      "parent": 165,
+      "name": "D2 Remera variable 9 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21443",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0010-S": {
+      "id": 181,
+      "type": "variation",
+      "parent": 166,
+      "name": "D2 Remera variable 10 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21270",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 30,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0010-M": {
+      "id": 182,
+      "type": "variation",
+      "parent": 166,
+      "name": "D2 Remera variable 10 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21370",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0010-L": {
+      "id": 183,
+      "type": "variation",
+      "parent": 166,
+      "name": "D2 Remera variable 10 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21470",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0010-XL": {
+      "id": 184,
+      "type": "variation",
+      "parent": 166,
+      "name": "D2 Remera variable 10 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21570",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 33,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0011-S": {
+      "id": 185,
+      "type": "variation",
+      "parent": 167,
+      "name": "D2 Remera variable 11 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21397",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 31,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0011-M": {
+      "id": 186,
+      "type": "variation",
+      "parent": 167,
+      "name": "D2 Remera variable 11 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21497",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0011-L": {
+      "id": 187,
+      "type": "variation",
+      "parent": 167,
+      "name": "D2 Remera variable 11 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21597",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 33,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0011-XL": {
+      "id": 188,
+      "type": "variation",
+      "parent": 167,
+      "name": "D2 Remera variable 11 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21697",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0012-S": {
+      "id": 189,
+      "type": "variation",
+      "parent": 168,
+      "name": "D2 Remera variable 12 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21524",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 32,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0012-M": {
+      "id": 190,
+      "type": "variation",
+      "parent": 168,
+      "name": "D2 Remera variable 12 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21624",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 33,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0012-L": {
+      "id": 191,
+      "type": "variation",
+      "parent": 168,
+      "name": "D2 Remera variable 12 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21724",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0012-XL": {
+      "id": 192,
+      "type": "variation",
+      "parent": 168,
+      "name": "D2 Remera variable 12 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21824",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 35,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0013": {
+      "id": 193,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 13",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0014": {
+      "id": 194,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 14",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0015": {
+      "id": 195,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 15",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0016": {
+      "id": 196,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 16",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0017": {
+      "id": 197,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 17",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0018": {
+      "id": 198,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 18",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0013-S": {
+      "id": 199,
+      "type": "variation",
+      "parent": 193,
+      "name": "D2 Remera variable 13 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21651",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 33,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0013-M": {
+      "id": 200,
+      "type": "variation",
+      "parent": 193,
+      "name": "D2 Remera variable 13 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21751",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0013-L": {
+      "id": 201,
+      "type": "variation",
+      "parent": 193,
+      "name": "D2 Remera variable 13 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21851",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 35,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0013-XL": {
+      "id": 202,
+      "type": "variation",
+      "parent": 193,
+      "name": "D2 Remera variable 13 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "21951",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 36,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0014-S": {
+      "id": 203,
+      "type": "variation",
+      "parent": 194,
+      "name": "D2 Remera variable 14 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21778",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0014-M": {
+      "id": 204,
+      "type": "variation",
+      "parent": 194,
+      "name": "D2 Remera variable 14 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "21878",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 35,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0014-L": {
+      "id": 205,
+      "type": "variation",
+      "parent": 194,
+      "name": "D2 Remera variable 14 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "21978",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 36,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0014-XL": {
+      "id": 206,
+      "type": "variation",
+      "parent": 194,
+      "name": "D2 Remera variable 14 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22078",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 37,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0015-S": {
+      "id": 207,
+      "type": "variation",
+      "parent": 195,
+      "name": "D2 Remera variable 15 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "21905",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 35,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0015-M": {
+      "id": 208,
+      "type": "variation",
+      "parent": 195,
+      "name": "D2 Remera variable 15 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "22005",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 36,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0015-L": {
+      "id": 209,
+      "type": "variation",
+      "parent": 195,
+      "name": "D2 Remera variable 15 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "22105",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 37,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0015-XL": {
+      "id": 210,
+      "type": "variation",
+      "parent": 195,
+      "name": "D2 Remera variable 15 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22205",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 38,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0016-S": {
+      "id": 211,
+      "type": "variation",
+      "parent": 196,
+      "name": "D2 Remera variable 16 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "22032",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 36,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0016-M": {
+      "id": 212,
+      "type": "variation",
+      "parent": 196,
+      "name": "D2 Remera variable 16 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "22132",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 37,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0016-L": {
+      "id": 213,
+      "type": "variation",
+      "parent": 196,
+      "name": "D2 Remera variable 16 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "22232",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 38,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0016-XL": {
+      "id": 214,
+      "type": "variation",
+      "parent": 196,
+      "name": "D2 Remera variable 16 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22332",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 39,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0017-S": {
+      "id": 215,
+      "type": "variation",
+      "parent": 197,
+      "name": "D2 Remera variable 17 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "22159",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 37,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0017-M": {
+      "id": 216,
+      "type": "variation",
+      "parent": 197,
+      "name": "D2 Remera variable 17 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "22259",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 38,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0017-L": {
+      "id": 217,
+      "type": "variation",
+      "parent": 197,
+      "name": "D2 Remera variable 17 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "22359",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 39,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0017-XL": {
+      "id": 218,
+      "type": "variation",
+      "parent": 197,
+      "name": "D2 Remera variable 17 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22459",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 40,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0018-S": {
+      "id": 219,
+      "type": "variation",
+      "parent": 198,
+      "name": "D2 Remera variable 18 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "22286",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 38,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0018-M": {
+      "id": 220,
+      "type": "variation",
+      "parent": 198,
+      "name": "D2 Remera variable 18 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "22386",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 39,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0018-L": {
+      "id": 221,
+      "type": "variation",
+      "parent": 198,
+      "name": "D2 Remera variable 18 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "22486",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 40,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0018-XL": {
+      "id": 222,
+      "type": "variation",
+      "parent": 198,
+      "name": "D2 Remera variable 18 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22586",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0019": {
+      "id": 223,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 19",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0020": {
+      "id": 224,
+      "type": "variable",
+      "parent": 0,
+      "name": "D2 Remera variable 20",
+      "description": "Producto ficticio con cuatro talles",
+      "status": "publish",
+      "regular": "",
+      "sale": "",
+      "image": "10",
+      "gallery": [],
+      "categories": [
+        20
+      ],
+      "attributes": {
+        "talle": {
+          "name": "Talle",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "visible": true,
+          "variation": true,
+          "id": 0
+        }
+      },
+      "stock": null,
+      "manage_stock": false,
+      "stock_status": "instock"
+    },
+    "D2-V-0019-S": {
+      "id": 225,
+      "type": "variation",
+      "parent": 223,
+      "name": "D2 Remera variable 19 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "22413",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 39,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0019-M": {
+      "id": 226,
+      "type": "variation",
+      "parent": 223,
+      "name": "D2 Remera variable 19 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "22513",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 40,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0019-L": {
+      "id": 227,
+      "type": "variation",
+      "parent": 223,
+      "name": "D2 Remera variable 19 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "22613",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0019-XL": {
+      "id": 228,
+      "type": "variation",
+      "parent": 223,
+      "name": "D2 Remera variable 19 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22713",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 42,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0020-S": {
+      "id": 229,
+      "type": "variation",
+      "parent": 224,
+      "name": "D2 Remera variable 20 - S",
+      "description": "",
+      "status": "publish",
+      "regular": "22540",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "S"
+      },
+      "stock": 40,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0020-M": {
+      "id": 230,
+      "type": "variation",
+      "parent": 224,
+      "name": "D2 Remera variable 20 - M",
+      "description": "",
+      "status": "publish",
+      "regular": "22640",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "M"
+      },
+      "stock": 0,
+      "manage_stock": true,
+      "stock_status": "outofstock"
+    },
+    "D2-V-0020-L": {
+      "id": 231,
+      "type": "variation",
+      "parent": 224,
+      "name": "D2 Remera variable 20 - L",
+      "description": "",
+      "status": "publish",
+      "regular": "22740",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "L"
+      },
+      "stock": 42,
+      "manage_stock": true,
+      "stock_status": "instock"
+    },
+    "D2-V-0020-XL": {
+      "id": 232,
+      "type": "variation",
+      "parent": 224,
+      "name": "D2 Remera variable 20 - XL",
+      "description": "",
+      "status": "publish",
+      "regular": "22840",
+      "sale": "",
+      "image": 10,
+      "gallery": [],
+      "categories": [],
+      "attributes": {
+        "talle": "XL"
+      },
+      "stock": 43,
+      "manage_stock": true,
+      "stock_status": "instock"
+    }
+  },
+  "duplicate_skus": [],
+  "peak_php_bytes": 138215424
+}

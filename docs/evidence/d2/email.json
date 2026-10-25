@@ -1,0 +1,39 @@
+{
+  "result": "passed",
+  "nativeSetting": true,
+  "shopManager": true,
+  "origenBefore": {
+    "enabled": "yes",
+    "email_type": "multipart",
+    "recipient": "seller@origen.seller.test",
+    "subject": "[{site_title}] Finalizamos tu pedido #{order_number}",
+    "heading": "Pedido completado",
+    "additional_content": "¡Gracias de nuevo! Si necesitás ayuda con tu pedido, contactate con nosotros en {store_email}.",
+    "cc": "",
+    "bcc": ""
+  },
+  "origenAfter": {
+    "enabled": "yes",
+    "email_type": "multipart",
+    "recipient": "seller@origen.seller.test",
+    "subject": "[{site_title}] Finalizamos tu pedido #{order_number}",
+    "heading": "Pedido completado",
+    "additional_content": "¡Gracias de nuevo! Si necesitás ayuda con tu pedido, contactate con nosotros en {store_email}.",
+    "cc": "",
+    "bcc": ""
+  },
+  "tramaApprovedFixtureUnchanged": true,
+  "tramaSellerLabPrimedFromApprovedFixture": true,
+  "captures": {
+    "origen": {
+      "subject": "[ORIGEN CASA · DEMO] Finalizamos tu pedido #84",
+      "synthetic": true
+    },
+    "trama": {
+      "subject": "[TRAMA] Finalizamos tu pedido #190",
+      "synthetic": true
+    }
+  },
+  "mailpitOnly": true,
+  "externalMail": false
+}

@@ -1,0 +1,53 @@
+{
+  "stage": "variation-qa",
+  "result": "passed",
+  "origin": "http://localhost:8196",
+  "checks": [
+    {
+      "name": "Genuine Shop Manager logs in",
+      "passed": true
+    },
+    {
+      "name": "All 80 imported variations retain their own attribute and known parent",
+      "passed": true
+    },
+    {
+      "name": "Imported variable is available in native Store API",
+      "passed": true
+    },
+    {
+      "name": "Imported variable has a native selection control",
+      "passed": true
+    },
+    {
+      "name": "Selecting S resolves to its imported variation ID",
+      "passed": true
+    },
+    {
+      "name": "Native cart issues a token for variant QA",
+      "passed": true
+    },
+    {
+      "name": "Imported in-stock variation can be added to cart",
+      "passed": true
+    },
+    {
+      "name": "Cart contains the correct imported variation",
+      "passed": true
+    },
+    {
+      "name": "Imported zero-stock variation is rejected by server",
+      "passed": true
+    },
+    {
+      "name": "Cart probes do not change any of the 220 product records",
+      "passed": true
+    }
+  ],
+  "imports": [],
+  "screenshots": [
+    "imported-variable-storefront.png"
+  ],
+  "externalRequestsBlocked": 4,
+  "realOrderCreated": false
+}

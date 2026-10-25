@@ -1,0 +1,63 @@
+{
+  "checkedAtUtc": "2026-10-25T21:10:09.792Z",
+  "scope": "Local public fixture labs; not remote capacity",
+  "stores": [
+    {
+      "brand": "trama",
+      "container": "commerce-d1-trama-web-1",
+      "filesKiB": 218680,
+      "uploadsKiBIncluded": 15412,
+      "regularFiles": 9951,
+      "allPathsIncludingDirectories": 11371,
+      "dbBytes": 3964928
+    },
+    {
+      "brand": "origen",
+      "container": "commerce-d1-origen-web-1",
+      "filesKiB": 204816,
+      "uploadsKiBIncluded": 1532,
+      "regularFiles": 9756,
+      "allPathsIncludingDirectories": 11177,
+      "dbBytes": 3571712
+    }
+  ],
+  "packages": [
+    {
+      "slug": "commerce-base",
+      "version": "1.9.1",
+      "sha256": "2cc57f2c460bdbdc3ba2313e07078dbbd2077af209fa057318cb6445d986b6fe",
+      "zipBytes": 162656
+    },
+    {
+      "slug": "commerce-core",
+      "version": "1.1.2",
+      "sha256": "12811c31b0b4f4463dcd0adb49712c7738e3bf2bc1d43364b0bd49bb46afdddc",
+      "zipBytes": 17461
+    },
+    {
+      "slug": "commerce-communications",
+      "version": "1.0.1",
+      "sha256": "3bfb42e01985fc5f41af59dd50cd9e19e86b00aba3a5af2e92629e74ece87e70",
+      "zipBytes": 2632
+    },
+    {
+      "slug": "commerce-order-integrity",
+      "version": "1.0.0",
+      "sha256": "f7e0d132f79fa65719254756ef34c31ef29ff9ca581c1ac53992a2a6cfebc119",
+      "zipBytes": 2113
+    },
+    {
+      "slug": "commerce-account-navigation",
+      "version": "1.0.0",
+      "sha256": "ea8e7395b3b2c49bf80153aeab4d63158788429098db886f3ac573bca1538673",
+      "zipBytes": 1046
+    },
+    {
+      "slug": "commerce-lookbook",
+      "version": "1.0.0",
+      "sha256": "e95e6c0ae7e88d7a7c731b21add2b64dae1f230cca61cd87cd4bb5ba4ef512b4",
+      "zipBytes": 11239
+    }
+  ],
+  "remoteChanges": false
+}

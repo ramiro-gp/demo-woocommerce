@@ -1,0 +1,323 @@
+{
+  "stage": "edges",
+  "result": "passed",
+  "origin": "http://localhost:8196",
+  "checks": [
+    {
+      "name": "Genuine Shop Manager logs in",
+      "passed": true
+    },
+    {
+      "name": "unknown-sku maps SKU",
+      "passed": true
+    },
+    {
+      "name": "unknown-sku maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Unknown SKU skipped without creating a product",
+      "passed": true
+    },
+    {
+      "name": "duplicate-new maps SKU",
+      "passed": true
+    },
+    {
+      "name": "duplicate-new maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Repeated existing SKU in create mode does not duplicate",
+      "passed": true
+    },
+    {
+      "name": "duplicate-update maps SKU",
+      "passed": true
+    },
+    {
+      "name": "duplicate-update maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Duplicate update SKU has no automatic rejection: last quantity wins",
+      "passed": true
+    },
+    {
+      "name": "partial maps SKU",
+      "passed": true
+    },
+    {
+      "name": "partial maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Valid rows before and after failed row persist",
+      "passed": true
+    },
+    {
+      "name": "Rejected type preserves that product",
+      "passed": true
+    },
+    {
+      "name": "Partial file preserves all commercial properties",
+      "passed": true
+    },
+    {
+      "name": "Misspelled stock header is not automatically mapped",
+      "passed": true
+    },
+    {
+      "name": "Wrong comma delimiter does not yield two proper mappings",
+      "passed": true
+    },
+    {
+      "name": "invalid-stock maps SKU",
+      "passed": true
+    },
+    {
+      "name": "invalid-stock maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Invalid stock probe retains commercial properties",
+      "passed": true
+    }
+  ],
+  "imports": [
+    {
+      "label": "unknown-sku",
+      "update": true,
+      "seconds": 1.563,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 1 producto fue omitido. Ver el registro de la importación. Archivo subido: product-unknown-z0pxu4s6du.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 1
+          }
+        }
+      ]
+    },
+    {
+      "label": "duplicate-new",
+      "update": false,
+      "seconds": 1.506,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "type"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[2]",
+          "value": "name"
+        },
+        {
+          "name": "map_to[3]",
+          "value": "published"
+        },
+        {
+          "name": "map_to[4]",
+          "value": "description"
+        },
+        {
+          "name": "map_to[5]",
+          "value": "regular_price"
+        },
+        {
+          "name": "map_to[6]",
+          "value": "sale_price"
+        },
+        {
+          "name": "map_to[7]",
+          "value": "category_ids"
+        },
+        {
+          "name": "map_to[8]",
+          "value": "stock_quantity"
+        },
+        {
+          "name": "map_to[9]",
+          "value": "images"
+        },
+        {
+          "name": "map_to[10]",
+          "value": "parent_id"
+        },
+        {
+          "name": "map_to[11]",
+          "value": "attributes:name1"
+        },
+        {
+          "name": "map_to[12]",
+          "value": "attributes:value1"
+        },
+        {
+          "name": "map_to[13]",
+          "value": "attributes:visible1"
+        },
+        {
+          "name": "map_to[14]",
+          "value": "attributes:taxonomy1"
+        }
+      ],
+      "summary": "¡Importación completa! 2 productos fueron omitidos. Ver el registro de la importación. Archivo subido: product-duplicate-new-izrpgblgmt.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 2
+          }
+        }
+      ]
+    },
+    {
+      "label": "duplicate-update",
+      "update": true,
+      "seconds": 1.586,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 2 productos actualizados. Archivo subido: product-duplicate-update-h1gwyp3ilf.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 2,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "partial",
+      "update": true,
+      "seconds": 1.85,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "type"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[2]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 2 productos actualizados. Falló al importar 1 producto. Ver el registro de la importación. Archivo subido: product-partial-4kdxxmda0z.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 1,
+            "updated": 2,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "invalid-stock",
+      "update": true,
+      "seconds": 1.825,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 1 producto actualizado. Archivo subido: product-invalid-stock-7oflwj9hpq.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 1,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "upload-edges.png",
+    "mapping-edges.png",
+    "result-unknown-sku.png",
+    "upload-edges.png",
+    "mapping-edges.png",
+    "result-duplicate-new.png",
+    "upload-edges.png",
+    "mapping-edges.png",
+    "result-duplicate-update.png",
+    "upload-edges.png",
+    "mapping-edges.png",
+    "result-partial.png",
+    "upload-edges.png",
+    "mapping-edges.png",
+    "wrong-delimiter.png",
+    "upload-edges.png",
+    "mapping-edges.png",
+    "result-invalid-stock.png"
+  ],
+  "externalRequestsBlocked": 26,
+  "duplicateWarning": "Reject duplicate SKUs in Excel before upload; native update accepts repeated rows.",
+  "headerError": "Stopped at mapping, no import executed. Unrecognized column defaults to Do not import.",
+  "delimiterError": "Stopped before mutation. Choose semicolon explicitly or save comma-delimited CSV.",
+  "invalidStock": {
+    "before": 16,
+    "after": 0
+  }
+}

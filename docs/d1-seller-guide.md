@@ -166,6 +166,97 @@ Cerrar una solicitud **no cancela el pedido, no repone stock ni devuelve dinero*
 
 Las demos públicas D1 no reciben trámites reales: esta pantalla y el formulario se prueban sólo en el laboratorio privado. Los datos y textos legales de una futura tienda real se completan y revisan antes de publicar.
 
+## Carga masiva desde Excel
+
+Validado el **25/10/2026 con WooCommerce 11.2.1 y Shop Manager**, usando el importador y exportador incluidos. El laboratorio D2 importó 120 productos simples, 20 variables y 80 variaciones. No necesitás un plugin pago ni cargar cada producto a mano. Las demos públicas tienen la administración bloqueada deliberadamente.
+
+### Descargar y preparar una plantilla
+
+- [Plantilla de alta de productos](templates/woocommerce-products.csv): encabezados nativos, sin artículos de ejemplo que puedas publicar por accidente.
+- [Plantilla de inventario](templates/woocommerce-stock.csv): exclusivamente `SKU,Stock`.
+
+Descargá el archivo completo con **Guardar enlace como / Descargar archivo original**. No copies el texto de una vista previa de GitHub. Guardá una copia de trabajo `.xlsx` en tu computadora y usá el CSV como archivo de intercambio. No subas el XLSX a WooCommerce.
+
+En Excel, elegí **Datos → Desde texto/CSV**, seleccioná **UTF-8** y el separador **coma**. Antes de cargar, usá **Transformar datos** y establecé `SKU` y `Parent` como **Texto**; eliminá cualquier paso previo que ya haya convertido esos códigos a números. Para filas nuevas, formateá esas columnas como Texto antes de escribir. Así se conservan `000123`, códigos largos y guiones. No abras un CSV de SKU numéricos con doble clic: Excel puede quitar ceros o cambiar códigos por notación científica. Poner formato Texto después no recupera lo perdido; volvé al archivo original.
+
+No uses fórmulas como `="000123"` dentro del CSV ni agregues apóstrofes al código exportado. El código debe coincidir exactamente con el SKU del catálogo, sin espacios al principio/final. No cambies los encabezados ingleses aunque el panel esté en español. El importador los reconoce en esta instalación.
+
+### Alta de simples y variables
+
+| Columna exacta | Qué completar |
+| --- | --- |
+| `Type` | `simple`, `variable` o `variation` |
+| `SKU` | Código único, también para cada variación; nunca reutilizarlo en dos filas |
+| `Name` | Nombre visible del artículo |
+| `Published` | `-1` borrador, `0` privado, `1` publicado. Para el primer ensayo usá borradores |
+| `Description` | Descripción. Conservá tildes y comillas con CSV UTF-8 |
+| `Regular price`, `Sale price` | Número sin símbolo monetario ni separador de miles; por ejemplo `12345.67`. Oferta vacía si no corresponde |
+| `Categories` | Nombre de categoría; jerarquía `Textiles > Mantas`; varias categorías se separan con coma dentro de la misma celda |
+| `Stock` | Cantidad final entera, igual o mayor a cero. En el padre variable dejalo vacío si cada variación tiene stock propio |
+| `Images` | URL directa de una imagen pública autorizada o nombre de un archivo ya existente en Medios. Varias imágenes separadas por coma; la primera es principal. No usar enlaces a carpetas ni páginas de visualización |
+| `Parent` | Vacío en simples/padres. En cada `variation`, SKU exacto del padre variable, que debe aparecer antes en el archivo |
+| `Attribute 1 name` | Por ejemplo `Talle` |
+| `Attribute 1 value(s)` | Padre: `S, M, L`. Variación: un solo valor, por ejemplo `M` |
+| `Attribute 1 visible` | `1` para mostrar el atributo; `0` para ocultarlo |
+| `Attribute 1 global` | `0` para atributo propio del producto, como en la prueba. Usar `1` sólo si se desea un atributo global compartido, coordinado con soporte |
+
+Para un producto simple, por ejemplo: `Type=simple`, `SKU=000123`, `Name=Manta natural`, `Published=-1`, `Regular price=25000`, `Categories=Textiles`, `Stock=8`. Completá sus descripciones e imágenes. `Parent` queda vacío.
+
+Para un variable, creá primero una fila `Type=variable`, `SKU=REM-001`, `Name=Remera`, atributo `Talle` con valores `S, M`, y sin precio ni stock en el padre. Después agregá dos filas `Type=variation`, con SKU `REM-001-S` / `REM-001-M`, `Parent=REM-001`, un único valor de `Talle`, precio propio y stock propio. Cada combinación es una fila de inventario. Para Talle y Color se agregan columnas nativas `Attribute 2 name`, `Attribute 2 value(s)`, `Attribute 2 visible`, `Attribute 2 global`; no inventes una columna “Variaciones”.
+
+La plantilla incluye una familia de atributo y puede ampliarse con esos encabezados nativos. No llenes el stock del padre si querés existencias independientes por variante. No confundas el SKU del padre con el SKU de la opción vendida.
+
+### Guardar e importar
+
+1. Antes del cambio, entrá en **Productos → Todos los productos → Exportar**, exportá todas las columnas y tipos necesarios, incluidas variaciones, y guardá ese CSV con fecha. Para una importación inicial o de muchas propiedades, pedí además una copia técnica de archivos y base de datos de esa tienda. El CSV no respalda pedidos, usuarios ni archivos de imágenes.
+2. Revisá que no haya SKU repetidos/vacíos ni filas incompletas. En Excel podés usar **Inicio → Formato condicional → Reglas para resaltar celdas → Valores duplicados** en la columna SKU. Corregí cada repetido; no uses “Quitar duplicados” a ciegas porque podrías eliminar una fila correcta.
+3. Validá Stock: sólo números enteros, sin fórmulas pendientes, errores, blancos ni texto para los SKU que manejan existencias. Usá **Datos → Validación de datos → Número entero → mayor o igual a 0**, y verificá también los datos ya pegados. La validación de Excel puede omitirse al pegar; revisá toda la columna. Un texto como `abc` fue convertido en **0 sin error** en la prueba nativa.
+4. Guardá la hoja de intercambio como **CSV UTF-8 (delimitado por comas) (*.csv)**. Excel exporta la hoja activa y no conserva formato ni validaciones. Si avisa que sólo conserva la hoja activa, confirmá la hoja correcta. Conservá aparte el XLSX de trabajo.
+5. Abrí una copia del CSV con un editor de texto y comprobá tildes, ceros iniciales y separadores. En algunas configuraciones regionales Excel usa punto y coma aunque el nombre diga “delimitado por comas”. Si lo hace, en **Mostrar opciones avanzadas** del importador elegí `;`. No reemplaces separadores globalmente: podrías romper descripciones, atributos y comillas.
+6. En **Productos → Todos los productos → Importar**, seleccioná el CSV. Para artículos nuevos, dejá **Actualizar productos existentes** desmarcado. Para modificar artículos existentes, marcalo expresamente.
+7. Pulsá **Continuar** y revisá la **Asignación de columnas**. Cada encabezado debe apuntar al campo esperado. Si sólo aparece una columna, falta SKU o Stock queda en **No importar**, detenete y corregí encabezados/separador. No ejecutes por intuición.
+8. Pulsá **Ejecutar el importador** una sola vez y esperá el resultado sin recargar ni cerrar la pestaña. Revisá importados, actualizados, omitidos y fallidos. “Importación completa” también puede contener errores.
+9. Abrí una muestra de simples y variables. Revisá fotos, precios, categorías, selección de variante y cantidades, y compará el total de registros con la planilla. En el primer trabajo remoto, soporte empezará con un lote de hasta **25 filas**, contando padres y variaciones; no es una capacidad garantizada del hosting.
+
+![Asignación nativa de las columnas de alta](evidence/d2/mapping-initial.png)
+
+### Actualizar exclusivamente existencias
+
+Usá la plantilla `SKU,Stock`, sin copiar las demás columnas del catálogo. No dejes columnas comerciales vacías: **eliminarlas del archivo** es más seguro que importar valores vacíos. Conservá exactamente dos encabezados:
+
+```csv
+SKU,Stock
+000123,8
+REM-001-S,0
+REM-001-M,12
+```
+
+Estos son ejemplos; reemplazalos por SKU existentes. `Stock=8` **deja ocho unidades disponibles**. No suma ocho a las que había. `0` agota esa opción. Para variaciones, usá el SKU específico de la variación; no agregues una fila del padre variable si éste no administra stock.
+
+Elegí el CSV en **Importar**, marcá **Actualizar productos existentes**, y comprobá que el mapeo muestre únicamente **SKU → SKU** y **Stock → Stock**. Ejecutá y revisá el informe. La prueba actualizó 200 SKU y conservó nombres, descripciones, precios normales/de oferta, imágenes, categorías, atributos y relación padre/variación de los 220 registros. No necesita una columna “Administrar inventario”; el valor numérico en `Stock` activa su gestión en los productos correspondientes.
+
+![Actualizar productos existentes con el archivo de stock](evidence/d2/upload-stock.png)
+
+![Mapeo exclusivo de SKU y Stock](evidence/d2/mapping-stock.png)
+
+![Resultado de la actualización de 200 SKU](evidence/d2/result-stock.png)
+
+Para cambiar precios y stock juntos, soporte puede preparar un CSV con `SKU,Regular price,Stock` y, si se solicita, `Sale price`. Se probó en un simple y una variación. No uses ese archivo para una tarea de stock solamente.
+
+### Evitar pisar ventas y corregir fallos
+
+Un CSV **no reconcilia ventas posteriores** ni aplica incrementos. Si exportaste 10 unidades, después se vendieron 2 y reimportás aquel 10, el stock vuelve a 10; se pierden las dos unidades descontadas. La prueba D2 reprodujo este comportamiento con la función nativa de movimiento de existencias. Coordiná una ventana sin pedidos ni movimientos, obtené una exportación reciente y conciliá los cambios antes de importar. Si hubo ventas durante el trabajo, detené la carga y pedí conciliación; no reimportes una planilla vieja ni un respaldo de stock completo. Para sumar una recepción de mercadería necesitás calcular previamente el total final sobre datos actuales o usar la edición nativa supervisada; este CSV no es un ajuste incremental.
+
+En una actualización, un SKU inexistente se **omite**: no se crea un artículo por ese motivo. Un SKU existente en una importación de altas se omite para no duplicarlo. Sin embargo, **dos filas del mismo SKU en una actualización se aceptan y prevalece la última**. El importador no reemplaza la revisión de duplicados en Excel.
+
+Si falla una fila, otras filas válidas pueden haberse guardado. En la prueba con tipo inválido se guardaron las dos filas correctas y la incorrecta conservó sus datos. **No existe una reversión automática del archivo completo.** Abrí **Ver el registro de la importación**, anotá SKU y motivo, exportá el estado actual y corregí sólo las filas fallidas/omitidas después de entender el error. Conservá CSV de entrada, respaldo, informe y horario; no compartas datos privados por capturas abiertas.
+
+![Importación parcial: dos filas actualizadas y una fallida](evidence/d2/result-partial.png)
+
+Si se corta la conexión o expira la pantalla, no pulses varias veces Ejecutar: comprobá primero qué SKU ya existen y sus cantidades con una exportación reciente. Una repetición de altas puede omitir existentes; una repetición de stock puede sobrescribir ventas recientes. Ante un cambio masivo incorrecto, soporte revisará una recuperación selectiva que preserve los pedidos nuevos. Restaurar toda la base sin revisar puede perderlos. Los errores de archivo no se solucionan ampliando permisos del vendedor ni desactivando controles del sitio.
+
+Referencia técnica: [informe D2 de carga masiva](d2-bulk-import.md). [Documentación oficial del importador nativo](https://woocommerce.com/document/product-csv-importer-exporter/).
+
 ## Qué conviene dejar a soporte
 
 | Vos, como responsable comercial | Con revisión ocasional | Soporte técnico |

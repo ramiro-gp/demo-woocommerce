@@ -1,0 +1,231 @@
+{
+  "stage": "initial",
+  "result": "passed",
+  "origin": "http://localhost:8196",
+  "checks": [
+    {
+      "name": "Genuine Shop Manager logs in",
+      "passed": true
+    },
+    {
+      "name": "Fresh catalog is empty",
+      "passed": true
+    },
+    {
+      "name": "Role is only shop_manager",
+      "passed": true
+    },
+    {
+      "name": "initial maps SKU",
+      "passed": true
+    },
+    {
+      "name": "initial maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "120 simple, 20 variable and 80 variations imported",
+      "passed": true
+    },
+    {
+      "name": "220 unique product records",
+      "passed": true
+    },
+    {
+      "name": "Every simple and variation manages its own stock",
+      "passed": true
+    },
+    {
+      "name": "All CSV images resolve to an attachment",
+      "passed": true
+    },
+    {
+      "name": "Four variations per parent with independent SKU",
+      "passed": true
+    },
+    {
+      "name": "Some variants and simple products are exhausted",
+      "passed": true
+    },
+    {
+      "name": "Shop Manager natively exports parent and variation SKUs",
+      "passed": true
+    }
+  ],
+  "imports": [
+    {
+      "label": "initial",
+      "update": false,
+      "seconds": 18.892,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "type"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[2]",
+          "value": "name"
+        },
+        {
+          "name": "map_to[3]",
+          "value": "published"
+        },
+        {
+          "name": "map_to[4]",
+          "value": "description"
+        },
+        {
+          "name": "map_to[5]",
+          "value": "regular_price"
+        },
+        {
+          "name": "map_to[6]",
+          "value": "sale_price"
+        },
+        {
+          "name": "map_to[7]",
+          "value": "category_ids"
+        },
+        {
+          "name": "map_to[8]",
+          "value": "stock_quantity"
+        },
+        {
+          "name": "map_to[9]",
+          "value": "images"
+        },
+        {
+          "name": "map_to[10]",
+          "value": "parent_id"
+        },
+        {
+          "name": "map_to[11]",
+          "value": "attributes:name1"
+        },
+        {
+          "name": "map_to[12]",
+          "value": "attributes:value1"
+        },
+        {
+          "name": "map_to[13]",
+          "value": "attributes:visible1"
+        },
+        {
+          "name": "map_to[14]",
+          "value": "attributes:taxonomy1"
+        }
+      ],
+      "summary": "¡Importación completa! 140 productos importados. 80 variaciones importadas. Archivo subido: product-initial-dnhs2n6u2y.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": 4298,
+            "percentage": 16,
+            "imported": 30,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 8442,
+            "percentage": 31,
+            "imported": 30,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 12585,
+            "percentage": 47,
+            "imported": 30,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 16770,
+            "percentage": 63,
+            "imported": 30,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 19631,
+            "percentage": 74,
+            "imported": 6,
+            "imported_variations": 24,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 22523,
+            "percentage": 85,
+            "imported": 6,
+            "imported_variations": 24,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": 25429,
+            "percentage": 96,
+            "imported": 6,
+            "imported_variations": 24,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 2,
+            "imported_variations": 8,
+            "failed": 0,
+            "updated": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "upload-initial.png",
+    "mapping-initial.png",
+    "result-initial.png",
+    "export-manager.png"
+  ],
+  "externalRequestsBlocked": 7,
+  "exportBytes": 50150
+}

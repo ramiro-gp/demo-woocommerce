@@ -1,0 +1,76 @@
+{
+  "stage": "stale",
+  "result": "passed",
+  "origin": "http://localhost:8196",
+  "checks": [
+    {
+      "name": "Genuine Shop Manager logs in",
+      "passed": true
+    },
+    {
+      "name": "Native stock movement decreases by two",
+      "passed": true
+    },
+    {
+      "name": "stale maps SKU",
+      "passed": true
+    },
+    {
+      "name": "stale maps stock quantity",
+      "passed": true
+    },
+    {
+      "name": "Old CSV overwrites the newer stock absolutely",
+      "passed": true
+    },
+    {
+      "name": "Stale probe preserves commercial data",
+      "passed": true
+    }
+  ],
+  "imports": [
+    {
+      "label": "stale",
+      "update": true,
+      "seconds": 1.687,
+      "mapping": [
+        {
+          "name": "map_to[0]",
+          "value": "sku"
+        },
+        {
+          "name": "map_to[1]",
+          "value": "stock_quantity"
+        }
+      ],
+      "summary": "¡Importación completa! 1 producto actualizado. Archivo subido: product-stale-wxkovv6kwe.csv",
+      "batches": [
+        {
+          "success": true,
+          "data": {
+            "position": "cleanup:0",
+            "percentage": 100,
+            "imported": 0,
+            "imported_variations": 0,
+            "failed": 0,
+            "updated": 1,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "upload-stale.png",
+    "mapping-stale.png",
+    "result-stale.png"
+  ],
+  "externalRequestsBlocked": 6,
+  "nativeDecrease": {
+    "sku": "D2-S-0007",
+    "before": 17,
+    "after": 15,
+    "operation": "native stock decrease, synthetic sale equivalent, no real order"
+  },
+  "warning": "No concurrency reconciliation: use a fresh export in an agreed window without orders or stock movements."
+}

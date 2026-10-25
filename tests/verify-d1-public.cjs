@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 process.env.PLAYWRIGHT_BROWSERS_PATH ||= path.join(process.env.LOCALAPPDATA||'C:\\Users\\ramiro\\AppData\\Local','ms-playwright');
 const {chromium}=require('playwright');
-const root=path.resolve(__dirname,'..'),out=path.join(root,'docs/evidence/d1');
+const root=path.resolve(__dirname,'..'),out=path.join(root,process.env.D1_EVIDENCE_DIR||'docs/evidence/d1');
 fs.mkdirSync(out,{recursive:true});
 const stores=[{key:'trama',brand:'TRAMA',base:'http://localhost:8190'},{key:'origen',brand:'ORIGEN CASA',base:'http://localhost:8191'}];
 const selected=(process.env.D1_STORES||'trama,origen').split(',');

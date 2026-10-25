@@ -1,0 +1,249 @@
+{
+  "accountWebsitesVerified": false,
+  "method": "Read-only DNS: recursive resolver plus both public authoritative nameservers; CAA via Node resolver",
+  "accountDnsZoneVerified": false,
+  "interpretation": "No public record does not prove an unused hosting name. Check websites, zone, wildcard and delegated subzones inside the account before creation.",
+  "checkedAtUtc": "2026-10-25T21:00:45.1884307Z",
+  "queries": [
+    {
+      "name": "ramita.dev",
+      "status": "ANSWER",
+      "answer": [
+        {
+          "Name": "ramita.dev",
+          "Type": 2,
+          "IPAddress": null,
+          "NameHost": "aster.dns-parking.com",
+          "Strings": null,
+          "Data": null
+        },
+        {
+          "Name": "ramita.dev",
+          "Type": 2,
+          "IPAddress": null,
+          "NameHost": "helios.dns-parking.com",
+          "Strings": null,
+          "Data": null
+        }
+      ],
+      "type": "NS",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "1.1.1.1"
+    },
+    {
+      "name": "ramita.dev",
+      "status": "ANSWER",
+      "answer": [
+        {
+          "Name": "ramita.dev",
+          "Type": 2,
+          "IPAddress": null,
+          "NameHost": "aster.dns-parking.com",
+          "Strings": null,
+          "Data": null
+        },
+        {
+          "Name": "ramita.dev",
+          "Type": 2,
+          "IPAddress": null,
+          "NameHost": "helios.dns-parking.com",
+          "Strings": null,
+          "Data": null
+        }
+      ],
+      "type": "NS",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "aster.dns-parking.com"
+    },
+    {
+      "name": "ramita.dev",
+      "status": "ANSWER",
+      "answer": [
+        {
+          "Name": "ramita.dev",
+          "Type": 2,
+          "IPAddress": null,
+          "NameHost": "aster.dns-parking.com",
+          "Strings": null,
+          "Data": null
+        },
+        {
+          "Name": "ramita.dev",
+          "Type": 2,
+          "IPAddress": null,
+          "NameHost": "helios.dns-parking.com",
+          "Strings": null,
+          "Data": null
+        }
+      ],
+      "type": "NS",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "trama-demo.ramita.dev",
+      "status": "trama-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "origen-demo.ramita.dev",
+      "status": "origen-demo.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "A",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "AAAA",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "name": "d2-unallocated-probe-20261025.ramita.dev",
+      "status": "d2-unallocated-probe-20261025.ramita.dev : El nombre DNS no existe.",
+      "type": "CNAME",
+      "server": "helios.dns-parking.com"
+    },
+    {
+      "server": "1.1.1.1",
+      "name": "ramita.dev",
+      "type": "CAA",
+      "status": "ENODATA"
+    }
+  ]
+}
