@@ -1,0 +1,16 @@
+[
+  {
+    "local_only": true,
+    "brand": "trama",
+    "files": 9951,
+    "filesystem_kib": 218680,
+    "directories": 1420
+  },
+  {
+    "local_only": true,
+    "brand": "origen",
+    "files": 9756,
+    "filesystem_kib": 204816,
+    "directories": 1421
+  }
+]

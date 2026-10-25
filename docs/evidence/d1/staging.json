@@ -1,0 +1,359 @@
+{
+  "result": "passed",
+  "scope": "Public DEMO running with staging WP environment in local D1 containers",
+  "checks": [
+    {
+      "name": "http://localhost:8190 staging home available",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 staging public page discovery works",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 privacy public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 terms public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 shipping public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 returns public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 withdrawal public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 staging checkout page exists",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8190 staging checkout remains denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 staging home available",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 staging public page discovery works",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 privacy public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 terms public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 shipping public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 returns public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal reviewed page remains discoverable",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal legal link remains rendered",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal legal GET available in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal explains DEMO scope",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal noindex",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal has no public legal intake form",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal REST remains readable in staging",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 withdrawal public POST still denied",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 staging checkout page exists",
+      "passed": true
+    },
+    {
+      "name": "http://localhost:8191 staging checkout remains denied",
+      "passed": true
+    }
+  ],
+  "remoteDeployment": false
+}

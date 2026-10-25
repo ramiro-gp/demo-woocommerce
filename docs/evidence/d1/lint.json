@@ -1,0 +1,46 @@
+{
+  "result": "passed",
+  "network": false,
+  "phpFiles": [
+    {
+      "file": "deployment/demo-public/commerce-demo-public.php",
+      "passed": true,
+      "sha256": "be48ca696c00b537013d191b395588e5013774e76dfa5265903593e0916b98b3"
+    },
+    {
+      "file": "deployment/demo-public/setup.php",
+      "passed": true,
+      "sha256": "db441f0fa3473a5c7aa041de5ca8b63c82ede0e9f5623960ed6e062b7644a089"
+    },
+    {
+      "file": "deployment/demo-lab/baseline.php",
+      "passed": true,
+      "sha256": "6aa6c9aa8a4fd051b567eb803b0dc6fd9d0049b9b3d0a9843afea7cec5779833"
+    },
+    {
+      "file": "deployment/demo-lab/inventory.php",
+      "passed": true,
+      "sha256": "08f8c212e46299ecdbc9d5a3ee750572a8f526046f1c5c08db6b5142338980d4"
+    },
+    {
+      "file": "deployment/demo-lab/mail-deny.php",
+      "passed": true,
+      "sha256": "185047ca54197fa09cec2e6790b8771d097452e295d9944e4b20f8b55d66f03e"
+    },
+    {
+      "file": "tests/d1-audit.php",
+      "passed": true,
+      "sha256": "f2ba1ae195d6e3df3ddcb1b91c542693e0a0aa6220291c57cc276fe8252bb26f"
+    },
+    {
+      "file": "tests/d1-reversal.php",
+      "passed": true,
+      "sha256": "5bfed812d63993a7760ab8f9511f2abe0ca48bf467e04266e82b7e0fae92402f"
+    },
+    {
+      "file": "tests/d1-module-contract.php",
+      "passed": true,
+      "sha256": "548a254213955593033dc0abae3cea9cf8eb6524e7b6faa1da37d41315ffadcb"
+    }
+  ]
+}

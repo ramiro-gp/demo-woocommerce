@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "independent_databases": true,
+    "independent_salts": true,
+    "independent_upload_origins": true,
+    "independent_wp_volumes": true,
+    "independent_db_volumes": true,
+    "loopback_only": true,
+    "independent_admin_credentials": true,
+    "independent_db_credentials": true,
+    "independent_root_credentials": true,
+    "independent_networks": true
+  },
+  "containers": [
+    {
+      "wordpress_volume": "commerce-d1-trama_wp",
+      "database_volume": "commerce-d1-trama_db",
+      "bind_address": "127.0.0.1",
+      "host_port": "8190",
+      "network": "commerce-d1-trama_default",
+      "brand": "trama"
+    },
+    {
+      "wordpress_volume": "commerce-d1-origen_wp",
+      "database_volume": "commerce-d1-origen_db",
+      "bind_address": "127.0.0.1",
+      "host_port": "8191",
+      "network": "commerce-d1-origen_default",
+      "brand": "origen"
+    }
+  ],
+  "hosting_isolation_verified": false,
+  "private_values_exposed": false,
+  "result": "passed"
+}

@@ -1,0 +1,20 @@
+{
+    "result": "passed",
+    "origin": "http://localhost:8191",
+    "mode": "disabled",
+    "checks": {
+        "expected_activation_state": true,
+        "empty_order_baseline": true,
+        "native_bacs_class_still_available": true,
+        "native_gateway_can_be_enabled_in_controlled_lab": true,
+        "native_order_creation_restored": true,
+        "synthetic_product_available": true,
+        "native_bacs_order_state_restored": true,
+        "mail_transport_stopped": true,
+        "product_stock_restored": true,
+        "no_order_left_after_probe": true
+    },
+    "external_mail": false,
+    "real_payment": false,
+    "native_checkout_browser_tested": false
+}

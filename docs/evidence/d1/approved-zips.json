@@ -1,0 +1,32 @@
+[
+  {
+    "sha256": "ea8e7395b3b2c49bf80153aeab4d63158788429098db886f3ac573bca1538673",
+    "file": "commerce-account-navigation-1.0.0.zip",
+    "unchanged": true
+  },
+  {
+    "sha256": "2cc57f2c460bdbdc3ba2313e07078dbbd2077af209fa057318cb6445d986b6fe",
+    "file": "commerce-base-1.9.1.zip",
+    "unchanged": true
+  },
+  {
+    "sha256": "3bfb42e01985fc5f41af59dd50cd9e19e86b00aba3a5af2e92629e74ece87e70",
+    "file": "commerce-communications-1.0.1.zip",
+    "unchanged": true
+  },
+  {
+    "sha256": "12811c31b0b4f4463dcd0adb49712c7738e3bf2bc1d43364b0bd49bb46afdddc",
+    "file": "commerce-core-1.1.2.zip",
+    "unchanged": true
+  },
+  {
+    "sha256": "e95e6c0ae7e88d7a7c731b21add2b64dae1f230cca61cd87cd4bb5ba4ef512b4",
+    "file": "commerce-lookbook-1.0.0.zip",
+    "unchanged": true
+  },
+  {
+    "sha256": "f7e0d132f79fa65719254756ef34c31ef29ff9ca581c1ac53992a2a6cfebc119",
+    "file": "commerce-order-integrity-1.0.0.zip",
+    "unchanged": true
+  }
+]

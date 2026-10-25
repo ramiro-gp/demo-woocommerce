@@ -1,0 +1,1147 @@
+{
+  "result": "passed",
+  "scope": "D1 public demo, disposable local installations only",
+  "checks": [
+    {
+      "name": "trama Store API catalog works",
+      "passed": true
+    },
+    {
+      "name": "trama has DEMO catalog",
+      "passed": true
+    },
+    {
+      "name": "trama published page discovery works",
+      "passed": true
+    },
+    {
+      "name": "trama cart page exists",
+      "passed": true
+    },
+    {
+      "name": "trama checkout page exists",
+      "passed": true
+    },
+    {
+      "name": "trama account page exists",
+      "passed": true
+    },
+    {
+      "name": "trama withdrawal page exists",
+      "passed": true
+    },
+    {
+      "name": "trama simple and variable remain purchasable for cart demonstration",
+      "passed": true
+    },
+    {
+      "name": "trama categorized catalog",
+      "passed": true
+    },
+    {
+      "name": "trama product image belongs to this demo",
+      "passed": true
+    },
+    {
+      "name": "trama static media sends noindex independently of PHP",
+      "passed": true
+    },
+    {
+      "name": "trama home navigation works",
+      "passed": true
+    },
+    {
+      "name": "trama home sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "trama home displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "trama home preserves brand",
+      "passed": true
+    },
+    {
+      "name": "trama home local images load",
+      "passed": true
+    },
+    {
+      "name": "trama home has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "trama home canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "trama Lookbook retains linked product hotspots",
+      "passed": true
+    },
+    {
+      "name": "trama Lookbook links stay inside this store",
+      "passed": true
+    },
+    {
+      "name": "trama Lookbook opens a real product",
+      "passed": true
+    },
+    {
+      "name": "trama catalog navigation works",
+      "passed": true
+    },
+    {
+      "name": "trama catalog sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "trama catalog displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "trama catalog preserves brand",
+      "passed": true
+    },
+    {
+      "name": "trama catalog local images load",
+      "passed": true
+    },
+    {
+      "name": "trama catalog has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "trama catalog canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "trama category navigation works",
+      "passed": true
+    },
+    {
+      "name": "trama category sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "trama category displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "trama category preserves brand",
+      "passed": true
+    },
+    {
+      "name": "trama category local images load",
+      "passed": true
+    },
+    {
+      "name": "trama category has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "trama category canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "trama product navigation works",
+      "passed": true
+    },
+    {
+      "name": "trama product sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "trama product displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "trama product preserves brand",
+      "passed": true
+    },
+    {
+      "name": "trama product local images load",
+      "passed": true
+    },
+    {
+      "name": "trama product has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "trama product canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "trama native variation controls visible",
+      "passed": true
+    },
+    {
+      "name": "trama variable attribute has options",
+      "passed": true
+    },
+    {
+      "name": "trama variable attribute has options",
+      "passed": true
+    },
+    {
+      "name": "trama variation resolves",
+      "passed": true
+    },
+    {
+      "name": "trama native variation add to cart succeeds",
+      "passed": true
+    },
+    {
+      "name": "trama mini cart displays selected product",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook navigation works",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook preserves brand",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook local images load",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "trama lookbook canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "trama product search works",
+      "passed": true
+    },
+    {
+      "name": "trama category filtering works",
+      "passed": true
+    },
+    {
+      "name": "trama home 390 light responds",
+      "passed": true
+    },
+    {
+      "name": "trama appearance 390 light is applied",
+      "passed": true
+    },
+    {
+      "name": "trama DEMO notice 390 light fits viewport",
+      "passed": true
+    },
+    {
+      "name": "trama home 1366 light responds",
+      "passed": true
+    },
+    {
+      "name": "trama appearance 1366 light is applied",
+      "passed": true
+    },
+    {
+      "name": "trama DEMO notice 1366 light fits viewport",
+      "passed": true
+    },
+    {
+      "name": "trama home 390 dark responds",
+      "passed": true
+    },
+    {
+      "name": "trama appearance 390 dark is applied",
+      "passed": true
+    },
+    {
+      "name": "trama DEMO notice 390 dark fits viewport",
+      "passed": true
+    },
+    {
+      "name": "trama home 1366 dark responds",
+      "passed": true
+    },
+    {
+      "name": "trama appearance 1366 dark is applied",
+      "passed": true
+    },
+    {
+      "name": "trama DEMO notice 1366 dark fits viewport",
+      "passed": true
+    },
+    {
+      "name": "trama browsing has no uncaught JS errors",
+      "passed": true
+    },
+    {
+      "name": "trama cart session remains available",
+      "passed": true
+    },
+    {
+      "name": "trama cart token issued privately",
+      "passed": true
+    },
+    {
+      "name": "trama cart/add-item works",
+      "passed": true
+    },
+    {
+      "name": "trama cart includes simple and selected variable",
+      "passed": true
+    },
+    {
+      "name": "trama cart/update-item works",
+      "passed": true
+    },
+    {
+      "name": "trama quantity persists",
+      "passed": true
+    },
+    {
+      "name": "trama native Cart Block renders products",
+      "passed": true
+    },
+    {
+      "name": "trama native Cart Block loads without blocked requests",
+      "passed": true
+    },
+    {
+      "name": "trama cart is isolated from the other demo",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?page_id=7 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama cart presents a route to the checkout restriction",
+      "passed": true
+    },
+    {
+      "name": "trama checkout displays explicit restriction",
+      "passed": true
+    },
+    {
+      "name": "trama blocked checkout requests no personal or banking form",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/store/v1/checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/store/v1/checkout/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/checkout/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/store/v1/order/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/order/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/v3/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/v3/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/v2/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/v2/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wp/v2/users is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wp/v2/users is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wp/v2/settings is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wp/v2/settings is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /wp-json/wc/store/v1/checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/store/v1/checkout&_method=POST is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/cart/update-customer is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /checkout/order-pay/123/?pay_for_order=true&key=invalid-demo-key is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /checkout/order-received/123/?key=invalid-demo-key is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?wc-ajax=checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?wc-ajax=update_order_review is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?wc-api=WC_Gateway_BACS is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /wc-api/WC_Gateway_BACS/ is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /xmlrpc.php is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /wp-login.php?action=register is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /wp-login.php?action=lostpassword is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /wp-admin/admin-post.php?action=commerce_legal_manage is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /wp-login.php is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /wp-admin/ is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /wp-json/wp/v2/users is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama GET /?rest_route=/wc/store/v1/order/123&key=invalid-demo-key is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama OPTIONS /?rest_route=/wc/v2/system_status/tools is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?page_id=8 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama POST /?page_id=148 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "trama legal page explains public demo restriction",
+      "passed": true
+    },
+    {
+      "name": "trama account page offers no public login/register/reset form",
+      "passed": true
+    },
+    {
+      "name": "trama native sitemap disabled",
+      "passed": true
+    },
+    {
+      "name": "trama wrong Host fails closed",
+      "passed": true
+    },
+    {
+      "name": "trama denied mixed batches cause no partial cart changes",
+      "passed": true
+    },
+    {
+      "name": "trama cart/remove-item works",
+      "passed": true
+    },
+    {
+      "name": "trama cart removal persists",
+      "passed": true
+    },
+    {
+      "name": "trama cart/remove-item works",
+      "passed": true
+    },
+    {
+      "name": "trama cart can be emptied",
+      "passed": true
+    },
+    {
+      "name": "origen Store API catalog works",
+      "passed": true
+    },
+    {
+      "name": "origen has DEMO catalog",
+      "passed": true
+    },
+    {
+      "name": "origen published page discovery works",
+      "passed": true
+    },
+    {
+      "name": "origen cart page exists",
+      "passed": true
+    },
+    {
+      "name": "origen checkout page exists",
+      "passed": true
+    },
+    {
+      "name": "origen account page exists",
+      "passed": true
+    },
+    {
+      "name": "origen withdrawal page exists",
+      "passed": true
+    },
+    {
+      "name": "origen simple and variable remain purchasable for cart demonstration",
+      "passed": true
+    },
+    {
+      "name": "origen categorized catalog",
+      "passed": true
+    },
+    {
+      "name": "origen product image belongs to this demo",
+      "passed": true
+    },
+    {
+      "name": "origen static media sends noindex independently of PHP",
+      "passed": true
+    },
+    {
+      "name": "origen home navigation works",
+      "passed": true
+    },
+    {
+      "name": "origen home sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "origen home displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "origen home preserves brand",
+      "passed": true
+    },
+    {
+      "name": "origen home local images load",
+      "passed": true
+    },
+    {
+      "name": "origen home has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "origen home canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "origen Lookbook retains linked product hotspots",
+      "passed": true
+    },
+    {
+      "name": "origen Lookbook links stay inside this store",
+      "passed": true
+    },
+    {
+      "name": "origen Lookbook opens a real product",
+      "passed": true
+    },
+    {
+      "name": "origen catalog navigation works",
+      "passed": true
+    },
+    {
+      "name": "origen catalog sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "origen catalog displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "origen catalog preserves brand",
+      "passed": true
+    },
+    {
+      "name": "origen catalog local images load",
+      "passed": true
+    },
+    {
+      "name": "origen catalog has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "origen catalog canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "origen category navigation works",
+      "passed": true
+    },
+    {
+      "name": "origen category sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "origen category displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "origen category preserves brand",
+      "passed": true
+    },
+    {
+      "name": "origen category local images load",
+      "passed": true
+    },
+    {
+      "name": "origen category has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "origen category canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "origen product navigation works",
+      "passed": true
+    },
+    {
+      "name": "origen product sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "origen product displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "origen product preserves brand",
+      "passed": true
+    },
+    {
+      "name": "origen product local images load",
+      "passed": true
+    },
+    {
+      "name": "origen product has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "origen product canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "origen native variation controls visible",
+      "passed": true
+    },
+    {
+      "name": "origen variable attribute has options",
+      "passed": true
+    },
+    {
+      "name": "origen variable attribute has options",
+      "passed": true
+    },
+    {
+      "name": "origen variation resolves",
+      "passed": true
+    },
+    {
+      "name": "origen native variation add to cart succeeds",
+      "passed": true
+    },
+    {
+      "name": "origen mini cart displays selected product",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook navigation works",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook sends noindex and nofollow",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook displays clear DEMO notice",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook preserves brand",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook local images load",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook has no fictitious offer schema",
+      "passed": true
+    },
+    {
+      "name": "origen lookbook canonical stays on this demo or is absent",
+      "passed": true
+    },
+    {
+      "name": "origen product search works",
+      "passed": true
+    },
+    {
+      "name": "origen category filtering works",
+      "passed": true
+    },
+    {
+      "name": "origen home 390 light responds",
+      "passed": true
+    },
+    {
+      "name": "origen appearance 390 light is applied",
+      "passed": true
+    },
+    {
+      "name": "origen DEMO notice 390 light fits viewport",
+      "passed": true
+    },
+    {
+      "name": "origen home 1366 light responds",
+      "passed": true
+    },
+    {
+      "name": "origen appearance 1366 light is applied",
+      "passed": true
+    },
+    {
+      "name": "origen DEMO notice 1366 light fits viewport",
+      "passed": true
+    },
+    {
+      "name": "origen home 390 dark responds",
+      "passed": true
+    },
+    {
+      "name": "origen appearance 390 dark is applied",
+      "passed": true
+    },
+    {
+      "name": "origen DEMO notice 390 dark fits viewport",
+      "passed": true
+    },
+    {
+      "name": "origen home 1366 dark responds",
+      "passed": true
+    },
+    {
+      "name": "origen appearance 1366 dark is applied",
+      "passed": true
+    },
+    {
+      "name": "origen DEMO notice 1366 dark fits viewport",
+      "passed": true
+    },
+    {
+      "name": "origen browsing has no uncaught JS errors",
+      "passed": true
+    },
+    {
+      "name": "origen cart session remains available",
+      "passed": true
+    },
+    {
+      "name": "origen cart token issued privately",
+      "passed": true
+    },
+    {
+      "name": "origen cart/add-item works",
+      "passed": true
+    },
+    {
+      "name": "origen cart includes simple and selected variable",
+      "passed": true
+    },
+    {
+      "name": "origen cart/update-item works",
+      "passed": true
+    },
+    {
+      "name": "origen quantity persists",
+      "passed": true
+    },
+    {
+      "name": "origen native Cart Block renders products",
+      "passed": true
+    },
+    {
+      "name": "origen native Cart Block loads without blocked requests",
+      "passed": true
+    },
+    {
+      "name": "origen cart is isolated from the other demo",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?page_id=7 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen cart presents a route to the checkout restriction",
+      "passed": true
+    },
+    {
+      "name": "origen checkout displays explicit restriction",
+      "passed": true
+    },
+    {
+      "name": "origen blocked checkout requests no personal or banking form",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/store/v1/checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/store/v1/checkout/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/checkout/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/store/v1/order/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/order/123 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/v3/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/v3/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/v2/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/v2/orders is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wp/v2/users is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wp/v2/users is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wp/v2/settings is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wp/v2/settings is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /wp-json/wc/store/v1/checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/store/v1/checkout&_method=POST is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/cart/update-customer is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /checkout/order-pay/123/?pay_for_order=true&key=invalid-demo-key is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /checkout/order-received/123/?key=invalid-demo-key is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/wc/store/v1/batch is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?rest_route=/batch/v1 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?wc-ajax=checkout is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?wc-ajax=update_order_review is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?wc-api=WC_Gateway_BACS is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /wc-api/WC_Gateway_BACS/ is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /xmlrpc.php is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /wp-login.php?action=register is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /wp-login.php?action=lostpassword is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /wp-admin/admin-post.php?action=commerce_legal_manage is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /wp-login.php is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /wp-admin/ is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /wp-json/wp/v2/users is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen GET /?rest_route=/wc/store/v1/order/123&key=invalid-demo-key is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen OPTIONS /?rest_route=/wc/v2/system_status/tools is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?page_id=8 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen POST /?page_id=49 is blocked by DEMO server policy",
+      "passed": true
+    },
+    {
+      "name": "origen legal page explains public demo restriction",
+      "passed": true
+    },
+    {
+      "name": "origen account page offers no public login/register/reset form",
+      "passed": true
+    },
+    {
+      "name": "origen native sitemap disabled",
+      "passed": true
+    },
+    {
+      "name": "origen wrong Host fails closed",
+      "passed": true
+    },
+    {
+      "name": "origen denied mixed batches cause no partial cart changes",
+      "passed": true
+    },
+    {
+      "name": "origen cart/remove-item works",
+      "passed": true
+    },
+    {
+      "name": "origen cart removal persists",
+      "passed": true
+    },
+    {
+      "name": "origen cart/remove-item works",
+      "passed": true
+    },
+    {
+      "name": "origen cart can be emptied",
+      "passed": true
+    },
+    {
+      "name": "No Mercado Pago resource requested",
+      "passed": true
+    }
+  ],
+  "stores": [
+    {
+      "key": "trama",
+      "origin": "http://localhost:8190",
+      "brand": "TRAMA",
+      "productCount": 16,
+      "variableCount": 10,
+      "productSlugs": [
+        "bolso-transito",
+        "panuelo-pliegue",
+        "medias-canal",
+        "gorro-punto",
+        "gorra-sombra",
+        "bolsa-diario",
+        "pantalon-pausa",
+        "pantalon-linea",
+        "pantalon-cauce",
+        "buzo-textura",
+        "buzo-refugio",
+        "buzo-pulso",
+        "remera-horizonte",
+        "remera-aire",
+        "remera-trazo",
+        "remera-base"
+      ]
+    },
+    {
+      "key": "origen",
+      "origin": "http://localhost:8191",
+      "brand": "ORIGEN CASA",
+      "productCount": 10,
+      "variableCount": 2,
+      "productSlugs": [
+        "vela-ambar",
+        "cuencos-orilla",
+        "organizador-roble",
+        "cesto-nido",
+        "manta-calma",
+        "almohadon-lino",
+        "jarra-rio",
+        "jarron-tierra",
+        "colgante-duna",
+        "lampara-mesa-alba"
+      ]
+    }
+  ],
+  "externalRequests": [],
+  "mercadoPagoResources": [],
+  "screenshots": [
+    "trama-home-390-light.png",
+    "trama-home-1366-light.png",
+    "trama-home-390-dark.png",
+    "trama-home-1366-dark.png",
+    "trama-cart.png",
+    "trama-checkout-blocked.png",
+    "origen-home-390-light.png",
+    "origen-home-1366-light.png",
+    "origen-home-390-dark.png",
+    "origen-home-1366-dark.png",
+    "origen-cart.png",
+    "origen-checkout-blocked.png"
+  ],
+  "realPayments": false,
+  "externalMail": false,
+  "externalRequestsBlocked": 0
+}

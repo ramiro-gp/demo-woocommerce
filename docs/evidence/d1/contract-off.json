@@ -1,0 +1,11 @@
+{
+    "result": "passed",
+    "case": "off",
+    "module_sha256": "be48ca696c00b537013d191b395588e5013774e76dfa5265903593e0916b98b3",
+    "checks": {
+        "absent_flag_is_disabled": true,
+        "disabled_mode_registers_zero_hooks": true
+    },
+    "network": false,
+    "wordpress_integration": false
+}

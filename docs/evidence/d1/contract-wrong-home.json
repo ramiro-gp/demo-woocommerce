@@ -1,0 +1,16 @@
+{
+    "result": "passed",
+    "case": "wrong-home",
+    "module_sha256": "be48ca696c00b537013d191b395588e5013774e76dfa5265903593e0916b98b3",
+    "checks": {
+        "explicit_true_flag_enabled": true,
+        "three_part_opt_in_and_exact_host": true,
+        "enforcement_hook_pre_wp_mail": true,
+        "enforcement_hook_pre_http_request": true,
+        "enforcement_hook_woocommerce_before_order_object_save": true,
+        "enforcement_hook_rest_pre_dispatch": true,
+        "enforcement_hook_wp_sitemaps_enabled": true
+    },
+    "network": false,
+    "wordpress_integration": false
+}

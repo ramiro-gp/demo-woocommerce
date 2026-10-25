@@ -1,0 +1,10 @@
+{
+    "origin": "http://localhost:8190",
+    "database_data_index_bytes": 3964928,
+    "uploads_bytes": 15171290,
+    "upload_files": 277,
+    "simple_stock_source_mismatches": [],
+    "php_version": "8.4.27",
+    "local_only": true,
+    "hosting_capacity_test": false
+}

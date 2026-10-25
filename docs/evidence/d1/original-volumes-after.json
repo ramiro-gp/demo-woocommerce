@@ -1,0 +1,28 @@
+[
+  {
+    "installation": "local",
+    "fingerprints": [
+      {
+        "volume": "demo-woocommerce-local_db_data",
+        "sha256": "5196d0786b59f6a2f168ab3a5871a10c4d6ab9e5a38c6fc538d6037b37882453"
+      },
+      {
+        "volume": "demo-woocommerce-local_wordpress_data",
+        "sha256": "43e0924e5f55fab7404ca415d0d832139c500023ad7dea94b93d7633e3456a18"
+      }
+    ]
+  },
+  {
+    "installation": "origen-casa",
+    "fingerprints": [
+      {
+        "volume": "demo-woocommerce-origen-casa_db_data",
+        "sha256": "9dafd29a8b7ba541367e4db9f3f7d64f630b9d7b69d1f031ee729bd52f4e8c48"
+      },
+      {
+        "volume": "demo-woocommerce-origen-casa_wordpress_data",
+        "sha256": "02e8b7c73ea5ee74d7ada0d9d104cdd6a147f7547330fd40d641c067c19a99aa"
+      }
+    ]
+  }
+]

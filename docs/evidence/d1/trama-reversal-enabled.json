@@ -1,0 +1,16 @@
+{
+    "result": "passed",
+    "origin": "http://localhost:8190",
+    "mode": "enabled",
+    "checks": {
+        "expected_activation_state": true,
+        "empty_order_baseline": true,
+        "native_wc_create_order_is_blocked": true,
+        "gateways_empty": true,
+        "mail_transport_stopped": true,
+        "no_order_left_after_probe": true
+    },
+    "external_mail": false,
+    "real_payment": false,
+    "native_checkout_browser_tested": false
+}

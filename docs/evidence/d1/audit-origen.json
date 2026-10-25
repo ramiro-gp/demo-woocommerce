@@ -1,0 +1,47 @@
+{
+    "result": "passed",
+    "origin": "http://localhost:8191",
+    "checks": {
+        "public_module_enabled": true,
+        "public_module_configuration_valid": true,
+        "commerce_base_active": true,
+        "wordpress_7_1_3": true,
+        "woocommerce_11_2_1": true,
+        "hpos_enabled": true,
+        "noindex": true,
+        "public_registration_disabled": true,
+        "no_payment_gateways": true,
+        "native_gateways_persistently_disabled": true,
+        "only_initial_administrator": true,
+        "only_synthetic_user_emails": true,
+        "no_visitor_order_in_any_hpos_status": true,
+        "no_records_wc_orders": true,
+        "no_records_woocommerce_order_items": true,
+        "no_records_commerce_legal_requests": true,
+        "no_records_commerce_legal_events": true,
+        "no_legacy_orders_or_placeholders": true,
+        "mercadopago_absent": true,
+        "no_bank_accounts": true,
+        "no_real_fiscal_identity": true,
+        "synthetic_admin_email": true,
+        "products_preserved": true,
+        "simple_and_variable_preserved": true
+    },
+    "counts": {
+        "wc_orders": 0,
+        "woocommerce_order_items": 0,
+        "commerce_legal_requests": 0,
+        "commerce_legal_events": 0
+    },
+    "product_count": 10,
+    "user_count": 1,
+    "isolation": {
+        "database_sha256": "dfa28fcfa3704af086ca6ca1b8e15ec3bb97c857d88c2e8d92994838ca7ba1ec",
+        "salts_sha256": "be51dd4d636f418206bcbf5b777c319e5670cb96dd8655ab605cbe035bfbcfff",
+        "admin_password_hash_sha256": "5063d6405a2d3bdefd82962d8b806dd723e42b755e68994567143277ed74caf9",
+        "uploads_realpath": "/var/www/html/wp-content/uploads",
+        "upload_origin": "localhost:8191"
+    },
+    "real_mail": false,
+    "real_payments": false
+}
