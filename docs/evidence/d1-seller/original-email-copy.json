@@ -1,0 +1,34 @@
+{
+    "result": "read-only",
+    "settings": {
+        "trama": {
+            "woocommerce_customer_completed_order_settings": {
+                "enabled": "yes",
+                "subject": "[{site_title}] Finalizamos tu pedido #{order_number}",
+                "heading": "Pedido completado"
+            },
+            "woocommerce_customer_processing_order_settings": {
+                "enabled": "yes",
+                "subject": "[{site_title}] Pedido #{order_number} confirmado",
+                "heading": "Pedido confirmado"
+            },
+            "woocommerce_new_order_settings": {
+                "enabled": "yes",
+                "subject": "[{site_title}] Nuevo pedido #{order_number}",
+                "heading": "Nuevo pedido"
+            }
+        },
+        "origen": {
+            "woocommerce_customer_completed_order_settings": {
+                "enabled": "yes"
+            },
+            "woocommerce_customer_processing_order_settings": {
+                "enabled": "yes"
+            },
+            "woocommerce_new_order_settings": {
+                "enabled": "yes"
+            }
+        }
+    },
+    "recipients_disclosed": false
+}

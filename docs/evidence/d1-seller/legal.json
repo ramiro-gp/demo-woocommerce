@@ -1,0 +1,114 @@
+{
+  "result": "passed",
+  "phase": "legal",
+  "origin": "http://localhost:8193",
+  "checks": [
+    {
+      "name": "Own completed order is available for synthetic association",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Original legal form available only in separate seller lab",
+      "passed": true
+    },
+    {
+      "name": "Synthetic intake returns its receipt code",
+      "passed": true
+    },
+    {
+      "name": "Receipt does not claim cancellation or money returned",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "manager native login works",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "manager can list legal requests",
+      "passed": true
+    },
+    {
+      "name": "manager legal state saved",
+      "passed": true
+    },
+    {
+      "name": "manager verified order association uses native HPOS link",
+      "passed": true
+    },
+    {
+      "name": "manager sees audit notes",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "admin native login works",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "admin can list legal requests",
+      "passed": true
+    },
+    {
+      "name": "admin legal state saved",
+      "passed": true
+    },
+    {
+      "name": "admin verified order association uses native HPOS link",
+      "passed": true
+    },
+    {
+      "name": "admin sees audit notes",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Legal workflow preserves completed order/payment state",
+      "passed": true
+    },
+    {
+      "name": "Both legal notification transports succeeded to isolated Mailpit",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "legal-manager-list.png",
+    "legal-manager-detail.png",
+    "legal-admin-list.png",
+    "legal-admin-detail.png"
+  ],
+  "observations": [],
+  "externalRequestsBlocked": 0,
+  "synthetic": true,
+  "realTransfers": false,
+  "realRefunds": false,
+  "externalMail": false,
+  "legal": {
+    "id": 1,
+    "status": "awaiting",
+    "orderId": 84,
+    "consumerMail": "sent",
+    "merchantMail": "sent"
+  }
+}

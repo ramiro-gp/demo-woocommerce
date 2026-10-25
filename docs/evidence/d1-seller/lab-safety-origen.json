@@ -1,0 +1,36 @@
+{
+    "result": "passed",
+    "origin": "http://localhost:8193",
+    "checks": {
+        "public_guard_explicitly_off": true,
+        "approved_wordpress": true,
+        "approved_woocommerce": true,
+        "commerce_base_active": true,
+        "mercadopago_absent": true,
+        "native_bacs_only": true,
+        "no_bank_accounts": true,
+        "noindex": true,
+        "synthetic_users_only": true,
+        "external_recipient_rejected_before_transport": true,
+        "mixed_external_recipient_list_rejected": true,
+        "cc_recipient_rejected_before_transport": true,
+        "external_wordpress_http_rejected": true
+    },
+    "stored_roles": {
+        "administrator": {
+            "capability_count": 115,
+            "capabilities_sha256": "625e6bdfe25c43461f9bc2c8a14ec17c4a5ca706653817a919a4cd112c4df921"
+        },
+        "shop_manager": {
+            "capability_count": 93,
+            "capabilities_sha256": "f67b319ae694a3ee8504db9b20b2770cf80433a56fa6054f4dd5d63bfc383c5d"
+        },
+        "customer": {
+            "capability_count": 1,
+            "capabilities_sha256": "3ed25de16ca345b2d8058b937d5d709e05a1e439932c42f1900eeaa20c0af0fe"
+        }
+    },
+    "qa_user_count": 3,
+    "external_email_delivered": false,
+    "real_payment": false
+}

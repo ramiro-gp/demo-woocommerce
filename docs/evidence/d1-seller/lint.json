@@ -1,0 +1,64 @@
+{
+  "syntaxOnly": true,
+  "network": false,
+  "phpFiles": [
+    {
+      "file": "deployment/seller-lab/initialize.php",
+      "passed": true,
+      "sha256": "f6622d0fc39d1713ad623c1a7fd318514dfac4b4df45bd13db17b02f4f3e2277"
+    },
+    {
+      "file": "deployment/seller-lab/mail.php",
+      "passed": true,
+      "sha256": "20eee7f4ed231bffb199e26b995904b6ba9a6995eb042cbd395cd150b58a887c"
+    },
+    {
+      "file": "tests/seller-lab-audit.php",
+      "passed": true,
+      "sha256": "1b352957bdcd288fa136e6b653fb90f2eb221f06b4442447f5c4c0c6e485d180"
+    },
+    {
+      "file": "tests/seller-orders-fixture.php",
+      "passed": true,
+      "sha256": "fd53c9e5b8a4a621406f3ea9445070f75f2039eb7da1050b684975f7763e8453"
+    },
+    {
+      "file": "tests/seller-products-data.php",
+      "passed": true,
+      "sha256": "62c212922d91054e9e0a6a58798328cd1edbb1b7646478a299738c14d07f8e3a"
+    },
+    {
+      "file": "tests/seller-products-role.php",
+      "passed": true,
+      "sha256": "857881fd0b5b33b6941df4707a633184b779a93d73e418b572ee53e19e6acd30"
+    }
+  ],
+  "result": "passed",
+  "jsFiles": [
+    {
+      "file": "tests/seller-orders.cjs",
+      "passed": true,
+      "sha256": "ce8c8968e0284832fac2e2a590cf3d9ac2b7a8f8b51896ffc831a483e8f57929"
+    },
+    {
+      "file": "tests/seller-products.cjs",
+      "passed": true,
+      "sha256": "d074789036083d406ce8e41a8aa3b1fab91c7f09cbb358b2d7f98d229880de9b"
+    },
+    {
+      "file": "tests/seller-products-inspect.cjs",
+      "passed": true,
+      "sha256": "f30520297d30f8315af5dc50904ef3bcd0faa37f37eb4a9d244ab40370a55ecc"
+    },
+    {
+      "file": "tests/seller-personalization.cjs",
+      "passed": true,
+      "sha256": "4dbde144c6c6aa6ca56375b173bb7efe9bc3fe6e76db0dccd2779c87f2f55e57"
+    },
+    {
+      "file": "tests/verify-seller-secrets.cjs",
+      "passed": true,
+      "sha256": "96abbbb232a74d0134b4ca5a71ff59f3994a9fbd10f4e8f85bc7eefe8053ac1b"
+    }
+  ]
+}

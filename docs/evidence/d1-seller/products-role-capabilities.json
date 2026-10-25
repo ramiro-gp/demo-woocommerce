@@ -1,0 +1,186 @@
+{
+  "result": "passed",
+  "scope": "D1.1 native capabilities; synthetic local clone only",
+  "origin": "http://localhost:8192",
+  "checks": {
+    "native_public_guard_off": true,
+    "administrator_has_technical_control": true,
+    "manager_can_operate_shop": true,
+    "manager_cannot_change_plugins_or_general_settings": true,
+    "manager_cannot_edit_administrator": true,
+    "manager_can_edit_customer": true,
+    "customer_cannot_operate_shop": true
+  },
+  "stored_role_definitions_match_readonly_originals": {
+    "trama": {
+      "administrator": true,
+      "shop_manager": true,
+      "customer": true
+    },
+    "origen": {
+      "administrator": true,
+      "shop_manager": true,
+      "customer": true
+    }
+  },
+  "roles": [
+    {
+      "role": "administrator",
+      "capabilities": {
+        "read": true,
+        "manage_options": true,
+        "manage_woocommerce": true,
+        "view_woocommerce_reports": true,
+        "edit_products": true,
+        "publish_products": true,
+        "delete_products": true,
+        "manage_product_terms": true,
+        "upload_files": true,
+        "edit_shop_orders": true,
+        "edit_shop_coupons": true,
+        "publish_shop_coupons": true,
+        "list_users": true,
+        "edit_users": true,
+        "create_users": true,
+        "create_customers": true,
+        "delete_users": true,
+        "promote_users": true,
+        "activate_plugins": true,
+        "install_plugins": true,
+        "update_plugins": true,
+        "switch_themes": true,
+        "edit_theme_options": true,
+        "edit_pages": true
+      },
+      "targeted_user_permissions": {
+        "administrator": {
+          "edit_user": true,
+          "delete_user": true,
+          "promote_user": true
+        },
+        "shop_manager": {
+          "edit_user": true,
+          "delete_user": true,
+          "promote_user": true
+        },
+        "customer": {
+          "edit_user": true,
+          "delete_user": true,
+          "promote_user": true
+        }
+      },
+      "editable_roles": [
+        "administrator",
+        "editor",
+        "author",
+        "contributor",
+        "subscriber",
+        "customer",
+        "shop_manager"
+      ]
+    },
+    {
+      "role": "shop_manager",
+      "capabilities": {
+        "read": true,
+        "manage_options": false,
+        "manage_woocommerce": true,
+        "view_woocommerce_reports": true,
+        "edit_products": true,
+        "publish_products": true,
+        "delete_products": true,
+        "manage_product_terms": true,
+        "upload_files": true,
+        "edit_shop_orders": true,
+        "edit_shop_coupons": true,
+        "publish_shop_coupons": true,
+        "list_users": true,
+        "edit_users": true,
+        "create_users": false,
+        "create_customers": true,
+        "delete_users": false,
+        "promote_users": false,
+        "activate_plugins": false,
+        "install_plugins": false,
+        "update_plugins": false,
+        "switch_themes": false,
+        "edit_theme_options": true,
+        "edit_pages": true
+      },
+      "targeted_user_permissions": {
+        "administrator": {
+          "edit_user": false,
+          "delete_user": false,
+          "promote_user": false
+        },
+        "shop_manager": {
+          "edit_user": true,
+          "delete_user": false,
+          "promote_user": false
+        },
+        "customer": {
+          "edit_user": true,
+          "delete_user": false,
+          "promote_user": false
+        }
+      },
+      "editable_roles": [
+        "customer"
+      ]
+    },
+    {
+      "role": "customer",
+      "capabilities": {
+        "read": true,
+        "manage_options": false,
+        "manage_woocommerce": false,
+        "view_woocommerce_reports": false,
+        "edit_products": false,
+        "publish_products": false,
+        "delete_products": false,
+        "manage_product_terms": false,
+        "upload_files": false,
+        "edit_shop_orders": false,
+        "edit_shop_coupons": false,
+        "publish_shop_coupons": false,
+        "list_users": false,
+        "edit_users": false,
+        "create_users": false,
+        "create_customers": false,
+        "delete_users": false,
+        "promote_users": false,
+        "activate_plugins": false,
+        "install_plugins": false,
+        "update_plugins": false,
+        "switch_themes": false,
+        "edit_theme_options": false,
+        "edit_pages": false
+      },
+      "targeted_user_permissions": {
+        "administrator": {
+          "edit_user": false,
+          "delete_user": false,
+          "promote_user": false
+        },
+        "shop_manager": {
+          "edit_user": false,
+          "delete_user": false,
+          "promote_user": false
+        },
+        "customer": {
+          "edit_user": true,
+          "delete_user": false,
+          "promote_user": false
+        }
+      },
+      "editable_roles": [
+        "editor",
+        "author",
+        "contributor",
+        "subscriber",
+        "customer",
+        "shop_manager"
+      ]
+    }
+  ]
+}

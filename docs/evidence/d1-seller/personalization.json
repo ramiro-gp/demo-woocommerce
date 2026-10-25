@@ -1,0 +1,106 @@
+{
+  "result": "passed",
+  "origin": "http://localhost:8193",
+  "method": "Read-only native UI walkthrough; no settings or content saves",
+  "checks": [
+    {
+      "name": "manager authenticated to native WordPress",
+      "passed": true
+    },
+    {
+      "name": "Shop Manager general restricted by native permissions",
+      "passed": true
+    },
+    {
+      "name": "Shop Manager legal-settings restricted by native permissions",
+      "passed": true
+    },
+    {
+      "name": "Shop Manager can open native pages list",
+      "passed": true
+    },
+    {
+      "name": "Shop Manager can open Site Editor with edit_theme_options",
+      "passed": true
+    },
+    {
+      "name": "Shop Manager reaches native styles controls",
+      "passed": true
+    },
+    {
+      "name": "tablet product list retains readable product names",
+      "passed": true
+    },
+    {
+      "name": "tablet HPOS order list is accessible",
+      "passed": true
+    },
+    {
+      "name": "mobile product list retains readable product names",
+      "passed": true
+    },
+    {
+      "name": "mobile HPOS order list is accessible",
+      "passed": true
+    },
+    {
+      "name": "admin authenticated to native WordPress",
+      "passed": true
+    },
+    {
+      "name": "Administrator can edit business name from General settings",
+      "passed": true
+    },
+    {
+      "name": "Administrator can edit native Commerce Core identity settings",
+      "passed": true
+    },
+    {
+      "name": "Administrator can open existing Home editor",
+      "passed": true
+    },
+    {
+      "name": "Administrator can open native Site Editor",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "personalization-manager-pages.png",
+    "personalization-manager-site-editor.png",
+    "personalization-manager-styles-controls.png",
+    "personalization-manager-identity-controls.png",
+    "personalization-manager-dashboard-tablet.png",
+    "personalization-manager-products-tablet.png",
+    "personalization-manager-orders-tablet.png",
+    "personalization-manager-dashboard-mobile.png",
+    "personalization-manager-products-mobile.png",
+    "personalization-manager-orders-mobile.png",
+    "personalization-admin-general-settings.png",
+    "personalization-admin-legal-settings.png",
+    "personalization-admin-home-editor.png",
+    "personalization-admin-site-editor.png"
+  ],
+  "observations": [
+    {
+      "screen": "Shop Manager Appearance editor",
+      "status": 200,
+      "permissionDenied": false
+    },
+    {
+      "screen": "Shop Manager Identity controls",
+      "inputCount": 4,
+      "formValuesSaved": false
+    },
+    {
+      "screen": "Shop Manager WordPress privacy page",
+      "status": 403,
+      "nativePermissionDenied": true
+    }
+  ],
+  "externalRequestsBlocked": [],
+  "allowedStaticEmojiRequests": 0,
+  "privacyMasks": [
+    "Native WordPress events/news widget (possible cached operator location)",
+    "Exact private QA login identifiers"
+  ]
+}

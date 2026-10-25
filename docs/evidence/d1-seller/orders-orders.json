@@ -1,0 +1,182 @@
+{
+  "result": "passed",
+  "phase": "orders",
+  "origin": "http://localhost:8193",
+  "checks": [
+    {
+      "name": "Three native BACS orders created first",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "manager native login works",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Manager sees buyer and shipping address",
+      "passed": true
+    },
+    {
+      "name": "Manager sees decoration variation and delivery",
+      "passed": true
+    },
+    {
+      "name": "Manager identifies BACS payment",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Private and customer notes are distinct and persistent",
+      "passed": true
+    },
+    {
+      "name": "Completing main order does not reduce stock twice",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Partial refund restores exactly one unit and keeps processing",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "BACS exposes manual refund only",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native total-restante manual refund persists",
+      "passed": true
+    },
+    {
+      "name": "Remaining full manual refund is recorded without transferring money",
+      "passed": true
+    },
+    {
+      "name": "Refund restock restores both units exactly",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "orders-manager-list.png",
+    "orders-manager-detail.png",
+    "orders-manager-completed.png",
+    "orders-refund-total-restante-form.png",
+    "orders-manager-refunded.png",
+    "orders-manager-detail-1024.png",
+    "orders-manager-detail-390.png",
+    "orders-refund-parcial-form.png"
+  ],
+  "observations": [
+    "Procesando y Completado son estados; el control de acreditación BACS y el envío físico requieren una acción humana. No hay estado de envío/tracking propio en la plantilla.",
+    "El botón Reembolsar manualmente registra la operación. No envía dinero por BACS. Reponer inventario es una elección explícita en ese formulario."
+  ],
+  "externalRequestsBlocked": 0,
+  "synthetic": true,
+  "realTransfers": false,
+  "realRefunds": false,
+  "externalMail": false,
+  "orderStates": [
+    {
+      "id": 87,
+      "status": "refunded",
+      "total": 20000,
+      "totalRefunded": 20000,
+      "paymentMethod": "bacs"
+    },
+    {
+      "id": 85,
+      "status": "cancelled",
+      "total": 60000,
+      "totalRefunded": 0,
+      "paymentMethod": "bacs"
+    },
+    {
+      "id": 84,
+      "status": "completed",
+      "total": 35700,
+      "totalRefunded": 0,
+      "paymentMethod": "bacs"
+    }
+  ],
+  "inventory": {
+    "initial": {
+      "simple": 8,
+      "roble": 6,
+      "nogal": 4
+    },
+    "final": {
+      "simple": {
+        "id": 79,
+        "quantity": 6,
+        "status": "instock",
+        "low_stock_amount": 6
+      },
+      "roble": {
+        "id": 81,
+        "quantity": 5,
+        "status": "instock",
+        "low_stock_amount": 2
+      },
+      "nogal": {
+        "id": 82,
+        "quantity": 4,
+        "status": "instock",
+        "low_stock_amount": 2
+      }
+    }
+  },
+  "responsive": [
+    {
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "statusVisible": true,
+      "itemsScrollable": true
+    },
+    {
+      "viewport": 390,
+      "documentWidth": 390,
+      "statusVisible": true,
+      "itemsScrollable": true
+    }
+  ]
+}

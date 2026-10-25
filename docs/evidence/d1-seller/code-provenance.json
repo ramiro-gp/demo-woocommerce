@@ -1,0 +1,86 @@
+{
+  "brands": [
+    {
+      "brand": "trama",
+      "modules": [
+        {
+          "sha256": "84050695c534a79c7138315e335b66d96225f8d489c12fa779f1e2c10fe22738",
+          "unchanged": true,
+          "module": "themes/commerce-base"
+        },
+        {
+          "sha256": "990205820aeeebd7692c09b471c223763654f6c0ac18aa3f3213b9c886fe4d19",
+          "unchanged": true,
+          "module": "plugins/woocommerce"
+        },
+        {
+          "sha256": "6a41bd2a4765dddace34062baae136ce234f5cb4b36b35be9f0a30a775f40297",
+          "unchanged": true,
+          "module": "plugins/commerce-core"
+        },
+        {
+          "sha256": "b020bbfc4ec4a77d073cbafcb90b3a78d1fa13f0498dc55a3090f995b0c6b987",
+          "unchanged": true,
+          "module": "plugins/commerce-communications"
+        },
+        {
+          "sha256": "ab9b3be3e60e5c7d094c21dfbf9b455929deb803031bfdf1df111ab57b8d3b4f",
+          "unchanged": true,
+          "module": "plugins/commerce-order-integrity"
+        },
+        {
+          "sha256": "c9828f9864d02628e46a26139c77742095ff78392e4e4cc42a5c2ae8a992499e",
+          "unchanged": true,
+          "module": "plugins/commerce-account-navigation"
+        },
+        {
+          "sha256": "1a7f47d6bfcef66ba0d123b3e6ba5b138902743c77fd3bf4757d71d37d731ee9",
+          "unchanged": true,
+          "module": "plugins/commerce-lookbook"
+        }
+      ]
+    },
+    {
+      "brand": "origen",
+      "modules": [
+        {
+          "sha256": "cc99b6ea8023e2676e78cf3fdffe9207ee2f3d5f040cbbd72cb21115d469d7d6",
+          "unchanged": true,
+          "module": "themes/commerce-base"
+        },
+        {
+          "sha256": "990205820aeeebd7692c09b471c223763654f6c0ac18aa3f3213b9c886fe4d19",
+          "unchanged": true,
+          "module": "plugins/woocommerce"
+        },
+        {
+          "sha256": "6a41bd2a4765dddace34062baae136ce234f5cb4b36b35be9f0a30a775f40297",
+          "unchanged": true,
+          "module": "plugins/commerce-core"
+        },
+        {
+          "sha256": "b020bbfc4ec4a77d073cbafcb90b3a78d1fa13f0498dc55a3090f995b0c6b987",
+          "unchanged": true,
+          "module": "plugins/commerce-communications"
+        },
+        {
+          "sha256": "ab9b3be3e60e5c7d094c21dfbf9b455929deb803031bfdf1df111ab57b8d3b4f",
+          "unchanged": true,
+          "module": "plugins/commerce-order-integrity"
+        },
+        {
+          "sha256": "c9828f9864d02628e46a26139c77742095ff78392e4e4cc42a5c2ae8a992499e",
+          "unchanged": true,
+          "module": "plugins/commerce-account-navigation"
+        },
+        {
+          "sha256": "1a7f47d6bfcef66ba0d123b3e6ba5b138902743c77fd3bf4757d71d37d731ee9",
+          "unchanged": true,
+          "module": "plugins/commerce-lookbook"
+        }
+      ]
+    }
+  ],
+  "scope": "14 module trees compared bytewise with read-only D1 source volumes; no config or personal files",
+  "result": "passed"
+}

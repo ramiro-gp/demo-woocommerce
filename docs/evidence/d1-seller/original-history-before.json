@@ -1,0 +1,36 @@
+[
+  {
+    "checksums": [
+      "commerce_local.wp_posts\t445700306",
+      "commerce_local.wp_postmeta\t3633662954",
+      "commerce_local.wp_users\t4144876216",
+      "commerce_local.wp_usermeta\t2464755107",
+      "commerce_local.wp_wc_orders\t526369976",
+      "commerce_local.wp_wc_order_addresses\t2060180394",
+      "commerce_local.wp_wc_orders_meta\t1372490794",
+      "commerce_local.wp_woocommerce_order_items\t3677958297",
+      "commerce_local.wp_woocommerce_order_itemmeta\t1565015727",
+      "commerce_local.wp_commerce_legal_requests\t3012824129",
+      "commerce_local.wp_commerce_legal_events\t2518705533"
+    ],
+    "web_remains_stopped": true,
+    "brand": "trama"
+  },
+  {
+    "checksums": [
+      "commerce_local.wp_posts\t1852913667",
+      "commerce_local.wp_postmeta\t1952171975",
+      "commerce_local.wp_users\t531958208",
+      "commerce_local.wp_usermeta\t20800738",
+      "commerce_local.wp_wc_orders\t167073454",
+      "commerce_local.wp_wc_order_addresses\t1667500601",
+      "commerce_local.wp_wc_orders_meta\t2514800512",
+      "commerce_local.wp_woocommerce_order_items\t4075258925",
+      "commerce_local.wp_woocommerce_order_itemmeta\t385060658",
+      "commerce_local.wp_commerce_legal_requests\t1792312853",
+      "commerce_local.wp_commerce_legal_events\t2395091883"
+    ],
+    "web_remains_stopped": true,
+    "brand": "origen"
+  }
+]

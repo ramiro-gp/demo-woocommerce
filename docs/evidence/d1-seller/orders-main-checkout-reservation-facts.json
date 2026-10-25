@@ -1,0 +1,56 @@
+{
+  "result": "passed",
+  "mode": "snapshot",
+  "business_date": "2026-10-25",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "fixture": {
+    "installation": "d1-1-seller-audit",
+    "origin": "http://localhost:8193",
+    "products": {
+      "simple": 79,
+      "variable": 80,
+      "variations": {
+        "roble": 81,
+        "nogal": 82
+      }
+    },
+    "coupon": {
+      "id": 83,
+      "code": "d11o-qa10"
+    },
+    "initial_stock": {
+      "simple": 8,
+      "roble": 6,
+      "nogal": 4
+    }
+  },
+  "stock": {
+    "simple": {
+      "id": 79,
+      "quantity": 8,
+      "status": "instock",
+      "low_stock_amount": 6
+    },
+    "roble": {
+      "id": 81,
+      "quantity": 6,
+      "status": "instock",
+      "low_stock_amount": 2
+    },
+    "nogal": {
+      "id": 82,
+      "quantity": 4,
+      "status": "instock",
+      "low_stock_amount": 2
+    }
+  },
+  "orders": [],
+  "reservations": [],
+  "reservation_probe": null,
+  "legal": [],
+  "native_analytics_rows": [],
+  "analytics_native_sync_invoked": false,
+  "real_transfer": false,
+  "real_refund": false,
+  "external_mail": false
+}

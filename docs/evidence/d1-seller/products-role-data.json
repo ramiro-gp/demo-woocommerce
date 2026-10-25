@@ -1,0 +1,111 @@
+{
+  "result": "passed",
+  "scope": "Persistence after actual native seller UI actions; disposable clone only",
+  "origin": "http://localhost:8192",
+  "checks": {
+    "ui_simple_product_published": true,
+    "ui_prices_and_sale_persist": true,
+    "ui_stock_restock_persists": true,
+    "ui_uploaded_featured_image_persists": true,
+    "ui_clothing_four_variations_persist": true,
+    "ui_clothing_per_variation_prices_stock_persist": true,
+    "ui_decoration_four_variations_persist": true,
+    "ui_decoration_per_variation_prices_stock_persist": true,
+    "native_csv_product_persists": true,
+    "own_qa_product_in_trash": true,
+    "ui_global_attribute_and_terms_persist": true,
+    "ui_coupon_d11p-percent_settings_persist": true,
+    "ui_coupon_d11p-fixed_settings_persist": true,
+    "ui_coupon_d11p-expired_settings_persist": true,
+    "ui_shipping_zone_persists": true,
+    "qa_zone_only_postcode_9999": true,
+    "ui_flat_rate_1800_persists": true,
+    "ui_free_shipping_threshold_50000_persists": true,
+    "ui_pickup_zero_cost_persists": true,
+    "original_country_eligibility_preserved": true
+  },
+  "variables": {
+    "clothing": {
+      "attribute_names": [
+        "talle-qa",
+        "color-qa"
+      ],
+      "variation_count": 4,
+      "prices": [
+        30000,
+        31000,
+        32000,
+        33000
+      ],
+      "stocks": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "decoration": {
+      "attribute_names": [
+        "material-qa",
+        "capacidad-qa"
+      ],
+      "variation_count": 4,
+      "prices": [
+        30000,
+        31000,
+        32000,
+        33000
+      ],
+      "stocks": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "coupons": {
+    "d11p-percent": {
+      "type": "percent",
+      "amount": 15,
+      "minimum": 50000,
+      "expires": "2030-01-01",
+      "individual_use": true
+    },
+    "d11p-fixed": {
+      "type": "fixed_cart",
+      "amount": 2500,
+      "minimum": 10000,
+      "expires": "2030-01-01",
+      "individual_use": true
+    },
+    "d11p-expired": {
+      "type": "percent",
+      "amount": 5,
+      "minimum": 10000,
+      "expires": "2020-01-01",
+      "individual_use": true
+    }
+  },
+  "shipping": {
+    "flat_rate": {
+      "title": "D11P Tarifa fija QA",
+      "cost": "1800",
+      "min_amount": "",
+      "requires": ""
+    },
+    "free_shipping": {
+      "title": "D11P Envío gratis QA",
+      "cost": "",
+      "min_amount": "50000",
+      "requires": "min_amount"
+    },
+    "local_pickup": {
+      "title": "D11P Retiro QA",
+      "cost": "0",
+      "min_amount": "",
+      "requires": ""
+    }
+  },
+  "no_functional_source_changes": true
+}

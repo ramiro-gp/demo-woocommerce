@@ -1,0 +1,319 @@
+{
+  "result": "passed",
+  "phase": "checkout",
+  "origin": "http://localhost:8193",
+  "checks": [
+    {
+      "name": "Guarded seller CLI seed succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "customer native login works",
+      "passed": true
+    },
+    {
+      "name": "Native cart available",
+      "passed": true
+    },
+    {
+      "name": "Cart token kept private",
+      "passed": true
+    },
+    {
+      "name": "Only this order fixture occupies the synthetic customer cart",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/remove-coupon succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/remove-item succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/remove-item succeeds",
+      "passed": true
+    },
+    {
+      "name": "Own variable product available",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /product/qa-vendedor-lampara-d11o/",
+      "passed": true
+    },
+    {
+      "name": "Own native variation resolved",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/add-item succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/update-customer succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/apply-coupon succeeds",
+      "passed": true
+    },
+    {
+      "name": "main chosen delivery rate available",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/select-shipping-rate succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Native Checkout Block appears",
+      "passed": true
+    },
+    {
+      "name": "Only fictitious BACS offered",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "main merely opening checkout does not reserve physical stock",
+      "passed": true
+    },
+    {
+      "name": "main native place-order succeeds",
+      "passed": true
+    },
+    {
+      "name": "main BACS receives an on-hold order",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "main stored buyer/delivery data exists",
+      "passed": true
+    },
+    {
+      "name": "main paid-order reservation is released",
+      "passed": true
+    },
+    {
+      "name": "Main simple stock reduces 8→6 and Roble variation6→5",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "customer native login works",
+      "passed": true
+    },
+    {
+      "name": "Native cart available",
+      "passed": true
+    },
+    {
+      "name": "Cart token kept private",
+      "passed": true
+    },
+    {
+      "name": "Only this order fixture occupies the synthetic customer cart",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/add-item succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/update-customer succeeds",
+      "passed": true
+    },
+    {
+      "name": "cancel chosen delivery rate available",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/select-shipping-rate succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Native Checkout Block appears",
+      "passed": true
+    },
+    {
+      "name": "Only fictitious BACS offered",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "cancel merely opening checkout does not reserve physical stock",
+      "passed": true
+    },
+    {
+      "name": "cancel native place-order succeeds",
+      "passed": true
+    },
+    {
+      "name": "cancel BACS receives an on-hold order",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "cancel stored buyer/delivery data exists",
+      "passed": true
+    },
+    {
+      "name": "cancel paid-order reservation is released",
+      "passed": true
+    },
+    {
+      "name": "Cancellation fixture exhausts remaining simple stock",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "manager native login works",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native UI persists cancelled",
+      "passed": true
+    },
+    {
+      "name": "Native cancellation restores six units",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "customer native login works",
+      "passed": true
+    },
+    {
+      "name": "Native cart available",
+      "passed": true
+    },
+    {
+      "name": "Cart token kept private",
+      "passed": true
+    },
+    {
+      "name": "Only this order fixture occupies the synthetic customer cart",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/add-item succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/update-customer succeeds",
+      "passed": true
+    },
+    {
+      "name": "refund chosen delivery rate available",
+      "passed": true
+    },
+    {
+      "name": "Native cart cart/select-shipping-rate succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Native Checkout Block appears",
+      "passed": true
+    },
+    {
+      "name": "Only fictitious BACS offered",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "refund merely opening checkout does not reserve physical stock",
+      "passed": true
+    },
+    {
+      "name": "refund native place-order succeeds",
+      "passed": true
+    },
+    {
+      "name": "refund BACS receives an on-hold order",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI snapshot succeeds",
+      "passed": true
+    },
+    {
+      "name": "refund stored buyer/delivery data exists",
+      "passed": true
+    },
+    {
+      "name": "refund paid-order reservation is released",
+      "passed": true
+    },
+    {
+      "name": "Guarded seller CLI reservation-probe succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native pending-order reservation/release works without reducing physical stock",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "orders-bacs-checkout-qa.png",
+    "orders-cancelled-restock.png"
+  ],
+  "observations": [
+    "WC11.2 no reserva inventario por abrir el checkout. La reserva ocurre durante el POST final; BACS En espera descuenta stock y libera la reserva. La prueba separada de reservar/liberar un pedido pendiente se ejecutó con funciones nativas por CLI, sin inventar una pantalla de reservas."
+  ],
+  "externalRequestsBlocked": 2,
+  "synthetic": true,
+  "realTransfers": false,
+  "realRefunds": false,
+  "externalMail": false
+}

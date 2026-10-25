@@ -1,0 +1,499 @@
+{
+  "result": "passed",
+  "phase": "mail",
+  "origin": "http://localhost:8193",
+  "checks": [
+    {
+      "name": "Isolated Mailpit responds",
+      "passed": true
+    },
+    {
+      "name": "Native workflow produced captured mail",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "Captured message is readable",
+      "passed": true
+    },
+    {
+      "name": "All recipients synthetic .test",
+      "passed": true
+    },
+    {
+      "name": "No QA password appears in messages",
+      "passed": true
+    },
+    {
+      "name": "Every sender is also synthetic",
+      "passed": true
+    },
+    {
+      "name": "Captured mail never links to historical or public D1 shops",
+      "passed": true
+    },
+    {
+      "name": "Native new_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native cancelled_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_on_hold_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_processing_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_completed_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_cancelled_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_refunded_order transport captured",
+      "passed": true
+    },
+    {
+      "name": "Native customer_note transport captured",
+      "passed": true
+    },
+    {
+      "name": "Private seller note is never emailed",
+      "passed": true
+    },
+    {
+      "name": "Customer-facing note is present in its native email",
+      "passed": true
+    },
+    {
+      "name": "merchant new order email captured",
+      "passed": true
+    },
+    {
+      "name": "merchant cancellation email captured",
+      "passed": true
+    },
+    {
+      "name": "processing email captured",
+      "passed": true
+    },
+    {
+      "name": "completed email captured",
+      "passed": true
+    },
+    {
+      "name": "manual refund clarification email captured",
+      "passed": true
+    },
+    {
+      "name": "consumer legal receipt email captured",
+      "passed": true
+    },
+    {
+      "name": "merchant legal notification email captured",
+      "passed": true
+    },
+    {
+      "name": "Native low-stock and exhausted-stock merchant alerts captured",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Mailpit merchant-new-order message available",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Mailpit merchant-cancelled message available",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Mailpit customer-completed message available",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Mailpit customer-refund message available",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    },
+    {
+      "name": "Mailpit merchant-legal message available",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "mailpit-workflow-list.png",
+    "mail-merchant-new-order.png",
+    "mail-merchant-cancelled.png",
+    "mail-customer-completed.png",
+    "mail-customer-refund.png",
+    "mail-merchant-legal.png"
+  ],
+  "observations": [
+    "El asunto nativo de Completado dice «está en camino» en es_AR; no demuestra envío. La configuración nativa de email permite corregirlo sin desarrollar un panel ni un plugin. Los cuerpos de Commerce Communications distinguen pago pendiente, gestión finalizada y reembolso registrado sin acreditar dinero."
+  ],
+  "externalRequestsBlocked": 0,
+  "synthetic": true,
+  "realTransfers": false,
+  "realRefunds": false,
+  "externalMail": false,
+  "messages": [
+    {
+      "subject": "Nueva solicitud de arrepentimiento ARR-20261025-F5971C1EF9D21FC3C526",
+      "types": [],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "Constancia de recepción ARR-20261025-F5971C1EF9D21FC3C526",
+      "types": [],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "Tu pedido en ORIGEN CASA · DEMO #87 fue reembolsado.",
+      "types": [
+        "customer_refunded_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": true,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "Tu pedido en ORIGEN CASA · DEMO #87 te ha sido parcialmente reembolsado.",
+      "types": [
+        "customer_partially_refunded_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": true,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "¡Hemos recibido tu pedido en ORIGEN CASA · DEMO!",
+      "types": [
+        "customer_processing_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "¡Tu pedido de ORIGEN CASA · DEMO está en camino!",
+      "types": [
+        "customer_completed_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "¡Hemos recibido tu pedido en ORIGEN CASA · DEMO!",
+      "types": [
+        "customer_processing_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "Se agregó una nota a tu pedido de ORIGEN CASA · DEMO",
+      "types": [
+        "customer_note"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "¡Hemos recibido tu pedido en ORIGEN CASA · DEMO!",
+      "types": [
+        "customer_on_hold_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": true
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO]: Tenés un nuevo pedido: #87",
+      "types": [
+        "new_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO] Producto con poco stock",
+      "types": [
+        "low_stock"
+      ],
+      "recipientCount": 1,
+      "hasHtml": false,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO]: Tu pedido n.º 85 se canceló",
+      "types": [
+        "customer_cancelled_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": true,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO]: El pedido #85 se ha cancelado",
+      "types": [
+        "cancelled_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "¡Hemos recibido tu pedido en ORIGEN CASA · DEMO!",
+      "types": [
+        "customer_on_hold_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": true
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO]: Tenés un nuevo pedido: #85",
+      "types": [
+        "new_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO] Producto agotado",
+      "types": [
+        "no_stock"
+      ],
+      "recipientCount": 1,
+      "hasHtml": false,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "¡Hemos recibido tu pedido en ORIGEN CASA · DEMO!",
+      "types": [
+        "customer_on_hold_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": true
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO]: Tenés un nuevo pedido: #84",
+      "types": [
+        "new_order"
+      ],
+      "recipientCount": 1,
+      "hasHtml": true,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO] Producto con poco stock",
+      "types": [
+        "low_stock"
+      ],
+      "recipientCount": 1,
+      "hasHtml": false,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    },
+    {
+      "subject": "[ORIGEN CASA · DEMO] Correo electrónico del administrador modificado",
+      "types": [],
+      "recipientCount": 1,
+      "hasHtml": false,
+      "hasText": true,
+      "synthetic": true,
+      "refundClarifiesMoney": false,
+      "cancelClarifiesMoney": false,
+      "onHoldClarifiesPayment": false
+    }
+  ]
+}

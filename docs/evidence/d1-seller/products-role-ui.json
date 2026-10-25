@@ -1,0 +1,1168 @@
+{
+  "scope": "Native seller UI on disposable TRAMA clone only",
+  "origin": "http://localhost:8192",
+  "checks": [
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Simple sale and regular price persist",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /product/d11p-objeto-simple-qa/ responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Simple product storefront reflects UI title and offer",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Uploaded image appears in storefront",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /product/d11p-objeto-simple-qa/ responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Zero stock makes product unavailable",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native low-stock report includes configured threshold product",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /product/d11p-objeto-simple-qa/ responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Manual restock restores purchase button",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Draft product is unavailable to anonymous storefront",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "simple",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "variable",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "variable",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "variable",
+      "name": "Native UI /wp-admin/post-new.php responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Only own D11P product is edited",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Native Generate variations creates four combinations",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Native UI /product/d11p-remera-variable-qa/ responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "Clothing storefront uses all variation attributes",
+      "passed": true
+    },
+    {
+      "stage": "variable-clothing",
+      "name": "UI-created variation can be selected and purchased",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Only own D11P product is edited",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native Generate variations creates four combinations",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native per-variation save succeeds",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native product/coupon save response succeeds",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Native UI /product/d11p-jarra-variable-qa/ responds",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "Decoration storefront uses all variation attributes",
+      "passed": true
+    },
+    {
+      "stage": "variable-decor",
+      "name": "UI-created variation can be selected and purchased",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native product/coupon save response succeeds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "percent coupon persisted",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native product/coupon save response succeeds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "fixed_cart coupon persisted",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native product/coupon save response succeeds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "percent coupon persisted",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Coupon validation uses an isolated cart token",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Coupon probe adds own QA product",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Own QA cart product is identifiable",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native expiration rejects expired UI-created coupon",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native minimum spend rejects insufficient cart",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Own QA cart quantity raises minimum spend",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "UI-created percentage coupon applies",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native percentage discount is 15 percent of QA sale subtotal",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "UI-created fixed coupon applies",
+      "passed": true
+    },
+    {
+      "stage": "coupons",
+      "name": "Native fixed cart discount is ARS 2500",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native CSV wizard maps SKU automatically",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native CSV import completes",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "UI imported product appears in product list",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "csv",
+      "name": "Native CSV export contains QA SKU",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/ responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open products",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open woocommerce-settings",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open shipping",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open payments",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open emails",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open analytics",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/users.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open users",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open legal-management",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/themes.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open appearance",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/site-editor.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open site-editor",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager cannot open plugins",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager cannot open general-settings",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager cannot open legal-settings",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager cannot open administrator-edit",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/users.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can see administrator listed but cannot edit it",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/user-edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager can open Customer details",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Shop Manager cannot promote a Customer to Administrator",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "admin native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/ responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/plugins.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Administrator can open plugins",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/options-general.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Administrator can open general-settings",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-admin/options-general.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Administrator can open legal-settings",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "customer native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Native UI /my-account/ responds",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Customer lacks seller screen /wp-admin/edit.php?post_type=product",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Customer lacks seller screen /wp-admin/admin.php?page=wc-settings",
+      "passed": true
+    },
+    {
+      "stage": "roles",
+      "name": "Customer lacks seller screen /wp-admin/admin.php?page=commerce-legal",
+      "passed": true
+    },
+    {
+      "stage": "attributes",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "attributes",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "attributes",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "attributes",
+      "name": "Global attribute created through native seller UI",
+      "passed": true
+    },
+    {
+      "stage": "attributes",
+      "name": "Global attribute terms created natively",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Native UI /wp-admin/post-new.php responds",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Native product/coupon save response succeeds",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Native product/coupon save returns editor",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Own QA product moved to native trash",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Native UI /wp-admin/edit.php responds",
+      "passed": true
+    },
+    {
+      "stage": "delete",
+      "name": "Deleted QA remains identifiable in Trash",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Native shipping method card selects flat_rate",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Native shipping method card selects free_shipping",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Native shipping method card selects local_pickup",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "QA zone and flat/free methods persist",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "shipping",
+      "name": "Shop Manager can configure native Local Pickup",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-login.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "manager native WordPress login",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/ responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native dashboard remains accessible at 834",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native simple-editor remains accessible at 834",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native variable-editor remains accessible at 834",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native coupon-editor remains accessible at 834",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native shipping-zone remains accessible at 834",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/ responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native dashboard remains accessible at 390",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native simple-editor remains accessible at 390",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native variable-editor remains accessible at 390",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/post.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native coupon-editor remains accessible at 390",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native UI /wp-admin/admin.php responds",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Native shipping-zone remains accessible at 390",
+      "passed": true
+    },
+    {
+      "stage": "screenshots",
+      "name": "Final own simple product remains public and priced",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "products-role-dashboard-desktop.png",
+    "products-role-products-list.png",
+    "products-role-simple-editor.png",
+    "products-role-simple-storefront.png",
+    "products-role-low-stock-report.png",
+    "products-role-variable-attributes-before-save.png",
+    "products-role-variable-stock.png",
+    "products-role-variable-editor.png",
+    "products-role-variable-storefront.png",
+    "products-role-decor-stock.png",
+    "products-role-decor-editor.png",
+    "products-role-decor-storefront.png",
+    "products-role-coupon-percent.png",
+    "products-role-coupon-fixed_cart.png",
+    "products-role-coupon-percent-expired.png",
+    "products-role-coupons-list.png",
+    "products-role-csv-mapping.png",
+    "products-role-csv-imported.png",
+    "products-role-csv-export.png",
+    "products-role-products-tablet.png",
+    "products-role-products-mobile.png",
+    "products-role-global-attributes.png",
+    "products-role-attribute-values.png",
+    "products-role-product-trash.png",
+    "products-role-shipping-zone.png",
+    "products-role-shipping-pickup.png",
+    "products-role-dashboard-834.png",
+    "products-role-simple-editor-834.png",
+    "products-role-variable-editor-834.png",
+    "products-role-coupon-editor-834.png",
+    "products-role-shipping-zone-834.png",
+    "products-role-dashboard-390.png",
+    "products-role-simple-editor-390.png",
+    "products-role-variable-editor-390.png",
+    "products-role-coupon-editor-390.png",
+    "products-role-shipping-zone-390.png"
+  ],
+  "menus": {
+    "manager": [
+      "Escritorio",
+      "Entradas",
+      "Multimedia",
+      "Páginas",
+      "Comentarios 00 comentarios en moderación",
+      "WooCommerce",
+      "Productos",
+      "Pagos",
+      "Estadísticas",
+      "Marketing",
+      "Apariencia",
+      "Usuarios",
+      "Herramientas"
+    ],
+    "admin": [
+      "Escritorio",
+      "Entradas",
+      "Multimedia",
+      "Páginas",
+      "Comentarios 00 comentarios en moderación",
+      "WooCommerce",
+      "Productos",
+      "Pagos",
+      "Estadísticas",
+      "Marketing",
+      "Apariencia",
+      "Plugins 0",
+      "Usuarios",
+      "Herramientas",
+      "Ajustes"
+    ],
+    "customer": []
+  },
+  "notes": [
+    {
+      "role": "manager",
+      "name": "products",
+      "title": "\nProductos",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "woocommerce-settings",
+      "title": "Ajustes",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "shipping",
+      "title": "Ajustes",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "payments",
+      "title": "Ajustes",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "emails",
+      "title": "Ajustes",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "analytics",
+      "title": "Resumen",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "users",
+      "title": "\n\t\t\tUsuarios\t\t",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "legal-management",
+      "title": "Solicitudes de arrepentimiento",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "appearance",
+      "title": "Temas\t\t1\n\t",
+      "available": true
+    },
+    {
+      "role": "manager",
+      "name": "site-editor",
+      "title": "",
+      "available": true
+    }
+  ],
+  "externalRequests": [
+    {
+      "origin": "https://connect-js.stripe.com",
+      "path": "/v1.0/connect.js"
+    },
+    {
+      "origin": "https://connect-js.stripe.com",
+      "path": "/v1.0/connect.js"
+    },
+    {
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f50d.svg"
+    },
+    {
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f50d.svg"
+    },
+    {
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f389.svg"
+    },
+    {
+      "origin": "https://s.w.org",
+      "path": "/images/core/emoji/17.0.2/svg/1f389.svg"
+    },
+    {
+      "origin": "https://connect-js.stripe.com",
+      "path": "/v1.0/connect.js"
+    }
+  ],
+  "result": "passed",
+  "allowedStaticEmojiRequests": 6,
+  "lastStage": "screenshots",
+  "stageResults": {
+    "variable-clothing": "passed",
+    "variable-decor": "passed",
+    "coupons": "passed",
+    "csv": "passed",
+    "shipping": "passed",
+    "roles": "passed",
+    "attributes": "passed",
+    "delete": "passed",
+    "screenshots": "passed",
+    "simple": "passed"
+  },
+  "couponValidation": {
+    "percentage": 15,
+    "percentageDiscountMinor": 9450,
+    "fixedDiscountMinor": 2500,
+    "currency": "ARS",
+    "currencyMinorUnit": 0,
+    "expiredRejected": true,
+    "minimumSpendRejected": true,
+    "realOrderCreated": false
+  },
+  "csvExport": {
+    "bytes": 1179,
+    "containsQaSku": true,
+    "privateFileNotCommitted": true
+  },
+  "screenshotPrivacy": {
+    "toolbarAccountHidden": true,
+    "communityEventsLocationMasked": true,
+    "credentialsIncluded": false
+  },
+  "managerCustomerRoleChoices": [],
+  "responsiveViews": [
+    {
+      "screen": "dashboard",
+      "viewportWidth": 834,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "simple-editor",
+      "viewportWidth": 834,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "variable-editor",
+      "viewportWidth": 834,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "coupon-editor",
+      "viewportWidth": 834,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "shipping-zone",
+      "viewportWidth": 834,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "dashboard",
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "simple-editor",
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "variable-editor",
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "coupon-editor",
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "readOnly": true
+    },
+    {
+      "screen": "shipping-zone",
+      "viewportWidth": 390,
+      "horizontalOverflow": true,
+      "readOnly": true
+    }
+  ],
+  "externalObservationScope": "External resource observations include isolated harness retries; all except the exact official static magnifier SVG were blocked before delivery.",
+  "sourceSha256": {
+    "tests/seller-products.cjs": "d074789036083d406ce8e41a8aa3b1fab91c7f09cbb358b2d7f98d229880de9b",
+    "tests/seller-products-role.php": "857881fd0b5b33b6941df4707a633184b779a93d73e418b572ee53e19e6acd30",
+    "tests/seller-products-data.php": "62c212922d91054e9e0a6a58798328cd1edbb1b7646478a299738c14d07f8e3a",
+    "tests/seller-products-inspect.cjs": "f30520297d30f8315af5dc50904ef3bcd0faa37f37eb4a9d244ab40370a55ecc"
+  },
+  "finalSummary": {
+    "uiChecks": 176,
+    "uiAllPassed": true,
+    "capabilityChecks": 7,
+    "persistenceChecks": 20,
+    "allStagesPassed": true,
+    "screenshots": 36,
+    "onlyDisposableClone": true,
+    "noFunctionalCodeChanges": true,
+    "publicDeployment": false,
+    "totalChecks": 203
+  }
+}

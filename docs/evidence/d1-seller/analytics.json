@@ -1,0 +1,485 @@
+{
+  "result": "passed",
+  "phase": "analytics",
+  "origin": "http://localhost:8193",
+  "checks": [
+    {
+      "name": "Guarded seller CLI sync-analytics succeeds",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-login.php",
+      "passed": true
+    },
+    {
+      "name": "manager native login works",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics overview page is rendered",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics revenue page is rendered",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics orders page is rendered",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics products page is rendered",
+      "passed": true
+    },
+    {
+      "name": "Native product report offers CSV download",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics CSV contains QA product rows",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics coupons page is rendered",
+      "passed": true
+    },
+    {
+      "name": "Native page loads /wp-admin/admin.php",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics customers page is rendered",
+      "passed": true
+    },
+    {
+      "name": "Native Analytics current-day totals were observed",
+      "passed": true
+    },
+    {
+      "name": "Analytics net revenue reconciles with synthetic paid/refunded ledger",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "analytics-overview.png",
+    "analytics-revenue-onboarding.png",
+    "analytics-revenue.png",
+    "analytics-orders-onboarding.png",
+    "analytics-orders.png",
+    "analytics-products.png",
+    "analytics-coupons.png",
+    "analytics-customers.png"
+  ],
+  "observations": [
+    "Datos exclusivos de pedidos y reembolsos QA del laboratorio. Se ejecutó sincronización mediante datastores oficiales porque el cron del laboratorio está desactivado; no se hicieron consultas financieras reales."
+  ],
+  "externalRequestsBlocked": 2,
+  "synthetic": true,
+  "realTransfers": false,
+  "realRefunds": false,
+  "externalMail": false,
+  "reports": [
+    {
+      "key": "overview",
+      "text": "Filtros\nRango de fechas\nPersonalizado (Oct 25, 2026)\nvs. Periodo anterior (Oct 24, 2026)\nEstado de los datos\nÚltima actualización\n25 de Oct a las 11:31\nPróxima actualización\n25 de Oct a las 11:32\nRendimiento\n\nLista de puntos de datos disponibles para filtrar. Utiliza las teclas de flecha para moverte por la lista. Hacé clic en un punto de datos para obtener un informe detallado.\n\nVentas totales\n$35.700\n0%\nVentas netas\n$34.200\n0%\nPedidos\n2\n0%\nProductos vendidos\n3\n0%\nVariaciones vendidas\n1\n0%\nGráficos\nPor hora\nPor día\nVentas netas\nReporte en Ventas netas\n25\nOct 2026\n$0\n$16k\n$32k\n$48k\nPersonalizado (Oct 25, 2026)\n$34.200\nPeriodo anterior (Oct 24, 2026)\n$0\nPedidos\nReporte en Pedidos\n25\nOct 2026\n0\n1\n2\n3\nPersonalizado (Oct 25, 2026)\n2\nPeriodo anterior (Oct 24, 2026)\n0\nFavoritos\nPrincipales categorías - Artículos vendidos\nPrincipales categorías - Artículos vendidos\nCategoría\tArtículos vendidos\tVentas netas\n\nQA vendedor D1.1\n\t3\t$34.200\nPrincipales productos - Artículos vendidos\nPrincipales productos - Artículos vendidos\nProducto\tArtículos vendidos\tVentas netas\n\nQA vendedor · Objeto D11O\n\t2\t$18.000\n\nQA vendedor · Lámpara D11O\n\t1\t$16.200"
+    },
+    {
+      "key": "revenue",
+      "text": "Filtros\nRango de fechas\nPersonalizado (Oct 25, 2026)\nvs. Periodo anterior (Oct 24, 2026)\nEstado de los datos\nÚltima actualización\n25 de Oct a las 11:31\nPróxima actualización\n25 de Oct a las 11:32\n\nLista de puntos de datos disponibles para filtrar. Utiliza las teclas de flecha para moverte por la lista. Hacé clic en un punto de datos para obtener un informe detallado.\n\nVentas brutas\n$58.000\n0%\nDevoluciones\n$20.000\n0%\nCupones\n$3.800\n0%\nVentas netas\n$34.200\n0%\nImpuestos\n$0\n0%\nEnvío\n$1.500\n0%\nVentas totales\n$35.700\n0%\nVentas brutas\nPersonalizado (Oct 25, 2026)\n$58.000\nPeriodo anterior (Oct 24, 2026)\n$0\nPor hora\nPor día\n12AM\n1AM\n2AM\n3AM\n4AM\n5AM\n6AM\n7AM\n8AM\n9AM\n10AM\n11AM\n12PM\n1PM\n2PM\n3PM\n4PM\n5PM\n6PM\n7PM\n8PM\n9PM\n10PM\n11PM\nOct 25, 2026\n$0\n$26k\n$52k\n$78k\nIngresos\nDescarga\nIngresos(scroll para ver más)\nFecha\nOrdenar por Fecha en orden ascendente\n\t\nPedidos\nOrdenar por Pedidos en orden descendente\n\t\nVentas brutas\nOrdenar por Ventas brutas en orden descendente\n\t\nDevoluciones\nOrdenar por Devoluciones en orden descendente\n\t\nCupones\nOrdenar por Cupones en orden descendente\n\t\nVentas netas\nOrdenar por Ventas netas en orden descendente\n\t\nImpuestos\nOrdenar por Impuestos en orden descendente\n\t\nEnvío\nOrdenar por Envío en orden descendente\n\t\nVentas totales\nOrdenar por Ventas totales en orden descendente\n\n25/10/2026\noctubre 25, 2026\n\t\n2\n\t$58.000\t$20.000\t$3.800\t$34.200\t$0\t$1.500\t$35.700\n1día2pedidos$58.000Ventas brutas$20.000Devoluciones$3.800Cupones$34.200Ventas netas$0Impuestos$1.500Envío$35.700Ventas totales"
+    },
+    {
+      "key": "orders",
+      "text": "Filtros\nRango de fechas\nPersonalizado (Oct 25, 2026)\nvs. Periodo anterior (Oct 24, 2026)\nMostrar\nTodos los pedidos\nEstado de los datos\nÚltima actualización\n25 de Oct a las 11:31\nPróxima actualización\n25 de Oct a las 11:32\n\nLista de puntos de datos disponibles para filtrar. Utiliza las teclas de flecha para moverte por la lista. Hacé clic en un punto de datos para obtener un informe detallado.\n\nPedidos\n2\n0%\nVentas netas\n$34.200\n0%\nValor promedio de los pedidos\n$27.100\n0%\nPromedio de artículos por pedido\n3\n0%\nPedidos\nPersonalizado (Oct 25, 2026)\n2\nPeriodo anterior (Oct 24, 2026)\n0\nPor hora\nPor día\nPEDIDOS\n 3AM Oct 25, 2026\n0\n 3AM Oct 24, 2026\n0\n12AM\n1AM\n2AM\n3AM\n4AM\n5AM\n6AM\n7AM\n8AM\n9AM\n10AM\n11AM\n12PM\n1PM\n2PM\n3PM\n4PM\n5PM\n6PM\n7PM\n8PM\n9PM\n10PM\n11PM\nOct 25, 2026\n0\n1\n2\n3\nPedidos\nDescarga\nPedidos(scroll para ver más)\nFecha\nOrdenar por Fecha en orden ascendente\n\tPedido #\nNúmero del pedido\n\tEstado\tCliente\tTipo de cliente\tProducto(s)\nProductos\n\t\nArtículos vendidos\nOrdenar por Artículos vendidos en orden descendente\n\tCupón(es)\nCupones\n\t\nVentas netas\nVentas netas\nOrdenar por Ventas netas en orden descendente\n\tAtribución\nAtribución\n\n25/10/2026\noctubre 25, 2026\n\t\n87\n\t\nDevuelto\n\t\tReturning\t\t-1\t\t$-10.000\tDesconocido\n25/10/2026\noctubre 25, 2026\n\t\n87\n\t\nDevuelto\n\t\tReturning\t\nQA vendedor · Objeto D11O\n\t-1\t\t$-10.000\tDesconocido\n25/10/2026\noctubre 25, 2026\n\t\n87\n\t\nDevuelto\n\t\tReturning\t\nQA vendedor · Objeto D11O\n\t2\t\t$20.000\tDesconocido\n25/10/2026\noctubre 25, 2026\n\t\n84\n\t\nCompletado\n\t\tNew\tQA vendedor · Objeto D11O\n+1 más\n+1 más\n\t3\t\nd11o-qa10\n\t$34.200\tDesconocido\n2Orders1Cliente2Products3Artículos vendidos1Cupón$34.200ventas netas"
+    },
+    {
+      "key": "products",
+      "text": "Filtros\nRango de fechas\nPersonalizado (Oct 25, 2026)\nvs. Periodo anterior (Oct 24, 2026)\nMostrar\nTodos los productos\nEstado de los datos\nÚltima actualización\n25 de Oct a las 11:31\nPróxima actualización\n25 de Oct a las 11:32\n\nLista de puntos de datos disponibles para filtrar. Utiliza las teclas de flecha para moverte por la lista. Hacé clic en un punto de datos para obtener un informe detallado.\n\nArtículos vendidos\n3\n0%\nVentas netas\n$34.200\n0%\nPedidos\n2\n0%\nArtículos vendidos\nPersonalizado (Oct 25, 2026)\n3\nPeriodo anterior (Oct 24, 2026)\n0\nPor hora\nPor día\n12AM\n1AM\n2AM\n3AM\n4AM\n5AM\n6AM\n7AM\n8AM\n9AM\n10AM\n11AM\n12PM\n1PM\n2PM\n3PM\n4PM\n5PM\n6PM\n7PM\n8PM\n9PM\n10PM\n11PM\nOct 25, 2026\n0\n2\n4\nProductos\nComparar\nMoverse hacia atrás de los elementos seleccionados\nDescarga\nProductos\n\t\nTítulo del producto\nOrdenar por Título del producto en orden descendente\n\t\nSKU\nOrdenar por SKU en orden descendente\n\t\nArtículos vendidos\nOrdenar por Artículos vendidos en orden ascendente\n\t\nVentas netas\nVentas netas\nOrdenar por Ventas netas en orden descendente\n\t\nPedidos\nOrdenar por Pedidos en orden descendente\n\tCategoría\t\nVariaciones\nOrdenar por Variaciones en orden descendente\n\tEstado\tStock\n\n\t\nQA vendedor · Objeto D11O\n\tD11O-SIMPLE\t2\t$18.000\t\n2\n\t\nQA vendedor D1.1\n\t0\tHay stock\t6\n\n\t\nQA vendedor · Lámpara D11O\n\tD11O-VARIABLE\t1\t$16.200\t\n1\n\t\nQA vendedor D1.1\n\t2\tN/D\tN/D\n2Products3Artículos vendidos$34.200Ventas netas2Orders"
+    },
+    {
+      "key": "coupons",
+      "text": "Filtros\nRango de fechas\nPersonalizado (Oct 25, 2026)\nvs. Periodo anterior (Oct 24, 2026)\nMostrar\nTodos los cupones\nEstado de los datos\nÚltima actualización\n25 de Oct a las 11:31\nPróxima actualización\n25 de Oct a las 11:32\n\nLista de puntos de datos disponibles para filtrar. Utiliza las teclas de flecha para moverte por la lista. Hacé clic en un punto de datos para obtener un informe detallado.\n\nPedidos con descuento\n1\n0%\nCantidad\n$3.800\n0%\nPedidos con descuento\nPersonalizado (Oct 25, 2026)\n1\nPeriodo anterior (Oct 24, 2026)\n0\nPor hora\nPor día\n12AM\n1AM\n2AM\n3AM\n4AM\n5AM\n6AM\n7AM\n8AM\n9AM\n10AM\n11AM\n12PM\n1PM\n2PM\n3PM\n4PM\n5PM\n6PM\n7PM\n8PM\n9PM\n10PM\n11PM\nOct 25, 2026\n0\n1\n2\nCupones\nComparar\nMoverse hacia atrás de los elementos seleccionados\nDescarga\nCupones\n\t\nCódigo de cupón\nOrdenar por Código de cupón en orden descendente\n\t\nPedidos\nOrdenar por Pedidos en orden ascendente\n\t\nMonto descontado\nOrdenar por Monto descontado en orden descendente\n\tCreado\tCaduca\tTipo\n\n\t\nd11o-qa10\n\t\n1\n\t$3.800\t25/10/2026\noctubre 25, 2026\n\tN/D\tPorcentaje\n1Cupón1Pedido$3.800Monto descontado"
+    },
+    {
+      "key": "customers",
+      "text": "Filtros\nMostrar\nTodos los clientes\nEstado de los datos\nÚltima actualización\n25 de Oct a las 11:31\nPróxima actualización\n25 de Oct a las 11:32\nClientes\nMoverse hacia atrás de los elementos seleccionados\nDescarga\nClientes(scroll para ver más)\nNombre\nOrdenar por Nombre en orden descendente\n\tNombre de usuario\t\nÚltima actividad\nOrdenar por Última actividad en orden ascendente\n\t\nFecha de registro\nOrdenar por Fecha de registro en orden descendente\n\tCorreo electrónico\t\nPedidos\nOrdenar por Pedidos en orden descendente\n\t\nGasto total\nOrdenar por Gasto total en orden descendente\n\tVMP\nValor promedio de los pedidos\n\t\nPaís / Región\nOrdenar por País / Región en orden descendente\n\t\nCiudad\nOrdenar por Ciudad en orden descendente\n\t\nRegión\nOrdenar por Región en orden descendente\n\t\nCódigo postal\nOrdenar por Código postal en orden descendente\n\tBilling phone\tShipping phone\tRole\n\n\t[private]\t25/10/2026\noctubre 25, 2026\n\t25/10/2026\noctubre 25, 2026\n\t\ncustomer@origen.seller.test\n\t2\t$35.700\t$17.850\tAR\nArgentina\n\tCiudad DEMO\tC\t1414\t1100000000\t1100000000\tCliente\n1cliente2Pedidos promedio$35.700Promedio del gasto total$17.850Valor promedio de los pedidos"
+    }
+  ],
+  "nativeMetrics": [
+    {
+      "route": "/wp-json/wc-analytics/reports/revenue/stats",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "totals": {
+        "total_sales": 0,
+        "net_revenue": 0,
+        "refunds": 0,
+        "shipping": 0,
+        "products": 0,
+        "coupons_count": 0,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/revenue/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "total_sales": 35700,
+        "net_revenue": 34200,
+        "refunds": 20000,
+        "shipping": 1500,
+        "products": 2,
+        "coupons_count": 1,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/performance-indicators",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "rows": [
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/performance-indicators",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T00:00:00",
+      "rows": [
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/orders/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "orders_count": 2,
+        "avg_order_value": 27100,
+        "products": 2,
+        "coupons_count": 1,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/orders/stats",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "totals": {
+        "orders_count": 0,
+        "avg_order_value": 0,
+        "products": 0,
+        "coupons_count": 0,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/performance-indicators",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "rows": [
+        {},
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/revenue/stats",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "totals": {
+        "gross_sales": 0,
+        "refunds": 0,
+        "coupons": 0,
+        "net_revenue": 0,
+        "taxes": 0,
+        "shipping": 0,
+        "total_sales": 0,
+        "products": 0,
+        "coupons_count": 0,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/revenue/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "gross_sales": 58000,
+        "refunds": 20000,
+        "coupons": 3800,
+        "net_revenue": 34200,
+        "taxes": 0,
+        "shipping": 1500,
+        "total_sales": 35700,
+        "products": 2,
+        "coupons_count": 1,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/revenue/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "orders_count": 2,
+        "num_items_sold": 3,
+        "gross_sales": 58000,
+        "total_sales": 35700,
+        "coupons": 3800,
+        "coupons_count": 1,
+        "refunds": 20000,
+        "taxes": 0,
+        "shipping": 1500,
+        "net_revenue": 34200,
+        "avg_items_per_order": 2.5,
+        "avg_order_value": 27100,
+        "total_customers": 1,
+        "products": 2,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/revenue/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "orders_count": 2,
+        "gross_sales": 58000,
+        "total_sales": 35700,
+        "refunds": 20000,
+        "coupons": 3800,
+        "taxes": 0,
+        "shipping": 1500,
+        "net_revenue": 34200,
+        "products": 2,
+        "coupons_count": 1,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/orders/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "orders_count": 2,
+        "net_revenue": 34200,
+        "avg_order_value": 27100,
+        "avg_items_per_order": 2.5,
+        "products": 2,
+        "coupons_count": 1,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/orders/stats",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "totals": {
+        "orders_count": 0,
+        "net_revenue": 0,
+        "avg_order_value": 0,
+        "avg_items_per_order": 0,
+        "products": 0,
+        "coupons_count": 0,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/orders/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "orders_count": 2,
+        "total_customers": 1,
+        "num_items_sold": 3,
+        "coupons_count": 1,
+        "net_revenue": 34200,
+        "products": 2,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/orders",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "rows": [
+        {
+          "customer_id": 1
+        },
+        {
+          "customer_id": 1
+        },
+        {
+          "customer_id": 1
+        },
+        {
+          "customer_id": 1
+        }
+      ]
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/products/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "items_sold": 3,
+        "net_revenue": 34200,
+        "orders_count": 2,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/products/stats",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "totals": {
+        "items_sold": 0,
+        "net_revenue": 0,
+        "orders_count": 0,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/products/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "products_count": 2,
+        "items_sold": 3,
+        "net_revenue": 34200,
+        "orders_count": 2,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/products",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "rows": [
+        {
+          "product_id": 79,
+          "items_sold": 2,
+          "net_revenue": 18000,
+          "orders_count": 2
+        },
+        {
+          "product_id": 80,
+          "items_sold": 1,
+          "net_revenue": 16200,
+          "orders_count": 1
+        }
+      ]
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/coupons/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "orders_count": 1,
+        "amount": 3800,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/coupons/stats",
+      "after": "2026-10-24T00:00:00",
+      "before": "2026-10-24T23:59:59",
+      "totals": {
+        "orders_count": 0,
+        "amount": 0,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/coupons/stats",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "totals": {
+        "coupons_count": 1,
+        "orders_count": 1,
+        "amount": 3800,
+        "segments": []
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/coupons",
+      "after": "2026-10-25T00:00:00",
+      "before": "2026-10-25T23:59:59",
+      "rows": [
+        {
+          "coupon_id": 83,
+          "amount": 3800,
+          "orders_count": 1
+        }
+      ]
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/customers/stats",
+      "after": null,
+      "before": null,
+      "totals": {
+        "customers_count": 1,
+        "avg_orders_count": 2,
+        "avg_total_spend": 35700,
+        "avg_avg_order_value": 17850
+      }
+    },
+    {
+      "route": "/wp-json/wc-analytics/reports/customers",
+      "after": null,
+      "before": null,
+      "rows": [
+        {
+          "orders_count": 2,
+          "total_spend": 35700
+        }
+      ]
+    }
+  ],
+  "csvExport": {
+    "nativeButton": true,
+    "privateArtifact": true,
+    "rows": 2,
+    "headers": "﻿\"Título del producto\",SKU,\"Artículos vendidos\",\"Ventas netas\",Pedidos,Categoría,Variaciones,Estado,Stock",
+    "sha256": "bb43bddae81ca878802985b1762efe0b8ae09303b552588518301ba98318dae7"
+  },
+  "reconciliation": {
+    "businessDate": "2026-10-25",
+    "expectedNetFromSyntheticOrders": 34200,
+    "analyticsNetRevenue": 34200,
+    "analyticsOrderCount": 2,
+    "analyticsItemCount": 3,
+    "realRevenue": false
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "result": "passed",
+  "origins": [
+    "http://localhost:8190",
+    "http://localhost:8191"
+  ],
+  "checks": [
+    {
+      "origin": "http://localhost:8190",
+      "route": "/wp-admin/",
+      "method": "GET",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8190",
+      "route": "/checkout/",
+      "method": "GET",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8190",
+      "route": "/?wc-ajax=checkout",
+      "method": "POST",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8190",
+      "route": "/?rest_route=/wc/store/v1/checkout",
+      "method": "POST",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8190",
+      "route": "/?rest_route=/wc/store/v1/products",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8190",
+      "route": "/?rest_route=/wc/store/v1/cart",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8191",
+      "route": "/wp-admin/",
+      "method": "GET",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8191",
+      "route": "/checkout/",
+      "method": "GET",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8191",
+      "route": "/?wc-ajax=checkout",
+      "method": "POST",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8191",
+      "route": "/?rest_route=/wc/store/v1/checkout",
+      "method": "POST",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8191",
+      "route": "/?rest_route=/wc/store/v1/products",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "origin": "http://localhost:8191",
+      "route": "/?rest_route=/wc/store/v1/cart",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    }
+  ],
+  "scope": "D1 public restrictions preserved after independent seller audit",
+  "publicDeployment": false
+}

@@ -1,0 +1,25 @@
+{
+  "result": "passed",
+  "dateArgentina": "2026-10-25",
+  "branch": "codex/d1-1-seller-experience-audit",
+  "baseD1Commit": "9a71bca22176ca5d92269d7ea067140fa483a083",
+  "sellerBackoffice": "NEEDS IMPROVEMENTS",
+  "sellerConclusionScope": "Native functions sufficient; autonomous handoff still needs configuration and merchant training",
+  "publicDemosD1": "READY",
+  "publicDeployment": false,
+  "checks": {
+    "productsUi": 176,
+    "productData": 20,
+    "roleCapabilities": 7,
+    "ordersLegalAnalyticsMail": 194,
+    "personalization": 15,
+    "labSafety": 26,
+    "publicD1Preservation": 12,
+    "originalRoleDefinitionMatches": 6
+  },
+  "originalHistoryTablesUnchanged": 22,
+  "approvedFunctionalModuleTreesUnchanged": 14,
+  "simulatedPaymentsOnly": true,
+  "externalMailDelivered": false,
+  "sourceFunctionalChanges": false
+}

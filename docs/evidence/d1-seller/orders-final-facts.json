@@ -1,0 +1,242 @@
+{
+    "result": "passed",
+    "mode": "snapshot",
+    "business_date": "2026-10-25",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "fixture": {
+        "installation": "d1-1-seller-audit",
+        "origin": "http://localhost:8193",
+        "products": {
+            "simple": 79,
+            "variable": 80,
+            "variations": {
+                "roble": 81,
+                "nogal": 82
+            }
+        },
+        "coupon": {
+            "id": 83,
+            "code": "d11o-qa10"
+        },
+        "initial_stock": {
+            "simple": 8,
+            "roble": 6,
+            "nogal": 4
+        }
+    },
+    "stock": {
+        "simple": {
+            "id": 79,
+            "quantity": 6,
+            "status": "instock",
+            "low_stock_amount": 6
+        },
+        "roble": {
+            "id": 81,
+            "quantity": 5,
+            "status": "instock",
+            "low_stock_amount": 2
+        },
+        "nogal": {
+            "id": 82,
+            "quantity": 4,
+            "status": "instock",
+            "low_stock_amount": 2
+        }
+    },
+    "orders": [
+        {
+            "id": 87,
+            "status": "refunded",
+            "payment_method": "bacs",
+            "payment_method_title": "Transferencia bancaria · QA",
+            "total": 20000,
+            "shipping_total": 0,
+            "discount_total": 0,
+            "coupons": [],
+            "shipping_methods": [
+                {
+                    "name": "Retiro QA",
+                    "method_id": "local_pickup",
+                    "total": 0
+                }
+            ],
+            "items": [
+                {
+                    "item_id": 9,
+                    "product_id": 79,
+                    "variation_id": 0,
+                    "name": "QA vendedor · Objeto D11O",
+                    "quantity": 2,
+                    "subtotal": 20000,
+                    "total": 20000,
+                    "refunded_quantity": -2,
+                    "refunded_total": 20000
+                }
+            ],
+            "total_refunded": 20000,
+            "remaining_refund": 0,
+            "refund_count": 2,
+            "buyer_is_synthetic": true,
+            "has_shipping_address": true,
+            "has_private_note": false,
+            "has_customer_note": false,
+            "date_paid_set": true,
+            "date_completed_set": false
+        },
+        {
+            "id": 85,
+            "status": "cancelled",
+            "payment_method": "bacs",
+            "payment_method_title": "Transferencia bancaria · QA",
+            "total": 60000,
+            "shipping_total": 0,
+            "discount_total": 0,
+            "coupons": [],
+            "shipping_methods": [
+                {
+                    "name": "Envío gratis QA",
+                    "method_id": "free_shipping",
+                    "total": 0
+                }
+            ],
+            "items": [
+                {
+                    "item_id": 7,
+                    "product_id": 79,
+                    "variation_id": 0,
+                    "name": "QA vendedor · Objeto D11O",
+                    "quantity": 6,
+                    "subtotal": 60000,
+                    "total": 60000,
+                    "refunded_quantity": 0,
+                    "refunded_total": 0
+                }
+            ],
+            "total_refunded": 0,
+            "remaining_refund": 60000,
+            "refund_count": 0,
+            "buyer_is_synthetic": true,
+            "has_shipping_address": true,
+            "has_private_note": false,
+            "has_customer_note": false,
+            "date_paid_set": false,
+            "date_completed_set": false
+        },
+        {
+            "id": 84,
+            "status": "completed",
+            "payment_method": "bacs",
+            "payment_method_title": "Transferencia bancaria · QA",
+            "total": 35700,
+            "shipping_total": 1500,
+            "discount_total": 3800,
+            "coupons": [
+                "d11o-qa10"
+            ],
+            "shipping_methods": [
+                {
+                    "name": "Envío QA",
+                    "method_id": "flat_rate",
+                    "total": 1500
+                }
+            ],
+            "items": [
+                {
+                    "item_id": 3,
+                    "product_id": 80,
+                    "variation_id": 81,
+                    "name": "QA vendedor · Lámpara D11O - Roble QA",
+                    "quantity": 1,
+                    "subtotal": 18000,
+                    "total": 16200,
+                    "refunded_quantity": 0,
+                    "refunded_total": 0
+                },
+                {
+                    "item_id": 4,
+                    "product_id": 79,
+                    "variation_id": 0,
+                    "name": "QA vendedor · Objeto D11O",
+                    "quantity": 2,
+                    "subtotal": 20000,
+                    "total": 18000,
+                    "refunded_quantity": 0,
+                    "refunded_total": 0
+                }
+            ],
+            "total_refunded": 0,
+            "remaining_refund": 35700,
+            "refund_count": 0,
+            "buyer_is_synthetic": true,
+            "has_shipping_address": true,
+            "has_private_note": true,
+            "has_customer_note": true,
+            "date_paid_set": true,
+            "date_completed_set": true
+        }
+    ],
+    "reservations": [],
+    "reservation_probe": null,
+    "legal": [
+        {
+            "id": "1",
+            "code": "ARR-20261025-F5971C1EF9D21FC3C526",
+            "status": "awaiting",
+            "order_id": "84",
+            "consumer_mail": "sent",
+            "admin_mail": "sent"
+        }
+    ],
+    "native_analytics_rows": [
+        {
+            "order_id": "84",
+            "parent_id": "0",
+            "num_items_sold": "3",
+            "total_sales": "35700",
+            "net_total": "34200",
+            "status": "wc-completed",
+            "date_created": "2026-10-25 11:35:34"
+        },
+        {
+            "order_id": "85",
+            "parent_id": "0",
+            "num_items_sold": "6",
+            "total_sales": "60000",
+            "net_total": "60000",
+            "status": "wc-cancelled",
+            "date_created": "2026-10-25 11:35:42"
+        },
+        {
+            "order_id": "87",
+            "parent_id": "0",
+            "num_items_sold": "2",
+            "total_sales": "20000",
+            "net_total": "20000",
+            "status": "wc-refunded",
+            "date_created": "2026-10-25 11:35:58"
+        },
+        {
+            "order_id": "89",
+            "parent_id": "87",
+            "num_items_sold": "-1",
+            "total_sales": "-10000",
+            "net_total": "-10000",
+            "status": "wc-refunded",
+            "date_created": "2026-10-25 11:38:15"
+        },
+        {
+            "order_id": "90",
+            "parent_id": "87",
+            "num_items_sold": "-1",
+            "total_sales": "-10000",
+            "net_total": "-10000",
+            "status": "wc-refunded",
+            "date_created": "2026-10-25 11:40:21"
+        }
+    ],
+    "analytics_native_sync_invoked": false,
+    "real_transfer": false,
+    "real_refund": false,
+    "external_mail": false
+}

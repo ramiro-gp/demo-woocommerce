@@ -1,0 +1,14 @@
+{
+  "result": "passed",
+  "checks": {
+    "trama_administrator_stored_capabilities_match_original": true,
+    "trama_shop_manager_stored_capabilities_match_original": true,
+    "trama_customer_stored_capabilities_match_original": true,
+    "origen_administrator_stored_capabilities_match_original": true,
+    "origen_shop_manager_stored_capabilities_match_original": true,
+    "origen_customer_stored_capabilities_match_original": true
+  },
+  "scope": "Original database role definitions compared with independent clones; runtime target-user permissions tested separately",
+  "originalWordPressLogins": false,
+  "rolesModified": false
+}
